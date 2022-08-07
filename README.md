@@ -4,8 +4,8 @@ Configuration files and miscellaneous files for my personal linux setups
 ## Installation
 
 ```
-cd "$HOME"
+cd
 git clone https://github.com/LeoMeinel/dot-files.git
-chmod +x "$HOME"/dot-files/setup.sh
-"$HOME"/dot-files/setup.sh
+chmod +x ./dot-files/setup.sh
+./dot-files/setup.sh
 ```
