@@ -1,0 +1,69 @@
+Xft.dpi: 96
+Xft.antialias: 1
+Xft.autohint: 0
+Xft.hinting: 1
+Xft.hintstyle: hintfull
+Xft.rgba: rgb
+Xft.lcdfilter: lcddefault
+
+
+URxvt*font: xft:Noto Sans Mono:size=10:antialias=true:hinting=true
+URxvt*boldFont: xft:Noto Sans Mono:bold:size=10:antialias=true:hinting=true
+URxvt.letterSpace: -1
+
+URxvt.scrollBar: false
+URxvt.saveLines: 500
+
+URxvt.scrollTtyKeypress: true
+
+URxvt.secondaryScreen: true
+URxvt.secondaryScroll: false
+URxvt.secondaryWheel: true
+
+URxvt.fading: 15
+URxvt.cursorBlink: true
+
+! Zenburn color-scheme
+URxvt.background              :#202020
+URxvt.foreground              :#dcdccc
+
+! black + red
+!URxvt.color0                 :#3f3f3f
+URxvt.color0                  :#1f1f1f
+URxvt.color1                  :#705050
+
+! green + yellow
+URxvt.color2                  :#60b48a
+URxvt.color3                  :#dfaf8f
+
+! blue + purple
+URxvt.color4                  :#506070
+URxvt.color5                  :#dc8cc3
+
+! cyan + white
+URxvt.color6                  :#8cd0d3
+URxvt.color7                  :#dcdccc
+
+! bright-black + bright-red
+URxvt.color8                  :#709080
+URxvt.color9                  :#ffa3a3
+
+! bright-green + bright-yellow
+URxvt.color10                 :#c3ff9f
+URxvt.color11                 :#f0dfaf
+
+! bright-blue + bright-purple
+URxvt.color12                 :#94bff3
+URxvt.color13                 :#ec93d3
+
+! bright-cyan + bright-white
+URxvt.color14                 :#93e0e3
+URxvt.color15                 :#ffffff
+
+URxvt*transparent: true
+URxvt*shading: 15
+URxvt*saveLines: 12000
+
+URxvt*scrollBar: false
+
+URxvt*iconFile: /usr/share/icons/Paper/512x512/apps/terminal.png
