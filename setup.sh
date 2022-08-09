@@ -1,5 +1,6 @@
 #!/bin/sh
 
+set -e
 cd
 mkdir -p ./Images/screenshot
 cp -R ./dot-files/.local ./dot-files/Images ./dot-files/.bashrc ./dot-files/.gitconfig ./dot-files/.Xresources ./
