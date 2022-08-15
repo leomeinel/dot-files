@@ -7,4 +7,5 @@ mkdir ~/.config
   echo "[Wallet]"
   echo "Enabled=false"
 } > ~/.config/kwalletrc
+echo "nvidia-settings -l &" > ~/.xprofile
 rm -Rf ~/dot-files
