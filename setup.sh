@@ -21,5 +21,9 @@ mkdir ~/.config
   echo "Enabled=false"
 } > ~/.config/kwalletrc
 
+# Create .ssh
+mkdir ~/.ssh
+chmod 700 ~/.ssh
+
 # Remove repo
 rm -Rf ~/dot-files
