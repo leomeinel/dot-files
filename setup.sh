@@ -7,7 +7,10 @@ set -e
 cp -R ~/dot-files/.bashrc ~/dot-files/.gitconfig ~/dot-files/.Xresources ~/
 
 # Copy nvidia-install.sh if required
-pacman -Qq "nvidia-settings" && echo "nvidia-settings -l &" > ~/.xprofile && cp -R ~/dot-files/nvidia-install.sh ~/ && chmod +x ~/nvidia-install.sh
+pacman -Qq "nvidia-settings" &&
+echo "nvidia-settings -l &" > ~/.xprofile &&
+cp -R ~/dot-files/nvidia-install.sh ~/ &&
+chmod +x ~/nvidia-install.sh
 
 # Disable KWallet
 mkdir ~/.config
