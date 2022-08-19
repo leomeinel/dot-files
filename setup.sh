@@ -4,7 +4,7 @@
 set -e
 
 # Copy dot-files
-cp ~/dot-files/.bashrc ~/dot-files/.bashrc_aliases ~/dot-files/.xprofile ~/dot-files/.gitconfig ~/dot-files/.Xresources ~/
+cp ~/dot-files/.bashrc ~/dot-files/.bashrc_aliases ~/dot-files/.xprofile ~/dot-files/.gitconfig ~/
 chmod 744 ~/.bashrc_aliases
 
 # Copy nvidia-install.sh if required
