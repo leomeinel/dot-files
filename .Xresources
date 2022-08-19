@@ -7,62 +7,57 @@ Xft.rgba: rgb
 Xft.lcdfilter: lcddefault
 
 
-URxvt*font: xft:Noto Sans Mono:size=10:antialias=true:hinting=true
-URxvt*boldFont: xft:Noto Sans Mono:bold:size=10:antialias=true:hinting=true
-URxvt.letterSpace: -1
+URxvt.font:               xft:Symbols-1000-em Nerd Font Complete:size=10:antialias=true:hinting=true
+URxvt.boldFont:           xft:Symbols-1000-em Nerd Font Complete:bold:size=10:antialias=true:hinting=true
+URxvt.italicFont:         xft:Symbols-1000-em Nerd Font Complete:italic:size=10:antialias=true:hinting=true
+URxvt.boldItalicFont:     xft:Symbols-1000-em Nerd Font Complete:italic:bold:size=10:antialias=true:hinting=true
+URxvt.letterSpace:        -1
 
-URxvt.scrollBar: false
-URxvt.saveLines: 500
+URxvt.scrollBar:          false
+URxvt.scrollTtyKeypress:  true
+URxvt.secondaryScroll:    false
+URxvt.secondaryWheel:     true
 
-URxvt.scrollTtyKeypress: true
+URxvt.saveLines:          16384
 
-URxvt.secondaryScreen: true
-URxvt.secondaryScroll: false
-URxvt.secondaryWheel: true
-
-URxvt.fading: 15
-URxvt.cursorBlink: true
+URxvt.secondaryScreen:    true
+URxvt.transparent:        true
+URxvt.shading:            15
+URxvt.fading:             15
+URxvt.cursorBlink:        true
 
 ! Zenburn color-scheme
-URxvt.background              :#202020
-URxvt.foreground              :#dcdccc
+URxvt.background:         #202020
+URxvt.foreground:         #dcdccc
 
 ! black + red
-!URxvt.color0                 :#3f3f3f
-URxvt.color0                  :#1f1f1f
-URxvt.color1                  :#705050
+URxvt.color0:             #1f1f1f
+URxvt.color1:             #705050
 
 ! green + yellow
-URxvt.color2                  :#60b48a
-URxvt.color3                  :#dfaf8f
+URxvt.color2:             #60b48a
+URxvt.color3:             #dfaf8f
 
 ! blue + purple
-URxvt.color4                  :#506070
-URxvt.color5                  :#dc8cc3
+URxvt.color4:             #506070
+URxvt.color5:             #dc8cc3
 
 ! cyan + white
-URxvt.color6                  :#8cd0d3
-URxvt.color7                  :#dcdccc
+URxvt.color6:             #8cd0d3
+URxvt.color7:             #dcdccc
 
 ! bright-black + bright-red
-URxvt.color8                  :#709080
-URxvt.color9                  :#ffa3a3
+URxvt.color8:             #709080
+URxvt.color9:             #ffa3a3
 
 ! bright-green + bright-yellow
-URxvt.color10                 :#c3ff9f
-URxvt.color11                 :#f0dfaf
+URxvt.color10:            #c3ff9f
+URxvt.color11:            #f0dfaf
 
 ! bright-blue + bright-purple
-URxvt.color12                 :#94bff3
-URxvt.color13                 :#ec93d3
+URxvt.color12:            #94bff3
+URxvt.color13:            #ec93d3
 
 ! bright-cyan + bright-white
-URxvt.color14                 :#93e0e3
-URxvt.color15                 :#ffffff
-
-URxvt*transparent: true
-URxvt*shading: 15
-URxvt*saveLines: 12000
-
-URxvt*scrollBar: false
-
+URxvt.color14:            #93e0e3
+URxvt.color15:            #ffffff
