@@ -4,7 +4,7 @@
 set -e
 
 # Copy dot-files
-cp -R ~/dot-files/.bashrc ~/dot-files/.bashrc_aliases ~/dot-files/.xprofile ~/dot-files/.gitconfig ~/dot-files/.Xresources ~/
+cp ~/dot-files/.bashrc ~/dot-files/.bashrc_aliases ~/dot-files/.xprofile ~/dot-files/.gitconfig ~/dot-files/.Xresources ~/
 chmod 744 ~/.bashrc_aliases
 
 # Copy nvidia-install.sh if required
@@ -23,7 +23,7 @@ mkdir ~/.config
   echo "[Wallet]"
   echo "Enabled=false"
 } > ~/.config/kwalletrc
-starship preset nerd-font-symbols > ~/.config/starship.toml
+cp ~/dot-files/starship.toml ~/.config/
 
 # Create .ssh
 mkdir ~/.ssh
