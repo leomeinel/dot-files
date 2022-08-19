@@ -25,6 +25,7 @@ mkdir -p ~/.config/alacritty
 } > ~/.config/kwalletrc
 cp ~/dot-files/starship.toml ~/.config/
 cp ~/dot-files/alacritty.yml ~/.config/alacritty/
+cp ~/dot-files/ginit.vim ~/.config/nvim/
 
 # Create .ssh
 mkdir ~/.ssh
