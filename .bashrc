@@ -19,7 +19,7 @@ bind '"\e[B": history-search-forward'
 # ~/.bash_history
 HISTCONTROL=ignoredups:ignorespace
 HISTSIZE=1000
-HISTFILESIZE=2000
+HISTFILESIZE=10000
 shopt -s histappend
 
 # Line wrap on window resize
