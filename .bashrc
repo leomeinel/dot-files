@@ -10,7 +10,7 @@
 source ~/.bashrc_aliases
 
 # Prompt
-eval `starship init bash`
+eval "$(starship init bash)"
 
 # Key bindings
 bind '"\e[A": history-search-backward'
