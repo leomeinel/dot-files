@@ -1,0 +1,22 @@
+# Color Theme
+import: /usr/share/alacritty/dracula.yml
+
+# Font
+font:
+  normal:
+    family: Noto Sans Mono
+    style: Regular
+
+  bold:
+    family: Noto Sans Mono
+    style: Bold
+
+  italic:
+    family: Noto Sans Mono
+    style: Italic
+
+  bold_italic:
+    family: Noto Sans Mono
+    style: Bold Italic
+
+  size: 10
