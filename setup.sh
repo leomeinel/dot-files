@@ -4,7 +4,8 @@
 set -e
 
 # Copy dot-files
-cp -R ~/dot-files/.bashrc ~/dot-files/.gitconfig ~/dot-files/.Xresources ~/
+cp -R ~/dot-files/.bashrc ~/dot-files/.bashrc_aliases ~/dot-files/.gitconfig ~/dot-files/.Xresources ~/
+chmod 744 ~/.bashrc_aliases
 
 # Copy nvidia-install.sh if required
 pacman -Qq "nvidia-settings" &&
