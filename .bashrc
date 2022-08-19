@@ -7,7 +7,7 @@
 
 # Include ~/.bashrc_aliases
 [ -f ~/.bashrc_aliases ] &&
-. ~/.bashrc_aliases
+source ~/.bashrc_aliases
 
 # Prompt
 PS1='\u@\h \W\$ '
