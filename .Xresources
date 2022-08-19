@@ -7,10 +7,10 @@ Xft.rgba:                 rgb
 Xft.lcdfilter:            lcddefault
 
 
-URxvt.font:               xft:Symbols-1000-em Nerd Font Complete:size=10:antialias=true:hinting=true
-URxvt.boldFont:           xft:Symbols-1000-em Nerd Font Complete:bold:size=10:antialias=true:hinting=true
-URxvt.italicFont:         xft:Symbols-1000-em Nerd Font Complete:italic:size=10:antialias=true:hinting=true
-URxvt.boldItalicFont:     xft:Symbols-1000-em Nerd Font Complete:italic:bold:size=10:antialias=true:hinting=true
+URxvt.font:               xft:Symbols Nerd Font Complete:size=10:antialias=true:hinting=true
+URxvt.boldFont:           xft:Symbols Nerd Font Complete:bold:size=10:antialias=true:hinting=true
+URxvt.italicFont:         xft:Symbols Nerd Font Complete:italic:size=10:antialias=true:hinting=true
+URxvt.boldItalicFont:     xft:Symbols Nerd Font Complete:italic:bold:size=10:antialias=true:hinting=true
 URxvt.letterSpace:        -1
 
 URxvt.scrollBar:          false
