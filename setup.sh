@@ -23,9 +23,7 @@ mkdir ~/.config
   echo "[Wallet]"
   echo "Enabled=false"
 } > ~/.config/kwalletrc
-{
-
-} > ~/.config/starship.toml
+starship preset nerd-font-symbols > ~/.config/starship.toml
 
 # Create .ssh
 mkdir ~/.ssh
