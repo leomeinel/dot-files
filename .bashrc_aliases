@@ -2,6 +2,6 @@
 
 # Rust core-utils aliases
 alias ls='exa -la --color=automatic'
-alias cat='bat --decorations *auto* --color *auto*'
+alias cat='bat --decorations auto --color auto'
 alias grep='rg -s --color auto'
 alias find='fd -Hs -c auto'
