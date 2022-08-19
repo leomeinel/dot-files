@@ -1,5 +1,6 @@
 # Color Theme
-import: /usr/share/alacritty/dracula.yml
+import:
+- /usr/share/alacritty/dracula.yml
 
 # Font
 font:
