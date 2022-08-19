@@ -18,12 +18,13 @@ cp ~/dot-files/nvidia-install.sh ~/ &&
 chmod +x ~/nvidia-install.sh
 
 # Disable KWallet
-mkdir ~/.config
+mkdir -p ~/.config/alacritty
 {
   echo "[Wallet]"
   echo "Enabled=false"
 } > ~/.config/kwalletrc
 cp ~/dot-files/starship.toml ~/.config/
+cp ~/dot-files/alacritty.yml ~/.config/alacritty/
 
 # Create .ssh
 mkdir ~/.ssh
