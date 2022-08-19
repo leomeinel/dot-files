@@ -11,7 +11,7 @@ chmod 744 ~/.bashrc_aliases
 pacman -Qq "nvidia-settings" &&
 {
   echo ""
-  echo"# Load nvidia-settings"
+  echo "# Load nvidia-settings"
   echo "nvidia-settings -l &"
 } >> ~/.xprofile &&
 cp ~/dot-files/nvidia-install.sh ~/ &&
