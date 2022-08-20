@@ -7,4 +7,4 @@ set -e
 nvidia-settings -r
 
 # Remove script
-rm -rf ~/nvidia-install.sh
+rm ~/nvidia-install.sh
