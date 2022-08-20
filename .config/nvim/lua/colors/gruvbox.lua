@@ -1,4 +1,4 @@
-require("gruvbox").setup({
+require('gruvbox').setup({
   undercurl = true,
   underline = true,
   bold = true,
@@ -12,4 +12,4 @@ require("gruvbox").setup({
   contrast = "",
   overrides = {},
 })
-vim.cmd([[colorscheme gruvbox]])
+vim.cmd('colorscheme gruvbox')
