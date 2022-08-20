@@ -5,6 +5,7 @@ alias ls='exa -la --color=automatic'
 alias cat='bat --decorations auto --color auto'
 alias grep='rg -s --color auto'
 alias find='fd -Hs -c auto'
+alias du='dust'
 
 # Alias forks
 alias vim='nvim'
