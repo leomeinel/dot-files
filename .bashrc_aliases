@@ -7,6 +7,7 @@ alias grep='rg -s --color auto'
 alias find='fd -Hs -c auto'
 alias du='dust'
 alias ps='procs'
+alias neofetch='macchina'
 
 # Alias forks
 alias vim='nvim'
