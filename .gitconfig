@@ -2,16 +2,21 @@
 	email = "leo@meinel.dev"
 	name = "Leopold Johannes Meinel"
 	signingkey = 2D39C0733D0EF05E
+
 [core]
 	editor = nvim
 	pager = delta
 	autocrlf = input
+
 [init]
 	defaultBranch = main
+
 [pull]
 	rebase = true
+
 [commit]
 	gpgsign = true
+
 [interactive]
     diffFilter = delta --color-only
 [add.interactive]
