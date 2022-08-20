@@ -12,3 +12,4 @@ require("gruvbox").setup({
   contrast = "",
   overrides = {},
 })
+vim.cmd([[colorscheme gruvbox]])
