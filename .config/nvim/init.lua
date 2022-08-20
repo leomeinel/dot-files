@@ -7,12 +7,6 @@ if fn.empty(fn.glob(install_path)) > 0 then
   vim.cmd [[packadd packer.nvim]]
 end
 
-return require('packer').startup(function(use)
-  if packer_bootstrap then
-    require('packer').sync()
-  end
-end)
-
 -- Plugins
 require('plugins')
 
