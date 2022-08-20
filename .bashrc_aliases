@@ -8,6 +8,8 @@ alias find='fd -Hs -c auto'
 alias du='dust'
 alias ps='procs'
 alias neofetch='macchina'
+alias time='hyperfine --show-output --style auto'
+alias bench='hyperfine -w 3 -r 12 --style auto'
 
 # Alias forks
 alias vim='nvim'
