@@ -4,7 +4,7 @@
 	signingkey = 2D39C0733D0EF05E
 [core]
 	editor = nvim
-        pager = delta
+	pager = delta
 	autocrlf = input
 [init]
 	defaultBranch = main
