@@ -6,9 +6,9 @@ vim.cmd([[
 ]])
 
 return require('packer').startup(function(use)
-  -- Packer can manage itself
-  use 'wbthomason/packer.nvim'
+    -- Packer can manage itself
+    use 'wbthomason/packer.nvim'
 
- -- Gruvbox
-  use { "ellisonleao/gruvbox.nvim" }
+    -- Gruvbox
+    use { "ellisonleao/gruvbox.nvim" }
 end)

@@ -4,7 +4,7 @@
 set -e
 
 # Copy dot-files
-cp ~/dot-files/.bashrc ~/dot-files/.bashrc_aliases ~/dot-files/.xprofile ~/dot-files/.gitconfig ~/
+cp -R ~/dot-files/.bashrc ~/dot-files/.bashrc_aliases ~/dot-files/.xprofile ~/dot-files/.gitconfig ~/dot-files/.config ~/
 chmod 744 ~/.bashrc_aliases
 
 # Copy nvidia-install.sh if required
@@ -18,14 +18,10 @@ cp ~/dot-files/nvidia-install.sh ~/ &&
 chmod +x ~/nvidia-install.sh
 
 # Disable KWallet
-mkdir -p ~/.config/alacritty
 {
   echo "[Wallet]"
   echo "Enabled=false"
 } > ~/.config/kwalletrc
-cp ~/dot-files/starship.toml ~/.config/
-cp ~/dot-files/alacritty.yml ~/.config/alacritty/
-cp ~/dot-files/ginit.vim ~/.config/nvim/
 
 # Create .ssh
 mkdir ~/.ssh
