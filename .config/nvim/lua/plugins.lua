@@ -10,5 +10,5 @@ return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
 
     -- Gruvbox
-    use { "ellisonleao/gruvbox.nvim" }
+    use 'ellisonleao/gruvbox.nvim'
 end)
