@@ -1,3 +1,3 @@
 require('colors/gruvbox')
-require('plug/nvim-web-devicons')
-require('plug/nvim-tree')
+require('plugin/nvim-web-devicons')
+require('plugin/nvim-tree')
