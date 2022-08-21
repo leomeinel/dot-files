@@ -1,5 +1,8 @@
 #!/bin/sh
 
+# Initialize nvim
+nvim --headless -c 'sleep 10' -c 'q!' || return
+
 # Fail on error
 set -e
 
