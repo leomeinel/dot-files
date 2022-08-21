@@ -9,6 +9,7 @@ end
 
 -- Plugins
 require('plugins')
+require('setup')
 
 -- Set highlight on search
 vim.o.hlsearch = true
