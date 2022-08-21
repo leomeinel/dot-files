@@ -11,4 +11,10 @@ return require('packer').startup(function(use)
 
     -- Gruvbox
     use { "ellisonleao/gruvbox.nvim" }
+    
+    -- nvim-web-icons
+    use { 'kyazdani42/nvim-web-devicons' }
+    
+    -- nvim-tree
+    use { 'kyazdani42/nvim-tree.lua', requires = { 'kyazdani42/nvim-web-devicons' }, tag = 'nightly' }
 end)
