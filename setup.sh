@@ -1,8 +1,5 @@
 #!/bin/sh
 
-# Initialize nvim
-nvim --headless -c 'sleep 10' -c 'q!'
-
 # Fail on error
 set -e
 
@@ -29,6 +26,9 @@ chmod +x ~/nvidia-install.sh
 # Create .ssh
 mkdir ~/.ssh
 chmod 700 ~/.ssh
+
+# Initialize nvim
+nvim --headless -c 'sleep 10' -c 'q!'
 
 # Remove repo
 rm -rf ~/dot-files
