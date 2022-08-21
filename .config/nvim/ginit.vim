@@ -6,6 +6,34 @@ if exists(':GuiFont')
     GuiFont Noto Sans Mono:h10
 endif
 
+if exists(':GuiAdaptiveColor')
+    GuiAdaptiveColor 1
+endif
+
+if exists(':GuiAdaptiveFont')
+    GuiAdaptiveFont 1
+endif
+
+if exists(':GuiAdaptiveStyle')
+    GuiAdaptiveStyle Fusion
+endif
+
+if exists(':GuiLinespace')
+    GuiLinespace 5
+endif
+
+if exists(':GuiRenderLigatures')
+    GuiRenderLigatures 1
+endif
+
+if exists(':GuiWindowMaximized')
+    GuiWindowMaximized 1
+endif
+
+if exists(':GuiTreeviewShow')
+    GuiTreeviewShow 1
+endif
+
 " Disable GUI Tabline
 if exists(':GuiTabline')
     GuiTabline 0
