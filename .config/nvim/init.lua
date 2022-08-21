@@ -98,10 +98,3 @@ vim.o.splitbelow = true
 
 -- Faster scrolling
 vim.o.ttyfast = true
-
-vim.api.nvim_create_autocmd("UIEnter", {
-    once = true,
-    callback = function()
-        require "ginit"
-    end
-})
