@@ -1,0 +1,20 @@
+[$Version]
+update_info=kwinrules.upd:replace-placement-string-to-enum,kwinrules.upd:use-virtual-desktop-ids
+
+[1]
+Description=New window settings
+maximizehoriz=true
+maximizehorizrule=2
+maximizevert=true
+maximizevertrule=2
+noborder=true
+noborderrule=2
+wmclasscomplete=true
+
+[General]
+count=1
+rules=1
+
+[d85b513f-a951-496a-95f5-bdfcb97a969b]
+Description=New window settings
+wmclassmatch=1
