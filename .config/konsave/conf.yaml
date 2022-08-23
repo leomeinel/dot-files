@@ -54,4 +54,8 @@ save:
             - gtkrc
             - ksplashrc
             - khotkeysrc
+export:
+    configs:
+        location: "$CONFIG_DIR"
+        entries:
 ...
