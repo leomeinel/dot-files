@@ -17,12 +17,6 @@ pacman -Qq "nvidia-settings" &&
 cp ~/dot-files/nvidia-install.sh ~/ &&
 chmod +x ~/nvidia-install.sh
 
-# Disable KWallet
-{
-  echo "[Wallet]"
-  echo "Enabled=false"
-} > ~/.config/kwalletrc
-
 # Create .ssh
 mkdir ~/.ssh
 chmod 700 ~/.ssh
