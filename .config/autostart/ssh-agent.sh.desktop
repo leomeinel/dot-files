@@ -1,7 +1,0 @@
-[Desktop Entry]
-Exec=~/.config/custom-autostart/ssh-agent.sh
-Icon=dialog-scripts
-Name=ssh-agent.sh
-Path=
-Type=Application
-X-KDE-AutostartScript=true
