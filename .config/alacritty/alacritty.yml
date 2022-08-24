@@ -32,11 +32,13 @@ window:
     x: 0
     y: 0
 
+  dimensions:
+    columns: 2000
+    lines: 800
+
   decorations: none
   decorations_theme_variant: None
   opacity: 1.0
-
-  startup_mode: Maximized
 
   title: Alacritty
   dynamic_title: false
