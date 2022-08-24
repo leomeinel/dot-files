@@ -14,7 +14,6 @@ pacman -Qq "nvidia-settings" &&
   echo "# Load nvidia-settings"
   echo "nvidia-settings -l &"
 } > ~/.bash_profile &&
-chmod 744 ~/.config/custom-autostart/nvidia-settings.sh &&
 cp ~/dot-files/nvidia-install.sh ~/ &&
 chmod +x ~/nvidia-install.sh
 
