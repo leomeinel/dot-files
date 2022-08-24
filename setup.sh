@@ -6,16 +6,14 @@ set -e
 # Copy dot-files
 cp -R ~/dot-files/.bashrc ~/dot-files/.bashrc_aliases ~/dot-files/.bash_profile ~/dot-files/.bash_logout ~/dot-files/.gitconfig ~/dot-files/.config ~/
 chmod 744 ~/.bashrc_aliases
-chmod -R 744 ~/.config/custom-autostart
 
 # Copy nvidia-install.sh if required
 pacman -Qq "nvidia-settings" &&
 {
-  echo "#!/bin/bash"
   echo ""
   echo "# Load nvidia-settings"
   echo "nvidia-settings -l &"
-} > ~/.config/custom-autostart/nvidia-settings.sh &&
+} > ~/.bash_profile &&
 chmod 744 ~/.config/custom-autostart/nvidia-settings.sh &&
 cp ~/dot-files/nvidia-install.sh ~/ &&
 chmod +x ~/nvidia-install.sh
