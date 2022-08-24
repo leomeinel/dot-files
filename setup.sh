@@ -4,17 +4,12 @@
 set -e
 
 # Copy dot-files
-cp -R ~/dot-files/.bashrc ~/dot-files/.bashrc_aliases ~/dot-files/.xprofile ~/dot-files/.gitconfig ~/dot-files/.config ~/
+cp -R ~/dot-files/.bashrc ~/dot-files/.bashrc_aliases ~/dot-files/.gitconfig ~/dot-files/.config ~/
 chmod 744 ~/.bashrc_aliases
 chmod -R 744 ~/.config/custom-autostart
 
 # Copy nvidia-install.sh if required
 pacman -Qq "nvidia-settings" &&
-{
-  echo ""
-  echo "# Load nvidia-settings"
-  echo "nvidia-settings -l &"
-} >> ~/.xprofile &&
 {
   echo "#!/bin/bash"
   echo ""
