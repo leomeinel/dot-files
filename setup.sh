@@ -21,6 +21,10 @@ chmod +x ~/nvidia-install.sh
 mkdir ~/.ssh
 chmod 700 ~/.ssh
 
+# Create src
+mkdir ~/src
+chmod 700 ~/src
+
 # Initialize nvim
 nvim --headless -c 'sleep 10' -c 'q!'
 
