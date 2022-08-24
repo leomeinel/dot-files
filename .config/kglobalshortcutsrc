@@ -1,5 +1,6 @@
 [ActivityManager]
 _k_friendly_name=Activity Manager
+switch-to-activity-436a83c5-ed57-4e19-8aef-ebece220d587=none,none,Switch to activity "Default"
 switch-to-activity-ec9d7e2a-5247-4553-93c4-e0f3f9d70147=none,none,Switch to activity "Default"
 
 [Alacritty.desktop]
@@ -206,12 +207,12 @@ _launch=none,Meta+.,Emoji Selector
 [org.kde.spectacle.desktop]
 ActiveWindowScreenShot=Meta+Print,Meta+Print,Capture Active Window
 CurrentMonitorScreenShot=none,none,Capture Current Monitor
-FullScreenScreenShot=none,Shift+Print,Capture Entire Desktop
-OpenWithoutScreenshot=none,none,Launch without taking a screenshot
+FullScreenScreenShot=Print,Shift+Print,Capture Entire Desktop
+OpenWithoutScreenshot=none,none,Launch Spectacle without capturing
 RectangularRegionScreenShot=none,Meta+Shift+Print,Capture Rectangular Region
 WindowUnderCursorScreenShot=none,Meta+Ctrl+Print,Capture Window Under Cursor
 _k_friendly_name=Spectacle
-_launch=none,Print,Spectacle
+_launch=none,Print,Launch Spectacle
 
 [org_kde_powerdevil]
 Decrease Keyboard Brightness=none,Keyboard Brightness Down,Decrease Keyboard Brightness

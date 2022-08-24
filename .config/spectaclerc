@@ -1,0 +1,17 @@
+[$Version]
+update_info=spectacle_clipboard.upd:clipboard-settings-change,spectacle_rememberregion.upd:spectacle-migrate-rememberregion
+
+[FileDialogSize]
+DP-3 Window-Maximized 1920x1080=true
+
+[General]
+autoSaveImage=true
+onLaunchAction=DoNotTakeScreenshot
+
+[GuiConfig]
+window-position=530,290
+
+[Save]
+defaultSaveLocation=file:///usr/share/screenshots
+lastSaveLocation=file:///usr/share/screenshots/24_08_2022_18:20:22.png
+saveFilenameFormat=%D-%M-%Y_%H:%m:%S

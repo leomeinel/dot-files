@@ -5,10 +5,10 @@ wheel:Vertical;NoModifier=org.kde.switchdesktop
 [ActionPlugins][1]
 RightButton;NoModifier=org.kde.contextmenu
 
-[Containments][1]
+[Containments][18]
 ItemGeometries-1920x1080=
 ItemGeometriesHorizontal=
-activityId=ec9d7e2a-5247-4553-93c4-e0f3f9d70147
+activityId=436a83c5-ed57-4e19-8aef-ebece220d587
 formfactor=0
 immutability=1
 lastScreen=0
@@ -16,20 +16,12 @@ location=0
 plugin=org.kde.plasma.folder
 wallpaperplugin=org.kde.slideshow
 
-[Containments][1][ConfigDialog]
-DialogHeight=540
-DialogWidth=720
+[Containments][18][ConfigDialog]
+DialogHeight=1056
+DialogWidth=1920
 
-[Containments][1][General]
-ToolBoxButtonState=topcenter
-ToolBoxButtonX=566
-ToolBoxButtonY=24
-
-[Containments][1][Wallpaper][org.kde.image][General]
+[Containments][18][Wallpaper][org.kde.slideshow][General]
 Image=file:///usr/share/wallpapers/Next/contents/images/1920x1080.jpg
-
-[Containments][1][Wallpaper][org.kde.slideshow][General]
-Image=file:///usr/share/wallpapers/Custom/content/simple_tree.png
 SlidePaths=/usr/share/wallpapers
 
 [Containments][2]
@@ -49,6 +41,10 @@ plugin=org.kde.plasma.digitalclock
 immutability=1
 plugin=org.kde.plasma.pager
 
+[Containments][2][Applets][4][Configuration][ConfigDialog]
+DialogHeight=1056
+DialogWidth=1920
+
 [Containments][2][Applets][5]
 immutability=1
 plugin=org.kde.plasma.icontasks
@@ -61,7 +57,7 @@ immutability=1
 plugin=org.kde.plasma.systemtray
 
 [Containments][2][Applets][7][Configuration]
-PreloadWeight=60
+PreloadWeight=75
 SystrayContainmentId=8
 
 [Containments][2][ConfigDialog]
@@ -90,6 +86,9 @@ PreloadWeight=42
 [Containments][8][Applets][12]
 immutability=1
 plugin=org.kde.plasma.notifications
+
+[Containments][8][Applets][12][Configuration]
+PreloadWeight=65
 
 [Containments][8][Applets][13][Configuration]
 PreloadWeight=42
