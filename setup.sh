@@ -4,7 +4,7 @@
 set -e
 
 # Copy dot-files
-cp -R ~/dot-files/.bashrc ~/dot-files/.bashrc_aliases ~/dot-files/.gitconfig ~/dot-files/.config ~/
+cp -R ~/dot-files/.bashrc ~/dot-files/.bashrc_aliases ~/dot-files/.bash_profile ~/dot-files/.bash_logout ~/dot-files/.gitconfig ~/dot-files/.config ~/
 chmod 744 ~/.bashrc_aliases
 chmod -R 744 ~/.config/custom-autostart
 
