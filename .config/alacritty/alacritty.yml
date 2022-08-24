@@ -32,6 +32,7 @@ window:
     x: 0
     y: 0
 
+  # FIXME: This is a hack to get the window to maximize
   dimensions:
     columns: 2000
     lines: 800
