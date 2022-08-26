@@ -24,3 +24,6 @@ shopt -s histappend
 
 # Line wrap on window resize
 shopt -s checkwinsize
+
+# doas tab completion
+complete -cf doas
