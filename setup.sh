@@ -29,7 +29,7 @@ chmod 700 ~/src
 rustup default stable
 
 # Initialize nvim
-nvim --headless -c 'silent! sleep 10' -c 'silent! q!'
+nvim --headless -c 'sleep 10' -c 'q!'
 
 # Remove repo
 rm -rf ~/dot-files
