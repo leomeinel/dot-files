@@ -13,3 +13,6 @@ alias bench='hyperfine -w 3 -r 12 --style auto'
 
 # sudo
 alias sudo='doas'
+
+# btrfs
+alias df='btrfs fi df'
