@@ -4,6 +4,7 @@ esbenp.prettier-vscode
 formulahendry.auto-close-tag
 formulahendry.code-runner
 foxundermoon.shell-format
+Gruntfuggly.activitusbar
 llvm-vs-code-extensions.vscode-clangd
 matklad.rust-analyzer
 mikestead.dotenv
@@ -15,6 +16,7 @@ ms-vscode.cmake-tools
 mtxr.sqltools
 muhammad-sammy.csharp
 PKief.material-icon-theme
+PKief.material-product-icons
 redhat.java
 redhat.vscode-xml
 redhat.vscode-yaml
@@ -23,5 +25,7 @@ serayuzgur.crates
 timonwong.shellcheck
 twxs.cmake
 vadimcn.vscode-lldb
+vscjava.vscode-java-debug
+vscjava.vscode-java-test
 yzhang.markdown-all-in-one
 zhuangtongfa.material-theme
