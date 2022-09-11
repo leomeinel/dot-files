@@ -18,7 +18,6 @@ rustup default stable
 # Install vscodium extensions
 vscodium --list-extensions | xargs -n 1 vscodium --uninstall-extension
 xargs -n 1 vscodium --install-extension < ~/dot-files/vscodium-extensions.txt
-npm install --global prettier @prettier/plugin-php @prettier/plugin-ruby @prettier/plugin-xml prettier-plugin-java prettier-plugin-properties prettier-plugin-rust prettier-plugin-sh prettier-plugin-toml prettier-plugin-kotlin
 
 # Initialize nvim
 nvim --headless -c 'sleep 10' -c 'q!'
