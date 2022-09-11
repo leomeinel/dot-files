@@ -76,4 +76,8 @@
             "codicon": "extensions-view-icon"
         }
     ],
+    "git.autoStash": true,
+    "git.scanRepositories": [
+        "~/src"
+    ],
 }
