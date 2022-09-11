@@ -80,4 +80,8 @@
     "git.scanRepositories": [
         "~/src"
     ],
+    "prettier.prettierPath": "/usr/bin/prettier",
+    "prettier.withNodeModules": true,
+    "prettier.resolveGlobalModules": true,
+    "editor.formatOnSave": true,
 }
