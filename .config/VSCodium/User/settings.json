@@ -1,87 +1,78 @@
 {
-    "git.autofetch": "all",
-    "git.defaultCloneDirectory": "~/src",
-    "git.detectSubmodulesLimit": 100,
-    "git.enableCommitSigning": true,
-    "git.fetchOnPull": true,
-    "files.autoSave": "afterDelay",
-    "git.enableSmartCommit": true,
-    "git.confirmSync": false,
-    "explorer.confirmDelete": false,
-    "workbench.iconTheme": "material-icon-theme",
-    "workbench.colorTheme": "One Dark Pro Darker",
-    "workbench.preferredDarkColorTheme": "One Dark Pro Darker",
-    "material-icon-theme.hidesExplorerArrows": true,
-    "material-icon-theme.showWelcomeMessage": false,
-    "oneDarkPro.editorTheme": "One Dark Pro Darker",
-    "rust-analyzer.debug.engine": "vadimcn.vscode-lldb",
-    "editor.foldingImportsByDefault": true,
-    "editor.guides.bracketPairs": "active",
-    "editor.guides.highlightActiveBracketPair": false,
-    "editor.scrollbar.verticalScrollbarSize": 10,
-    "editor.scrollbar.horizontalScrollbarSize": 10,
-    "editor.scrollBeyondLastLine": false,
-    "editor.tabCompletion": "on",
-    "editor.unfoldOnClickAfterEndOfLine": true,
-    "files.maxMemoryForLargeFilesMB": 8192,
-    "workbench.commandPalette.history": 500,
-    "window.autoDetectColorScheme": true,
-    "search.showLineNumbers": true,
-    "search.smartCase": true,
-    "search.useIgnoreFiles": false,
-    "scm.repositories.sortOrder": "name",
-    "terminal.external.linuxExec": "alacritty",
-    "terminal.integrated.defaultProfile.linux": "bash",
-    "terminal.integrated.shellIntegration.history": 500,
-    "terminal.integrated.localEchoExcludePrograms": [
-        "vim",
-        "vi",
-        "nvim"
-    ],
-    "terminal.integrated.ignoreProcessNames": [
-        "starship",
-        "bash"
-    ],
-    "terminal.integrated.useWslProfiles": false,
-    "terminal.integrated.windowsEnableConpty": false,
-    "update.mode": "none",
-    "update.showReleaseNotes": false,
-    "git.allowForcePush": true,
-    "github.gitProtocol": "ssh",
-    "redhat.telemetry.enabled": false,
-    "cmake.configureOnOpen": false,
-    "workbench.productIconTheme": "material-product-icons",
-    "workbench.activityBar.visible": false,
-    "activitusbar.activeColour": "statusBar.foreground",
-    "activitusbar.inactiveColour": "statusBar.foreground",
-    "activitusbar.views": [
-        {
-            "name": "explorer",
-            "codicon": "explorer-view-icon"
-        },
-        {
-            "name": "search",
-            "codicon": "search-view-icon"
-        },
-        {
-            "name": "scm",
-            "codicon": "source-control-view-icon"
-        },
-        {
-            "name": "debug",
-            "codicon": "run-view-icon"
-        },
-        {
-            "name": "extensions",
-            "codicon": "extensions-view-icon"
-        }
-    ],
-    "git.autoStash": true,
-    "git.scanRepositories": [
-        "~/src"
-    ],
-    "prettier.prettierPath": "/usr/bin/prettier",
-    "prettier.withNodeModules": true,
-    "prettier.resolveGlobalModules": true,
-    "editor.formatOnSave": true,
+  "git.autofetch": "all",
+  "git.defaultCloneDirectory": "~/src",
+  "git.detectSubmodulesLimit": 100,
+  "git.enableCommitSigning": true,
+  "git.fetchOnPull": true,
+  "files.autoSave": "afterDelay",
+  "git.enableSmartCommit": true,
+  "git.confirmSync": false,
+  "explorer.confirmDelete": false,
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.colorTheme": "One Dark Pro Darker",
+  "workbench.preferredDarkColorTheme": "One Dark Pro Darker",
+  "material-icon-theme.hidesExplorerArrows": true,
+  "material-icon-theme.showWelcomeMessage": false,
+  "oneDarkPro.editorTheme": "One Dark Pro Darker",
+  "rust-analyzer.debug.engine": "vadimcn.vscode-lldb",
+  "editor.foldingImportsByDefault": true,
+  "editor.guides.bracketPairs": "active",
+  "editor.guides.highlightActiveBracketPair": false,
+  "editor.scrollbar.verticalScrollbarSize": 10,
+  "editor.scrollbar.horizontalScrollbarSize": 10,
+  "editor.scrollBeyondLastLine": false,
+  "editor.tabCompletion": "on",
+  "editor.unfoldOnClickAfterEndOfLine": true,
+  "files.maxMemoryForLargeFilesMB": 8192,
+  "workbench.commandPalette.history": 500,
+  "window.autoDetectColorScheme": true,
+  "search.showLineNumbers": true,
+  "search.smartCase": true,
+  "search.useIgnoreFiles": false,
+  "scm.repositories.sortOrder": "name",
+  "terminal.external.linuxExec": "alacritty",
+  "terminal.integrated.defaultProfile.linux": "bash",
+  "terminal.integrated.shellIntegration.history": 500,
+  "terminal.integrated.localEchoExcludePrograms": ["nvim"],
+  "terminal.integrated.ignoreProcessNames": ["starship", "bash"],
+  "terminal.integrated.useWslProfiles": false,
+  "terminal.integrated.windowsEnableConpty": false,
+  "update.mode": "none",
+  "update.showReleaseNotes": false,
+  "git.allowForcePush": true,
+  "github.gitProtocol": "ssh",
+  "redhat.telemetry.enabled": false,
+  "cmake.configureOnOpen": false,
+  "workbench.productIconTheme": "material-product-icons",
+  "workbench.activityBar.visible": false,
+  "activitusbar.activeColour": "statusBar.foreground",
+  "activitusbar.inactiveColour": "statusBar.foreground",
+  "git.autoStash": true,
+  "git.scanRepositories": ["~/src"],
+  "editor.formatOnSave": true,
+  "[java]": {
+    "editor.defaultFormatter": "mwpb.java-prettier-formatter"
+  },
+  "[rust]": {
+    "editor.defaultFormatter": "rust-lang.rust-analyzer"
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "C_Cpp.intelliSenseEngine": "Disabled",
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[sql]": {
+    "editor.defaultFormatter": "inferrinizzard.prettier-sql-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }
