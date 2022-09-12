@@ -16,6 +16,7 @@ golang.go
 Gruntfuggly.activitusbar
 inferrinizzard.prettier-sql-vscode
 jbockle.jbockle-format-files
+jcbuisson.vue
 kokororin.vscode-phpfmt
 llvm-vs-code-extensions.vscode-clangd
 mikestead.dotenv
@@ -27,6 +28,7 @@ ms-toolsai.jupyter-keymap
 ms-toolsai.jupyter-renderers
 ms-vscode.cmake-tools
 ms-vscode.cpptools
+msjsdiag.vscode-react-native
 mtxr.sqltools
 PKief.material-icon-theme
 PKief.material-product-icons
@@ -41,9 +43,13 @@ serayuzgur.crates
 tamasfe.even-better-toml
 twxs.cmake
 vadimcn.vscode-lldb
+VisualStudioExptTeam.vscodeintellicode
 vscjava.vscode-gradle
 vscjava.vscode-java-debug
+vscjava.vscode-java-dependency
+vscjava.vscode-java-pack
 vscjava.vscode-java-test
+vscjava.vscode-maven
 waderyan.gitblame
 wingrunr21.vscode-ruby
 yzhang.markdown-all-in-one
