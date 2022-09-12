@@ -1,55 +1,312 @@
 {
-  "git.autofetch": "all",
-  "git.defaultCloneDirectory": "~/src",
-  "git.detectSubmodulesLimit": 100,
-  "git.enableCommitSigning": true,
-  "git.fetchOnPull": true,
-  "files.autoSave": "afterDelay",
-  "git.enableSmartCommit": true,
-  "git.confirmSync": false,
-  "explorer.confirmDelete": false,
-  "workbench.iconTheme": "material-icon-theme",
-  "workbench.colorTheme": "One Dark Pro Darker",
-  "workbench.preferredDarkColorTheme": "One Dark Pro Darker",
-  "material-icon-theme.hidesExplorerArrows": true,
-  "material-icon-theme.showWelcomeMessage": false,
-  "oneDarkPro.editorTheme": "One Dark Pro Darker",
-  "rust-analyzer.debug.engine": "vadimcn.vscode-lldb",
+  "activitusbar.activeColour": "statusBar.foreground",
+  "activitusbar.inactiveColour": "statusBar.foreground",
+  "C_Cpp.intelliSenseEngine": "Disabled",
+  "cmake.configureOnOpen": false,
+  "cmake.ignoreCMakeListsMissing": true,
+  "cmake.statusbar.visibility": "hidden",
+  "code-runner.enableAppInsights": false,
   "editor.foldingImportsByDefault": true,
+  "editor.formatOnSave": true,
   "editor.guides.bracketPairs": "active",
   "editor.guides.highlightActiveBracketPair": false,
-  "editor.scrollbar.verticalScrollbarSize": 10,
   "editor.scrollbar.horizontalScrollbarSize": 10,
+  "editor.scrollbar.verticalScrollbarSize": 10,
   "editor.scrollBeyondLastLine": false,
   "editor.tabCompletion": "on",
   "editor.unfoldOnClickAfterEndOfLine": true,
+  "explorer.confirmDelete": false,
+  "files.autoSave": "afterDelay",
   "files.maxMemoryForLargeFilesMB": 8192,
-  "workbench.commandPalette.history": 500,
-  "window.autoDetectColorScheme": true,
+  "git.allowForcePush": true,
+  "git.autofetch": "all",
+  "git.autoStash": true,
+  "git.confirmSync": false,
+  "git.defaultCloneDirectory": "~/src",
+  "git.detectSubmodulesLimit": 100,
+  "git.enableCommitSigning": true,
+  "git.enableSmartCommit": true,
+  "git.enableStatusBarSync": false,
+  "git.fetchOnPull": true,
+  "git.scanRepositories": ["~/src"],
+  "gitblame.statusBarMessageFormat": "${author.name} (${time.ago})",
+  "github.gitProtocol": "ssh",
+  "material-icon-theme.hidesExplorerArrows": true,
+  "material-icon-theme.showWelcomeMessage": false,
+  "oneDarkPro.editorTheme": "One Dark Pro Darker",
+  "redhat.telemetry.enabled": false,
+  "rust-analyzer.debug.engine": "vadimcn.vscode-lldb",
+  "scm.repositories.sortOrder": "name",
   "search.showLineNumbers": true,
   "search.smartCase": true,
   "search.useIgnoreFiles": false,
-  "scm.repositories.sortOrder": "name",
   "terminal.external.linuxExec": "alacritty",
   "terminal.integrated.defaultProfile.linux": "bash",
-  "terminal.integrated.shellIntegration.history": 500,
-  "terminal.integrated.localEchoExcludePrograms": ["nvim"],
   "terminal.integrated.ignoreProcessNames": ["starship", "bash"],
+  "terminal.integrated.localEchoExcludePrograms": ["nvim"],
+  "terminal.integrated.shellIntegration.history": 500,
   "terminal.integrated.useWslProfiles": false,
   "terminal.integrated.windowsEnableConpty": false,
   "update.mode": "none",
   "update.showReleaseNotes": false,
-  "git.allowForcePush": true,
-  "github.gitProtocol": "ssh",
-  "redhat.telemetry.enabled": false,
-  "cmake.configureOnOpen": false,
-  "workbench.productIconTheme": "material-product-icons",
+  "window.autoDetectColorScheme": true,
   "workbench.activityBar.visible": false,
-  "activitusbar.activeColour": "statusBar.foreground",
-  "activitusbar.inactiveColour": "statusBar.foreground",
-  "git.autoStash": true,
-  "git.scanRepositories": ["~/src"],
-  "editor.formatOnSave": true,
+  "workbench.colorTheme": "One Dark Pro Darker",
+  "workbench.commandPalette.history": 500,
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.preferredDarkColorTheme": "One Dark Pro Darker",
+  "workbench.productIconTheme": "material-product-icons",
+  "psi-header.config": {
+    "forceToTop": true,
+    "blankLinesAfter": 1,
+    "license": "GPL-3.0-or-later"
+  },
+  "psi-header.variables": [
+    ["author", "Leopold Meinel"],
+    ["author_email", "leo@meinel.dev"]
+  ],
+  "psi-header.changes-tracking": {
+    "isActive": true,
+    "exclude": [
+      "abap",
+      "bibtex",
+      "clojure",
+      "coffeescript",
+      "diff",
+      "git-commit",
+      "git-rebase",
+      "groovy",
+      "handlebars",
+      "ini",
+      "json",
+      "jsonc",
+      "latex",
+      "makefile",
+      "markdown",
+      "plaintext",
+      "tex",
+      "xml",
+      "xsl",
+      "yaml"
+    ],
+    "autoHeader": "off",
+    "enforceHeader": false,
+    "replace": [],
+    "updateLicenseVariables": false
+  },
+  "psi-header.lang-config": [
+    {
+      "language": "bat",
+      "begin": "",
+      "prefix": "@rem ",
+      "end": ""
+    },
+    {
+      "language": "c",
+      "begin": "/*",
+      "prefix": "*",
+      "end": "*/"
+    },
+    {
+      "language": "dockerfile",
+      "begin": "###",
+      "prefix": "# ",
+      "end": "###"
+    },
+    {
+      "language": "fsharp",
+      "begin": "(*",
+      "prefix": "*",
+      "end": "*)"
+    },
+    {
+      "language": "haml",
+      "begin": "<!--",
+      "prefix": "--",
+      "end": "-->"
+    },
+    {
+      "language": "lua",
+      "begin": "--[[",
+      "prefix": "--",
+      "end": "--]]"
+    },
+    {
+      "language": "jade",
+      "begin": "",
+      "prefix": "//",
+      "end": ""
+    },
+    {
+      "language": "powershell",
+      "begin": "###",
+      "prefix": "# ",
+      "end": "###",
+      "beforeHeader": ["#!/usr/bin/pwsh"]
+    },
+    {
+      "language": "python",
+      "begin": "###",
+      "prefix": "# ",
+      "end": "###",
+      "beforeHeader": ["#!/usr/bin/env python3"]
+    },
+    {
+      "language": "razor",
+      "begin": "@*",
+      "prefix": "*",
+      "end": "*@"
+    },
+    {
+      "language": "shellscript",
+      "begin": "###",
+      "prefix": "# ",
+      "end": "###",
+      "beforeHeader": ["#!/bin/bash"]
+    },
+    {
+      "language": "slim",
+      "begin": "",
+      "prefix": "/!",
+      "end": ""
+    },
+    {
+      "language": "vb",
+      "begin": "'''",
+      "prefix": "'",
+      "end": "'''"
+    },
+    {
+      "language": "cpp",
+      "mapTo": "c"
+    },
+    {
+      "language": "csharp",
+      "mapTo": "c"
+    },
+    {
+      "language": "cuda-cpp",
+      "mapTo": "c"
+    },
+    {
+      "language": "css",
+      "mapTo": "c"
+    },
+    {
+      "language": "go",
+      "mapTo": "c"
+    },
+    {
+      "language": "java",
+      "mapTo": "c"
+    },
+    {
+      "language": "javascript",
+      "mapTo": "c"
+    },
+    {
+      "language": "javascriptreact",
+      "mapTo": "c"
+    },
+    {
+      "language": "less",
+      "mapTo": "c"
+    },
+    {
+      "language": "objective-c",
+      "mapTo": "c"
+    },
+    {
+      "language": "objective-cpp",
+      "mapTo": "c"
+    },
+    {
+      "language": "php",
+      "mapTo": "c"
+    },
+    {
+      "language": "rust",
+      "mapTo": "c"
+    },
+    {
+      "language": "sql",
+      "mapTo": "c"
+    },
+    {
+      "language": "stylus",
+      "mapTo": "c"
+    },
+    {
+      "language": "swift",
+      "mapTo": "c"
+    },
+    {
+      "language": "typescript",
+      "mapTo": "c"
+    },
+    {
+      "language": "typescriptreact",
+      "mapTo": "c"
+    },
+    {
+      "language": "perl",
+      "mapTo": "dockerfile"
+    },
+    {
+      "language": "perl6",
+      "mapTo": "dockerfile"
+    },
+    {
+      "language": "r",
+      "mapTo": "dockerfile"
+    },
+    {
+      "language": "ruby",
+      "mapTo": "dockerfile"
+    },
+    {
+      "language": "scss",
+      "mapTo": "dockerfile"
+    },
+    {
+      "language": "html",
+      "mapTo": "haml"
+    },
+    {
+      "language": "vue",
+      "mapTo": "haml"
+    },
+    {
+      "language": "vue-html",
+      "mapTo": "haml"
+    },
+    {
+      "language": "pug",
+      "mapTo": "jade"
+    },
+    {
+      "language": "sass",
+      "mapTo": "jade"
+    },
+    {
+      "language": "shaderlab",
+      "mapTo": "jade"
+    }
+  ],
+  "psi-header.templates": [
+    {
+      "language": "*",
+      "template": [
+        "File: <<fileName>>",
+        "Author: <<author>> (<<author_email>>)",
+        "-----",
+        "Copyright (c) <<year>> <<author>> & contributors",
+        "SPDX ID: <<spdxid>>",
+        "URL: <<licenseurl>>",
+        "-----"
+      ]
+    }
+  ],
   "[java]": {
     "editor.defaultFormatter": "mwpb.java-prettier-formatter"
   },
@@ -59,7 +316,6 @@
   "[markdown]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "C_Cpp.intelliSenseEngine": "Disabled",
   "[css]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
@@ -73,6 +329,12 @@
     "editor.defaultFormatter": "inferrinizzard.prettier-sql-vscode"
   },
   "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   }
 }

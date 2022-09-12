@@ -3,7 +3,6 @@ christian-kohler.path-intellisense
 dan-c-underwood.arm
 DotJoshJohnson.xml
 dtsvet.vscode-wasm
-eamodio.gitlens
 esbenp.prettier-vscode
 fnando.linter
 formulahendry.auto-close-tag
@@ -19,6 +18,7 @@ llvm-vs-code-extensions.vscode-clangd
 mikestead.dotenv
 ms-dotnettools.csharp
 ms-python.python
+ms-python.vscode-pylance
 ms-toolsai.jupyter
 ms-toolsai.jupyter-keymap
 ms-toolsai.jupyter-renderers
@@ -28,6 +28,7 @@ mtxr.sqltools
 mwpb.java-prettier-formatter
 PKief.material-icon-theme
 PKief.material-product-icons
+psioniq.psi-header
 rebornix.ruby
 redhat.java
 redhat.vscode-xml
@@ -41,6 +42,7 @@ vadimcn.vscode-lldb
 vscjava.vscode-gradle
 vscjava.vscode-java-debug
 vscjava.vscode-java-test
+waderyan.gitblame
 wingrunr21.vscode-ruby
 yzhang.markdown-all-in-one
 zhuangtongfa.material-theme
