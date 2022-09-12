@@ -1,3 +1,5 @@
+bcanzanella.openmatchingfiles
+belfz.search-crates-io
 cheshirekow.cmake-format
 christian-kohler.path-intellisense
 dan-c-underwood.arm
@@ -13,6 +15,7 @@ fwcd.kotlin
 golang.go
 Gruntfuggly.activitusbar
 inferrinizzard.prettier-sql-vscode
+jbockle.jbockle-format-files
 kokororin.vscode-phpfmt
 llvm-vs-code-extensions.vscode-clangd
 mikestead.dotenv
@@ -25,7 +28,6 @@ ms-toolsai.jupyter-renderers
 ms-vscode.cmake-tools
 ms-vscode.cpptools
 mtxr.sqltools
-mwpb.java-prettier-formatter
 PKief.material-icon-theme
 PKief.material-product-icons
 psioniq.psi-header

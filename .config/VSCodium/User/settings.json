@@ -18,6 +18,8 @@
   "explorer.confirmDelete": false,
   "files.autoSave": "afterDelay",
   "files.maxMemoryForLargeFilesMB": 8192,
+  "formatFiles.extensionsToInclude": "java, rs, md, css, html, js, sql, ts, json, yaml, toml, gradle, bat, sh, sql",
+  "formatFiles.logLevel": "warn",
   "git.allowForcePush": true,
   "git.autofetch": "all",
   "git.autoStash": true,
@@ -89,9 +91,9 @@
       "xsl",
       "yaml"
     ],
-    "autoHeader": "off",
+    "autoHeader": "autoSave",
     "enforceHeader": false,
-    "replace": [],
+    "replace": ["File:", "Author:", "Copyright (c)"],
     "updateLicenseVariables": false
   },
   "psi-header.lang-config": [
@@ -104,8 +106,8 @@
     {
       "language": "c",
       "begin": "/*",
-      "prefix": "*",
-      "end": "*/"
+      "prefix": " * ",
+      "end": " */"
     },
     {
       "language": "dockerfile",
@@ -116,14 +118,14 @@
     {
       "language": "fsharp",
       "begin": "(*",
-      "prefix": "*",
-      "end": "*)"
+      "prefix": " * ",
+      "end": " *)"
     },
     {
       "language": "haml",
       "begin": "<!--",
       "prefix": "--",
-      "end": "-->"
+      "end": " -->"
     },
     {
       "language": "lua",
@@ -154,8 +156,8 @@
     {
       "language": "razor",
       "begin": "@*",
-      "prefix": "*",
-      "end": "*@"
+      "prefix": " * ",
+      "end": " *@"
     },
     {
       "language": "shellscript",
@@ -308,13 +310,13 @@
     }
   ],
   "[java]": {
-    "editor.defaultFormatter": "mwpb.java-prettier-formatter"
+    "editor.defaultFormatter": "redhat.java"
   },
   "[rust]": {
     "editor.defaultFormatter": "rust-lang.rust-analyzer"
   },
   "[markdown]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "yzhang.markdown-all-in-one"
   },
   "[css]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -336,5 +338,8 @@
   },
   "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[yaml]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml"
   }
 }
