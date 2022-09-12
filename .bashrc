@@ -7,7 +7,7 @@
 
 # Include ~/.bashrc_aliases
 [ -f ~/.bashrc_aliases ] &&
-source ~/.bashrc_aliases
+  source ~/.bashrc_aliases
 
 # Prompt
 eval "$(starship init bash)"
@@ -29,7 +29,6 @@ shopt -s checkwinsize
 complete -cf doas
 
 # List number of outdated packages
-if [ "$(checkupdates | wc -l)" -gt 0 ]
-then
+if [ "$(checkupdates | wc -l)" -gt 0 ]; then
   echo -e "\e[31m$(checkupdates | wc -l)\e[0m packages are out of date!"
 fi
