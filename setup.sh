@@ -16,7 +16,7 @@ chmod 700 ~/src
 rustup default stable
 
 # Install vscodium extensions
-vscodium --list-extensions | xargs -n 1 vscodium --uninstall-extension
+vscodium --list-extensions | xargs -n 1 vscodium --uninstall-extension --force
 xargs -n 1 vscodium --install-extension < ~/dot-files/vscodium-extensions.txt
 
 # Initialize nvim
