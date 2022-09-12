@@ -5,10 +5,10 @@ wheel:Vertical;NoModifier=org.kde.switchdesktop
 [ActionPlugins][1]
 RightButton;NoModifier=org.kde.contextmenu
 
-[Containments][18]
+[Containments][19]
 ItemGeometries-1920x1080=
 ItemGeometriesHorizontal=
-activityId=436a83c5-ed57-4e19-8aef-ebece220d587
+activityId=d94ac93a-c9d0-42ff-843a-58f7c4792ec5
 formfactor=0
 immutability=1
 lastScreen=0
@@ -16,12 +16,12 @@ location=0
 plugin=org.kde.plasma.folder
 wallpaperplugin=org.kde.slideshow
 
-[Containments][18][ConfigDialog]
+[Containments][19][ConfigDialog]
 DialogHeight=1056
 DialogWidth=1920
 
-[Containments][18][Wallpaper][org.kde.slideshow][General]
-Image=file:///usr/share/wallpapers/Next/contents/images/1920x1080.jpg
+[Containments][19][Wallpaper][org.kde.slideshow][General]
+Image=file:///usr/share/wallpapers/Arc/contents/images/1920x1080.png
 SlidePaths=/usr/share/wallpapers
 
 [Containments][2]
@@ -57,7 +57,7 @@ immutability=1
 plugin=org.kde.plasma.systemtray
 
 [Containments][2][Applets][7][Configuration]
-PreloadWeight=75
+PreloadWeight=80
 SystrayContainmentId=8
 
 [Containments][2][ConfigDialog]
@@ -111,17 +111,24 @@ PreloadWeight=42
 immutability=1
 plugin=org.kde.plasma.networkmanagement
 
+[Containments][8][Applets][21]
+immutability=1
+plugin=org.kde.plasma.bluetooth
+
+[Containments][8][Applets][21][Configuration]
+PreloadWeight=55
+
 [Containments][8][Applets][9][Configuration]
 PreloadWeight=42
 
 [Containments][8][ConfigDialog]
-DialogHeight=540
-DialogWidth=720
+DialogHeight=1056
+DialogWidth=1920
 
 [Containments][8][General]
-extraItems=org.kde.plasma.devicenotifier,org.kde.plasma.mediacontroller,org.kde.plasma.notifications,org.kde.plasma.printmanager,org.kde.plasma.volume,org.kde.plasma.networkmanagement
-hiddenItems=org.kde.plasma.notifications,org.kde.plasma.devicenotifier,org.kde.plasma.networkmanagement,org.kde.plasma.printmanager
-knownItems=org.kde.plasma.battery,org.kde.plasma.clipboard,org.kde.plasma.devicenotifier,org.kde.plasma.manage-inputmethod,org.kde.plasma.mediacontroller,org.kde.plasma.notifications,org.kde.plasma.keyboardlayout,org.kde.kalendar.contact,org.kde.plasma.printmanager,org.kde.plasma.volume,org.kde.plasma.networkmanagement
+extraItems=org.kde.plasma.devicenotifier,org.kde.plasma.mediacontroller,org.kde.plasma.notifications,org.kde.plasma.printmanager,org.kde.plasma.volume,org.kde.plasma.networkmanagement,org.kde.plasma.bluetooth
+hiddenItems=org.kde.plasma.notifications,org.kde.plasma.devicenotifier,org.kde.plasma.networkmanagement,org.kde.plasma.printmanager,org.kde.plasma.bluetooth
+knownItems=org.kde.plasma.battery,org.kde.plasma.clipboard,org.kde.plasma.devicenotifier,org.kde.plasma.manage-inputmethod,org.kde.plasma.mediacontroller,org.kde.plasma.notifications,org.kde.plasma.keyboardlayout,org.kde.kalendar.contact,org.kde.plasma.printmanager,org.kde.plasma.volume,org.kde.plasma.networkmanagement,org.kde.plasma.bluetooth
 
 [ScreenMapping]
 itemsOnDisabledScreens=

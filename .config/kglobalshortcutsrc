@@ -1,6 +1,7 @@
 [ActivityManager]
 _k_friendly_name=Activity Manager
 switch-to-activity-436a83c5-ed57-4e19-8aef-ebece220d587=none,none,Switch to activity "Default"
+switch-to-activity-d94ac93a-c9d0-42ff-843a-58f7c4792ec5=none,none,Switch to activity "Default"
 switch-to-activity-ec9d7e2a-5247-4553-93c4-e0f3f9d70147=none,none,Switch to activity "Default"
 
 [Alacritty.desktop]
