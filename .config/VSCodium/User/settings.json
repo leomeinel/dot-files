@@ -35,6 +35,7 @@
   "git.scanRepositories": ["~/src"],
   "gitblame.statusBarMessageFormat": "${author.name} (${time.ago})",
   "github.gitProtocol": "ssh",
+  "java.eclipse.downloadSources": true,
   "material-icon-theme.hidesExplorerArrows": true,
   "material-icon-theme.showWelcomeMessage": false,
   "oneDarkPro.editorTheme": "One Dark Pro Darker",
@@ -344,5 +345,5 @@
   },
   "[yaml]": {
     "editor.defaultFormatter": "redhat.vscode-yaml"
-  }
+  },
 }
