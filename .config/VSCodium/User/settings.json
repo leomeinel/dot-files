@@ -62,6 +62,7 @@
   "workbench.iconTheme": "material-icon-theme",
   "workbench.preferredDarkColorTheme": "One Dark Pro Darker",
   "workbench.productIconTheme": "material-product-icons",
+  "workbench.startupEditor": "none",
   "psi-header.config": {
     "forceToTop": true,
     "blankLinesAfter": 1,
