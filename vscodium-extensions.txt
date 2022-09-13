@@ -1,5 +1,4 @@
 bcanzanella.openmatchingfiles
-belfz.search-crates-io
 cheshirekow.cmake-format
 christian-kohler.path-intellisense
 dan-c-underwood.arm
@@ -17,6 +16,7 @@ Gruntfuggly.activitusbar
 inferrinizzard.prettier-sql-vscode
 jbockle.jbockle-format-files
 jcbuisson.vue
+jedeop.crates-completer
 kokororin.vscode-phpfmt
 llvm-vs-code-extensions.vscode-clangd
 mikestead.dotenv
@@ -30,6 +30,8 @@ ms-vscode.cmake-tools
 ms-vscode.cpptools
 msjsdiag.vscode-react-native
 mtxr.sqltools
+naco-siren.gradle-language
+pflannery.vscode-versionlens
 PKief.material-icon-theme
 PKief.material-product-icons
 psioniq.psi-header
@@ -42,6 +44,7 @@ scala-lang.scala
 serayuzgur.crates
 tamasfe.even-better-toml
 twxs.cmake
+usernamehw.errorlens
 vadimcn.vscode-lldb
 VisualStudioExptTeam.vscodeintellicode
 vscjava.vscode-gradle
