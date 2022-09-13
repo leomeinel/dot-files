@@ -20,7 +20,7 @@
   "explorer.confirmDelete": false,
   "files.autoSave": "afterDelay",
   "files.maxMemoryForLargeFilesMB": 8192,
-  "formatFiles.extensionsToInclude": "java, rs, md, css, html, js, sql, ts, json, yaml, toml, gradle, bat, sh, sql, C, cc, cxx, cpp, c++, c, h, cs",
+  "formatFiles.extensionsToInclude": "asm, bat, c, C, cc, clj, conf, cpp, cs, css, cxx, fish, fs, go, gradle, groovy, h, hh, hpp, hs, htm, html, hxx, ini, java, js, json, jsp, jsx, ksh, kt, lhs, lua, md, p, patch, php, pl, py, r, rb, rs, s, scala, sh, sql, swift, toml, ts, vb, vbs, xml, yaml, zsh",
   "formatFiles.logLevel": "warn",
   "git.allowForcePush": true,
   "git.autofetch": "all",
@@ -345,5 +345,5 @@
   },
   "[yaml]": {
     "editor.defaultFormatter": "redhat.vscode-yaml"
-  },
+  }
 }
