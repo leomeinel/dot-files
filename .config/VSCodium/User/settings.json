@@ -24,14 +24,17 @@
   "formatFiles.logLevel": "warn",
   "git.allowForcePush": true,
   "git.autofetch": "all",
+  "git.autoRepositoryDetection": "openEditors",
   "git.autoStash": true,
   "git.confirmSync": false,
   "git.defaultCloneDirectory": "~/src",
+  "git.detectSubmodules": false,
   "git.detectSubmodulesLimit": 100,
   "git.enableCommitSigning": true,
   "git.enableSmartCommit": true,
   "git.enableStatusBarSync": false,
   "git.fetchOnPull": true,
+  "git.ignoreSubmodules": true,
   "git.scanRepositories": ["~/src"],
   "gitblame.statusBarMessageFormat": "${author.name} (${time.ago})",
   "github.gitProtocol": "ssh",
@@ -347,5 +350,5 @@
   },
   "[yaml]": {
     "editor.defaultFormatter": "redhat.vscode-yaml"
-  }
+  },
 }
