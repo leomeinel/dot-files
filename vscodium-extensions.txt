@@ -39,6 +39,7 @@ rebornix.ruby
 redhat.java
 redhat.vscode-xml
 redhat.vscode-yaml
+rickvansloten.bbcode
 rust-lang.rust-analyzer
 scala-lang.scala
 serayuzgur.crates

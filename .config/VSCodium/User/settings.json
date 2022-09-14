@@ -80,6 +80,7 @@
     "isActive": true,
     "exclude": [
       "abap",
+      "bbcode",
       "bibtex",
       "clojure",
       "coffeescript",
@@ -350,5 +351,5 @@
   },
   "[yaml]": {
     "editor.defaultFormatter": "redhat.vscode-yaml"
-  },
+  }
 }
