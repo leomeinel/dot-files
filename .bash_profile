@@ -12,17 +12,15 @@ export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_STATE_HOME="$HOME/.local/state"
 
 ## For application data/settings
-export GTK2_RC_FILES="$XDG_CONFIG_HOME"/gtk-2.0/gtkrc
 export ANDROID_HOME="$XDG_DATA_HOME"/android
 export CARGO_HOME="$XDG_DATA_HOME"/cargo
 export GNUPGHOME="$XDG_DATA_HOME"/gnupg
 export GOPATH="$XDG_DATA_HOME"/go
+export GRADLE_USER_HOME="$XDG_DATA_HOME"/gradle
+export GTK2_RC_FILES="$XDG_CONFIG_HOME"/gtk-2.0/gtkrc
+export HISTFILE="$XDG_STATE_HOME"/bash/history
 export PLATFORMIO_CORE_DIR="$XDG_DATA_HOME"/platformio
 export RUSTUP_HOME="$XDG_DATA_HOME"/rustup
-export HISTFILE="$XDG_STATE_HOME"/bash/history
-
-# FIXME: When this is configured, gradle doesn't work correctly in vscodium
-#export GRADLE_USER_HOME="$XDG_DATA_HOME"/gradle
 
 # FIXME: Files still get generated in $HOME
 # "$HOME"/.pki -> "$XDG_DATA_HOME"/pki (not supported by chromium): https://bugzilla.mozilla.org/show_bug.cgi?id=818686#c11
