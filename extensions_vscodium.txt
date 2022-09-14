@@ -30,6 +30,10 @@ ms-vscode.cmake-tools
 ms-vscode.cpptools
 msjsdiag.vscode-react-native
 mtxr.sqltools
+mtxr.sqltools-driver-mssql
+mtxr.sqltools-driver-mysql
+mtxr.sqltools-driver-pg
+mtxr.sqltools-driver-sqlite
 naco-siren.gradle-language
 pflannery.vscode-versionlens
 PKief.material-icon-theme
@@ -40,6 +44,7 @@ redhat.java
 redhat.vscode-xml
 redhat.vscode-yaml
 rickvansloten.bbcode
+ritwickdey.LiveServer
 rust-lang.rust-analyzer
 scala-lang.scala
 serayuzgur.crates

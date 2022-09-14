@@ -6,6 +6,7 @@
   "cmake.ignoreCMakeListsMissing": true,
   "cmake.statusbar.visibility": "hidden",
   "code-runner.enableAppInsights": false,
+  "debug.showInStatusBar": "never",
   "editor.detectIndentation": false,
   "editor.foldingImportsByDefault": true,
   "editor.foldingMaximumRegions": 50000,
@@ -68,6 +69,7 @@
   "workbench.preferredDarkColorTheme": "One Dark Pro Darker",
   "workbench.productIconTheme": "material-product-icons",
   "workbench.startupEditor": "none",
+  "zenMode.hideStatusBar": false,
   "psi-header.config": {
     "forceToTop": true,
     "blankLinesAfter": 1,

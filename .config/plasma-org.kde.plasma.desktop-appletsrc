@@ -50,14 +50,14 @@ immutability=1
 plugin=org.kde.plasma.icontasks
 
 [Containments][2][Applets][5][Configuration][General]
-launchers=applications:systemsettings.desktop,preferred://filemanager,preferred://browser
+launchers=preferred://filemanager,preferred://browser,applications:chromium.desktop
 
 [Containments][2][Applets][7]
 immutability=1
 plugin=org.kde.plasma.systemtray
 
 [Containments][2][Applets][7][Configuration]
-PreloadWeight=80
+PreloadWeight=85
 SystrayContainmentId=8
 
 [Containments][2][ConfigDialog]
@@ -116,7 +116,7 @@ immutability=1
 plugin=org.kde.plasma.bluetooth
 
 [Containments][8][Applets][21][Configuration]
-PreloadWeight=55
+PreloadWeight=47
 
 [Containments][8][Applets][9][Configuration]
 PreloadWeight=42
