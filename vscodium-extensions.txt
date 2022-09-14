@@ -47,6 +47,7 @@ tamasfe.even-better-toml
 twxs.cmake
 usernamehw.errorlens
 vadimcn.vscode-lldb
+VisualStudioExptTeam.intellicode-api-usage-examples
 VisualStudioExptTeam.vscodeintellicode
 vscjava.vscode-gradle
 vscjava.vscode-java-debug
