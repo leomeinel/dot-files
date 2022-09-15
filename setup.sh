@@ -12,6 +12,7 @@
 # Copy dot-files
 cp -R ~/dot-files/.config ~/dot-files/.bash_logout ~/dot-files/.bash_profile ~/dot-files/.bashrc ~/dot-files/.bashrc_aliases ~/dot-files/.gtkrc-2.0 ~/
 chmod 744 ~/.bashrc_aliases
+source ~/.bash_profile
 
 # Create .ssh
 mkdir ~/.ssh
