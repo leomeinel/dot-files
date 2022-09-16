@@ -22,6 +22,11 @@ chmod 700 ~/.ssh
 mkdir ~/src
 chmod 700 ~/src
 
+# Create ~/.local/share/gnupg
+mkdir -p ~/.local/share/gnupg
+/usr/bin/find ~/.local/share/gnupg -type f -exec chmod 600 {} \;
+/usr/bin/find ~/.local/share/gnupg -type d -exec chmod 700 {} \;
+
 # Create XDG dirs
 mkdir -p ~/.config/gtk-2.0
 mkdir -p ~/.local/share/android
