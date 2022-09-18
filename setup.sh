@@ -1,6 +1,6 @@
 #!/bin/bash
 ###
-# File: setup.sh
+# File: setup0.sh
 # Author: Leopold Meinel (leo@meinel.dev)
 # -----
 # Copyright (c) 2022 Leopold Meinel & contributors
@@ -39,12 +39,5 @@ mkdir -p ~/.local/share/gnupg
 # Set default rust
 rustup default stable
 
-# Install vscodium extensions
-vscodium --list-extensions | xargs -n 1 vscodium --uninstall-extension
-xargs -n 1 vscodium --install-extension <~/dot-files/extensions_vscodium.txt
-
 # Initialize nvim
 nvim --headless -c 'sleep 5' -c 'q!'
-
-# Remove repo
-rm -rf ~/dot-files
