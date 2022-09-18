@@ -1,6 +1,6 @@
 #!/bin/bash
 ###
-# File: setup0.sh
+# File: setup.sh
 # Author: Leopold Meinel (leo@meinel.dev)
 # -----
 # Copyright (c) 2022 Leopold Meinel & contributors
