@@ -44,7 +44,7 @@ vscodium --list-extensions | xargs -n 1 vscodium --uninstall-extension
 xargs -n 1 vscodium --install-extension <~/dot-files/extensions_vscodium.txt
 
 # Initialize nvim
-nvim --headless -c 'sleep 10' -c 'q!'
+nvim --headless -c 'sleep 5' -c 'q!'
 
 # Remove repo
 rm -rf ~/dot-files
