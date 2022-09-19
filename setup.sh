@@ -36,8 +36,7 @@ mkdir -p ~/.local/state/bash
 
 ## Create ~/.local/share/gnupg
 mkdir -p ~/.local/share/gnupg
-/usr/bin/find ~/.local/share/gnupg -type f -exec chmod 600 {} \;
-/usr/bin/find ~/.local/share/gnupg -type d -exec chmod 700 {} \;
+chmod 700 ~/.local/share/gnupg
 
 # Set default rust
 rustup default stable
