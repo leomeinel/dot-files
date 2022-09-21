@@ -13,5 +13,8 @@
 vscodium --list-extensions | xargs -n 1 vscodium --uninstall-extension
 xargs -n 1 vscodium --install-extension <~/dot-files/extensions_vscodium.txt
 
+# Fail on error
+set -e
+
 # Remove repo
 rm -rf ~/dot-files
