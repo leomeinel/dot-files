@@ -69,7 +69,10 @@
   "workbench.preferredDarkColorTheme": "One Dark Pro Darker",
   "workbench.productIconTheme": "material-product-icons",
   "workbench.startupEditor": "none",
+  "zenMode.centerLayout": false,
+  "zenMode.hideLineNumbers": false,
   "zenMode.hideStatusBar": false,
+  "zenMode.hideTabs": false,
   "psi-header.config": {
     "forceToTop": true,
     "blankLinesAfter": 1,
