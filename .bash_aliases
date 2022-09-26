@@ -1,5 +1,5 @@
 #
-# ~/.bashrc_aliases
+# ~/.bash_aliases
 #
 
 # sudo
