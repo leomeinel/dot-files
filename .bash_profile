@@ -1,3 +1,7 @@
+#
+# ~/.bash_profile
+#
+
 # Set environment variables
 export JAVA_HOME="/usr/lib/jvm/default"
 export XDG_CACHE_HOME="$HOME/.cache"
