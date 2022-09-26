@@ -5,7 +5,7 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-# Include ~/.bashrc_aliases
+# Include ~/.bash_aliases
 [ -f ~/.bash_aliases ] &&
     source ~/.bash_aliases
 
