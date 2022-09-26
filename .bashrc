@@ -7,7 +7,7 @@
 
 # Include ~/.bashrc_aliases
 [ -f ~/.bashrc_aliases ] &&
-    source ~/.bashrc_aliases
+    source ~/.bash_aliases
 
 # Prompt
 eval "$(starship init bash)"
