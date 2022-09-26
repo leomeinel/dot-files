@@ -6,7 +6,7 @@
 [[ $- != *i* ]] && return
 
 # Include ~/.bashrc_aliases
-[ -f ~/.bashrc_aliases ] &&
+[ -f ~/.bash_aliases ] &&
     source ~/.bash_aliases
 
 # Prompt
