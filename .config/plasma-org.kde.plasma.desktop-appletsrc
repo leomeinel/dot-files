@@ -31,7 +31,7 @@ immutability=1
 plugin=org.kde.plasma.icontasks
 
 [Containments][2][Applets][5][Configuration][General]
-launchers=preferred://filemanager,preferred://browser
+launchers=preferred://filemanager,preferred://browser,file:///usr/bin/waterfox-g
 
 [Containments][2][Applets][7]
 immutability=1
@@ -64,7 +64,7 @@ DialogHeight=1056
 DialogWidth=1920
 
 [Containments][20][Wallpaper][org.kde.slideshow][General]
-Image=file:///usr/share/wallpapers/Custom/content/simple_tree.png
+Image=file:///usr/share/wallpapers/Arc-Mountains/contents/images/8000x4500.png
 SlidePaths=/usr/share/wallpapers
 
 [Containments][8]
