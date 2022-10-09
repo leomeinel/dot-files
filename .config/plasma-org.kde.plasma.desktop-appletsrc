@@ -5,25 +5,6 @@ wheel:Vertical;NoModifier=org.kde.switchdesktop
 [ActionPlugins][1]
 RightButton;NoModifier=org.kde.contextmenu
 
-[Containments][19]
-ItemGeometries-1920x1080=
-ItemGeometriesHorizontal=
-activityId=d94ac93a-c9d0-42ff-843a-58f7c4792ec5
-formfactor=0
-immutability=1
-lastScreen=0
-location=0
-plugin=org.kde.plasma.folder
-wallpaperplugin=org.kde.slideshow
-
-[Containments][19][ConfigDialog]
-DialogHeight=1056
-DialogWidth=1920
-
-[Containments][19][Wallpaper][org.kde.slideshow][General]
-Image=file:///usr/share/wallpapers/Arc/contents/images/1920x1080.png
-SlidePaths=/usr/share/wallpapers
-
 [Containments][2]
 activityId=
 formfactor=2
@@ -50,7 +31,7 @@ immutability=1
 plugin=org.kde.plasma.icontasks
 
 [Containments][2][Applets][5][Configuration][General]
-launchers=preferred://filemanager,preferred://browser,applications:chromium.desktop
+launchers=preferred://filemanager,preferred://browser
 
 [Containments][2][Applets][7]
 immutability=1
@@ -66,6 +47,25 @@ DialogWidth=1920
 
 [Containments][2][General]
 AppletOrder=4;5;7;17
+
+[Containments][20]
+ItemGeometries-1920x1080=
+ItemGeometriesHorizontal=
+activityId=6dc480bb-ad55-41b5-bb6b-c082980d44ee
+formfactor=0
+immutability=1
+lastScreen=0
+location=0
+plugin=org.kde.plasma.folder
+wallpaperplugin=org.kde.slideshow
+
+[Containments][20][ConfigDialog]
+DialogHeight=1056
+DialogWidth=1920
+
+[Containments][20][Wallpaper][org.kde.slideshow][General]
+Image=file:///usr/share/wallpapers/Custom/content/simple_tree.png
+SlidePaths=/usr/share/wallpapers
 
 [Containments][8]
 activityId=
