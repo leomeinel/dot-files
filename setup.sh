@@ -33,7 +33,7 @@ mkdir -p ~/.local/share/platformio
 mkdir -p ~/.local/share/rustup
 mkdir -p ~/.local/state/bash
 
-## Create ~/.local/share/gnupg
+# Create ~/.local/share/gnupg
 mkdir -p ~/.local/share/gnupg
 chmod 700 ~/.local/share/gnupg
 
