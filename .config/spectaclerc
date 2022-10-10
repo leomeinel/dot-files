@@ -12,6 +12,5 @@ onLaunchAction=DoNotTakeScreenshot
 window-position=530,290
 
 [Save]
-defaultSaveLocation=file:///usr/share/screenshots
-lastSaveLocation=file:///usr/share/screenshots/24_08_2022_18:20:22.png
+defaultSaveLocation=file:///var/share/screenshots
 saveFilenameFormat=%D-%M-%Y_%H:%m:%S
