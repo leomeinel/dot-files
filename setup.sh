@@ -25,7 +25,6 @@ mkdir ~/src
 chmod 700 ~/src
 
 # Create XDG dirs
-mkdir -p ~/.config/gtk-2.0
 mkdir -p ~/.local/share/android
 mkdir -p ~/.local/share/cargo
 mkdir -p ~/.local/share/go
