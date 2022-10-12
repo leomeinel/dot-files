@@ -1,6 +1,6 @@
 #!/bin/bash
 ###
-# File: vscodium-extensions.sh
+# File: exts-code.sh
 # Author: Leopold Meinel (leo@meinel.dev)
 # -----
 # Copyright (c) 2022 Leopold Meinel & contributors
@@ -11,7 +11,7 @@
 
 # Install vscodium extensions
 vscodium --list-extensions | xargs -n 1 vscodium --uninstall-extension
-xargs -n 1 vscodium --install-extension <~/dot-files/extensions_vscodium.txt
+xargs -n 1 vscodium --install-extension <~/dot-files/exts-code.txt
 
 # Fail on error
 set -e
