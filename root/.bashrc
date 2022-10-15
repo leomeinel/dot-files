@@ -27,8 +27,3 @@ shopt -s checkwinsize
 
 # doas tab completion
 complete -cf doas
-
-# List number of outdated packages
-if [ "$(checkupdates | wc -l)" -gt 0 ]; then
-    echo -e "\e[31m$(checkupdates | wc -l)\e[0m packages are out of date!"
-fi
