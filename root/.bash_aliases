@@ -14,7 +14,8 @@
 #
 
 # sudo
-alias sudo='doas'
+alias sudo='doas '
+alias doas='doas '
 
 # btrfs
 alias df='btrfs fi df'

@@ -4,10 +4,10 @@
 
 # Set environment variables
 export JAVA_HOME="/usr/lib/jvm/default"
-export XDG_CACHE_HOME="/root/.cache"
-export XDG_CONFIG_HOME="/root/.config"
-export XDG_DATA_HOME="/root/.local/share"
-export XDG_STATE_HOME="/root/.local/state"
+export XDG_CACHE_HOME="$HOME/.cache"
+export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_DATA_HOME="$HOME/.local/share"
+export XDG_STATE_HOME="$HOME/.local/state"
 
 ## For application data/settings
 export ANDROID_HOME="$XDG_DATA_HOME"/android
