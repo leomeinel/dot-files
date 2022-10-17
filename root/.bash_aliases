@@ -1,21 +1,10 @@
-#!/bin/bash
-###
-# File: .bash_aliases
-# Author: Leopold Meinel (leo@meinel.dev)
-# -----
-# Copyright (c) 2022 Leopold Meinel & contributors
-# SPDX ID: GPL-3.0-or-later
-# URL: https://www.gnu.org/licenses/gpl-3.0-standalone.html
-# -----
-###
-
 #
 # ~/.bash_aliases
 #
 
-# sudo
-alias sudo='doas '
+# doas
 alias doas='doas '
+alias sudo='sudo '
 
 # btrfs
 alias df='btrfs fi df'

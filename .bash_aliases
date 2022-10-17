@@ -2,9 +2,9 @@
 # ~/.bash_aliases
 #
 
-# sudo
-alias sudo='doas '
+# doas
 alias doas='doas '
+alias sudo='sudo '
 
 # btrfs
 alias df='btrfs fi df'
