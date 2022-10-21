@@ -16,6 +16,9 @@ set -e
 cp -R ~/dot-files/.config ~/dot-files/.bash_logout ~/dot-files/.bash_profile ~/dot-files/.bashrc ~/dot-files/.bash_aliases ~/
 source ~/.bash_profile
 
+# Give KDE logout scripts correct permissions
+chmod 744 ~/.config/plasma-workspace/shutdown/*.sh
+
 # Create .ssh
 mkdir ~/.ssh
 chmod 700 ~/.ssh
