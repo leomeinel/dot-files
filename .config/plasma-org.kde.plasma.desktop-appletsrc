@@ -48,10 +48,10 @@ DialogWidth=1920
 [Containments][2][General]
 AppletOrder=4;5;7;17
 
-[Containments][20]
+[Containments][21]
 ItemGeometries-1920x1080=
 ItemGeometriesHorizontal=
-activityId=6dc480bb-ad55-41b5-bb6b-c082980d44ee
+activityId=1039c124-0a04-42e4-9df8-b8df1ab7a763
 formfactor=0
 immutability=1
 lastScreen=0
@@ -59,13 +59,12 @@ location=0
 plugin=org.kde.plasma.folder
 wallpaperplugin=org.kde.slideshow
 
-[Containments][20][ConfigDialog]
+[Containments][21][ConfigDialog]
 DialogHeight=1056
 DialogWidth=1920
 
-[Containments][20][Wallpaper][org.kde.slideshow][General]
-Image=file:///usr/share/wallpapers/Arc-Mountains/contents/images/8000x4500.png
-SlidePaths=/usr/share/wallpapers
+[Containments][21][Wallpaper][org.kde.slideshow][General]
+SlidePaths=/usr/share/wallpapers/
 
 [Containments][8]
 activityId=
