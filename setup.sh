@@ -17,6 +17,7 @@ cp -R ~/dot-files/.config ~/dot-files/.bash_logout ~/dot-files/.bash_profile ~/d
 source ~/.bash_profile
 
 # Set screenshot dir
+mkdir -p ~/Documents/Pictures/Screenshots
 HOME=$(echo ~)
 sed -i "s|defaultSaveLocation=.*|defaultSaveLocation=file://$HOME/Documents/Pictures/Screenshots|" ~/.config/spectaclerc
 
