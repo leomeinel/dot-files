@@ -18,7 +18,7 @@ source ~/.bash_profile
 
 # Set screenshot dir
 HOME=$(echo ~)
-sed -i "s|defaultSaveLocation=.*|defaultSaveLocation=file://$HOME/Documents/Pictures/screenshots|" ~/.config/spectaclerc
+sed -i "s|defaultSaveLocation=.*|defaultSaveLocation=file://$HOME/Documents/Pictures/Screenshots|" ~/.config/spectaclerc
 
 # Give KDE logout scripts correct permissions
 chmod 744 ~/.config/plasma-workspace/shutdown/*.sh
