@@ -5,11 +5,8 @@
 {"_id":"defaultInvidiousInstance","value":"https://yewtu.be"}
 {"_id":"externalPlayer","value":"mpv"}
 {"_id":"externalPlayerIgnoreWarnings","value":true}
-{"_id":"externalPlayer","value":""}
 {"_id":"defaultQuality","value":"1080"}
-{"_id":"barColor","value":true}
 {"_id":"barColor","value":false}
-{"_id":"hideLabelsSideBar","value":true}
 {"_id":"hideLabelsSideBar","value":false}
 {"_id":"checkForBlogPosts","value":false}
 {"_id":"enableSearchSuggestions","value":false}
