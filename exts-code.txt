@@ -13,6 +13,7 @@ foxundermoon.shell-format
 fwcd.kotlin
 golang.go
 Gruntfuggly.activitusbar
+hangxingliu.vscode-nginx-conf-hint
 inferrinizzard.prettier-sql-vscode
 jbockle.jbockle-format-files
 jcbuisson.vue
@@ -21,11 +22,14 @@ kokororin.vscode-phpfmt
 llvm-vs-code-extensions.vscode-clangd
 mikestead.dotenv
 ms-dotnettools.csharp
+ms-python.isort
 ms-python.python
 ms-python.vscode-pylance
 ms-toolsai.jupyter
 ms-toolsai.jupyter-keymap
 ms-toolsai.jupyter-renderers
+ms-toolsai.vscode-jupyter-cell-tags
+ms-toolsai.vscode-jupyter-slideshow
 ms-vscode.cmake-tools
 ms-vscode.cpptools
 msjsdiag.vscode-react-native
