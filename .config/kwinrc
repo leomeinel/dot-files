@@ -26,5 +26,8 @@ Name_9=8
 Number=9
 Rows=3
 
+[Xwayland]
+Scale=1
+
 [org.kde.kdecoration2]
 ShowToolTips=false
