@@ -13,4 +13,4 @@ window-position=530,290
 
 [Save]
 defaultSaveLocation=file://<replace-me>
-saveFilenameFormat=%Y-%M-%D\T%H-%m-%S
+saveFilenameFormat=%Y-%M-%DT%H-%m-%S
