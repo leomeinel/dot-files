@@ -25,11 +25,11 @@ sed -i "s|defaultSaveLocation=.*|defaultSaveLocation=file://$HOME/Documents/Pict
 chmod 744 ~/.config/plasma-workspace/shutdown/*.sh
 
 # Create .ssh
-mkdir ~/.ssh
+mkdir -p ~/.ssh
 chmod 700 ~/.ssh
 
 # Create src
-mkdir ~/src
+mkdir -p ~/src
 chmod 700 ~/src
 
 # Create XDG dirs
