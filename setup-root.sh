@@ -17,11 +17,11 @@ cp -R ~/dot-files/root/.config ~/dot-files/root/.bash_profile ~/dot-files/root/.
 source ~/.bash_profile
 
 # Create .ssh
-mkdir ~/.ssh
+mkdir -p ~/.ssh
 chmod 700 ~/.ssh
 
 # Create src
-mkdir ~/src
+mkdir -p ~/src
 chmod 700 ~/src
 
 # Create XDG dirs
