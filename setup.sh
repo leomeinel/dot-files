@@ -16,14 +16,6 @@ set -e
 cp -R ~/dot-files/.config ~/dot-files/.bash_logout ~/dot-files/.bash_profile ~/dot-files/.bashrc ~/dot-files/.bash_aliases ~/
 source ~/.bash_profile
 
-# Set screenshot dir
-mkdir -p ~/Documents/Pictures/Screenshots
-HOME=$(echo ~)
-sed -i "s|defaultSaveLocation=.*|defaultSaveLocation=file://$HOME/Documents/Pictures/Screenshots|" ~/.config/spectaclerc
-
-# Give KDE logout scripts correct permissions
-chmod 744 ~/.config/plasma-workspace/shutdown/*.sh
-
 # Create .ssh
 mkdir -p ~/.ssh
 chmod 700 ~/.ssh
