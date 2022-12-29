@@ -41,3 +41,6 @@ rustup default stable
 
 # Initialize nvim
 nvim --headless -c 'sleep 5' -c 'q!'
+
+# Remove repo
+rm -rf ~/dot-files
