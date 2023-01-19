@@ -42,7 +42,7 @@ immutability=1
 plugin=org.kde.plasma.systemtray
 
 [Containments][2][Applets][7][Configuration]
-PreloadWeight=90
+PreloadWeight=100
 SystrayContainmentId=8
 
 [Containments][2][ConfigDialog]
@@ -68,6 +68,7 @@ DialogHeight=1056
 DialogWidth=1920
 
 [Containments][21][Wallpaper][org.kde.slideshow][General]
+Image=/usr/share/wallpapers/Arc/
 SlidePaths=/usr/share/wallpapers/
 
 [Containments][8]
@@ -77,8 +78,8 @@ immutability=1
 lastScreen=0
 location=3
 plugin=org.kde.plasma.private.systemtray
-popupHeight=0
-popupWidth=0
+popupHeight=432
+popupWidth=432
 wallpaperplugin=org.kde.image
 
 [Containments][8][Applets][10]
@@ -93,7 +94,7 @@ immutability=1
 plugin=org.kde.plasma.notifications
 
 [Containments][8][Applets][12][Configuration]
-PreloadWeight=65
+PreloadWeight=70
 
 [Containments][8][Applets][13][Configuration]
 PreloadWeight=42
@@ -110,7 +111,7 @@ immutability=1
 plugin=org.kde.plasma.volume
 
 [Containments][8][Applets][16][Configuration]
-PreloadWeight=55
+PreloadWeight=85
 
 [Containments][8][Applets][19][Configuration]
 PreloadWeight=42
@@ -119,12 +120,15 @@ PreloadWeight=42
 immutability=1
 plugin=org.kde.plasma.networkmanagement
 
+[Containments][8][Applets][20][Configuration]
+PreloadWeight=60
+
 [Containments][8][Applets][21]
 immutability=1
 plugin=org.kde.plasma.bluetooth
 
 [Containments][8][Applets][21][Configuration]
-PreloadWeight=0
+PreloadWeight=15
 
 [Containments][8][Applets][22]
 immutability=1
