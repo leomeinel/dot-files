@@ -1,7 +1,7 @@
 {
   "activitusbar.activeColour": "statusBar.foreground",
   "activitusbar.inactiveColour": "statusBar.foreground",
-  "C_Cpp.intelliSenseEngine": "Disabled",
+  "C_Cpp.intelliSenseEngine": "disabled",
   "cmake.configureOnOpen": false,
   "cmake.ignoreCMakeListsMissing": true,
   "cmake.statusbar.visibility": "hidden",
