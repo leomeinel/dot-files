@@ -3,7 +3,7 @@
 # File: setup.sh
 # Author: Leopold Meinel (leo@meinel.dev)
 # -----
-# Copyright (c) 2022 Leopold Meinel & contributors
+# Copyright (c) 2023 Leopold Meinel & contributors
 # SPDX ID: GPL-3.0-or-later
 # URL: https://www.gnu.org/licenses/gpl-3.0-standalone.html
 # -----
@@ -45,7 +45,7 @@ mkdir -p ~/.local/share/gnupg
 chmod 700 ~/.local/share/gnupg
 
 # Set default rust
-rustup default stable
+#rustup default stable
 
 # Initialize nvim
 nvim --headless -c 'sleep 5' -c 'q!'
