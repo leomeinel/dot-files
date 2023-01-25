@@ -3,7 +3,7 @@
 # File: setup.sh
 # Author: Leopold Meinel (leo@meinel.dev)
 # -----
-# Copyright (c) 2022 Leopold Meinel & contributors
+# Copyright (c) 2023 Leopold Meinel & contributors
 # SPDX ID: GPL-3.0-or-later
 # URL: https://www.gnu.org/licenses/gpl-3.0-standalone.html
 # -----
@@ -19,7 +19,11 @@ source ~/.bash_profile
 # Set screenshot dir
 mkdir -p ~/Documents/Pictures/Screenshots
 HOME=$(echo ~)
-sed -i "s|defaultSaveLocation=.*|defaultSaveLocation=file://$HOME/Documents/Pictures/Screenshots|" ~/.config/spectaclerc
+if [ -z "$(sed -i "s|^defaultSaveLocation=.*|defaultSaveLocation=file://$HOME/Documents/Pictures/Screenshots|w /dev/stdout" ~/.config/spectaclerc)" ]; then
+    echo "ERROR: 'sed' didn't replace, please report this:"
+    echo "       https://github.com/LeoMeinel/dot-files/issues"
+    exit 1
+fi
 
 # Give KDE logout scripts correct permissions
 chmod 744 ~/.config/plasma-workspace/shutdown/*.sh
