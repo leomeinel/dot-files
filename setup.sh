@@ -19,11 +19,12 @@ source ~/.bash_profile
 # Set screenshot dir
 mkdir -p ~/Documents/Pictures/Screenshots
 HOME=$(echo ~)
-if [ -z "$(sed -i "s|^defaultSaveLocation=.*|defaultSaveLocation=file://$HOME/Documents/Pictures/Screenshots|w /dev/stdout" ~/.config/spectaclerc)" ]; then
-    echo "ERROR: 'sed' didn't replace, please report this:"
-    echo "       https://github.com/LeoMeinel/dot-files/issues"
-    exit 1
-fi
+## START sed
+FILE="~/.config/spectaclerc"
+STRING="^defaultSaveLocation=.*"
+grep -q "$STRING" "$FILE" &&
+    sed -i "s|$STRING|defaultSaveLocation=file://$HOME/Documents/Pictures/Screenshots|" "$FILE"
+## END sed
 
 # Give KDE logout scripts correct permissions
 chmod 744 ~/.config/plasma-workspace/shutdown/*.sh
