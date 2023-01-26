@@ -15,7 +15,7 @@ set -e
 # Define functions
 sed_exit() {
     echo "ERROR: 'sed' didn't replace, report this @"
-    echo "       https://github.com/LeoMeinel/arch-install/issues"
+    echo "       https://github.com/LeoMeinel/dot-files/issues"
     exit 1
 }
 
