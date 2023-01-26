@@ -20,7 +20,7 @@ source ~/.bash_profile
 mkdir -p ~/Documents/Pictures/Screenshots
 HOME=$(echo ~)
 ## START sed
-FILE="~/.config/spectaclerc"
+FILE=~/.config/spectaclerc
 STRING="^defaultSaveLocation=.*"
 grep -q "$STRING" "$FILE" &&
     sed -i "s|$STRING|defaultSaveLocation=file://$HOME/Documents/Pictures/Screenshots|" "$FILE"
