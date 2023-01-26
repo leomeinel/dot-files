@@ -12,13 +12,6 @@
 # Fail on error
 set -e
 
-# Define functions
-sed_exit() {
-    echo "ERROR: 'sed' didn't replace, report this @"
-    echo "       https://github.com/LeoMeinel/arch-install/issues"
-    exit 1
-}
-
 # Copy dot-files
 cp -R ~/dot-files/.config ~/dot-files/.bash_logout ~/dot-files/.bash_profile ~/dot-files/.bashrc ~/dot-files/.bash_aliases ~/
 source ~/.bash_profile
