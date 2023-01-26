@@ -16,18 +16,6 @@ set -e
 cp -R ~/dot-files/.config ~/dot-files/.bash_logout ~/dot-files/.bash_profile ~/dot-files/.bashrc ~/dot-files/.bash_aliases ~/
 source ~/.bash_profile
 
-# Set screenshot dir
-mkdir -p ~/Documents/Pictures/Screenshots
-HOME=$(echo ~)
-if [ -z "$(sed -i "s|^defaultSaveLocation=.*|defaultSaveLocation=file://$HOME/Documents/Pictures/Screenshots|w /dev/stdout" ~/.config/spectaclerc)" ]; then
-    echo "ERROR: 'sed' didn't replace, please report this:"
-    echo "       https://github.com/LeoMeinel/dot-files/issues"
-    exit 1
-fi
-
-# Give KDE logout scripts correct permissions
-chmod 744 ~/.config/plasma-workspace/shutdown/*.sh
-
 # Create .ssh
 mkdir -p ~/.ssh
 chmod 700 ~/.ssh
@@ -37,6 +25,8 @@ mkdir -p ~/src
 chmod 700 ~/src
 
 # Create XDG dirs
+# Some of these exist, even tho the program isn't installed.
+# This is on purpose in case one of the programs gets installed later on.
 mkdir -p ~/.local/share/android
 mkdir -p ~/.local/share/cargo
 mkdir -p ~/.local/share/go
@@ -47,9 +37,6 @@ mkdir -p ~/.local/state/bash
 # Create ~/.local/share/gnupg
 mkdir -p ~/.local/share/gnupg
 chmod 700 ~/.local/share/gnupg
-
-# Set default rust
-rustup default stable
 
 # Initialize nvim
 nvim --headless -c 'sleep 5' -c 'q!'
