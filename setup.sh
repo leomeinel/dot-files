@@ -57,7 +57,7 @@ mkdir -p ~/.local/share/gnupg
 chmod 700 ~/.local/share/gnupg
 
 # Set default rust
-rustup default stable
+#rustup default stable
 
 # Initialize nvim
 nvim --headless -c 'sleep 5' -c 'q!'
