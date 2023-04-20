@@ -13,7 +13,7 @@
 set -e
 
 # Copy dot-files
-cp -R ~/dot-files/.config ~/dot-files/.bash_logout ~/dot-files/.bash_profile ~/dot-files/.bashrc ~/dot-files/.bash_aliases ~/
+cp -R ~/dot-files/.config ~/dot-files/.bash_aliases ~/dot-files/.bash_logout ~/dot-files/.bash_profile ~/dot-files/.bashrc ~/
 source ~/.bash_profile
 
 # Create .ssh
