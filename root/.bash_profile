@@ -23,5 +23,6 @@ export HISTFILE="$XDG_STATE_HOME"/bash/history
 export PLATFORMIO_CORE_DIR="$XDG_DATA_HOME"/platformio
 export RUSTUP_HOME="$XDG_DATA_HOME"/rustup
 
+# Source ~/.bashrc
 [[ -f ~/.bashrc ]] &&
     source ~/.bashrc

@@ -30,5 +30,6 @@ export RUSTUP_HOME="$XDG_DATA_HOME"/rustup
 # Update rust toolchains
 rustup update
 
+# Source ~/.bashrc
 [[ -f ~/.bashrc ]] &&
     source ~/.bashrc

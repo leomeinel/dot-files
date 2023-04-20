@@ -14,7 +14,7 @@
 bind '"\e[A": history-search-backward'
 bind '"\e[B": history-search-forward'
 
-# history
+# History
 HISTCONTROL=ignoredups:ignorespace
 HISTSIZE=1000
 HISTFILESIZE=10000
@@ -23,7 +23,7 @@ shopt -s histappend
 # Line wrap on window resize
 shopt -s checkwinsize
 
-# doas tab completion
+# Tab completion for doas
 complete -cf doas
 
 # If GUI isn't available, don't do anything
