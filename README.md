@@ -6,7 +6,7 @@ Configuration files and miscellaneous files for my personal linux setups
 
 ```sh
 cd
-git clone https://github.com/leomeinel/dot-files.git
+git clone -b server https://github.com/leomeinel/dot-files.git
 chmod +x ./dot-files/setup.sh
 ./dot-files/setup.sh
 ```
