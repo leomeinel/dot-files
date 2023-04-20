@@ -27,8 +27,9 @@ export RUSTUP_HOME="$XDG_DATA_HOME"/rustup
 [[ -z "$SSH_AUTH_SOCK" ]] &&
     eval "$(ssh-agent -s)"
 
-# Update rust toolchains
-rustup update
+# Update rust toolchains if rustup is installed
+pacman -Qq rustup >/dev/null 2>&1 &&
+    rustup update
 
 # Source ~/.bashrc
 [[ -f ~/.bashrc ]] &&

@@ -36,8 +36,9 @@ mkdir -p ~/.local/state/bash
 mkdir -p ~/.local/share/gnupg
 chmod 700 ~/.local/share/gnupg
 
-# Set default rust
-rustup default stable
+# Set default rust if rustup is installed
+pacman -Qq rustup >/dev/null 2>&1 &&
+    rustup default stable
 
 # Initialize nvim
 nvim --headless -c 'sleep 5' -c 'q!'
