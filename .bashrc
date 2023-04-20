@@ -3,14 +3,12 @@
 #
 
 # If not running interactively, don't do anything
-[[ $- != *i* ]] && return
+[[ $- != *i* ]] &&
+    return
 
 # Include ~/.bash_aliases
-[ -f ~/.bash_aliases ] &&
+[[ -f ~/.bash_aliases ]] &&
     source ~/.bash_aliases
-
-# Prompt
-eval "$(starship init bash)"
 
 # Key bindings
 bind '"\e[A": history-search-backward'
@@ -28,7 +26,13 @@ shopt -s checkwinsize
 # doas tab completion
 complete -cf doas
 
+# If GUI isn't available, don't do anything
+[[ -z "$DISPLAY" ]] &&
+    return
+
 # List number of outdated packages
-if [ "$(checkupdates | wc -l)" -gt 0 ]; then
+[[ "$(checkupdates | wc -l)" -gt 0 ]] &&
     echo -e "\e[31m$(checkupdates | wc -l)\e[0m packages are out of date!"
-fi
+
+# Prompt
+eval "$(starship init bash)"
