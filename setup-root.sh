@@ -3,7 +3,7 @@
 # File: setup-root.sh
 # Author: Leopold Meinel (leo@meinel.dev)
 # -----
-# Copyright (c) 2022 Leopold Meinel & contributors
+# Copyright (c) 2023 Leopold Meinel & contributors
 # SPDX ID: GPL-3.0-or-later
 # URL: https://www.gnu.org/licenses/gpl-3.0-standalone.html
 # -----
@@ -13,7 +13,7 @@
 set -e
 
 # Copy dot-files
-cp -R ~/dot-files/root/.config ~/dot-files/root/.bash_profile ~/dot-files/root/.bashrc ~/dot-files/root/.bash_aliases ~/
+cp -R ~/dot-files/root/.config ~/dot-files/root/.bash_profile ~/dot-files/.bashrc ~/dot-files/.bash_aliases ~/
 source ~/.bash_profile
 
 # Create .ssh
