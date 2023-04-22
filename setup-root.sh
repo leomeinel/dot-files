@@ -15,7 +15,7 @@ set -e
 # Copy dot-files
 cp -R ~/dot-files/.bash_aliases ~/dot-files/.bash_logout ~/dot-files/.bash_profile ~/dot-files/.bashrc ~/
 mkdir -p ~/.config
-cp -R ~/dot-files/.config/git ~/dot-files/.config/macchina ~/dot-files/.config/nvim ~/dot-files/.config/starship.toml ~/.config
+cp -R ~/dot-files/.config/git ~/dot-files/.config/macchina ~/dot-files/.config/nvim ~/dot-files/.config/starship.toml ~/.config/
 source ~/.bash_profile
 
 # Create .ssh
