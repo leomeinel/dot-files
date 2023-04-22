@@ -32,5 +32,5 @@ pacman -Qq rustup >/dev/null 2>&1 &&
     rustup update
 
 # Source ~/.bashrc
-[[ -f ~/.bashrc ]] &&
-    source ~/.bashrc
+[[ -f "$HOME/.bashrc" ]] &&
+    source "$HOME/.bashrc"

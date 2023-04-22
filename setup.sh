@@ -33,9 +33,6 @@ grep -q "$STRING" "$FILE" || sed_exit
 sed -i "s|$STRING|defaultSaveLocation=file://$HOME/Documents/Pictures/Screenshots|" "$FILE"
 ## END sed
 
-# Give KDE logout scripts correct permissions
-chmod 744 ~/.config/plasma-workspace/shutdown/*.sh
-
 # Create .ssh
 mkdir -p ~/.ssh
 chmod 700 ~/.ssh
