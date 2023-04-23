@@ -46,6 +46,8 @@ if [ -z "${WAYLAND_DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
     export QT_QPA_PLATFORM=wayland
     export QT_QPA_PLATFORMTHEME=qt5ct
     export QT_WAYLAND_DISABLE_WINDOWDECORATION=1
+    export WLR_NO_HARDWARE_CURSORS=1
+    export WLR_RENDERER_ALLOW_SOFTWARE=1
     export XCURSOR_SIZE=24
     export XDG_CURRENT_DESKTOP=sway
     export XDG_SESSION_DESKTOP=sway
