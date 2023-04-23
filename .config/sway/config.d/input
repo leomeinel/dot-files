@@ -7,3 +7,7 @@ input "type:touchpad" {
 	natural_scroll enable
 	scroll_factor 0.5
 }
+## Keyboard
+input "type:keyboard" {
+    xkb_layout de
+}

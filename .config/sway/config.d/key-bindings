@@ -43,6 +43,8 @@ set $sway-exit swaynag -t warning -m 'Do you really want to exit sway? This will
     bindsym $super+Shift+e exec $sway-exit
     ## Enter resize mode
     bindsym $mod+r mode "resize"
+    ## Notifications
+    bindsym $super+n exec swaync-client -t -sw
 
 # Workspaces
     ## Switch to workspace

@@ -1,48 +1,45 @@
 {
   "layer": "top",
   "position": "top",
-  "height": 24,
-  // "width": 1280,
-  "modules-left": ["sway/workspaces"],
+  "height": 15,
+  "modules-left": ["sway/workspaces", "idle_inhibitor"],
   "modules-center": [],
   "modules-right": [
     "pulseaudio",
-    "network",
     "backlight",
     "battery",
-    "battery#bat2",
+    "tray",
     "clock",
-    "tray"
+    "custom/notification"
   ],
-  "pulseaudio": {
-    // "scroll-step": 1, // %, can be a float
-    "format": "{volume}% {icon} {format_source}",
-    "format-bluetooth": "{volume}% {icon} {format_source}",
-    "format-bluetooth-muted": " {icon} {format_source}",
-    "format-muted": " {format_source}",
-    "format-source": "{volume}% ",
-    "format-source-muted": "",
+  "sway/workspaces": {
+    "disable-scroll": true,
+    "all-outputs": true,
+    "format": "{name}"
+  },
+  "idle_inhibitor": {
+    "format": "{icon}",
     "format-icons": {
-      "headphone": "",
-      "hands-free": "",
+      "activated": "☕️",
+      "deactivated": "🕶️"
+    }
+  },
+  "pulseaudio": {
+    "format": "🐵 {volume}%",
+    "format-bluetooth": "🙈 {volume}%",
+    "format-muted": "🙊",
+    "format-icons": {
+      "headphones": "",
+      "handsfree": "",
       "headset": "",
       "phone": "",
       "portable": "",
       "car": "",
-      "default": ["", "", ""]
+      "default": ["🔈️", "🔉", "🔊"]
     },
     "on-click": "pavucontrol"
   },
-  "network": {
-    // "interface": "wlp2*",
-    "format-wifi": "{essid} ({signalStrength}%) ",
-    "format-ethernet": "{ifname}: {ipaddr}/{cidr} ",
-    "format-linked": "{ifname} (No IP) ",
-    "format-disconnected": "Disconnected ⚠",
-    "format-alt": "{ifname}: {ipaddr}/{cidr}"
-  },
   "backlight": {
-    // "device": "acpi_video1",
     "format": "{percent}% {icon}",
     "format-icons": ["", ""]
   },
@@ -55,22 +52,15 @@
     "format": "{capacity}% {icon}",
     "format-charging": "{capacity}% ",
     "format-plugged": "{capacity}% ",
-    "format-alt": "{time} {icon}",
-    "format-good": "",
     "format-full": "",
     "format-icons": ["", "", "", "", ""]
   },
-  "battery#bat2": {
-    "bat": "BAT2"
+  "tray": {
+    "icon-size": 16,
+    "spacing": 10
   },
   "clock": {
-    // "timezone": "America/New_York",
-    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-    "format-alt": "{:%Y-%m-%d}"
-  },
-  "tray": {
-    // "icon-size": 21,
-    "spacing": 10
+    "format": "{:%Y-%m-%d - %H:%M}"
   },
   "custom/notification": {
     "tooltip": false,
