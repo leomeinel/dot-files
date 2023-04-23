@@ -12,8 +12,7 @@ exec swaybg -i /usr/share/wallpapers/Custom/content/simple_tree.png
 
 # GTK3 applications take a long time to start
 exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK
-exec hash dbus-update-activation-environment 2>/dev/null &&
-    dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
+exec hash dbus-update-activation-environment 2>/dev/null && dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
 ## GTK Theme
 exec gsettings set org.gnome.desktop.interface cursor-theme Adwaita
 exec gsettings set org.gnome.desktop.interface gtk-theme Arc-Dark
@@ -29,5 +28,5 @@ exec kanshi
 exec /usr/libexec/xdg-desktop-portal
 
 # Tray
-nm-applet --indicator
-nextcloud --background
+exec nm-applet --indicator
+exec nextcloud --background

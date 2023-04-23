@@ -227,3 +227,7 @@ label:focus {
   margin: 6px 3px;
   min-width: 16px;
 }
+
+#custom-notification {
+  font-family: "NotoSansMono Nerd Font";
+}
