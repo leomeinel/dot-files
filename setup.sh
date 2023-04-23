@@ -26,9 +26,6 @@ source ~/.bash_profile
 # Set screenshot dir
 mkdir -p ~/Documents/Pictures/Screenshots
 
-# Give KDE logout scripts correct permissions
-chmod 744 ~/.config/plasma-workspace/shutdown/*.sh
-
 # Create .ssh
 mkdir -p ~/.ssh
 chmod 700 ~/.ssh
