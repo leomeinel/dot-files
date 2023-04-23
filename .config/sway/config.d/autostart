@@ -1,0 +1,33 @@
+# polkit-gnome
+exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+
+# Gnome Keyring
+exec gnome-keyring-daemon --daemonize --start --components=gpg,pkcs11,secrets,ssh
+
+# Notifications
+exec swaync
+
+# Background
+exec swaybg -i /usr/share/wallpapers/Custom/content/simple_tree.png
+
+# GTK3 applications take a long time to start
+exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK
+exec hash dbus-update-activation-environment 2>/dev/null &&
+    dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
+## GTK Theme
+exec gsettings set org.gnome.desktop.interface cursor-theme Adwaita
+exec gsettings set org.gnome.desktop.interface gtk-theme Arc-Dark
+exec gsettings set org.gnome.desktop.wm.preferences theme Arc-Dark
+
+# Touchpad gestures
+exec libinput-gestures-setup start
+
+# Outputs
+exec kanshi
+
+# XDG Desktop Portal
+exec /usr/libexec/xdg-desktop-portal
+
+# Tray
+nm-applet --indicator
+nextcloud --background
