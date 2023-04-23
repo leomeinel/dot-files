@@ -35,6 +35,10 @@ pacman -Qq rustup >/dev/null 2>&1 &&
 [[ -f ~/.bashrc ]] &&
     source ~/.bashrc
 
+# If not running interactively, don't do anything
+[[ $- != *i* ]] &&
+    return
+
 if [ -z "${WAYLAND_DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
     exec sway
 fi
