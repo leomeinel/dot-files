@@ -1,0 +1,9 @@
+# Input
+## Disable mouse acceleration
+input "type:pointer" accel_profile flat
+## Touchpad
+input "type:touchpad" {
+	tap enable
+	natural_scroll enable
+	scroll_factor 0.5
+}

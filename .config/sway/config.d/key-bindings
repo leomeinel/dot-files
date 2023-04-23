@@ -1,0 +1,95 @@
+# Variables
+## Modifiers
+set $mod Mod1
+set $super Mod4
+## Home row direction keys
+set $left h
+set $down j
+set $up k
+set $right l
+## Preferred applications
+set $term alacritty
+set $menu wofi --show run
+set $rectangle-screenshot grim -g "$(slurp)" "$(xdg-user-dir PICTURES)/Screenshots/$(date).png"
+set $screenshot grim "$(xdg-user-dir PICTURES)/Screenshots/$(date).png"
+set $volume-down ~/.config/sway/scripts/volume --down
+set $volume-up ~/.config/sway/scripts/volume --up
+set $brightness-down brightnessctl set 5%-
+set $brightness-up brightnessctl set 5%+
+## Sway
+set $sway-exit swaynag -t warning -m 'Do you really want to exit sway? This will end your Wayland session.' -b 'Yes, exit sway' 'swaymsg exit'
+
+# Applications
+    ## Start terminal
+    bindsym $super+Return exec $term
+    ## Kill focused window
+    bindsym $super+q kill
+    ## Start launcher
+    bindsym $super+d exec $menu
+    ## Screenshots
+    bindsym $super+Shift+Print exec $rectangle-screenshot
+    bindsym $super+Print exec $screenshot
+    ## Volume
+    bindsym $super+F2 exec $volume-down
+    bindsym $super+F3 exec $volume-up
+    ## Brightness
+    bindsym $super+F5 exec $brightness-down
+    bindsym $super+F6 exec $brightness-up
+
+# Sway
+    ## Reload config
+    bindsym $super+Shift+c reload
+    ## Exit sway
+    bindsym $super+Shift+e exec $sway-exit
+    ## Enter resize mode
+    bindsym $mod+r mode "resize"
+
+# Workspaces
+    ## Switch to workspace
+    bindsym $super+1 workspace number 1
+    bindsym $super+2 workspace number 2
+    bindsym $super+3 workspace number 3
+    bindsym $super+4 workspace number 4
+    bindsym $super+5 workspace number 5
+    bindsym $super+6 workspace number 6
+    bindsym $super+7 workspace number 7
+    bindsym $super+8 workspace number 8
+    bindsym $super+9 workspace number 9
+    ## Move focused window to workspace
+    bindsym $super+Shift+1 move container to workspace number 1
+    bindsym $super+Shift+2 move container to workspace number 2
+    bindsym $super+Shift+3 move container to workspace number 3
+    bindsym $super+Shift+4 move container to workspace number 4
+    bindsym $super+Shift+5 move container to workspace number 5
+    bindsym $super+Shift+6 move container to workspace number 6
+    bindsym $super+Shift+7 move container to workspace number 7
+    bindsym $super+Shift+8 move container to workspace number 8
+    bindsym $super+Shift+9 move container to workspace number 9
+
+# Move
+    ## Move focus
+    bindsym $super+$left focus left
+    bindsym $super+$down focus down
+    bindsym $super+$up focus up
+    bindsym $super+$right focus right
+    ## Move focused window
+    bindsym $super+Shift+$left move left
+    bindsym $super+Shift+$down move down
+    bindsym $super+Shift+$up move up
+    bindsym $super+Shift+$right move right
+
+# Layout
+    ## Switch focused window to fullscreen
+    bindsym $super+F11 fullscreen
+    ## Resize and drag modifier
+    floating_modifier $mod normal
+
+# Resize mode
+mode "resize" {
+    bindsym $left resize shrink width 10px
+    bindsym $down resize grow height 10px
+    bindsym $up resize shrink height 10px
+    bindsym $right resize grow width 10px
+    # Return
+    bindsym Escape mode "default"
+}

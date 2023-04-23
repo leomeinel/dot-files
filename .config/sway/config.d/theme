@@ -1,0 +1,12 @@
+# Gaps
+gaps inner 0
+gaps outer 0
+
+# Border
+default_border pixel 1
+
+# Font
+font pango: NotoSansMono Regular 10
+
+### Output configuration
+output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
