@@ -12,26 +12,12 @@
 # Fail on error
 set -e
 
-# Define functions
-sed_exit() {
-    echo "ERROR: 'sed' didn't replace, report this @"
-    echo "       https://github.com/leomeinel/dot-files/issues"
-    exit 1
-}
-
 # Copy dot-files
 cp -R ~/dot-files/.config ~/dot-files/.bash_aliases ~/dot-files/.bash_logout ~/dot-files/.bash_profile ~/dot-files/.bashrc ~/
 source ~/.bash_profile
 
-# Set screenshot dir
+# Create screenshot dir
 mkdir -p ~/Documents/Pictures/Screenshots
-HOME=$(echo ~)
-## START sed
-FILE=~/.config/spectaclerc
-STRING="^defaultSaveLocation=.*"
-grep -q "$STRING" "$FILE" || sed_exit
-sed -i "s|$STRING|defaultSaveLocation=file://$HOME/Documents/Pictures/Screenshots|" "$FILE"
-## END sed
 
 # Create .ssh
 mkdir -p ~/.ssh
