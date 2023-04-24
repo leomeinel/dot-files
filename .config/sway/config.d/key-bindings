@@ -12,8 +12,8 @@ set $term alacritty
 set $menu wofi --show run
 set $rectangle-screenshot grim -g "$(slurp)" "$(xdg-user-dir PICTURES)/Screenshots/$(date).png"
 set $screenshot grim "$(xdg-user-dir PICTURES)/Screenshots/$(date).png"
-set $volume-down ~/.config/sway/scripts/volume --down
-set $volume-up ~/.config/sway/scripts/volume --up
+set $volume-down ~/.config/sway/scripts/volume.sh --down
+set $volume-up ~/.config/sway/scripts/volume.sh --up
 set $brightness-down brightnessctl set 5%-
 set $brightness-up brightnessctl set 5%+
 ## Sway
