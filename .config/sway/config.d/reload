@@ -1,0 +1,3 @@
+# Reload notification center
+exec_always swaync-client -R
+exec_always swaync-client -rs
