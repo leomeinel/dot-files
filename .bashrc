@@ -27,7 +27,7 @@ shopt -s checkwinsize
 complete -cf doas
 
 # If GUI isn't available, don't do anything
-[[ -z "$DISPLAY" ]] &&
+[[ -z "$XDG_CURRENT_DESKTOP" ]] &&
     return
 
 # List number of outdated packages
