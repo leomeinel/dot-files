@@ -17,7 +17,7 @@ set $volume-up ~/.config/sway/scripts/volume.sh --up
 set $brightness-down brightnessctl set 5%-
 set $brightness-up brightnessctl set 5%+
 ## Sway
-set $sway-exit swaynag -t warning -m 'Do you really want to exit sway? This will end your Wayland session.' -b 'Yes, exit sway' 'swaymsg exit'
+set $sway-exit nwg-bar
 
 # Applications
     ## Start terminal
