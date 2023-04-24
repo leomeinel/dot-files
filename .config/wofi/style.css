@@ -1,22 +1,26 @@
+@define-color white #ebdbb2;
+@define-color dark #1d2021;
+@define-color secondary #689d6a;
+@define-color hint #fabd2f;
+
 * {
   border-radius: 3px;
   border: none;
-  font-family: "Noto Sans Mono Regular", Helvetica, Arial, sans-serif;
-  font-size: 10px;
+  font-family: "Hasklig";
+  font-size: 24px;
 }
 
 window {
-  background-color: rgba(50, 50, 50, 0.9);
-  color: #ffffff;
-  border-bottom: 3px solid rgba(100, 114, 125, 0.5);
+  background-color: @dark;
+  color: @white;
 }
 
 #input {
-  background-color: #bbccdd;
-  color: #333333;
+  background-color: white;
+  color: @dark;
 }
 
 #entry:selected {
   box-shadow: inset 0 -3px white;
-  background-color: #64727d;
+  background-color: @secondary;
 }

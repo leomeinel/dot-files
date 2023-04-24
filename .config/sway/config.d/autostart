@@ -1,3 +1,8 @@
+# Dbus
+exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK
+#exec hash dbus-update-activation-environment 2>/dev/null && dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
+exec dbus-update-activation-environment --all 2>/dev/null
+
 # polkit-gnome
 exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 
@@ -6,13 +11,11 @@ exec gnome-keyring-daemon --daemonize --start --components=gpg,pkcs11,secrets,ss
 
 # Notifications
 exec swaync
+exec aa-notify -p -s 1 -w 60 -f /var/log/audit/audit.log
 
 # Background
 exec swaybg -i /usr/share/wallpapers/Custom/content/simple_tree.png
 
-# GTK3 applications take a long time to start
-exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK
-exec hash dbus-update-activation-environment 2>/dev/null && dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
 ## GTK Theme
 exec gsettings set org.gnome.desktop.interface cursor-theme Adwaita
 exec gsettings set org.gnome.desktop.interface gtk-theme Arc-Dark

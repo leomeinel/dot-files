@@ -17,8 +17,8 @@ window#waybar {
   background: @dark;
 }
 
-#workspaces,
-#clock {
+#clock,
+#workspaces {
   font-weight: 800;
 }
 
@@ -45,22 +45,22 @@ window#waybar {
   color: @primary;
 }
 
+#backlight,
+#battery,
+#clock,
 #custom-notification,
 #idle_inhibitor,
-#tray,
 #pulseaudio,
-#battery,
-#backlight,
-#clock{
+#tray {
   padding: 0 8px;
   margin: 0;
 }
 
+#backlight,
+#battery,
 #custom-notification,
 #idle_inhibitor,
-#tray,
 #pulseaudio,
-#battery,
-#backlight {
-    font-family: "Font Awesome 6 Free";
+#tray {
+  font-family: "Font Awesome 6 Free";
 }

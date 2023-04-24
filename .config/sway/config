@@ -1,5 +1,5 @@
 # User configs
 include $HOME/.config/sway/config.d/*
 
-# Disable this if every app is compatible with wayland
+# Enable this if every app is compatible with wayland
 xwayland enable

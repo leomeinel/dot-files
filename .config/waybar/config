@@ -2,7 +2,9 @@
   "layer": "top",
   "position": "top",
   "height": 8,
-  "modules-left": ["sway/workspaces"],
+  "modules-left": [
+    "sway/workspaces"
+  ],
   "modules-center": [],
   "modules-right": [
     "idle_inhibitor",
@@ -29,13 +31,20 @@
     "format": "{icon}",
     "format-muted": "🔈️",
     "format-icons": {
-        "default": ["🔈️", "🔉", "🔊"]
+      "default": [
+        "🔈️",
+        "🔉",
+        "🔊"
+      ]
     },
     "on-click": "pavucontrol"
   },
   "backlight": {
     "format": "{percent}% {icon}",
-    "format-icons": ["", ""]
+    "format-icons": [
+      "",
+      ""
+    ]
   },
   "battery": {
     "states": {
@@ -47,7 +56,13 @@
     "format-charging": "{capacity}% ",
     "format-plugged": "{capacity}% ",
     "format-full": "",
-    "format-icons": ["", "", "", "", ""]
+    "format-icons": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
   },
   "tray": {
     "icon-size": 12,
