@@ -1,13 +1,13 @@
 @define-color white #ebdbb2;
 @define-color dark #1d2021;
 @define-color secondary #689d6a;
-@define-color hint #fabd2f;
+@define-color extra-bg #3f5f5f;
 
 * {
   border-radius: 3px;
   border: none;
   font-family: "Hasklig";
-  font-size: 24px;
+  font-size: 20px;
 }
 
 window {
@@ -16,11 +16,10 @@ window {
 }
 
 #input {
-  background-color: white;
+  background-color: @extra-bg;
   color: @dark;
 }
 
 #entry:selected {
-  box-shadow: inset 0 -3px white;
   background-color: @secondary;
 }
