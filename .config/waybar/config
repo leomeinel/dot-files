@@ -1,14 +1,15 @@
 {
   "layer": "top",
   "position": "top",
-  "height": 15,
-  "modules-left": ["sway/workspaces", "idle_inhibitor"],
+  "height": 8,
+  "modules-left": ["sway/workspaces"],
   "modules-center": [],
   "modules-right": [
+    "idle_inhibitor",
+    "tray",
     "pulseaudio",
     "backlight",
     "battery",
-    "tray",
     "clock",
     "custom/notification"
   ],
@@ -20,22 +21,15 @@
   "idle_inhibitor": {
     "format": "{icon}",
     "format-icons": {
-      "activated": "☕️",
-      "deactivated": "🕶️"
+      "activated": "🏀",
+      "deactivated": "🍪"
     }
   },
   "pulseaudio": {
-    "format": "🐵 {volume}%",
-    "format-bluetooth": "🙈 {volume}%",
-    "format-muted": "🙊",
+    "format": "{icon}",
+    "format-muted": "🔈️",
     "format-icons": {
-      "headphones": "",
-      "handsfree": "",
-      "headset": "",
-      "phone": "",
-      "portable": "",
-      "car": "",
-      "default": ["🔈️", "🔉", "🔊"]
+        "default": ["🔈️", "🔉", "🔊"]
     },
     "on-click": "pavucontrol"
   },
@@ -56,8 +50,8 @@
     "format-icons": ["", "", "", "", ""]
   },
   "tray": {
-    "icon-size": 16,
-    "spacing": 10
+    "icon-size": 12,
+    "spacing": 12
   },
   "clock": {
     "format": "{:%Y-%m-%d - %H:%M}"
