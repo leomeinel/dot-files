@@ -26,7 +26,6 @@ window#waybar {
   color: @dark;
 }
 
-/* Workspace Buttons */
 #workspaces button label {
   color: @secondary;
 }
@@ -37,22 +36,8 @@ window#waybar {
   background: @secondary;
 }
 
-#clock,
-#battery,
-#pulseaudio,
-#tray,
-#idle_inhibitor {
-  padding: 0 5px;
-  margin: 0 5px;
-}
-
-#idle_inhibitor.activated {
-  background-color: @secondary;
-  color: @dark;
-}
-
 #clock {
-  margin: 0;
+  font-family: "Nerd Font Symbols Mono";
   color: @hint;
 }
 
@@ -60,6 +45,22 @@ window#waybar {
   color: @primary;
 }
 
-#custom-notification {
-  font-family: "NotoSansMono Nerd Font";
+#custom-notification,
+#idle_inhibitor,
+#tray,
+#pulseaudio,
+#battery,
+#backlight,
+#clock{
+  padding: 0 8px;
+  margin: 0;
+}
+
+#custom-notification,
+#idle_inhibitor,
+#tray,
+#pulseaudio,
+#battery,
+#backlight {
+    font-family: "Font Awesome 6 Free";
 }
