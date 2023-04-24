@@ -6,7 +6,7 @@
   },
   {
     "label": "Logout",
-    "exec": "~/.config/sway/scripts/logout.sh",
+    "exec": "swaymsg exit && pkill -u $UID",
     "icon": "/usr/share/nwg-bar/images/system-log-out.svg"
   },
   {
