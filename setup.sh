@@ -29,6 +29,15 @@ mkdir -p ~/Documents/Pictures/Screenshots
 
 # Set keyboard layout for sway
 LAYOUT="$(localectl status | grep "X11 Layout:" | awk '{print $3}')"
+[[ -n "$XDG_CURRENT_DESKTOP" ]] &&
+    {
+        ## START sed
+        FILE=~/.config/sway/config.d/input
+        STRING="^    xkb_layout .*"
+        grep -q "$STRING" "$FILE" || sed_exit
+        sed -i "s/$STRING/    xkb_layout $LAYOUT/" "$FILE"
+        ## END sed
+    }
 
 # Create .ssh
 mkdir -p ~/.ssh
