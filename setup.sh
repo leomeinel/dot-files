@@ -21,6 +21,7 @@ sed_exit() {
 
 # Copy dot-files
 cp -R ~/dot-files/.config ~/dot-files/.bash_aliases ~/dot-files/.bash_logout ~/dot-files/.bash_profile ~/dot-files/.bashrc ~/
+rsync -rpq --mkpath ~/dot-files/.local/ ~/.local/
 source ~/.bash_profile
 
 # Set screenshot dir
