@@ -15,11 +15,6 @@ exec aa-notify -p -s 1 -w 60 -f /var/log/audit/audit.log
 # Background
 exec swaybg -i /usr/share/wallpapers/Custom/content/simple_tree.png
 
-## GTK Theme
-exec gsettings set org.gnome.desktop.interface cursor-theme Adwaita
-exec gsettings set org.gnome.desktop.interface gtk-theme Arc-Dark
-exec gsettings set org.gnome.desktop.wm.preferences theme Arc-Dark
-
 # Touchpad gestures
 exec libinput-gestures-setup start
 
