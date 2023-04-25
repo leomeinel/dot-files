@@ -21,20 +21,23 @@ sed_exit() {
 
 # Copy dot-files
 cp -R ~/dot-files/.config ~/dot-files/.bash_aliases ~/dot-files/.bash_logout ~/dot-files/.bash_profile ~/dot-files/.bashrc ~/
+rsync -rpq --mkpath ~/dot-files/.local/ ~/.local/
 source ~/.bash_profile
 
 # Set screenshot dir
 mkdir -p ~/Documents/Pictures/Screenshots
-HOME=$(echo ~)
-## START sed
-FILE=~/.config/spectaclerc
-STRING="^defaultSaveLocation=.*"
-grep -q "$STRING" "$FILE" || sed_exit
-sed -i "s|$STRING|defaultSaveLocation=file://$HOME/Documents/Pictures/Screenshots|" "$FILE"
-## END sed
 
-# Give KDE logout scripts correct permissions
-chmod 744 ~/.config/plasma-workspace/shutdown/*.sh
+# Set keyboard layout for sway
+LAYOUT="$(localectl status | grep "X11 Layout:" | awk '{print $3}')"
+[[ -n "$XDG_CURRENT_DESKTOP" ]] &&
+    {
+        ## START sed
+        FILE=~/.config/sway/config.d/input
+        STRING="^    xkb_layout .*"
+        grep -q "$STRING" "$FILE" || sed_exit
+        sed -i "s/$STRING/    xkb_layout $LAYOUT/" "$FILE"
+        ## END sed
+    }
 
 # Create .ssh
 mkdir -p ~/.ssh
