@@ -12,9 +12,6 @@ exec gnome-keyring-daemon --daemonize --start --components=gpg,pkcs11,secrets,ss
 exec swaync
 exec aa-notify -p -s 1 -w 60 -f /var/log/audit/audit.log
 
-# Background
-exec swaybg -i /usr/share/wallpapers/Custom/content/simple_tree.png
-
 # Touchpad gestures
 exec libinput-gestures-setup start
 
