@@ -39,6 +39,11 @@ pacman -Qq rustup >/dev/null 2>&1 &&
 [[ $- != *i* ]] &&
     return
 
+# If sway is not installed, don't do anything
+pacman -Qq sway >/dev/null 2>&1 ||
+    return
+
+# Start sway with environment variables
 if [ -z "${WAYLAND_DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
     export MOZ_ENABLE_WAYLAND=1
     export MOZ_WEBRENDER=1
