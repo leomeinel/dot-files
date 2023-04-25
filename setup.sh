@@ -27,6 +27,9 @@ source ~/.bash_profile
 # Set screenshot dir
 mkdir -p ~/Documents/Pictures/Screenshots
 
+# Set keyboard layout for sway
+LAYOUT="$(localectl status | grep "X11 Layout:" | awk '{print $3}')"
+
 # Create .ssh
 mkdir -p ~/.ssh
 chmod 700 ~/.ssh
