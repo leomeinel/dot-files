@@ -46,3 +46,12 @@ for_window [app_id="^.*"] opacity 1
 default_border pixel 1
 default_floating_border pixel 2
 hide_edge_borders smart
+
+# GTK Theme
+exec gsettings set org.gnome.desktop.interface cursor-theme 'Adwaita'
+exec gsettings set org.gnome.desktop.interface gtk-theme 'Arc-Dark'
+exec gsettings set org.gnome.desktop.wm.preferences theme 'Arc-Dark'
+exec gsettings set org.gnome.desktop.interface icon-theme 'Papirus-Dark'
+
+# Background
+exec swaybg -i /usr/share/wallpapers/Custom/content/simple_tree.png
