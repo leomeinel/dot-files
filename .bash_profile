@@ -43,6 +43,10 @@ export RUSTUP_HOME="$XDG_DATA_HOME"/rustup
 [[ -n $(which sway) ]] &&
     return
 
+# If current user is root, don't do anything
+[[ "$UID" -eq 0 ]] &&
+    return
+
 # Start sway with environment variables
 if [ -z "${WAYLAND_DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
     export MOZ_ENABLE_WAYLAND=1
