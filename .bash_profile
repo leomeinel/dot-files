@@ -28,7 +28,7 @@ export RUSTUP_HOME="$XDG_DATA_HOME"/rustup
     eval "$(ssh-agent -s)"
 
 # Update rust toolchains if rustup is installed
-pacman -Qq rustup >/dev/null 2>&1 &&
+[[ -n $(which rustup) ]] &&
     rustup update
 
 # Source ~/.bashrc
@@ -40,7 +40,7 @@ pacman -Qq rustup >/dev/null 2>&1 &&
     return
 
 # If sway is not installed, don't do anything
-pacman -Qq sway >/dev/null 2>&1 ||
+[[ -n $(which sway) ]] &&
     return
 
 # Start sway with environment variables
