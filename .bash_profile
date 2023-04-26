@@ -40,7 +40,7 @@ export RUSTUP_HOME="$XDG_DATA_HOME"/rustup
     return
 
 # If sway is not installed, don't do anything
-[[ -n $(which sway >/dev/null 2>&1) ]] &&
+[[ -z $(which sway >/dev/null 2>&1) ]] &&
     return
 
 # If current user is root, don't do anything
