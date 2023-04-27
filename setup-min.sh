@@ -39,7 +39,7 @@ mkdir -p ~/.local/share/gnupg
 chmod 700 ~/.local/share/gnupg
 
 # Set default rust if rustup is installed
-[[ -n $(which rustup >/dev/null 2>&1) ]] &&
+[[ -n $(which rustup) ]] >/dev/null 2>&1 &&
     rustup default stable
 
 # Initialize nvim
