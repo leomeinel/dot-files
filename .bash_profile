@@ -28,7 +28,7 @@ export RUSTUP_HOME="$XDG_DATA_HOME"/rustup
     eval "$(ssh-agent -s)"
 
 # Update rust toolchains if rustup is installed
-[[ -n $(which rustup >/dev/null 2>&1) ]] &&
+[[ -n $(which rustup) ]] >/dev/null 2>&1 &&
     rustup update
 
 # Source ~/.bashrc
@@ -40,7 +40,7 @@ export RUSTUP_HOME="$XDG_DATA_HOME"/rustup
     return
 
 # If sway is not installed, don't do anything
-[[ -z $(which sway >/dev/null 2>&1) ]] &&
+[[ -z $(which sway) ]] >/dev/null 2>&1 &&
     return
 
 # If current user is root, don't do anything
