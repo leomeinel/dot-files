@@ -1,16 +1,21 @@
 {
-  "app_version": "0.19.8",
-  "app_version_int": 953,
+  "app_version": "0.25.0",
+  "app_version_int": 992,
   "subscriptions": [
+    {
+      "service_id": 0,
+      "url": "https://www.youtube.com/channel/UCE5dIscvDxrb7CD5uiJJOiw",
+      "name": "Adrian's Digital Basement"
+    },
+    {
+      "service_id": 0,
+      "url": "https://www.youtube.com/channel/UCbtwi4wK1YXd9AyV_4UcE6g",
+      "name": "Adrian's Digital Basement ]["
+    },
     {
       "service_id": 0,
       "url": "https://www.youtube.com/channel/UC3ts8coMP645hZw9JSD3pqQ",
       "name": "Andreas Kling"
-    },
-    {
-      "service_id": 0,
-      "url": "https://www.youtube.com/channel/UC2KfmYEM4KCuA1ZurravgYw",
-      "name": "Amigoscode"
     },
     {
       "service_id": 0,
@@ -24,8 +29,8 @@
     },
     {
       "service_id": 0,
-      "url": "https://www.youtube.com/channel/UCld68syR8Wi-GY_n4CaoJGA",
-      "name": "Brodie Robertson"
+      "url": "https://www.youtube.com/channel/UCxHAlbZQNFU2LgEtiqd2Maw",
+      "name": "C++ Weekly With Jason Turner"
     },
     {
       "service_id": 0,
@@ -41,11 +46,6 @@
       "service_id": 0,
       "url": "https://www.youtube.com/channel/UCwHPRkLWbL_guuBMGxKe2aQ",
       "name": "China Fact Chasers"
-    },
-    {
-      "service_id": 0,
-      "url": "https://www.youtube.com/channel/UCxHAlbZQNFU2LgEtiqd2Maw",
-      "name": "Cᐩᐩ Weekly With Jason Turner"
     },
     {
       "service_id": 0,
@@ -99,6 +99,11 @@
     },
     {
       "service_id": 0,
+      "url": "https://www.youtube.com/channel/UCE7HSqVe0-fTumbJJn3S5hg",
+      "name": "Lashmak"
+    },
+    {
+      "service_id": 0,
       "url": "https://www.youtube.com/channel/UCSp-OaMpsO8K0KkOqyBl7_w",
       "name": "Let's Get Rusty"
     },
@@ -114,16 +119,6 @@
     },
     {
       "service_id": 0,
-      "url": "https://www.youtube.com/channel/UCXuqSBlHAE6Xw-yeJA0Tunw",
-      "name": "Linus Tech Tips"
-    },
-    {
-      "service_id": 0,
-      "url": "https://www.youtube.com/channel/UC2eYFnH61tmytImy1mTYvhA",
-      "name": "Luke Smith"
-    },
-    {
-      "service_id": 0,
       "url": "https://www.youtube.com/channel/UCcnci5vbpLJ-rh_V9yXwawg",
       "name": "martincitopants"
     },
@@ -131,11 +126,6 @@
       "service_id": 0,
       "url": "https://www.youtube.com/channel/UCrMUPP-xQ7BuEhADfo2GVDQ",
       "name": "McYum"
-    },
-    {
-      "service_id": 0,
-      "url": "https://www.youtube.com/channel/UC7YOGHUfC1Tb6E4pudI9STA",
-      "name": "Mental Outlaw"
     },
     {
       "service_id": 0,
@@ -174,18 +164,13 @@
     },
     {
       "service_id": 0,
-      "url": "https://www.youtube.com/channel/UCs6KfncB4OV6Vug4o_bzijg",
-      "name": "Techlore"
+      "url": "https://www.youtube.com/channel/UCcukTqc1cJJ4K3c4uzxTzjA",
+      "name": "The China Show"
     },
     {
       "service_id": 0,
       "url": "https://www.youtube.com/channel/UCjr2bPAyPV7t35MvcgT3W8Q",
       "name": "The Hated One"
-    },
-    {
-      "service_id": 0,
-      "url": "https://www.youtube.com/channel/UCylGUf9BvQooEFjgdNudoQg",
-      "name": "The Linux Cast"
     },
     {
       "service_id": 0,
