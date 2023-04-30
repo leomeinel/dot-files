@@ -24,15 +24,16 @@ shopt -s histappend
 shopt -s checkwinsize
 
 # Tab completion for doas
-complete -cf doas
+complete -cf /usr/bin/doas
 
 # If GUI isn't available, don't do anything
 [[ -z "$XDG_CURRENT_DESKTOP" ]] &&
     return
 
 # List number of outdated packages
-[[ "$(checkupdates | wc -l)" -gt 0 ]] &&
-    echo -e "\e[31m$(checkupdates | wc -l)\e[0m packages are out of date!"
+UPDATES="$(/usr/bin/checkupdates | /usr/bin/wc -l)"
+[[ "$UPDATES" -gt 0 ]] &&
+    /usr/bin/echo -e "\e[31m$UPDATES\e[0m packages are out of date!"
 
 # Prompt
 eval "$(starship init bash)"
