@@ -25,11 +25,11 @@ export RUSTUP_HOME="$XDG_DATA_HOME"/rustup
 
 # Start ssh-agent if it is not already started
 [[ -z "$SSH_AUTH_SOCK" ]] &&
-    eval "$(ssh-agent -s)"
+    eval "$(ssh-agent -s)" >/dev/null 2>&1
 
 # Update rust toolchains if rustup is installed
 [[ -n $(which rustup) ]] >/dev/null 2>&1 &&
-    rustup update
+    rustup update >/dev/null 2>&1
 
 # Source ~/.bashrc
 [[ -f ~/.bashrc ]] &&
