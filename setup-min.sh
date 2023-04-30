@@ -43,7 +43,7 @@ chmod 700 ~/.local/share/gnupg
     rustup default stable
 
 # Initialize nvim
-nvim --headless -c 'sleep 5' -c 'q!' >/dev/null 2>&1 &&
+nvim --headless -c 'sleep 5' -c 'q!' >/dev/null 2>&1
 
 # Remove repo
 rm -rf ~/dot-files
