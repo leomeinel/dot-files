@@ -29,10 +29,12 @@ mkdir -p ~/Documents/Pictures/Screenshots
 
 # Set keyboard layout for sway
 LAYOUT="$(localectl status | grep "X11 Layout:" | awk '{print $3}')"
-[[ -n "$XDG_CURRENT_DESKTOP" ]] &&
+## START sed
+FILE=~/.config/sway/config.d/input
+##
+[[ -f "$FILE" ]] && [[ -n "$LAYOUT" ]] &&
     {
-        ## START sed
-        FILE=~/.config/sway/config.d/input
+        ##
         STRING="^    xkb_layout .*"
         grep -q "$STRING" "$FILE" || sed_exit
         sed -i "s/$STRING/    xkb_layout $LAYOUT/" "$FILE"
@@ -64,7 +66,7 @@ chmod 700 ~/.local/share/gnupg
     rustup default stable
 
 # Initialize nvim
-nvim --headless -c 'sleep 5' -c 'q!'
+nvim --headless -c 'sleep 5' -c 'q!' >/dev/null 2>&1
 
 # Remove repo
 rm -rf ~/dot-files
