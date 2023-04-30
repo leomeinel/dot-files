@@ -48,7 +48,7 @@ export RUSTUP_HOME="$XDG_DATA_HOME"/rustup
     return
 
 # Start sway with environment variables
-if [ -z "${WAYLAND_DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
+if [[ -z "${WAYLAND_DISPLAY}" ]] && [[ "${XDG_VTNR}" -eq 1 ]]; then
     export MOZ_ENABLE_WAYLAND=1
     export MOZ_WEBRENDER=1
     export QT_AUTO_SCREEN_SCALE_FACTOR=1
