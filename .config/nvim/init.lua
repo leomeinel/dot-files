@@ -1,3 +1,7 @@
+-- disable netrw
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+
 -- Plugins
 require('plugins')
 require('setup')
@@ -31,6 +35,7 @@ vim.wo.signcolumn = 'yes'
 -- Set colorscheme
 vim.o.background = 'dark'
 vim.o.termguicolors = true
+vim.opt.termguicolors = true
 
 -- Set completeopt to have a better completion experience
 vim.o.completeopt = 'menuone,noselect'
