@@ -9,7 +9,6 @@ vim.o.hlsearch = true
 vim.o.autochdir = true
 
 -- Make relative line numbers default
-vim.wo.number = true
 vim.wo.relativenumber = true
 
 -- Enable mouse mode
