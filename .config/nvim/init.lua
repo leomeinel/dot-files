@@ -8,8 +8,9 @@ vim.o.hlsearch = true
 -- Set working directory to current file
 vim.o.autochdir = true
 
--- Make line numbers default
+-- Make relative line numbers default
 vim.wo.number = true
+vim.wo.relativenumber = true
 
 -- Enable mouse mode
 vim.o.mouse = 'a'
