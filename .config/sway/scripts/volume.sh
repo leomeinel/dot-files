@@ -8,23 +8,23 @@
 # URL: https://www.gnu.org/licenses/gpl-3.0-standalone.html
 # -----
 ###
-CURRENT=$(pactl get-sink-volume @DEFAULT_SINK@ | grep -e '%' | sed 's/ //g' | cut -d "/" -f 2 | sed 's/%//')
+CURRENT=$(/usr/bin/pactl get-sink-volume @DEFAULT_SINK@ | /usr/bin/grep -e '%' | /usr/bin/sed 's/ //g' | /usr/bin/cut -d "/" -f 2 | /usr/bin/sed 's/%//')
 
 up() {
     new="$(($CURRENT + 5))"
     if [ $new -lt 100 ]; then
-        pactl set-sink-volume @DEFAULT_SINK@ $new%
+        /usr/bin/pactl set-sink-volume @DEFAULT_SINK@ $new%
     else
-        pactl set-sink-volume @DEFAULT_SINK@ 100%
+        /usr/bin/pactl set-sink-volume @DEFAULT_SINK@ 100%
     fi
 }
 
 down() {
     new="$(($CURRENT - 5))"
     if [ $new -gt 0 ]; then
-        pactl set-sink-volume @DEFAULT_SINK@ $new%
+        /usr/bin/pactl set-sink-volume @DEFAULT_SINK@ $new%
     else
-        pactl set-sink-volume @DEFAULT_SINK@ 0%
+        /usr/bin/pactl set-sink-volume @DEFAULT_SINK@ 0%
     fi
 }
 

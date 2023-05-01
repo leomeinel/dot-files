@@ -36,4 +36,4 @@ UPDATES="$(/usr/bin/checkupdates | /usr/bin/wc -l)"
     /usr/bin/echo -e "\e[31m$UPDATES\e[0m packages are out of date!"
 
 # Prompt
-eval "$(starship init bash)"
+eval "$(/usr/bin/starship init /usr/bin/bash)"

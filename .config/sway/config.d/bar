@@ -1,4 +1,4 @@
 # Bar
 bar {
-	swaybar_command waybar
+	swaybar_command /usr/bin/waybar
 }

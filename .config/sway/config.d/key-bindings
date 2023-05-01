@@ -8,16 +8,16 @@ set $down j
 set $up k
 set $right l
 ## Preferred applications
-set $term alacritty
-set $menu wofi --show run
-set $rectangle-screenshot grim -g "$(slurp)" "$(xdg-user-dir PICTURES)/Screenshots/$(date).png"
-set $screenshot grim "$(xdg-user-dir PICTURES)/Screenshots/$(date).png"
+set $term "$TERMINAL"
+set $menu /usr/bin/wofi --show run
+set $rectangle-screenshot /usr/bin/grim -g "$(/usr/bin/slurp)" "$(/usr/bin/xdg-user-dir PICTURES)/Screenshots/$(/usr/bin/date).png"
+set $screenshot /usr/bin/grim "$(/usr/bin/xdg-user-dir PICTURES)/Screenshots/$(/usr/bin/date).png"
 set $volume-down ~/.config/sway/scripts/volume.sh --down
 set $volume-up ~/.config/sway/scripts/volume.sh --up
-set $brightness-down brightnessctl set 5%-
-set $brightness-up brightnessctl set 5%+
-## Sway
-set $sway-exit nwg-bar
+set $brightness-down /usr/bin/brightnessctl set 5%-
+set $brightness-up /usr/bin/brightnessctl set 5%+
+set $sway-exit /usr/bin/nwg-bar
+set $sway-notifications /usr/bin/swaync-client -t -sw
 
 # Applications
     ## Start terminal
@@ -44,7 +44,7 @@ set $sway-exit nwg-bar
     ## Enter resize mode
     bindsym $mod+r mode "resize"
     ## Notifications
-    bindsym $super+n exec swaync-client -t -sw
+    bindsym $super+n exec $sway-notifications
 
 # Workspaces
     ## Switch to workspace

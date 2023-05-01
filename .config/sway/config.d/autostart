@@ -1,26 +1,23 @@
 # Dbus
-exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK
-exec dbus-update-activation-environment --all 2>/dev/null
+exec /usr/bin/systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK
+exec /usr/bin/dbus-update-activation-environment --all 2>/dev/null
 
 # polkit-gnome
 exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 
 # Gnome Keyring
-exec gnome-keyring-daemon --daemonize --start --components=gpg,pkcs11,secrets,ssh
+exec /usr/bin/gnome-keyring-daemon --daemonize --start --components=gpg,pkcs11,secrets,ssh
 
 # Notifications
-exec swaync
-exec aa-notify -p -s 1 -w 60 -f /var/log/audit/audit.log
-
-# Touchpad gestures
-exec libinput-gestures-setup start
+exec /usr/bin/swaync
+exec /usr/bin/aa-notify -p -s 1 -w 60 -f /var/log/audit/audit.log
 
 # Outputs
-exec kanshi
+exec /usr/bin/kanshi
 
 # XDG Desktop Portal
-exec /usr/libexec/xdg-desktop-portal
+exec /usr/lib/xdg-desktop-portal
 
 # Tray
-exec nm-applet --indicator
-exec nextcloud --background
+exec /usr/bin/nm-applet --indicator
+exec /usr/bin/nextcloud --background
