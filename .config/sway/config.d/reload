@@ -1,3 +1,6 @@
 # Reload notification center
 exec_always /usr/bin/swaync-client -R
 exec_always /usr/bin/swaync-client -rs
+
+# Reload autotiling
+exec_always /usr/bin/autotiling
