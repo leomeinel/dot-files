@@ -1,6 +1,6 @@
 # Variables
 ## Modifiers
-set $mod Mod1
+set $mod Mod1+Shift
 set $super Mod4
 ## Home row direction keys
 set $left h
@@ -83,8 +83,6 @@ set $sway-notifications /usr/bin/swaync-client -t -sw
 # Layout
     ## Switch focused window to fullscreen
     bindsym $super+F11 fullscreen
-    ## Resize and drag modifier
-    floating_modifier $mod normal
 
 # Resize mode
 mode "resize" {
