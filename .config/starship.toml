@@ -66,3 +66,10 @@ symbol = "🅢 "
 
 [rust]
 symbol = " "
+
+[hostname]
+ssh_symbol = "🌐 "
+style = 'bold blue'
+format = '[$ssh_symbol$hostname]($style) in '
+ssh_only = true
+trim_at = ''
