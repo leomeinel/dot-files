@@ -10,8 +10,8 @@ set $right l
 ## Preferred applications
 set $term "$TERMINAL"
 set $menu /usr/bin/wofi --show run
-set $rectangle-screenshot /usr/bin/grim -g "$(/usr/bin/slurp)" "$(/usr/bin/xdg-user-dir PICTURES)/Screenshots/$(/usr/bin/date).png"
-set $screenshot /usr/bin/grim "$(/usr/bin/xdg-user-dir PICTURES)/Screenshots/$(/usr/bin/date).png"
+set $rectangle-screenshot /usr/bin/grim -g "$(/usr/bin/slurp)" "$(/usr/bin/xdg-user-dir PICTURES)/Screenshots/$(/usr/bin/date -u +"%Y-%m-%dT%H-%M-%S").png"
+set $screenshot /usr/bin/grim "$(/usr/bin/xdg-user-dir PICTURES)/Screenshots/$(/usr/bin/date -u +"%Y-%m-%dT%H-%M-%S").png"
 set $volume-down ~/.config/sway/scripts/volume.sh --down
 set $volume-up ~/.config/sway/scripts/volume.sh --up
 set $brightness-down /usr/bin/brightnessctl set 5%-
