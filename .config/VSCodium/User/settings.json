@@ -40,7 +40,7 @@
   "gitblame.statusBarMessageFormat": "${author.name} (${time.ago})",
   "github.gitProtocol": "ssh",
   "java.eclipse.downloadSources": true,
-  "java.format.settings.url": "https://raw.githubusercontent.com/google/styleguide/gh-pages/eclipse-java-google-style.xml",
+  "java.format.settings.url": "~/.config/eclipse-style-guides/java.xml",
   "material-icon-theme.hidesExplorerArrows": true,
   "oneDarkPro.editorTheme": "One Dark Pro Darker",
   "phpfmt.indent_with_space": 4,
