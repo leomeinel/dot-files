@@ -24,8 +24,10 @@ cp -R ~/dot-files/.config ~/dot-files/.bash_aliases ~/dot-files/.bash_logout ~/d
 rsync -rpq --mkpath ~/dot-files/.local/ ~/.local/
 source ~/.bash_profile
 
-# Set screenshot dir
-mkdir -p ~/Documents/Pictures/Screenshots
+# Copy firefox user.js
+git clone https://github.com/yokoffing/Betterfox.git
+CONFIG_DIR=$(/usr/bin/find ~/.mozilla/firefox/ -type d -name "*.default-release")
+cp ~/Betterfox/user.js "$CONFIG_DIR"
 
 # Set keyboard layout for sway
 LAYOUT="$(localectl status | grep "X11 Layout:" | awk '{print $3}')"
@@ -40,6 +42,9 @@ FILE=~/.config/sway/config.d/input
         sed -i "s/$STRING/    xkb_layout $LAYOUT/" "$FILE"
         ## END sed
     }
+
+# Create screenshot dir
+mkdir -p ~/Documents/Pictures/Screenshots
 
 # Create .ssh
 mkdir -p ~/.ssh
@@ -70,3 +75,4 @@ nvim --headless -c 'sleep 5' -c 'q!' >/dev/null 2>&1
 
 # Remove repo
 rm -rf ~/dot-files
+rm -rf ~/Betterfox
