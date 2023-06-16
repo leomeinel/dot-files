@@ -1,6 +1,6 @@
 {
-  "app_version": "0.25.0",
-  "app_version_int": 992,
+  "app_version": "0.25.1",
+  "app_version_int": 993,
   "subscriptions": [
     {
       "service_id": 0,
@@ -64,6 +64,11 @@
     },
     {
       "service_id": 0,
+      "url": "https://www.youtube.com/channel/UC5KDiSAFxrDWhmysBcNqtMA",
+      "name": "Eric Murphy"
+    },
+    {
+      "service_id": 0,
       "url": "https://www.youtube.com/channel/UC8CsGpP6kVNrWeBVmlJ2UyA",
       "name": "Huggbees"
     },
@@ -79,8 +84,8 @@
     },
     {
       "service_id": 0,
-      "url": "https://www.youtube.com/channel/UC4USoIAL9qcsx5nCZV_QRnA",
-      "name": "iDubbbzTV"
+      "url": "https://www.youtube.com/channel/UCZ9x-z3iOnIbJxVpm1rsu2A",
+      "name": "iskall85"
     },
     {
       "service_id": 0,
@@ -129,6 +134,21 @@
     },
     {
       "service_id": 0,
+      "url": "https://www.youtube.com/channel/UCS-WzPVpAAli-1IfEG2lN8A",
+      "name": "Michael MJD"
+    },
+    {
+      "service_id": 0,
+      "url": "https://www.youtube.com/channel/UCmyGZ0689ODyReHw3rsKLtQ",
+      "name": "Michael Tunnell"
+    },
+    {
+      "service_id": 0,
+      "url": "https://www.youtube.com/channel/UCalhdhWlkBjz9FwLx2YEBfg",
+      "name": "MikeTech"
+    },
+    {
+      "service_id": 0,
       "url": "https://www.youtube.com/channel/UCUMwY9iS8oMyWDYIe6_RmoA",
       "name": "No Boilerplate"
     },
@@ -136,6 +156,11 @@
       "service_id": 0,
       "url": "https://www.youtube.com/channel/UCN7LL0dEffQ7FSjbY5wwlnw",
       "name": "Oxen Project"
+    },
+    {
+      "service_id": 0,
+      "url": "https://www.youtube.com/channel/UCOxmlaJURX3nq8eLuJPbl3A",
+      "name": "Psivewri"
     },
     {
       "service_id": 0,
