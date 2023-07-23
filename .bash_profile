@@ -9,7 +9,7 @@ export VISUAL=/usr/bin/nvim
 export EDITOR=/usr/bin/nvim
 ### Set bat as MANPAGER if it is installed
 [[ -n $(/usr/bin/which bat) ]] >/dev/null 2>&1 &&
-    export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+    export MANPAGER="/usr/bin/sh -c '/usr/bin/col -bx | /usr/bin/bat -l man -p'"
 ## Application data/settings
 export XDG_CACHE_HOME="$HOME/.cache"
 export XDG_CONFIG_HOME="$HOME/.config"
