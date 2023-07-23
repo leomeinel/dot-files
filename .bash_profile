@@ -3,14 +3,14 @@
 #
 
 # Set environment variables
-## For applications
+## Applications
 export JAVA_HOME="/usr/lib/jvm/default"
 export VISUAL=/usr/bin/nvim
 export EDITOR=/usr/bin/nvim
-## For application data/settings
-## FIXME: Files still get generated in $HOME
-## "$HOME"/.pki -> mv "$HOME"/.pki "$XDG_DATA_HOME"/pki (not supported by chromium): https://bugzilla.mozilla.org/show_bug.cgi?id=818686#c11
-## "$HOME/.java" -> export _JAVA_OPTIONS=-Djava.util.prefs.userRoot="$XDG_CONFIG_HOME"/java (not supported by some applications): https://bugs.java.com/bugdatabase/view_bug.do?bug_id=JDK-8290140
+### Set bat as MANPAGER if it is installed
+[[ -n $(/usr/bin/which bat) ]] >/dev/null 2>&1 &&
+    export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+## Application data/settings
 export XDG_CACHE_HOME="$HOME/.cache"
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"
@@ -32,10 +32,6 @@ export RUSTUP_HOME="$XDG_DATA_HOME"/rustup
 # Update rust toolchains if rustup is installed
 [[ -n $(/usr/bin/which rustup) ]] >/dev/null 2>&1 &&
     /usr/bin/rustup update >/dev/null 2>&1
-
-# Set bat as manpager if it is installed
-[[ -n $(/usr/bin/which bat) ]] >/dev/null 2>&1 &&
-    export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 
 # Source ~/.bashrc
 [[ -f ~/.bashrc ]] &&
