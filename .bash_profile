@@ -33,6 +33,10 @@ export RUSTUP_HOME="$XDG_DATA_HOME"/rustup
 [[ -n $(/usr/bin/which rustup) ]] >/dev/null 2>&1 &&
     /usr/bin/rustup update >/dev/null 2>&1
 
+# Set bat as manpager if it is installed
+[[ -n $(/usr/bin/which bat) ]] >/dev/null 2>&1 &&
+    export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+
 # Source ~/.bashrc
 [[ -f ~/.bashrc ]] &&
     source ~/.bashrc
