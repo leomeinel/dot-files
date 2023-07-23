@@ -8,8 +8,10 @@ export JAVA_HOME="/usr/lib/jvm/default"
 export VISUAL=/usr/bin/nvim
 export EDITOR=/usr/bin/nvim
 ### Set bat as MANPAGER if it is installed
-[[ -n $(/usr/bin/which bat) ]] >/dev/null 2>&1 &&
-    export MANPAGER="/usr/bin/sh -c '/usr/bin/col -bx | /usr/bin/bat -l man -p'"
+if [[ -n $(/usr/bin/which bat) ]]; then
+        export MANPAGER="/usr/bin/sh -c '/usr/bin/col -bx | /usr/bin/bat -l man -p'"
+        export MANROFFOPT="-c"
+fi
 ## Application data/settings
 export XDG_CACHE_HOME="$HOME/.cache"
 export XDG_CONFIG_HOME="$HOME/.config"
