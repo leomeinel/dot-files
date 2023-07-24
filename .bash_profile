@@ -39,6 +39,10 @@ export RUSTUP_HOME="$XDG_DATA_HOME"/rustup
 [[ -n $(/usr/bin/which rustup) ]] >/dev/null 2>&1 &&
     /usr/bin/rustup update >/dev/null 2>&1
 
+# Source ~/.bashrc
+[[ -f ~/.bashrc ]] &&
+    source ~/.bashrc
+
 # If sway is not installed, don't do anything
 [[ -z $(/usr/bin/which sway) ]] >/dev/null 2>&1 &&
     return
