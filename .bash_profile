@@ -27,6 +27,10 @@ export HISTFILE="$XDG_STATE_HOME"/bash/history
 export PLATFORMIO_CORE_DIR="$XDG_DATA_HOME"/platformio
 export RUSTUP_HOME="$XDG_DATA_HOME"/rustup
 
+# If not running interactively, don't do anything
+[[ $- != *i* ]] &&
+    return
+
 # Start ssh-agent if it is not already started
 [[ -z "$SSH_AUTH_SOCK" ]] &&
     eval "$(/usr/bin/ssh-agent -s)" >/dev/null 2>&1
@@ -34,14 +38,6 @@ export RUSTUP_HOME="$XDG_DATA_HOME"/rustup
 # Update rust toolchains if rustup is installed
 [[ -n $(/usr/bin/which rustup) ]] >/dev/null 2>&1 &&
     /usr/bin/rustup update >/dev/null 2>&1
-
-# Source ~/.bashrc
-[[ -f ~/.bashrc ]] &&
-    source ~/.bashrc
-
-# If not running interactively, don't do anything
-[[ $- != *i* ]] &&
-    return
 
 # If sway is not installed, don't do anything
 [[ -z $(/usr/bin/which sway) ]] >/dev/null 2>&1 &&
