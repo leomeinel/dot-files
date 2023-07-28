@@ -25,12 +25,9 @@ return require('packer').startup(function(use)
     -- Gruvbox
     use { "ellisonleao/gruvbox.nvim" }
     
-    -- nvim-web-icons
-    use { 'nvim-tree/nvim-web-devicons' }
-    
     -- nvim-tree
-    use { 'nvim-tree/nvim-tree.lua', requires = { 'nvim-tree/nvim-web-devicons' }, tag = 'nightly' }
-    
+    use { 'nvim-tree/nvim-tree.lua', requires = { 'nvim-tree/nvim-web-devicons' } }
+
     if packer_bootstrap then
         require('packer').sync()
     end
