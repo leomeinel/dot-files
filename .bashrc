@@ -27,7 +27,7 @@ shopt -s checkwinsize
 complete -cf /usr/bin/doas
 
 # If GUI isn't available and not connected through ssh, don't do anything
-[[ -z "$XDG_CURRENT_DESKTOP" ]] && [ -z "$SSH_CLIENT" ] && [ -z "$SSH_TTY" ] &&
+[[ -z "$XDG_CURRENT_DESKTOP" ]] && [[ -z "$SSH_CLIENT" ]] && [[ -z "$SSH_TTY" ]] &&
     return
 
 # Prompt
