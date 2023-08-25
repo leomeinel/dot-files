@@ -20,8 +20,10 @@ jcbuisson.vue
 jedeop.crates-completer
 kokororin.vscode-phpfmt
 llvm-vs-code-extensions.vscode-clangd
+MathWorks.language-matlab
 mikestead.dotenv
 ms-dotnettools.csharp
+ms-dotnettools.vscode-dotnet-runtime
 ms-python.isort
 ms-python.python
 ms-python.vscode-pylance
@@ -43,10 +45,12 @@ pflannery.vscode-versionlens
 PKief.material-icon-theme
 PKief.material-product-icons
 psioniq.psi-header
+RDebugger.r-debugger
 rebornix.ruby
 redhat.java
 redhat.vscode-xml
 redhat.vscode-yaml
+REditorSupport.r
 rickvansloten.bbcode
 ritwickdey.LiveServer
 rust-lang.rust-analyzer
