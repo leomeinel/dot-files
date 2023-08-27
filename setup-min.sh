@@ -1,6 +1,6 @@
 #!/bin/bash
 ###
-# File: setup-root.sh
+# File: setup-min.sh
 # Author: Leopold Meinel (leo@meinel.dev)
 # -----
 # Copyright (c) 2023 Leopold Meinel & contributors
@@ -27,16 +27,16 @@ mkdir -p ~/src
 chmod 700 ~/src
 
 # Create XDG dirs
-mkdir -p ~/.local/share/android
-mkdir -p ~/.local/share/cargo
-mkdir -p ~/.local/share/go
-mkdir -p ~/.local/share/platformio
-mkdir -p ~/.local/share/rustup
-mkdir -p ~/.local/state/bash
-
-# Create ~/.local/share/gnupg
-mkdir -p ~/.local/share/gnupg
-chmod 700 ~/.local/share/gnupg
+mkdir -p "$XDG_DATA_HOME"/android
+mkdir -p "$XDG_DATA_HOME"/cargo
+mkdir -p "$XDG_DATA_HOME"/go
+mkdir -p "$XDG_DATA_HOME"/platformio
+mkdir -p "$XDG_DATA_HOME"/r/library
+mkdir -p "$XDG_DATA_HOME"/rustup
+mkdir -p "$XDG_STATE_HOME"/bash
+mkdir -p "$XDG_STATE_HOME"/r
+mkdir -p "$XDG_DATA_HOME"/gnupg
+chmod 700 "$XDG_DATA_HOME"/gnupg
 
 # Set default rust if rustup is installed
 [[ -n $(which rustup) ]] >/dev/null 2>&1 &&
