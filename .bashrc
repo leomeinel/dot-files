@@ -7,8 +7,8 @@
     return
 
 # Include ~/.bash_aliases
-[[ -f ~/.bash_aliases ]] &&
-    source ~/.bash_aliases
+[[ -f "$HOME"/.bash_aliases ]] &&
+    source "$HOME"/.bash_aliases
 
 # Key bindings
 bind '"\e[A": history-search-backward'
