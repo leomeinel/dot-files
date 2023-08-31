@@ -1,0 +1,22 @@
+# Variables
+set $laptop eDP-1
+set $left DP-3
+set $right DP-4
+# Outputs
+## Toggle internal display when lid open/closed
+bindswitch lid:on output $laptop disable
+bindswitch lid:off output $laptop enable
+## Monitors
+output $left res 3840x2160@29.981Hz pos 0 0
+output $right res 3840x2160@29.981Hz pos 3840 0
+output $laptop res 1920x1080@60.000Hz pos 7680 0 
+## Workspaces
+workspace 1 output $left $right $laptop
+workspace 2 output $left $right $laptop
+workspace 3 output $left $right $laptop
+workspace 4 output $left $right $laptop
+workspace 5 output $left $right $laptop
+workspace 6 output $right $left $laptop
+workspace 7 output $right $left $laptop
+workspace 8 output $right $left $laptop
+workspace 9 output $right $left $laptop
