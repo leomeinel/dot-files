@@ -10,7 +10,7 @@ alias sudo='/usr/bin/sudo '
 alias df='/usr/bin/btrfs fi df'
 
 # Rust core-utils aliases
-alias ls='/usr/bin/exa -la --color=automatic'
+alias ls='/usr/bin/eza -la --color=automatic'
 alias cat='/usr/bin/bat --decorations auto --color auto'
 alias grep='/usr/bin/rg -s --color auto'
 alias find='/usr/bin/fd -Hs -c auto'
