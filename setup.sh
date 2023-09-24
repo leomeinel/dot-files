@@ -74,8 +74,10 @@ chmod 700 "$XDG_DATA_HOME"/gnupg
 nvim --headless -c 'sleep 5' -c 'q!' >/dev/null 2>&1
 
 # Install R packages
-R -e 'install.packages(c("devtools", "lintr", "httpgd", "languageserver", "rmarkdown"))' >/dev/null 2>&1
-R -e 'devtools::install_github("ManuelHentschel/vscDebugger")' >/dev/null 2>&1
+if [[ -n $(which R) ]] >/dev/null 2>&1; then
+    R -e 'install.packages(c("devtools", "lintr", "httpgd", "languageserver", "rmarkdown"))' >/dev/null 2>&1
+    R -e 'devtools::install_github("ManuelHentschel/vscDebugger")' >/dev/null 2>&1
+fi
 
 # Remove repo
 rm -rf ~/dot-files
