@@ -3,30 +3,32 @@
 #
 
 # Set environment variables
+export EDITOR=/usr/bin/nvim
 export JAVA_HOME=/usr/lib/jvm/default
 export MYSQL_HOME=/var/lib/mysql
-export VISUAL=/usr/bin/nvim
-export EDITOR=/usr/bin/nvim
 export PAGER=/usr/bin/less
+export VISUAL=/usr/bin/nvim
+export WINE=/usr/bin/wine
+export WINETRICKS=/usr/bin/winetricks
 ## Set bat as MANPAGER if it is installed
 if [[ -n $(/usr/bin/which bat) ]]; then
     export MANPAGER="/usr/bin/sh -c '/usr/bin/col -bx | /usr/bin/bat -l man -p'"
     export MANROFFOPT="-c"
 fi
-export XDG_CACHE_HOME="$HOME"/.cache
-export XDG_CONFIG_HOME="$HOME"/.config
-export XDG_DATA_HOME="$HOME"/.local/share
-export XDG_STATE_HOME="$HOME"/.local/state
 export ANDROID_HOME="$XDG_DATA_HOME"/android
 export CARGO_HOME="$XDG_DATA_HOME"/cargo
 export GNUPGHOME="$XDG_DATA_HOME"/gnupg
 export GOPATH="$XDG_DATA_HOME"/go
 export GRADLE_USER_HOME="$XDG_DATA_HOME"/gradle
 export GTK2_RC_FILES="$XDG_CONFIG_HOME"/gtk-2.0/gtkrc
-export R_ENVIRON_USER="$XDG_CONFIG_HOME"/r/.Renviron
 export HISTFILE="$XDG_STATE_HOME"/bash/history
 export PLATFORMIO_CORE_DIR="$XDG_DATA_HOME"/platformio
+export R_ENVIRON_USER="$XDG_CONFIG_HOME"/r/.Renviron
 export RUSTUP_HOME="$XDG_DATA_HOME"/rustup
+export XDG_CACHE_HOME="$HOME"/.cache
+export XDG_CONFIG_HOME="$HOME"/.config
+export XDG_DATA_HOME="$HOME"/.local/share
+export XDG_STATE_HOME="$HOME"/.local/state
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] &&
