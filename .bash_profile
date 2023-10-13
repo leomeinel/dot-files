@@ -8,8 +8,6 @@ export JAVA_HOME=/usr/lib/jvm/default
 export MYSQL_HOME=/var/lib/mysql
 export PAGER=/usr/bin/less
 export VISUAL=/usr/bin/nvim
-export WINE=/usr/bin/wine
-export WINETRICKS=/usr/bin/winetricks
 ## Set bat as MANPAGER if it is installed
 if [[ -n $(/usr/bin/which bat) ]]; then
     export MANPAGER="/usr/bin/sh -c '/usr/bin/col -bx | /usr/bin/bat -l man -p'"
