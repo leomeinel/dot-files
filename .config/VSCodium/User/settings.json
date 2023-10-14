@@ -46,6 +46,7 @@
   "markdown-pdf.omitBackground": true,
   "markdown-pdf.outputDirectory": "markdown-pdf",
   "markdown-pdf.outputDirectoryRelativePathFile": true,
+  "markdown.extension.toc.orderedList": true,
   "material-icon-theme.hidesExplorerArrows": true,
   "oneDarkPro.editorTheme": "One Dark Pro Darker",
   "phpfmt.indent_with_space": 4,
