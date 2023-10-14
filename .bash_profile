@@ -3,6 +3,10 @@
 #
 
 # Set environment variables
+export XDG_CACHE_HOME="$HOME"/.cache
+export XDG_CONFIG_HOME="$HOME"/.config
+export XDG_DATA_HOME="$HOME"/.local/share
+export XDG_STATE_HOME="$HOME"/.local/state
 export EDITOR=/usr/bin/nvim
 export JAVA_HOME=/usr/lib/jvm/default
 export MYSQL_HOME=/var/lib/mysql
@@ -23,10 +27,6 @@ export HISTFILE="$XDG_STATE_HOME"/bash/history
 export PLATFORMIO_CORE_DIR="$XDG_DATA_HOME"/platformio
 export R_ENVIRON_USER="$XDG_CONFIG_HOME"/r/.Renviron
 export RUSTUP_HOME="$XDG_DATA_HOME"/rustup
-export XDG_CACHE_HOME="$HOME"/.cache
-export XDG_CONFIG_HOME="$HOME"/.config
-export XDG_DATA_HOME="$HOME"/.local/share
-export XDG_STATE_HOME="$HOME"/.local/state
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] &&
