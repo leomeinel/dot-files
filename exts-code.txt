@@ -19,6 +19,7 @@ hangxingliu.vscode-nginx-conf-hint
 inferrinizzard.prettier-sql-vscode
 jbockle.jbockle-format-files
 jedeop.crates-completer
+jnoortheen.nix-ide
 KeeganBruer.javadoc-generator
 kokororin.vscode-phpfmt
 llvm-vs-code-extensions.vscode-clangd
