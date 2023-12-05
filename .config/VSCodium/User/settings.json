@@ -4,7 +4,7 @@
   "C_Cpp.intelliSenseEngine": "disabled",
   "cmake.configureOnOpen": false,
   "cmake.ignoreCMakeListsMissing": true,
-  "cmake.statusbar.visibility": "hidden",
+  "cmake.touchbar.visibility": "hidden",
   "code-runner.enableAppInsights": false,
   "debug.showInStatusBar": "never",
   "editor.detectIndentation": false,
@@ -48,6 +48,13 @@
   "markdown-pdf.outputDirectoryRelativePathFile": true,
   "markdown.extension.toc.orderedList": true,
   "material-icon-theme.hidesExplorerArrows": true,
+  "nix.enableLanguageServer": true,
+  "nix.serverPath": "rnix-lsp",
+  "nix.serverSettings": {
+    "formatting": {
+      "command": ["nixpkgs-fmt"]
+    }
+  },
   "oneDarkPro.editorTheme": "One Dark Pro Darker",
   "phpfmt.indent_with_space": 4,
   "redhat.telemetry.enabled": false,
@@ -68,7 +75,7 @@
   "update.mode": "none",
   "update.showReleaseNotes": false,
   "window.autoDetectColorScheme": true,
-  "workbench.activityBar.visible": false,
+  "workbench.activityBar.location": "hidden",
   "workbench.colorTheme": "One Dark Pro Darker",
   "workbench.commandPalette.history": 500,
   "workbench.iconTheme": "material-icon-theme",
@@ -78,7 +85,7 @@
   "zenMode.centerLayout": false,
   "zenMode.hideLineNumbers": false,
   "zenMode.hideStatusBar": false,
-  "zenMode.hideTabs": false,
+  "zenMode.showTabs": "multiple",
   "psi-header.config": {
     "forceToTop": true,
     "blankLinesAfter": 1,
@@ -168,7 +175,7 @@
       "begin": "###",
       "prefix": "# ",
       "end": "###",
-      "beforeHeader": ["#!/usr/bin/pwsh"]
+      "beforeHeader": ["#!/usr/bin/env pwsh"]
     },
     {
       "language": "python",
@@ -188,7 +195,7 @@
       "begin": "###",
       "prefix": "# ",
       "end": "###",
-      "beforeHeader": ["#!/bin/bash"]
+      "beforeHeader": ["#!/usr/bin/env bash"]
     },
     {
       "language": "slim",
