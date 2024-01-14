@@ -1,4 +1,5 @@
 import = ["/usr/share/gruvbox/gruvbox.toml"]
+live_config_reload = true
 
 [window]
 padding = { x = 0, y = 0 }
@@ -26,5 +27,3 @@ bold_italic = { family = "Noto Sans Mono", style = "Bold Italic" }
 
 [env]
 TERM = "alacritty"
-
-live_config_reload = "true"
