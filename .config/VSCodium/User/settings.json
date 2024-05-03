@@ -49,12 +49,7 @@
   "markdown.extension.toc.orderedList": true,
   "material-icon-theme.hidesExplorerArrows": true,
   "nix.enableLanguageServer": true,
-  "nix.serverPath": "rnix-lsp",
-  "nix.serverSettings": {
-    "formatting": {
-      "command": ["nixpkgs-fmt"]
-    }
-  },
+  "nix.serverPath": "nixd",
   "oneDarkPro.editorTheme": "One Dark Pro Darker",
   "phpfmt.indent_with_space": 4,
   "redhat.telemetry.enabled": false,
