@@ -66,7 +66,7 @@ vim.o.swapfile = false
 vim.o.encoding = 'UTF-8'
 
 -- Syntax highlighting
-vim.o.syntax = true
+vim.o.syntax = 'ON'
 
 -- Auto completion
 vim.o.wildmenu = true
