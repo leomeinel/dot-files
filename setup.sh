@@ -3,7 +3,7 @@
 # File: setup.sh
 # Author: Leopold Meinel (leo@meinel.dev)
 # -----
-# Copyright (c) 2023 Leopold Meinel & contributors
+# Copyright (c) 2024 Leopold Meinel & contributors
 # SPDX ID: GPL-3.0-or-later
 # URL: https://www.gnu.org/licenses/gpl-3.0-standalone.html
 # -----
@@ -11,6 +11,10 @@
 
 # Fail on error
 set -e
+
+# Set variables
+SCRIPT_DIR="$(dirname -- "$(readlink -f -- "$0")")"
+cd "$SCRIPT_DIR"
 
 # Define functions
 sed_exit() {
@@ -20,14 +24,13 @@ sed_exit() {
 }
 
 # Copy dot-files
-cp -R ~/dot-files/.config ~/dot-files/.bash_aliases ~/dot-files/.bash_logout ~/dot-files/.bash_profile ~/dot-files/.bashrc ~/
-rsync -rpq --mkpath ~/dot-files/.local/ ~/.local/
+cp -R "$SCRIPT_DIR"/.config "$SCRIPT_DIR"/.bash_aliases "$SCRIPT_DIR"/.bash_logout "$SCRIPT_DIR"/.bash_profile "$SCRIPT_DIR"/.bashrc ~/
+rsync -rpq --mkpath "$SCRIPT_DIR"/.local/ ~/.local/
 source ~/.bash_profile
 
 # Copy firefox user.js
-git clone https://github.com/yokoffing/Betterfox.git
-CONFIG_DIR=$(/usr/bin/find ~/.mozilla/firefox/ -type d -name "*.default-release")
-cp ~/Betterfox/user.js "$CONFIG_DIR"
+chmod +x ~/.local/bin/pull-betterfox.sh
+~/.local/bin/pull-betterfox.sh
 
 # Set keyboard layout for sway
 LAYOUT="$(localectl status | grep "X11 Layout:" | awk '{print $3}')"
@@ -80,5 +83,4 @@ if [[ -n $(which R) ]] >/dev/null 2>&1; then
 fi
 
 # Remove repo
-rm -rf ~/dot-files
-rm -rf ~/Betterfox
+rm -rf "$SCRIPT_DIR"
