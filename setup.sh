@@ -29,7 +29,7 @@ rsync -rpq --mkpath "$SCRIPT_DIR"/.local/ ~/.local/
 source ~/.bash_profile
 
 # Copy firefox user.js
-chmod +x ~/.local/bin/pull-betterfox.sh
+chmod +x ~/.local/bin/*.sh
 ~/.local/bin/pull-betterfox.sh
 
 # Set keyboard layout for sway
