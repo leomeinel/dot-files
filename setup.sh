@@ -80,6 +80,8 @@ nvim --headless -c 'sleep 5' -c 'q!' >/dev/null 2>&1
 if [[ -n $(which R) ]] >/dev/null 2>&1; then
     R -e 'install.packages(c("devtools", "lintr", "httpgd", "languageserver", "rmarkdown"))' >/dev/null 2>&1
     R -e 'install.packages("vscDebugger", repos = "https://manuelhentschel.r-universe.dev")' >/dev/null 2>&1
+else
+    rm -f ~/.local/bin/update-packages-r.sh
 fi
 
 # Remove repo
