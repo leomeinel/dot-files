@@ -9,5 +9,6 @@
 # -----
 ###
 
+# FIXME: Since vscDebugger isn't available in default repo, this call fails when reaching it. I might not fix this soon since I haven't really used R anyways :D
 # Source: https://www.r-bloggers.com/2014/11/update-all-user-installed-r-packages-again/. This basically reinstalls every single package, not sure if this is actually needed.
 R -e 'install.packages(lib  = lib <- .libPaths()[1], pkgs = as.data.frame(installed.packages(lib), stringsAsFactors=FALSE)$Package, type = "source")'
