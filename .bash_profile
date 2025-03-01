@@ -9,6 +9,7 @@ export XDG_DATA_HOME="$HOME"/.local/share
 export XDG_STATE_HOME="$HOME"/.local/state
 export EDITOR=/usr/bin/nvim
 export JAVA_HOME=/usr/lib/jvm/default
+export _JAVA_OPTIONS=-Djava.util.prefs.userRoot="$XDG_CONFIG_HOME"/java
 export MYSQL_HOME=/var/lib/mysql
 export PAGER=/usr/bin/less
 export VISUAL=/usr/bin/nvim
@@ -18,6 +19,7 @@ if [[ -n $(/usr/bin/which bat) ]]; then
     export MANROFFOPT="-c"
 fi
 export ANDROID_HOME="$XDG_DATA_HOME"/android
+export ANDROID_USER_HOME="$XDG_DATA_HOME"/android
 export CARGO_HOME="$XDG_DATA_HOME"/cargo
 export GNUPGHOME="$XDG_DATA_HOME"/gnupg
 export GOPATH="$XDG_DATA_HOME"/go

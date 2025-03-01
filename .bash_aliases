@@ -18,3 +18,6 @@ alias du='/usr/bin/dust'
 alias ps='/usr/bin/procs'
 alias neofetch='/usr/bin/macchina'
 alias bench='/usr/bin/hyperfine -w 3 -r 12 --style auto'
+
+# xdg-ninja recommendations
+alias adb='HOME="$XDG_DATA_HOME"/android adb'
