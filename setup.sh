@@ -28,9 +28,8 @@ cp -R "$SCRIPT_DIR"/.config "$SCRIPT_DIR"/.bash_aliases "$SCRIPT_DIR"/.bash_logo
 rsync -rpq --mkpath "$SCRIPT_DIR"/.local/ ~/.local/
 source ~/.bash_profile
 
-# Copy firefox user.js
+# Chmod ~/.local/bin/*.sh
 chmod +x ~/.local/bin/*.sh
-~/.local/bin/pull-betterfox.sh
 
 # Set keyboard layout for sway
 LAYOUT="$(localectl status | grep "X11 Layout:" | awk '{print $3}')"
