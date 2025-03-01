@@ -57,6 +57,7 @@ mkdir -p ~/src
 chmod 700 ~/src
 
 # Create XDG dirs
+mkdir -p "$XDG_CONFIG_HOME"/putty
 mkdir -p "$XDG_DATA_HOME"/android
 mkdir -p "$XDG_DATA_HOME"/cargo
 mkdir -p "$XDG_DATA_HOME"/go
