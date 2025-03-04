@@ -1,11 +1,8 @@
 {
   "activitusbar.activeColour": "statusBar.foreground",
   "activitusbar.inactiveColour": "statusBar.foreground",
-  "C_Cpp.intelliSenseEngine": "disabled",
-  "cmake.configureOnOpen": false,
-  "cmake.ignoreCMakeListsMissing": true,
-  "cmake.touchbar.visibility": "hidden",
   "code-runner.enableAppInsights": false,
+  "prettier.prettierPath": "/usr/lib/node_modules/prettier/",
   "debug.showInStatusBar": "never",
   "editor.detectIndentation": false,
   "editor.foldingImportsByDefault": true,
@@ -22,9 +19,6 @@
   "evenBetterToml.formatter.indentString": " ",
   "explorer.confirmDelete": false,
   "files.autoSave": "afterDelay",
-  "formatFiles.extensionsToInclude": "asm, bat, c, C, cc, clj, code-workspace, conf, cpp, cs, css, cxx, fish, fs, go, gradle, groovy, h, hh, hpp, hs, htm, html, hxx, ini, java, js, json, jsp, jsx, ksh, kt, lhs, lua, md, p, patch, php, pl, py, R, r, rb, rs, Rmd, s, scala, sh, sql, svg, swift, toml, ts, vb, vbs, xml, yml, zsh",
-  "formatFiles.logLevel": "warn",
-  "formatFiles.useGitIgnore": true,
   "git.autofetch": "all",
   "git.autoRepositoryDetection": "openEditors",
   "git.autoStash": true,
@@ -60,6 +54,7 @@
   "search.showLineNumbers": true,
   "search.smartCase": true,
   "search.useIgnoreFiles": false,
+  "telemetry.telemetryLevel": "off",
   "terminal.external.linuxExec": "alacritty",
   "terminal.integrated.defaultProfile.linux": "bash",
   "terminal.integrated.ignoreProcessNames": ["starship", "bash"],
@@ -84,7 +79,7 @@
   "psi-header.config": {
     "forceToTop": true,
     "blankLinesAfter": 1,
-    "license": "GPL-3.0-or-later"
+    "license": "MIT"
   },
   "psi-header.variables": [
     ["author", "Leopold Meinel"],
@@ -297,6 +292,10 @@
       "mapTo": "dockerfile"
     },
     {
+      "language": "toml",
+      "mapTo": "dockerfile"
+    },
+    {
       "language": "html",
       "mapTo": "haml"
     },
@@ -354,7 +353,7 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[sql]": {
-    "editor.defaultFormatter": "inferrinizzard.prettier-sql-vscode"
+    "editor.defaultFormatter": "mtxr.sqltools"
   },
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
