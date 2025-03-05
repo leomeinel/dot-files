@@ -37,38 +37,44 @@
       homeConfigurations = {
         # Users
         "GUESTUSER" = home-manager.lib.homeManagerConfiguration {
+          inherit pkgs;
           # Args to parse
-          specialArgs = { inherit pkgs nixos-version; };
+          extraSpecialArgs = { inherit nixos-version; };
           # Modules to use
           modules = [ ./home-manager/configs/GUESTUSER.nix ];
         };
         "HOMEUSER" = home-manager.lib.homeManagerConfiguration {
+          inherit pkgs;
           # Args to parse
-          specialArgs = { inherit pkgs nixos-version; };
+          extraSpecialArgs = { inherit nixos-version; };
           # Modules to use
           modules = [ ./home-manager/configs/HOMEUSER.nix ];
         };
         "ROOTUSER" = home-manager.lib.homeManagerConfiguration {
+          inherit pkgs;
           # Args to parse
-          specialArgs = { inherit pkgs nixos-version; };
+          extraSpecialArgs = { inherit nixos-version; };
           # Modules to use
           modules = [ ./home-manager/configs/ROOTUSER.nix ];
         };
         "SYSUSER" = home-manager.lib.homeManagerConfiguration {
+          inherit pkgs;
           # Args to parse
-          specialArgs = { inherit pkgs nixos-version; };
+          extraSpecialArgs = { inherit nixos-version; };
           # Modules to use
           modules = [ ./home-manager/configs/SYSUSER.nix ];
         };
         "VIRTUSER" = home-manager.lib.homeManagerConfiguration {
+          inherit pkgs;
           # Args to parse
-          specialArgs = { inherit pkgs nixos-version; };
+          extraSpecialArgs = { inherit nixos-version; };
           # Modules to use
           modules = [ ./home-manager/configs/VIRTUSER.nix ];
         };
         "YOUTUBEUSER" = home-manager.lib.homeManagerConfiguration {
+          inherit pkgs;
           # Args to parse
-          specialArgs = { inherit pkgs nixos-version; };
+          extraSpecialArgs = { inherit nixos-version; };
           # Modules to use
           modules = [ ./home-manager/configs/YOUTUBEUSER.nix ];
         };
