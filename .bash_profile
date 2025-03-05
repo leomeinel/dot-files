@@ -31,6 +31,8 @@ export R_ENVIRON_USER="$XDG_CONFIG_HOME"/r/.Renviron
 export RUSTUP_HOME="$XDG_DATA_HOME"/rustup
 export SCREENRC="$XDG_CONFIG_HOME"/screen/screenrc
 export TEXMFVAR="$XDG_CACHE_HOME"/texlive/texmf-var
+## Add to PATH
+PATH="${PATH:+${PATH}:}$XDG_STATE_HOME/nix/profile/bin/"
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] &&

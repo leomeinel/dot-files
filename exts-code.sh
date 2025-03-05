@@ -9,9 +9,9 @@
 # -----
 ###
 
-# Install vscodium extensions
-vscodium --list-extensions | xargs -n 1 vscodium --uninstall-extension
-parallel --retries 10 vscodium --install-extension <~/dot-files/exts-code.txt
+# Install codium extensions
+codium --list-extensions | xargs -n 1 codium --uninstall-extension
+parallel --retries 10 codium --install-extension <~/dot-files/exts-code.txt
 
 # Fail on error
 set -e
