@@ -9,6 +9,9 @@
 # -----
 ###
 
+# FIXME: This should be a CI/CD pipeline.
+#        TODO: Configure build environemnt, Get latest nix CODIUM_VERSION dynamically, ...
+
 # Source config
 SCRIPT_DIR="$(dirname -- "$(readlink -f -- "$0")")"
 
