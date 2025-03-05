@@ -115,7 +115,7 @@
         nvim --headless -c 'sleep 5' -c 'q!' >/dev/null 2>&1
 
         # Add nix channel
-        nix-channel --add https://nixos.org/channels/nixos-REPLACE_NIX_VERSION nixpkgs
+        nix-channel --add https://nixos.org/channels/nixos-${nixos-version} nixpkgs
       '';
     };
   };

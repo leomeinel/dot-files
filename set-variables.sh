@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 ###
-# File: update-variables.sh
+# File: set-variables.sh
 # Author: Leopold Meinel (leo@meinel.dev)
 # -----
 # Copyright (c) 2025 Leopold Meinel & contributors
@@ -25,16 +25,6 @@ sed_exit() {
 
 # flake.nix
 FILE="$SCRIPT_DIR/flake.nix"
-STRING="REPLACE_NIX_VERSION"
-grep -q "$STRING" "$FILE" || sed_exit
-sed -i "s|$STRING|$NIX_VERSION|g" "$FILE"
-# home-manager/common-home-cli.nix
-FILE="$SCRIPT_DIR/home-manager/common-home-cli.nix"
-STRING="REPLACE_NIX_VERSION"
-grep -q "$STRING" "$FILE" || sed_exit
-sed -i "s|$STRING|$NIX_VERSION|g" "$FILE"
-# home-manager/common-home-gui.nix
-FILE="$SCRIPT_DIR/home-manager/common-home-gui.nix"
 STRING="REPLACE_NIX_VERSION"
 grep -q "$STRING" "$FILE" || sed_exit
 sed -i "s|$STRING|$NIX_VERSION|g" "$FILE"
