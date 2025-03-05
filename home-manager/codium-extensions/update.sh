@@ -29,7 +29,7 @@ if [[ -n "${CODIUM_VERSION}" ]] >/dev/null 2>&1; then
     FILE="$SCRIPT_DIR"/config.toml
     STRING="vscode_version =.*"
     grep -q "$STRING" "$FILE" || sed_exit
-    sed -i "s/$STRING/vscode_version = "$CODIUM_VERSION"/" "$FILE"
+    sed -i "s/$STRING/vscode_version = \"$CODIUM_VERSION\"/" "$FILE"
     ## END sed
 else
     echo "ERROR: Unable to get CODIUM_VERSION"
@@ -41,4 +41,4 @@ cd "$SCRIPT_DIR"/nix4vscode
 git submodule update --remote
 
 # Generate codium-extensions.nix dynamically
-cargo run -q -- ../config.toml >"$SCRIPT_DIR"/codium-extensions.nix
+nix develop --command bash -c "cargo run -q -- $SCRIPT_DIR/config.toml" >"$SCRIPT_DIR"/codium-extensions.nix

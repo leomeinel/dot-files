@@ -40,23 +40,6 @@
       python312Packages.radian
       usbguard-notifier
       xdg-ninja
-      vscode-with-extensions.override {
-        vscode = vscodium;
-        # When the extension is already available in the default extensions set.
-        vscodeExtensions = with vscode-extensions; [
-          bbenoist.Nix
-        ]
-
-        # Concise version from the vscode market place when not available in the default set.
-        ++ vscode-utils.extensionsFromVscodeMarketplace [
-          {
-            name = "code-runner";
-            publisher = "formulahendry";
-            version = "0.6.33";
-            sha256 = "166ia73vrcl5c9hm4q1a73qdn56m0jc7flfsk5p5q41na9f10lb0";
-          }
-        ];
-      }
     ];
     # Files in $HOME
     file = {
@@ -171,59 +154,66 @@
   # Program options
   programs = {
     home-manager.enable = true;
-    vscode = {
+    vscode =
+    let
+      codium-extensions = (import ./codium-extensions/codium-extensions.nix) { pkgs = pkgs; lib = lib; };
+    in
+    with pkgs;
+    {
       enable = true;
-      package = pkgs.vscodium;
-      extensions = with pkgs.vscode-extensions; [
-        anseki.vscode-color
-        christian-kohler.path-intellisense
-        dotjoshjohnson.xml
-        esbenp.prettier-vscode
-        fill-labs.dependi
-        formulahendry.auto-complete-tag
-        formulahendry.code-runner
-        franneck94.vscode-c-cpp-dev-extension-pack
-        franneck94.vscode-python-dev-extension-pack
-        franneck94.workspace-formatter
-        fwcd.kotlin
-        gitlab.gitlab-workflow
-        golang.go
-        gruntfuggly.activitusbar
-        hangxingliu.vscode-nginx-conf-hint
-        htmlhint.vscode-htmlhint
-        jnoortheen.nix-ide
-        jock.svg
-        kisstkondoros.vscode-gutter-preview
-        kokororin.vscode-phpfmt
-        mikestead.dotenv
-        mkhl.shfmt
-        ms-vscode.live-server
-        mtxr.sqltools
-        mtxr.sqltools-driver-mssql
-        mtxr.sqltools-driver-mysql
-        mtxr.sqltools-driver-pg
-        mtxr.sqltools-driver-sqlite
-        naumovs.color-highlight
-        pkief.material-icon-theme
-        pkief.material-product-icons
-        pranaygp.vscode-css-peek
-        psioniq.psi-header
-        rdebugger.r-debugger
-        rebornix.ruby
-        redhat.vscode-xml
-        redhat.vscode-yaml
-        reditorsupport.r
-        rust-lang.rust-analyzer
-        swellaby.vscode-rust-test-adapter
-        tamasfe.even-better-toml
-        usernamehw.errorlens
-        vscjava.vscode-java-pack
-        waderyan.gitblame
-        wingrunr21.vscode-ruby
-        yzane.markdown-pdf
-        yzhang.markdown-all-in-one
-        zhuangtongfa.material-theme
-        zignd.html-css-class-completion
+      package = vscodium;
+      enableExtensionUpdateCheck = false;
+      enableUpdateCheck = false;
+      extensions = with vscode-marketplace; [
+        codium-extensions.anseki.vscode-color
+        codium-extensions.christian-kohler.path-intellisense
+        codium-extensions.dotjoshjohnson.xml
+        codium-extensions.esbenp.prettier-vscode
+        codium-extensions.fill-labs.dependi
+        codium-extensions.formulahendry.auto-complete-tag
+        codium-extensions.formulahendry.code-runner
+        codium-extensions.franneck94.vscode-c-cpp-dev-extension-pack
+        codium-extensions.franneck94.vscode-python-dev-extension-pack
+        codium-extensions.franneck94.workspace-formatter
+        codium-extensions.fwcd.kotlin
+        codium-extensions.gitlab.gitlab-workflow
+        codium-extensions.golang.go
+        codium-extensions.gruntfuggly.activitusbar
+        codium-extensions.hangxingliu.vscode-nginx-conf-hint
+        codium-extensions.htmlhint.vscode-htmlhint
+        codium-extensions.jnoortheen.nix-ide
+        codium-extensions.jock.svg
+        codium-extensions.kisstkondoros.vscode-gutter-preview
+        codium-extensions.kokororin.vscode-phpfmt
+        codium-extensions.mikestead.dotenv
+        codium-extensions.mkhl.shfmt
+        codium-extensions.ms-vscode.live-server
+        codium-extensions.mtxr.sqltools
+        codium-extensions.mtxr.sqltools-driver-mssql
+        codium-extensions.mtxr.sqltools-driver-mysql
+        codium-extensions.mtxr.sqltools-driver-pg
+        codium-extensions.mtxr.sqltools-driver-sqlite
+        codium-extensions.naumovs.color-highlight
+        codium-extensions.pkief.material-icon-theme
+        codium-extensions.pkief.material-product-icons
+        codium-extensions.pranaygp.vscode-css-peek
+        codium-extensions.psioniq.psi-header
+        codium-extensions.rdebugger.r-debugger
+        codium-extensions.rebornix.ruby
+        codium-extensions.redhat.vscode-xml
+        codium-extensions.redhat.vscode-yaml
+        codium-extensions.reditorsupport.r
+        codium-extensions.rust-lang.rust-analyzer
+        codium-extensions.swellaby.vscode-rust-test-adapter
+        codium-extensions.tamasfe.even-better-toml
+        codium-extensions.usernamehw.errorlens
+        codium-extensions.vscjava.vscode-java-pack
+        codium-extensions.waderyan.gitblame
+        codium-extensions.wingrunr21.vscode-ruby
+        codium-extensions.yzane.markdown-pdf
+        codium-extensions.yzhang.markdown-all-in-one
+        codium-extensions.zhuangtongfa.material-theme
+        codium-extensions.zignd.html-css-class-completion
       ];
       userSettings = {
         "activitusbar.activeColour" = "statusBar.foreground";
