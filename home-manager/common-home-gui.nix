@@ -165,55 +165,58 @@
       enableExtensionUpdateCheck = false;
       enableUpdateCheck = false;
       extensions = with vscode-marketplace; [
+        # Marketplace
         codium-extensions.anseki.vscode-color
-        codium-extensions.christian-kohler.path-intellisense
-        codium-extensions.dotjoshjohnson.xml
-        codium-extensions.esbenp.prettier-vscode
-        codium-extensions.fill-labs.dependi
-        codium-extensions.formulahendry.auto-complete-tag
-        codium-extensions.formulahendry.code-runner
         codium-extensions.franneck94.vscode-c-cpp-dev-extension-pack
         codium-extensions.franneck94.vscode-python-dev-extension-pack
         codium-extensions.franneck94.workspace-formatter
         codium-extensions.fwcd.kotlin
-        codium-extensions.gitlab.gitlab-workflow
-        codium-extensions.golang.go
         codium-extensions.gruntfuggly.activitusbar
         codium-extensions.hangxingliu.vscode-nginx-conf-hint
         codium-extensions.htmlhint.vscode-htmlhint
-        codium-extensions.jnoortheen.nix-ide
-        codium-extensions.jock.svg
         codium-extensions.kisstkondoros.vscode-gutter-preview
         codium-extensions.kokororin.vscode-phpfmt
-        codium-extensions.mikestead.dotenv
         codium-extensions.mkhl.shfmt
-        codium-extensions.ms-vscode.live-server
         codium-extensions.mtxr.sqltools
         codium-extensions.mtxr.sqltools-driver-mssql
         codium-extensions.mtxr.sqltools-driver-mysql
         codium-extensions.mtxr.sqltools-driver-pg
         codium-extensions.mtxr.sqltools-driver-sqlite
-        codium-extensions.naumovs.color-highlight
-        codium-extensions.pkief.material-icon-theme
-        codium-extensions.pkief.material-product-icons
         codium-extensions.pranaygp.vscode-css-peek
         codium-extensions.psioniq.psi-header
         codium-extensions.rdebugger.r-debugger
-        codium-extensions.rebornix.ruby
-        codium-extensions.redhat.vscode-xml
-        codium-extensions.redhat.vscode-yaml
-        codium-extensions.reditorsupport.r
-        codium-extensions.rust-lang.rust-analyzer
         codium-extensions.swellaby.vscode-rust-test-adapter
-        codium-extensions.tamasfe.even-better-toml
-        codium-extensions.usernamehw.errorlens
-        codium-extensions.vscjava.vscode-java-pack
-        codium-extensions.waderyan.gitblame
-        codium-extensions.wingrunr21.vscode-ruby
-        codium-extensions.yzane.markdown-pdf
-        codium-extensions.yzhang.markdown-all-in-one
-        codium-extensions.zhuangtongfa.material-theme
         codium-extensions.zignd.html-css-class-completion
+        # Nix
+        vscode-extensions.christian-kohler.path-intellisense
+        vscode-extensions.dotjoshjohnson.xml
+        vscode-extensions.esbenp.prettier-vscode
+        vscode-extensions.fill-labs.dependi
+        vscode-extensions.formulahendry.auto-rename-tag
+        vscode-extensions.formulahendry.auto-close-tag
+        vscode-extensions.formulahendry.code-runner
+        vscode-extensions.gitlab.gitlab-workflow
+        vscode-extensions.golang.go
+        vscode-extensions.jnoortheen.nix-ide
+        vscode-extensions.jock.svg
+        vscode-extensions.mikestead.dotenv
+        vscode-extensions.ms-vscode.live-server
+        vscode-extensions.naumovs.color-highlight
+        vscode-extensions.pkief.material-icon-theme
+        vscode-extensions.pkief.material-product-icons
+        vscode-extensions.rebornix.ruby
+        vscode-extensions.redhat.vscode-xml
+        vscode-extensions.redhat.vscode-yaml
+        vscode-extensions.reditorsupport.r
+        vscode-extensions.rust-lang.rust-analyzer
+        vscode-extensions.tamasfe.even-better-toml
+        vscode-extensions.usernamehw.errorlens
+        vscode-extensions.vscjava.vscode-java-pack
+        vscode-extensions.waderyan.gitblame
+        vscode-extensions.wingrunr21.vscode-ruby
+        vscode-extensions.yzane.markdown-pdf
+        vscode-extensions.yzhang.markdown-all-in-one
+        vscode-extensions.zhuangtongfa.material-theme
       ];
       userSettings = {
         "activitusbar.activeColour" = "statusBar.foreground";
