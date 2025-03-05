@@ -1,0 +1,3 @@
+[submodule "home-manager/codium-extensions/nix4vscode"]
+	path = home-manager/codium-extensions/nix4vscode
+	url = https://github.com/nix-community/nix4vscode.git
