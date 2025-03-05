@@ -8,23 +8,25 @@
   * -----
 */
 
-let
-  nixos-version = REPLACE_NIX_VERSION;
-in
 {
   # Description of the flake
   description = "home-manager configuration";
 
   # Input options
-  inputs = {
-    # nixpkgs
-    # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-${nixos-version}";
-    # home-manager
-    # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
-    home-manager.url = "github:nix-community/home-manager/release-${nixos-version}";
-    home-manager.inputs.nixpkgs.follows = "nixpkgs";
-  };
+  inputs =
+    let
+      # FIXME: This should be defined only once
+      nixos-version = REPLACE_NIX_VERSION;
+    in
+    {
+      # nixpkgs
+      # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
+      nixpkgs.url = "github:nixos/nixpkgs/nixos-${nixos-version}";
+      # home-manager
+      # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
+      home-manager.url = "github:nix-community/home-manager/release-${nixos-version}";
+      home-manager.inputs.nixpkgs.follows = "nixpkgs";
+    };
 
   # Output options
   outputs =
@@ -32,6 +34,8 @@ in
     let
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
+      # FIXME: This should be defined only once
+      nixos-version = REPLACE_NIX_VERSION;
     in
     {
       # Configurations
