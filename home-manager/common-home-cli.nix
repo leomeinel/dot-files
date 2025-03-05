@@ -35,8 +35,6 @@
     packages = with pkgs; [
       xdg-ninja
     ];
-    # Enable management of XDG base directories
-    xdg.enable = true;
     # Files in $HOME
     file = {
       "${config.xdg.configHome}/git" = {
@@ -124,4 +122,7 @@
   programs = {
     home-manager.enable = true;
   };
+
+  # xdg options
+  xdg.enable = true;
 }

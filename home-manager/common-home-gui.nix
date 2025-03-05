@@ -41,8 +41,6 @@
       usbguard-notifier
       xdg-ninja
     ];
-    # Enable management of XDG base directories
-    xdg.enable = true;
     # Files in $HOME
     file = {
       "${config.xdg.configHome}" = {
@@ -216,4 +214,7 @@
       };
     };
   };
+
+  # xdg options
+  xdg.enable = true;
 }
