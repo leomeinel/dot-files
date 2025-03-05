@@ -164,7 +164,7 @@
       package = vscodium;
       enableExtensionUpdateCheck = false;
       enableUpdateCheck = false;
-      extensions = with vscode-marketplace; [
+      extensions = [
         # Marketplace
         codium-extensions.anseki.vscode-color
         codium-extensions.franneck94.vscode-c-cpp-dev-extension-pack
@@ -609,4 +609,7 @@
 
   # xdg options
   xdg.enable = true;
+
+  # Allow unfree packages to install VSCode extensions
+  nixpkgs.config.allowUnfree = true;
 }
