@@ -16,7 +16,7 @@
   inputs =
     let
       # FIXME: This should be defined only once
-      nixos-version = REPLACE_NIX_VERSION;
+      nixos-version = "REPLACE_NIX_VERSION";
     in
     {
       # nixpkgs
@@ -35,7 +35,7 @@
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
       # FIXME: This should be defined only once
-      nixos-version = REPLACE_NIX_VERSION;
+      nixos-version = "REPLACE_NIX_VERSION";
     in
     {
       # Configurations
