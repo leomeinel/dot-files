@@ -168,9 +168,20 @@
       enableUpdateCheck = false;
       extensions = [
         # Marketplace
-        codium-extensions.anseki.vscode-color
+        codium-extensions.bierner.color-info
         codium-extensions.franneck94.vscode-c-cpp-dev-extension-pack
+        codium-extensions.13xforever.language-x86-64-assembly
+        codium-extensions.bbenoist.doxygen
+        codium-extensions.cheshirekow.cmake-format
+        codium-extensions.cschlosser.doxdocgen
+        codium-extensions.franneck94.c-cpp-runner
+        codium-extensions.franneck94.vscode-c-cpp-config
+        codium-extensions.jeff-hykin.better-cpp-syntax
+        codium-extensions.ms-vscode.cpptools-themes
+        codium-extensions.franneck94.vscode-python-config
         codium-extensions.franneck94.vscode-python-dev-extension-pack
+        codium-extensions.ms-python.mypy-type-checker
+        codium-extensions.njqdev.vscode-python-typehint
         codium-extensions.franneck94.workspace-formatter
         codium-extensions.fwcd.kotlin
         codium-extensions.gruntfuggly.activitusbar
@@ -194,8 +205,8 @@
         vscode-extensions.dotjoshjohnson.xml
         vscode-extensions.esbenp.prettier-vscode
         vscode-extensions.fill-labs.dependi
-        vscode-extensions.formulahendry.auto-rename-tag
         vscode-extensions.formulahendry.auto-close-tag
+        vscode-extensions.formulahendry.auto-rename-tag
         vscode-extensions.formulahendry.code-runner
         vscode-extensions.gitlab.gitlab-workflow
         vscode-extensions.golang.go
@@ -214,11 +225,33 @@
         vscode-extensions.tamasfe.even-better-toml
         vscode-extensions.usernamehw.errorlens
         vscode-extensions.vscjava.vscode-java-pack
+        vscode-extensions.redhat.java
+        vscode-extensions.vscjava.vscode-gradle
+        vscode-extensions.vscjava.vscode-java-debug
+        vscode-extensions.vscjava.vscode-java-dependency
+        vscode-extensions.vscjava.vscode-java-test
+        vscode-extensions.vscjava.vscode-maven
         vscode-extensions.waderyan.gitblame
         vscode-extensions.wingrunr21.vscode-ruby
         vscode-extensions.yzane.markdown-pdf
         vscode-extensions.yzhang.markdown-all-in-one
         vscode-extensions.zhuangtongfa.material-theme
+        vscode-extensions.ms-vscode.cpptools-extension-pack
+        vscode-extensions.ms-vscode.cmake-tools
+        vscode-extensions.ms-vscode.cpptools
+        vscode-extensions.twxs.cmake
+        vscode-extensions.vadimcn.vscode-lldb
+        vscode-extensions.charliermarsh.ruff
+        vscode-extensions.ms-python.black-formatter
+        vscode-extensions.ms-python.isort
+        vscode-extensions.ms-python.python
+        vscode-extensions.ms-python.vscode-pylance
+        vscode-extensions.ms-toolsai.jupyter
+        vscode-extensions.ms-toolsai.jupyter-keymap
+        vscode-extensions.ms-toolsai.jupyter-renderers
+        vscode-extensions.ms-toolsai.vscode-jupyter-cell-tags
+        vscode-extensions.ms-toolsai.vscode-jupyter-slideshow
+        vscode-extensions.njpwerner.autodocstring
       ];
       userSettings = {
         "activitusbar.activeColour" = "statusBar.foreground";
