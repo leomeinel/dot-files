@@ -121,7 +121,10 @@
 
   # Program options
   programs = {
-    home-manager.enable = true;
+    home-manager = {
+      enable = true;
+      backupFileExtension = "bak";
+    };
   };
 
   # xdg options
