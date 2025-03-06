@@ -16,6 +16,7 @@ source "$SCRIPT_DIR/install.conf"
 set -e
 
 if [[ -n "${1}" ]] >/dev/null 2>&1; then
+    rm -rf ~/.vscode-oss/
     nix run home-manager/release-"$NIX_VERSION" -- init --switch -b "bak" --flake "$SCRIPT_DIR/#$1"
 else
     echo "ERROR: You have to use a user from $SCRIPT_DIR/flake.nix as first argument"
