@@ -45,6 +45,20 @@ STRING="REPLACE_YOUTUBEUSER"
 grep -q "$STRING" "$FILE" || sed_exit
 sed -i "s|$STRING|$YOUTUBEUSER|g" "$FILE"
 ## END sed
+## home-manager/common-home-cli.nix
+## START sed
+FILE="$SCRIPT_DIR/home-manager/common-home-cli.nix"
+STRING="REPLACE_GIT_SIGNING_KEY"
+grep -q "$STRING" "$FILE" || sed_exit
+sed -i "s|$STRING|$GIT_SIGNING_KEY|g" "$FILE"
+## END sed
+## home-manager/common-home-gui.nix
+## START sed
+FILE="$SCRIPT_DIR/home-manager/common-home-gui.nix"
+STRING="REPLACE_GIT_SIGNING_KEY"
+grep -q "$STRING" "$FILE" || sed_exit
+sed -i "s|$STRING|$GIT_SIGNING_KEY|g" "$FILE"
+## END sed
 ## home-manager/configs/GUESTUSER.nix
 ## START sed
 FILE="$SCRIPT_DIR/home-manager/configs/GUESTUSER.nix"
