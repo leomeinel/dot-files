@@ -89,6 +89,7 @@
         chmod 700 ~/.ssh
         mkdir -p ~/src
         chmod 700 ~/src
+        mkdir -p ~/src/.system
 
         # Create XDG dirs
         mkdir -p "$HOME"/.cache
