@@ -170,7 +170,7 @@
         # Marketplace
         codium-extensions.bierner.color-info
         codium-extensions.franneck94.vscode-c-cpp-dev-extension-pack
-        codium-extensions.13xforever.language-x86-64-assembly
+        codium-extensions."13xforever".language-x86-64-assembly
         codium-extensions.bbenoist.doxygen
         codium-extensions.cheshirekow.cmake-format
         codium-extensions.cschlosser.doxdocgen
