@@ -102,9 +102,6 @@
         mkdir -p "$XDG_CONFIG_HOME"/screen
         mkdir -p "$XDG_CACHE_HOME"/texlive
 
-        # Chmod ~/.local/bin/*.sh
-        chmod +x ~/.local/bin/*.sh
-
         # Set default rust if rustup is installed
         [[ -n $(which rustup) ]] >/dev/null 2>&1 &&
             rustup default stable

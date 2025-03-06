@@ -113,9 +113,6 @@
         mkdir -p "$XDG_CONFIG_HOME"/screen
         mkdir -p "$XDG_CACHE_HOME"/texlive
 
-        # Chmod ~/.local/bin/*.sh
-        chmod +x ~/.local/bin/*.sh
-
         # Set keyboard layout for sway
         LAYOUT="$(localectl status | grep "X11 Layout:" | awk '{print $3}')"
         ## START sed
