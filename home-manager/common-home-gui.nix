@@ -51,10 +51,6 @@
         source = ../files/.local/share;
         recursive = true;
       };
-      ".local/bin" = {
-        source = ../files/.local/bin;
-        recursive = true;
-      };
       ".bash_aliases" = {
         source = ../files/.bash_aliases;
         recursive = true;
@@ -84,7 +80,6 @@
 
         # Create dirs
         mkdir -p ~/Documents/Pictures/Screenshots
-        mkdir -p ~/.local/bin/
         mkdir -p ~/.ssh
         chmod 700 ~/.ssh
         mkdir -p ~/src
@@ -141,8 +136,6 @@
         if [[ -n $(which R) ]] >/dev/null 2>&1; then
             R -e 'install.packages(c("devtools", "lintr", "httpgd", "languageserver", "rmarkdown"))' >/dev/null 2>&1
             R -e 'install.packages("vscDebugger", repos = "https://manuelhentschel.r-universe.dev")' >/dev/null 2>&1
-        else
-            rm -f ~/.local/bin/update-packages-r.sh
         fi
       '';
     };

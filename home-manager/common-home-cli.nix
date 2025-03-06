@@ -73,7 +73,6 @@
         }
 
         # Create dirs
-        mkdir -p ~/.local/bin/
         mkdir -p ~/.ssh
         chmod 700 ~/.ssh
         mkdir -p ~/src
