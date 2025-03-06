@@ -210,10 +210,12 @@
           vscode-extensions.formulahendry.code-runner
           vscode-extensions.gitlab.gitlab-workflow
           vscode-extensions.golang.go
+          vscode-extensions.hbenl.vscode-test-explorer
           vscode-extensions.jnoortheen.nix-ide
           vscode-extensions.jock.svg
           vscode-extensions.mikestead.dotenv
           vscode-extensions.ms-vscode.live-server
+          vscode-extensions.ms-vscode.test-adapter-converter
           vscode-extensions.naumovs.color-highlight
           vscode-extensions.pkief.material-icon-theme
           vscode-extensions.pkief.material-product-icons
