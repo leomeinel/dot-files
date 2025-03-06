@@ -16,7 +16,9 @@ source "$SCRIPT_DIR/install.conf"
 set -e
 
 if [[ -n "${1}" ]] >/dev/null 2>&1; then
-    rm -rf ~/.vscode-oss/
+    # Remove codium configs for home-manager to be able to regenerate them
+    rm -rf ~/.vscode-oss ~/.vscode-R ~/.config/VSCodium ~/.config/vscode-sqltools ~/.local/share/vscode-sqltools
+    # Run home-manager
     nix run home-manager/release-"$NIX_VERSION" -- init --switch -b "bak" --flake "$SCRIPT_DIR/#$1"
 else
     echo "ERROR: You have to use a user from $SCRIPT_DIR/flake.nix as first argument"
