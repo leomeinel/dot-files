@@ -27,6 +27,7 @@ export GRADLE_USER_HOME="$XDG_DATA_HOME"/gradle
 export GTK2_RC_FILES="$XDG_CONFIG_HOME"/gtk-2.0/gtkrc
 export HISTFILE="$XDG_STATE_HOME"/bash/history
 export NIX_REMOTE=daemon
+export NIX_PATH=nixpkgs="$XDG_STATE_HOME"/nix/profiles/channels/nixpkgs/:"$NIX_PATH"
 export PARALLEL_HOME="$XDG_CONFIG_HOME"/parallel
 export PLATFORMIO_CORE_DIR="$XDG_DATA_HOME"/platformio
 export R_ENVIRON_USER="$XDG_CONFIG_HOME"/r/.Renviron
