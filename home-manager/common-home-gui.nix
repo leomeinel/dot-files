@@ -73,15 +73,14 @@
       GNUPGHOME = "${config.xdg.dataHome}/gnupg";
       GOPATH = "${config.xdg.dataHome}/go";
       GRADLE_USER_HOME = "${config.xdg.dataHome}/gradle";
-      GTK2_RC_FILES = "${config.xdg.configHome}/gtk-2.0/gtkrc";
-      HISTFILE = "${config.xdg.statehome}/bash/history";
+      HISTFILE = "${config.xdg.stateHome}/bash/history";
       NIX_REMOTE = "daemon";
       PARALLEL_HOME = "${config.xdg.configHome}/parallel";
       PLATFORMIO_CORE_DIR = "${config.xdg.dataHome}/platformio";
       R_ENVIRON_USER = "${config.xdg.configHome}/r/.Renviron";
       RUSTUP_HOME = "${config.xdg.dataHome}/rustup";
       SCREENRC = "${config.xdg.configHome}/screen/screenrc";
-      TEXMFVAR = "${config.xdg.cachehome}/texlive/texmf-var";
+      TEXMFVAR = "${config.xdg.cacheHome}/texlive/texmf-var";
     };
     # Activation script
     activation = {
@@ -101,10 +100,10 @@
         run chmod 700 ~/src
 
         # Create XDG dirs
-        run mkdir -p ${config.xdg.cachehome}
+        run mkdir -p ${config.xdg.cacheHome}
         run mkdir -p ${config.xdg.configHome}
         run mkdir -p ${config.xdg.dataHome}
-        run mkdir -p ${config.xdg.statehome}
+        run mkdir -p ${config.xdg.stateHome}
         run mkdir -p ${config.xdg.configHome}/java
         run mkdir -p ${config.xdg.dataHome}/android
         run mkdir -p ${config.xdg.dataHome}/cargo
@@ -113,29 +112,30 @@
         run mkdir -p ${config.xdg.dataHome}/go
         run mkdir -p ${config.xdg.dataHome}/gradle
         run mkdir -p ${config.xdg.configHome}/gtk-2.0
-        run mkdir -p ${config.xdg.statehome}/bash
+        run mkdir -p ${config.xdg.stateHome}/bash
         run mkdir -p ${config.xdg.configHome}/parallel
         run mkdir -p ${config.xdg.dataHome}/platformio
         run mkdir -p ${config.xdg.configHome}/r
         run mkdir -p ${config.xdg.dataHome}/r/library
-        run mkdir -p ${config.xdg.statehome}/r
+        run mkdir -p ${config.xdg.stateHome}/r
         run mkdir -p ${config.xdg.dataHome}/rustup
         run mkdir -p ${config.xdg.configHome}/screen
-        run mkdir -p ${config.xdg.cachehome}/texlive
+        run mkdir -p ${config.xdg.cacheHome}/texlive
 
         # Set keyboard layout for sway
-        LAYOUT="$(run localectl status | run grep "X11 Layout:" | run awk '{print $3}')"
-        ## START sed
-        FILE=${config.xdg.configHome}/sway/config.d/input
-        ##
-        [[ -f "$FILE" ]] && [[ -n "$LAYOUT" ]] &&
-            {
-                ##
-                STRING="^    xkb_layout .*"
-                grep -q "$STRING" "$FILE" || sed_exit
-                run sed -i "s/$STRING/    xkb_layout $LAYOUT/" "$FILE"
-                ## END sed
-            }
+        # FIXME: localectl, awk unknown command
+        #LAYOUT="$(run localectl status | run grep "X11 Layout:" | run awk '{print $3}')"
+        ### START sed
+        #FILE=${config.xdg.configHome}/sway/config.d/input
+        ###
+        #[[ -f "$FILE" ]] && [[ -n "$LAYOUT" ]] &&
+        #    {
+        #        ##
+        #        STRING="^    xkb_layout .*"
+        #        grep -q "$STRING" "$FILE" || sed_exit
+        #        run sed -i "s/$STRING/    xkb_layout $LAYOUT/" "$FILE"
+        #        ## END sed
+        #    }
 
         # Set default rust if rustup is installed
         [[ -n $(run which rustup) ]] >/dev/null 2>&1 &&
@@ -154,9 +154,9 @@
     home-manager.enable = true;
     # Bash options
     bash = {
-      completion.enable = true;
+      enableCompletion = true;
       # Equivalent to .bashrc for interactive sessions
-      interactiveShellInit = ''
+      bashrcExtra = ''
         # Key bindings
         bind '"\e[A": history-search-backward'
         bind '"\e[B": history-search-forward'
@@ -232,7 +232,7 @@
             return
 
         # Start sway with environment variables
-        if [[ -z "${WAYLAND_DISPLAY}" ]] && [[ "${XDG_VTNR}" -eq 1 ]]; then
+        if [[ -z "''${WAYLAND_DISPLAY}" ]] && [[ "''${XDG_VTNR}" -eq 1 ]]; then
             export MOZ_ENABLE_WAYLAND=1
             export MOZ_WEBRENDER=1
             export GTK_THEME="Arc-Dark"
@@ -872,7 +872,8 @@
   nixpkgs.config.allowUnfree = true;
 
   # Nix options
-  nix.channels = { inherit nixpkgs; };
+  # FIXME: Either remove this if unsupported or readd with correct syntax; nixpkgs is unknown, pkgs isn't correct
+  #nix.channels = { inherit nixpkgs; };
 
   # GTK Options
   gtk = {
