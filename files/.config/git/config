@@ -1,7 +1,7 @@
 [user]
 email = "leo@meinel.dev"
 name = "Leopold Johannes Meinel"
-signingkey = 2D39C0733D0EF05E
+signingkey = F0A7BB97CAF49D8CB058BB0A744FDDD73AECC993
 
 [core]
 editor = nvim
