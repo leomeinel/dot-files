@@ -11,5 +11,5 @@ git clone https://github.com/leomeinel/dot-files.git ~/.config/home-manager
 chmod +x ~/.config/home-manager/set-variables.sh
 ~/.config/home-manager/set-variables.sh
 chmod +x ~/.config/home-manager/setup.sh
-~/.config/home-manager/setup.sh <your-username>
+~/.config/home-manager/setup.sh $USER
 ```
