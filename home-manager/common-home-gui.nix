@@ -156,7 +156,6 @@
   programs = {
     home-manager = {
       enable = true;
-      backupFileExtension = "bak";
     };
     vscode =
     let

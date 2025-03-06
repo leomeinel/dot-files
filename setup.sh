@@ -15,7 +15,7 @@ SCRIPT_DIR="$(dirname -- "$(readlink -f -- "$0")")"
 set -e
 
 if [[ -n "${1}" ]] >/dev/null 2>&1; then
-    home-manager switch --flake "$SCRIPT_DIR/#$1"
+    home-manager switch -b "bak" --flake "$SCRIPT_DIR/#$1"
 else
     echo "ERROR: You have to use a user from $SCRIPT_DIR/flake.nix as first argument"
     exit 1
