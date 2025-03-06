@@ -28,6 +28,21 @@ FILE="$SCRIPT_DIR/flake.nix"
 STRING="REPLACE_NIX_VERSION"
 grep -q "$STRING" "$FILE" || sed_exit
 sed -i "s|$STRING|$NIX_VERSION|g" "$FILE"
+STRING="REPLACE_GUESTUSER"
+grep -q "$STRING" "$FILE" || sed_exit
+sed -i "s|$STRING|$GUESTUSER|g" "$FILE"
+STRING="REPLACE_HOMEUSER"
+grep -q "$STRING" "$FILE" || sed_exit
+sed -i "s|$STRING|$HOMEUSER|g" "$FILE"
+STRING="REPLACE_SYSUSER"
+grep -q "$STRING" "$FILE" || sed_exit
+sed -i "s|$STRING|$SYSUSER|g" "$FILE"
+STRING="REPLACE_VIRTUSER"
+grep -q "$STRING" "$FILE" || sed_exit
+sed -i "s|$STRING|$VIRTUSER|g" "$FILE"
+STRING="REPLACE_YOUTUBEUSER"
+grep -q "$STRING" "$FILE" || sed_exit
+sed -i "s|$STRING|$YOUTUBEUSER|g" "$FILE"
 # home-manager/configs/GUESTUSER.nix
 FILE="$SCRIPT_DIR/home-manager/configs/GUESTUSER.nix"
 STRING="REPLACE_GUESTUSER"

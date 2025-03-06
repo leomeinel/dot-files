@@ -36,42 +36,42 @@
       # Configurations
       homeConfigurations = {
         # Users
-        "GUESTUSER" = home-manager.lib.homeManagerConfiguration {
+        "REPLACE_GUESTUSER" = home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
           # Args to parse
           extraSpecialArgs = { inherit nixos-version; };
           # Modules to use
           modules = [ ./home-manager/configs/GUESTUSER.nix ];
         };
-        "HOMEUSER" = home-manager.lib.homeManagerConfiguration {
+        "REPLACE_HOMEUSER" = home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
           # Args to parse
           extraSpecialArgs = { inherit nixos-version; };
           # Modules to use
           modules = [ ./home-manager/configs/HOMEUSER.nix ];
         };
-        "ROOTUSER" = home-manager.lib.homeManagerConfiguration {
+        "root" = home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
           # Args to parse
           extraSpecialArgs = { inherit nixos-version; };
           # Modules to use
           modules = [ ./home-manager/configs/ROOTUSER.nix ];
         };
-        "SYSUSER" = home-manager.lib.homeManagerConfiguration {
+        "REPLACE_SYSUSER" = home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
           # Args to parse
           extraSpecialArgs = { inherit nixos-version; };
           # Modules to use
           modules = [ ./home-manager/configs/SYSUSER.nix ];
         };
-        "VIRTUSER" = home-manager.lib.homeManagerConfiguration {
+        "REPLACE_VIRTUSER" = home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
           # Args to parse
           extraSpecialArgs = { inherit nixos-version; };
           # Modules to use
           modules = [ ./home-manager/configs/VIRTUSER.nix ];
         };
-        "YOUTUBEUSER" = home-manager.lib.homeManagerConfiguration {
+        "REPLACE_YOUTUBEUSER" = home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
           # Args to parse
           extraSpecialArgs = { inherit nixos-version; };
