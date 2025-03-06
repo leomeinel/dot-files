@@ -86,7 +86,7 @@ if [[ -n "${1}" ]] >/dev/null 2>&1; then
     rm -rf ~/.vscode-oss ~/.vscode-R ~/.config/vscode-sqltools ~/.local/share/vscode-sqltools
     rm -rf ~/.config/VSCodium
     # Run home-manager
-    nix run home-manager/release-"$NIX_VERSION" switch -b "bak" --flake "$SCRIPT_DIR/#$1"
+    nix run home-manager/release-"$NIX_VERSION" -- switch -b "bak" --flake "$SCRIPT_DIR/#$1"
     DATE="$(/usr/bin/date +"%F-%H")"
     git add .
     git commit -m "Install dot-files - $DATE"
