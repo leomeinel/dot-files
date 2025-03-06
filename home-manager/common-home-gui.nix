@@ -423,6 +423,7 @@
           vscode-extensions.gitlab.gitlab-workflow
           vscode-extensions.golang.go
           vscode-extensions.hbenl.vscode-test-explorer
+          # FIXME: extensions shows that codium version installed via nixpkgs is unsupported. Not sure how that would be possible since both are from the same repo. Probably my mistake.
           vscode-extensions.jnoortheen.nix-ide
           vscode-extensions.jock.svg
           vscode-extensions.mikestead.dotenv
