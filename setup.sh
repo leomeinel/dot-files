@@ -16,8 +16,8 @@ source "$SCRIPT_DIR/install.conf"
 set -e
 
 if [[ -n "${1}" ]] >/dev/null 2>&1; then
-    nix run home-manager/release-"$NIX_VERSION" --init
-    home-manager switch -b "bak" --flake "$SCRIPT_DIR/#$1"
+    # Update nix channels
+    nix run home-manager/release-"$NIX_VERSION" -- init --switch -b "bak" --flake "$SCRIPT_DIR/#$1"
 else
     echo "ERROR: You have to use a user from $SCRIPT_DIR/flake.nix as first argument"
     exit 1
