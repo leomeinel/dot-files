@@ -203,6 +203,7 @@
           # Nix
           vscode-extensions.christian-kohler.path-intellisense
           vscode-extensions.dotjoshjohnson.xml
+          vscode-extensions.editorconfig.editorconfig
           vscode-extensions.esbenp.prettier-vscode
           vscode-extensions.fill-labs.dependi
           vscode-extensions.formulahendry.auto-close-tag
