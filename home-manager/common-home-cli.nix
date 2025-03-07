@@ -291,4 +291,10 @@
   # Nix options
   # FIXME: Either remove this if unsupported or readd with correct syntax; nixpkgs is unknown, pkgs isn't correct
   #nix.channels = { inherit nixpkgs; };
+
+  # Systemd options
+  systemd.user = {
+    enable = true;
+    startServices = true;
+  };
 }

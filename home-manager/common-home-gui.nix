@@ -917,4 +917,25 @@
       gtk-primary-button-warps-slider = false;
     };
   };
+
+  # Systemd options
+  systemd.user = {
+    enable = true;
+    startServices = true;
+    # Systemd services
+    services = {
+      # Source: https://github.com/Cropi/usbguard-notifier/blob/main/usbguard-notifier.service.in
+      usbguard-notifier = {
+        Unit = {
+          Description = "USBGuard Notifier";
+        };
+        Install = {
+          WantedBy = [ "default.target" ];
+        };
+        Service = {
+          ExecStart = "${pkgs.usbguard-notifier}/bin/usbguard-notifier";
+        };
+      };
+    };
+  };
 }
