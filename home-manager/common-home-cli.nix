@@ -47,17 +47,14 @@
       _JAVA_OPTIONS = "-Djava.util.prefs.userRoot=${config.xdg.configHome}/java";
       MYSQL_HOME = "/var/lib/mysql";
       PAGER = "/usr/bin/less";
-      VISUAL = "/usr/bin/nvim";
       MANPAGER = "/usr/bin/sh -c '/usr/bin/col -bx | /usr/bin/bat -l man -p'";
       MANROFFOPT = "-c";
       ANDROID_HOME = "${config.xdg.dataHome}/android";
       ANDROID_USER_HOME = "${config.xdg.dataHome}/android";
       CARGO_HOME = "${config.xdg.dataHome}/cargo";
-      GNUPGHOME = "${config.xdg.dataHome}/gnupg";
       GOPATH = "${config.xdg.dataHome}/go";
       GRADLE_USER_HOME = "${config.xdg.dataHome}/gradle";
       HISTFILE = "${config.xdg.stateHome}/bash/history";
-      NIX_REMOTE = "daemon";
       PARALLEL_HOME = "${config.xdg.configHome}/parallel";
       PLATFORMIO_CORE_DIR = "${config.xdg.dataHome}/platformio";
       R_ENVIRON_USER = "${config.xdg.configHome}/r/.Renviron";
@@ -90,8 +87,6 @@
         run mkdir -p ${config.xdg.configHome}/java
         run mkdir -p ${config.xdg.dataHome}/android
         run mkdir -p ${config.xdg.dataHome}/cargo
-        run mkdir -p ${config.xdg.dataHome}/gnupg
-        run chmod 700 ${config.xdg.dataHome}/gnupg
         run mkdir -p ${config.xdg.dataHome}/go
         run mkdir -p ${config.xdg.dataHome}/gradle
         run mkdir -p ${config.xdg.configHome}/gtk-2.0
@@ -125,6 +120,9 @@
       enableCompletion = true;
       # Equivalent to .bashrc for interactive sessions
       bashrcExtra = ''
+        # Commands that should be applied only for interactive shells.
+        [[ $- == *i* ]] || return
+
         # Key bindings
         bind '"\e[A": history-search-backward'
         bind '"\e[B": history-search-forward'
@@ -175,9 +173,8 @@
       };
       # Equivalent to .bash_profile
       profileExtra = ''
-        # If not running interactively, don't do anything
-        [[ $- != *i* ]] &&
-            return
+        # Commands that should be applied only for interactive shells.
+        [[ $- == *i* ]] || return
 
         # Start ssh-agent if it is not already started
         [[ -z "$SSH_AUTH_SOCK" ]] &&
@@ -186,10 +183,6 @@
         # Update rust toolchains if rustup is installed
         [[ -n $(/usr/bin/which rustup) ]] >/dev/null 2>&1 &&
             /usr/bin/rustup update >/dev/null 2>&1
-
-        # Source ~/.bashrc
-        [[ -f "$HOME"/.bashrc ]] && [[ -n "$BASH_VERSION" ]] &&
-            source "$HOME"/.bashrc
 
         # If sway is not installed, don't do anything
         [[ -z $(/usr/bin/which sway) ]] >/dev/null 2>&1 &&
@@ -214,7 +207,7 @@
             export XDG_CURRENT_DESKTOP=sway
             export XDG_SESSION_DESKTOP=sway
             export XDG_SESSION_TYPE=wayland
-            export TERMINAL=/usr/bin/alacritty
+            export TERMINAL=${pkgs.alacritty}/bin/alacritty
             exec /usr/bin/sway
         fi
       '';
@@ -268,6 +261,11 @@
         add.interactive.useBuiltin = false;
         credential.helper = "${pkgs.git.override { withLibsecret = true; }}/bin/git-credential-libsecret";
       };
+    };
+    # Gpg options
+    gpg = {
+      enable = true;
+      homedir = "${config.xdg.dataHome}/gnupg";
     };
     # Neovim options
     neovim = {

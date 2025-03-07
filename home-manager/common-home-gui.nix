@@ -64,17 +64,14 @@
       _JAVA_OPTIONS = "-Djava.util.prefs.userRoot=${config.xdg.configHome}/java";
       MYSQL_HOME = "/var/lib/mysql";
       PAGER = "/usr/bin/less";
-      VISUAL = "/usr/bin/nvim";
       MANPAGER = "/usr/bin/sh -c '/usr/bin/col -bx | /usr/bin/bat -l man -p'";
       MANROFFOPT = "-c";
       ANDROID_HOME = "${config.xdg.dataHome}/android";
       ANDROID_USER_HOME = "${config.xdg.dataHome}/android";
       CARGO_HOME = "${config.xdg.dataHome}/cargo";
-      GNUPGHOME = "${config.xdg.dataHome}/gnupg";
       GOPATH = "${config.xdg.dataHome}/go";
       GRADLE_USER_HOME = "${config.xdg.dataHome}/gradle";
       HISTFILE = "${config.xdg.stateHome}/bash/history";
-      NIX_REMOTE = "daemon";
       PARALLEL_HOME = "${config.xdg.configHome}/parallel";
       PLATFORMIO_CORE_DIR = "${config.xdg.dataHome}/platformio";
       R_ENVIRON_USER = "${config.xdg.configHome}/r/.Renviron";
@@ -87,44 +84,42 @@
       common-home = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
         # Define functions
         sed_exit() {
-            run echo "ERROR: 'sed' didn't replace, report this @"
-            run echo "       https://github.com/leomeinel/dot-files/issues"
-            run exit 1
+            echo "ERROR: 'sed' didn't replace, report this @"
+            echo "       https://github.com/leomeinel/dot-files/issues"
+            exit 1
         }
 
         # Create dirs
-        run mkdir -p ~/Documents/Pictures/Screenshots
-        run mkdir -p ~/.ssh
-        run chmod 700 ~/.ssh
-        run mkdir -p ~/src
-        run chmod 700 ~/src
+        mkdir -p ~/Documents/Pictures/Screenshots
+        mkdir -p ~/.ssh
+        chmod 700 ~/.ssh
+        mkdir -p ~/src
+        chmod 700 ~/src
 
         # Create XDG dirs
-        run mkdir -p ${config.xdg.cacheHome}
-        run mkdir -p ${config.xdg.configHome}
-        run mkdir -p ${config.xdg.dataHome}
-        run mkdir -p ${config.xdg.stateHome}
-        run mkdir -p ${config.xdg.configHome}/java
-        run mkdir -p ${config.xdg.dataHome}/android
-        run mkdir -p ${config.xdg.dataHome}/cargo
-        run mkdir -p ${config.xdg.dataHome}/gnupg
-        run chmod 700 ${config.xdg.dataHome}/gnupg
-        run mkdir -p ${config.xdg.dataHome}/go
-        run mkdir -p ${config.xdg.dataHome}/gradle
-        run mkdir -p ${config.xdg.configHome}/gtk-2.0
-        run mkdir -p ${config.xdg.stateHome}/bash
-        run mkdir -p ${config.xdg.configHome}/parallel
-        run mkdir -p ${config.xdg.dataHome}/platformio
-        run mkdir -p ${config.xdg.configHome}/r
-        run mkdir -p ${config.xdg.dataHome}/r/library
-        run mkdir -p ${config.xdg.stateHome}/r
-        run mkdir -p ${config.xdg.dataHome}/rustup
-        run mkdir -p ${config.xdg.configHome}/screen
-        run mkdir -p ${config.xdg.cacheHome}/texlive
+        mkdir -p ${config.xdg.cacheHome}
+        mkdir -p ${config.xdg.configHome}
+        mkdir -p ${config.xdg.dataHome}
+        mkdir -p ${config.xdg.stateHome}
+        mkdir -p ${config.xdg.configHome}/java
+        mkdir -p ${config.xdg.dataHome}/android
+        mkdir -p ${config.xdg.dataHome}/cargo
+        mkdir -p ${config.xdg.dataHome}/go
+        mkdir -p ${config.xdg.dataHome}/gradle
+        mkdir -p ${config.xdg.configHome}/gtk-2.0
+        mkdir -p ${config.xdg.stateHome}/bash
+        mkdir -p ${config.xdg.configHome}/parallel
+        mkdir -p ${config.xdg.dataHome}/platformio
+        mkdir -p ${config.xdg.configHome}/r
+        mkdir -p ${config.xdg.dataHome}/r/library
+        mkdir -p ${config.xdg.stateHome}/r
+        mkdir -p ${config.xdg.dataHome}/rustup
+        mkdir -p ${config.xdg.configHome}/screen
+        mkdir -p ${config.xdg.cacheHome}/texlive
 
         # Set keyboard layout for sway
         # FIXME: localectl, awk unknown command
-        #LAYOUT="$(run localectl status | run grep "X11 Layout:" | run awk '{print $3}')"
+        #LAYOUT="$(localectl status | grep "X11 Layout:" | awk '{print $3}')"
         ### START sed
         #FILE=${config.xdg.configHome}/sway/config.d/input
         ###
@@ -133,16 +128,16 @@
         #        ##
         #        STRING="^    xkb_layout .*"
         #        grep -q "$STRING" "$FILE" || sed_exit
-        #        run sed -i "s/$STRING/    xkb_layout $LAYOUT/" "$FILE"
+        #        sed -i "s/$STRING/    xkb_layout $LAYOUT/" "$FILE"
         #        ## END sed
         #    }
 
         # Set default rust if rustup is installed
-        [[ -n $(run which rustup) ]] >/dev/null 2>&1 &&
-            run rustup default stable
+        [[ -n $(which rustup) ]] >/dev/null 2>&1 &&
+            rustup default stable
 
         # Initialize nvim
-        run nvim --headless -c 'sleep 5' -c 'q!' >/dev/null 2>&1
+        nvim --headless -c 'sleep 5' -c 'q!' >/dev/null 2>&1
       '';
     };
   };
@@ -158,6 +153,9 @@
       enableCompletion = true;
       # Equivalent to .bashrc for interactive sessions
       bashrcExtra = ''
+        # Commands that should be applied only for interactive shells.
+        [[ $- == *i* ]] || return
+
         # Key bindings
         bind '"\e[A": history-search-backward'
         bind '"\e[B": history-search-forward'
@@ -208,9 +206,8 @@
       };
       # Equivalent to .bash_profile
       profileExtra = ''
-        # If not running interactively, don't do anything
-        [[ $- != *i* ]] &&
-            return
+        # Commands that should be applied only for interactive shells.
+        [[ $- == *i* ]] || return
 
         # Start ssh-agent if it is not already started
         [[ -z "$SSH_AUTH_SOCK" ]] &&
@@ -219,10 +216,6 @@
         # Update rust toolchains if rustup is installed
         [[ -n $(/usr/bin/which rustup) ]] >/dev/null 2>&1 &&
             /usr/bin/rustup update >/dev/null 2>&1
-
-        # Source ~/.bashrc
-        [[ -f "$HOME"/.bashrc ]] && [[ -n "$BASH_VERSION" ]] &&
-            source "$HOME"/.bashrc
 
         # If sway is not installed, don't do anything
         [[ -z $(/usr/bin/which sway) ]] >/dev/null 2>&1 &&
@@ -247,7 +240,7 @@
             export XDG_CURRENT_DESKTOP=sway
             export XDG_SESSION_DESKTOP=sway
             export XDG_SESSION_TYPE=wayland
-            export TERMINAL=/usr/bin/alacritty
+            export TERMINAL=${pkgs.alacritty}/bin/alacritty
             exec /usr/bin/sway
         fi
       '';
@@ -301,6 +294,11 @@
         add.interactive.useBuiltin = false;
         credential.helper = "${pkgs.git.override { withLibsecret = true; }}/bin/git-credential-libsecret";
       };
+    };
+    # Gpg options
+    gpg = {
+      enable = true;
+      homedir = "${config.xdg.dataHome}/gnupg";
     };
     # Neovim options
     neovim = {
@@ -892,13 +890,16 @@
     };
     iconTheme.name = "Papirus-Dark";
     theme.name = "Arc-Dark";
-    gtk2.extraConfig = ''
-      gtk-enable-animations = 1
-      gtk-primary-button-warps-slider = 0
-      gtk-toolbar-style = 3
-      gtk-menu-images = 1
-      gtk-button-images = 1
-    '';
+    gtk2 = {
+      configLocation = "${config.xdg.configHome}/gtk-2.0/gtkrc";
+      extraConfig = ''
+        gtk-enable-animations = 1
+        gtk-primary-button-warps-slider = 0
+        gtk-toolbar-style = 3
+        gtk-menu-images = 1
+        gtk-button-images = 1
+      '';
+    };
     gtk3.extraConfig = {
       gtk-application-prefer-dark-theme = true;
       gtk-button-images = true;
