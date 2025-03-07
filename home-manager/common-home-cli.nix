@@ -54,7 +54,6 @@
       CARGO_HOME = "${config.xdg.dataHome}/cargo";
       GOPATH = "${config.xdg.dataHome}/go";
       GRADLE_USER_HOME = "${config.xdg.dataHome}/gradle";
-      HISTFILE = "${config.xdg.stateHome}/bash/history";
       PARALLEL_HOME = "${config.xdg.configHome}/parallel";
       PLATFORMIO_CORE_DIR = "${config.xdg.dataHome}/platformio";
       R_ENVIRON_USER = "${config.xdg.configHome}/r/.Renviron";
@@ -118,23 +117,18 @@
     bash = {
       enable = true;
       enableCompletion = true;
+      historyFile = "${config.xdg.stateHome}/bash/history";
+      historyControl = [
+        "ignoredups"
+        "ignorespace"
+      ];
+      historySize = 10000;
+      historyFileSize = 100000;
       # Equivalent to .bashrc for interactive sessions
-      bashrcExtra = ''
-        # Commands that should be applied only for interactive shells.
-        [[ $- == *i* ]] || return
-
+      initExtra = ''
         # Key bindings
         bind '"\e[A": history-search-backward'
         bind '"\e[B": history-search-forward'
-
-        # History
-        HISTCONTROL=ignoredups:ignorespace
-        HISTSIZE=1000
-        HISTFILESIZE=10000
-        shopt -s histappend
-
-        # Line wrap on window resize
-        shopt -s checkwinsize
 
         # Tab completion for doas
         complete -cf /usr/bin/doas
