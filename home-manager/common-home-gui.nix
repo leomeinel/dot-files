@@ -922,6 +922,7 @@
       usbguard-notifier = {
         Unit = {
           Description = "USBGuard Notifier";
+          After = "usbguard.service";
         };
         Install = {
           WantedBy = [ "default.target" ];
