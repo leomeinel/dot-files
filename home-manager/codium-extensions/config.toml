@@ -20,6 +20,7 @@ extensions = [
  "gruntfuggly.activitusbar",
  "hangxingliu.vscode-nginx-conf-hint",
  "htmlhint.vscode-htmlhint",
+ "jnoortheen.nix-ide",
  "kisstkondoros.vscode-gutter-preview",
  "kokororin.vscode-phpfmt",
  "mkhl.shfmt",

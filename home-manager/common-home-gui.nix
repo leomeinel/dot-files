@@ -400,6 +400,8 @@
           codium-extensions.gruntfuggly.activitusbar
           codium-extensions.hangxingliu.vscode-nginx-conf-hint
           codium-extensions.htmlhint.vscode-htmlhint
+          # FIXME: jnoortheen.nix-ide should be in vscode-extensions, but the version in pkgs isn't compatible with the pkgs version of the extension in pkgs
+          codium-extensions.jnoortheen.nix-ide
           codium-extensions.kisstkondoros.vscode-gutter-preview
           codium-extensions.kokororin.vscode-phpfmt
           codium-extensions.mkhl.shfmt
@@ -424,8 +426,8 @@
           vscode-extensions.gitlab.gitlab-workflow
           vscode-extensions.golang.go
           vscode-extensions.hbenl.vscode-test-explorer
-          # FIXME: extensions shows that codium version installed via nixpkgs is unsupported. Not sure how that would be possible since both are from the same repo. Probably my mistake.
-          vscode-extensions.jnoortheen.nix-ide
+          # FIXME: jnoortheen.nix-ide should be in vscode-extensions, but the version in pkgs isn't compatible with the pkgs version of the extension in pkgs
+          #vscode-extensions.jnoortheen.nix-ide
           vscode-extensions.jock.svg
           vscode-extensions.mikestead.dotenv
           vscode-extensions.ms-vscode.live-server
