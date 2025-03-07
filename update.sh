@@ -16,14 +16,12 @@ source "$SCRIPT_DIR/install.conf"
 # Fail on error
 set -e
 
-if [[ -n "${1}" ]] >/dev/null 2>&1; then
-    # Remove certain codium configs for home-manager to be able to regenerate them
-    rm -rf ~/.vscode-oss ~/.vscode-R ~/.config/vscode-sqltools ~/.local/share/vscode-sqltools
-    # Run home-manager
-    nix run home-manager/release-"$NIX_VERSION" -- switch -b "bak" --flake "$SCRIPT_DIR/#$1"
-    git add .
-    git commit -m "Install dot-files - $DATE"
-else
-    echo "ERROR: You have to use a user from $SCRIPT_DIR/flake.nix as first argument"
-    exit 1
-fi
+# Remove codium configs for home-manager to be able to regenerate them
+rm -rf ~/.vscode-oss ~/.vscode-R ~/.config/vscode-sqltools ~/.local/share/vscode-sqltools
+# Run home-manager
+nix run home-manager/release-"$NIX_VERSION" -- switch -b "bak" --flake "$SCRIPT_DIR/#$USER"
+DATE="$(/usr/bin/date +"%F-%H")"
+cd "$SCRIPT_DIR"
+git add .
+git commit -m "Install dot-files - $DATE"
+
