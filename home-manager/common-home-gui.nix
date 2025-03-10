@@ -98,7 +98,7 @@
 
         # FIXME: Remove this after this issue has been resolved https://github.com/nix-community/home-manager/issues/4807
         run mkdir -p ~/.nix-profile/bin
-        run ln -s ${config.xdg.stateHome}/nix/profile/bin/starship ~/.nix-profile/bin/starship
+        run ln -f -s ${config.xdg.stateHome}/nix/profile/bin/starship ~/.nix-profile/bin/starship
 
         # Create XDG dirs
         run mkdir -p ${config.xdg.cacheHome}
