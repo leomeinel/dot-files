@@ -1,5 +1,3 @@
-# WARNING: DO NOT USE THIS, THE CURRENT VERSION DOESN'T WORK AT ALL
-
 # dot-files
 
 Configuration files and miscellaneous files for my personal linux setups
