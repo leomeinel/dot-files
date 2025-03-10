@@ -113,7 +113,7 @@
         run mkdir -p ${config.xdg.dataHome}/android
         run mkdir -p ${config.xdg.dataHome}/cargo
         run mkdir -p ${config.xdg.dataHome}/gnupg
-        chmod 700 ${config.xdg.dataHome}/gnupg
+        run chmod 700 ${config.xdg.dataHome}/gnupg
         run mkdir -p ${config.xdg.dataHome}/go
         run mkdir -p ${config.xdg.dataHome}/gradle
         run mkdir -p ${config.xdg.configHome}/gtk-2.0
@@ -132,11 +132,11 @@
             run rustup default stable
 
         # Initialize nvim
-        /usr/bin/nvim --headless -c 'sleep 5' -c 'q!' >/dev/null 2>&1
+        run nvim --headless -c 'sleep 5' -c 'q!' >/dev/null 2>&1
 
         # Add nixpkgs channel
-        nix-channel --add https://nixos.org/channels/nixos-${nixos-version} nixpkgs
-        nix-channel --update
+        run nix-channel --add https://nixos.org/channels/nixos-${nixos-version} nixpkgs
+        run nix-channel --update
       '';
     };
   };
