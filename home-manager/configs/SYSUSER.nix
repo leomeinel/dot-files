@@ -15,6 +15,7 @@
 {
   # Imports
   imports = [
+    ../common-home.nix
     ../common-home-gui.nix
   ];
 
