@@ -51,3 +51,5 @@ git submodule update --init --remote
 
 # Generate codium-extensions.nix dynamically
 nix develop --command bash -c "cargo run -q -- $SCRIPT_DIR/config.toml" >"$SCRIPT_DIR"/codium-extensions.nix
+
+# FIXME: Sort top-level entries in codium-extensions.nix alphabetically before committing, this avoids confusing git diffs
