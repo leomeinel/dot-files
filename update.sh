@@ -24,4 +24,3 @@ DATE="$(/usr/bin/date +"%F-%H")"
 cd "$SCRIPT_DIR"
 git add .
 git commit -m "Install dot-files - $DATE"
-
