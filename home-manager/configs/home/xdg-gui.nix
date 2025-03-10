@@ -1526,7 +1526,7 @@
     };
     dataFile = {
       # gnupg
-      ".local/share/gnupg/gpg-agent.conf" = {
+      "gnupg/gpg-agent.conf" = {
         text = ''
           pinentry-program /usr/bin/pinentry-gnome3
         '';
