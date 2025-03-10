@@ -141,7 +141,7 @@
             run rustup default stable
 
         # Initialize nvim
-        ${pkgs.neovim}/bin/nvim --headless -c 'sleep 5' -c 'q!' >/dev/null 2>&1 
+        ${pkgs.neovim}/bin/nvim --headless -c 'sleep 5' -c 'q!' >/dev/null 2>&1
       '';
     };
   };
@@ -325,7 +325,7 @@
             cyan = "#689d6a";
             white = "#a89984";
           };
-          birght = {
+          bright = {
             black = "#928374";
             red = "#fb4934";
             green = "#b8bb26";
@@ -336,7 +336,6 @@
             white = "#ebdbb2";
           };
         };
-
         window = {
           padding = {
             x = 0;
