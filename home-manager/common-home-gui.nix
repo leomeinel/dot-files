@@ -60,6 +60,10 @@
       };
     };
     sessionVariables = {
+      XDG_CACHE_HOME="${config.xdg.cacheHome}";
+      XDG_CONFIG_HOME="${config.xdg.configHome}";
+      XDG_DATA_HOME="${config.xdg.dataHome}";
+      XDG_STATE_HOME="${config.xdg.stateHome}";
       JAVA_HOME = "/usr/lib/jvm/default";
       _JAVA_OPTIONS = "-Djava.util.prefs.userRoot=${config.xdg.configHome}/java";
       MYSQL_HOME = "/var/lib/mysql";
@@ -69,7 +73,6 @@
       ANDROID_HOME = "${config.xdg.dataHome}/android";
       ANDROID_USER_HOME = "${config.xdg.dataHome}/android";
       CARGO_HOME = "${config.xdg.dataHome}/cargo";
-      GNUPGHOME = "${config.xdg.dataHome}/gnupg";
       GOPATH = "${config.xdg.dataHome}/go";
       GRADLE_USER_HOME = "${config.xdg.dataHome}/gradle";
       PARALLEL_HOME = "${config.xdg.configHome}/parallel";
