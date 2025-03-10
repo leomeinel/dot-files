@@ -53,6 +53,7 @@
       ANDROID_USER_HOME = "${config.xdg.dataHome}/android";
       CARGO_HOME = "${config.xdg.dataHome}/cargo";
       GOPATH = "${config.xdg.dataHome}/go";
+      GNUPGHOME = "${config.xdg.dataHome}/gnupg";
       GRADLE_USER_HOME = "${config.xdg.dataHome}/gradle";
       PARALLEL_HOME = "${config.xdg.configHome}/parallel";
       PLATFORMIO_CORE_DIR = "${config.xdg.dataHome}/platformio";
@@ -77,6 +78,10 @@
         run chmod 700 ~/.ssh
         run mkdir -p ~/src
         run chmod 700 ~/src
+
+        # FIXME: Remove this after this issue has been resolved https://github.com/nix-community/home-manager/issues/4807
+        run mkdir -p ~/.nix-profile/bin
+        run ln -f -s ${config.xdg.stateHome}/nix/profile/bin/starship ~/.nix-profile/bin/starship
 
         # Create XDG dirs
         run mkdir -p ${config.xdg.cacheHome}
@@ -104,7 +109,7 @@
             run rustup default stable
 
         # Initialize nvim
-        ${pkgs.neovim}/bin/nvim --headless -c 'sleep 5' -c 'q!' >/dev/null 2>&1 
+        ${pkgs.neovim}/bin/nvim --headless -c 'sleep 5' -c 'q!' >/dev/null 2>&1
       '';
     };
   };
