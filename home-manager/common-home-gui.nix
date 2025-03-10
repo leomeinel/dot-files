@@ -136,7 +136,7 @@
             run rustup default stable
 
         # Initialize nvim
-        run nvim --headless -c 'sleep 5' -c 'q!' >/dev/null 2>&1
+        ${pkgs.neovim}/bin/nvim --headless -c 'sleep 5' -c 'q!' >/dev/null 2>&1 
       '';
     };
   };
