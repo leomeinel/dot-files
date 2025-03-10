@@ -95,6 +95,10 @@
         run mkdir -p ~/src
         run chmod 700 ~/src
 
+        # FIXME: Remove this after this issue has been resolved https://github.com/nix-community/home-manager/issues/4807
+        run mkdir -p ~/.nix-profile/bin
+        run ln -s ${config.xdg.stateHome}/nix/profile/bin/starship ~/.nix-profile/bin/starship
+
         # Create XDG dirs
         run mkdir -p ${config.xdg.cacheHome}
         run mkdir -p ${config.xdg.configHome}
@@ -278,7 +282,7 @@
       # custom config
       extraConfig = {
         core = {
-          editor = "nvim";
+          editor = "${pkgs.neovim}/bin/nvim";
           autocrlf = "input";
         };
         init.defaultBranch = "main";
@@ -354,7 +358,7 @@
           };
         };
 
-        env.TERM = "alacritty";
+        env.TERM = "${pkgs.alacritty}/bin/alacritty";
       };
     };
     # Vscode options
