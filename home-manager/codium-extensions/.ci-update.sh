@@ -49,7 +49,7 @@ echo "DEBUG: a"
 # Get latest submodule of nix4vscode
 cd "$SCRIPT_DIR"/nix4vscode
 echo "DEBUG: b"
-git submodule update --remote
+git submodule update --init --remote
 echo "DEBUG: c"
 
 # Generate codium-extensions.nix dynamically
