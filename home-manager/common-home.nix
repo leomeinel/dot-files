@@ -39,33 +39,6 @@
     packages = with pkgs; [
       xdg-ninja
     ];
-    sessionVariables = {
-      XDG_CACHE_HOME = "${config.xdg.cacheHome}";
-      XDG_CONFIG_HOME = "${config.xdg.configHome}";
-      XDG_DATA_HOME = "${config.xdg.dataHome}";
-      XDG_STATE_HOME = "${config.xdg.stateHome}";
-      EDITOR = "/usr/bin/nvim";
-      JAVA_HOME = "/usr/lib/jvm/default";
-      _JAVA_OPTIONS = "-Djava.util.prefs.userRoot=${config.xdg.configHome}/java";
-      MYSQL_HOME = "/var/lib/mysql";
-      PAGER = "/usr/bin/less";
-      VISUAL = "/usr/bin/nvim";
-      MANPAGER = "/usr/bin/sh -c '/usr/bin/col -bx | /usr/bin/bat -l man -p'";
-      MANROFFOPT = "-c";
-      ANDROID_HOME = "${config.xdg.dataHome}/android";
-      ANDROID_USER_HOME = "${config.xdg.dataHome}/android";
-      CARGO_HOME = "${config.xdg.dataHome}/cargo";
-      GNUPGHOME = "${config.xdg.dataHome}/gnupg";
-      GOPATH = "${config.xdg.dataHome}/go";
-      GRADLE_USER_HOME = "${config.xdg.dataHome}/gradle";
-      HISTFILE = "${config.xdg.stateHome}/bash/history";
-      PARALLEL_HOME = "${config.xdg.configHome}/parallel";
-      PLATFORMIO_CORE_DIR = "${config.xdg.dataHome}/platformio";
-      R_ENVIRON_USER = "${config.xdg.configHome}/r/.Renviron";
-      RUSTUP_HOME = "${config.xdg.dataHome}/rustup";
-      SCREENRC = "${config.xdg.configHome}/screen/screenrc";
-      TEXMFVAR = "${config.xdg.cacheHome}/texlive/texmf-var";
-    };
     # Activation script
     activation = {
       common-home = lib.hm.dag.entryAfter [ "writeBoundary" ] ''

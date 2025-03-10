@@ -65,6 +65,33 @@
         # ~/.bash_profile
         #
 
+        # Set environment variables
+        export XDG_CACHE_HOME="${config.xdg.cacheHome}";
+        export XDG_CONFIG_HOME="${config.xdg.configHome}";
+        export XDG_DATA_HOME="${config.xdg.dataHome}";
+        export XDG_STATE_HOME="${config.xdg.stateHome}";
+        export EDITOR="/usr/bin/nvim";
+        export JAVA_HOME="/usr/lib/jvm/default";
+        export _JAVA_OPTIONS="-Djava.util.prefs.userRoot=${config.xdg.configHome}/java";
+        export MYSQL_HOME="/var/lib/mysql";
+        export PAGER="/usr/bin/less";
+        export VISUAL="/usr/bin/nvim";
+        export MANPAGER="/usr/bin/sh -c '/usr/bin/col -bx | /usr/bin/bat -l man -p'";
+        export MANROFFOPT="-c";
+        export ANDROID_HOME="${config.xdg.dataHome}/android";
+        export ANDROID_USER_HOME="${config.xdg.dataHome}/android";
+        export CARGO_HOME="${config.xdg.dataHome}/cargo";
+        export GNUPGHOME="${config.xdg.dataHome}/gnupg";
+        export GOPATH="${config.xdg.dataHome}/go";
+        export GRADLE_USER_HOME="${config.xdg.dataHome}/gradle";
+        export HISTFILE="${config.xdg.stateHome}/bash/history";
+        export PARALLEL_HOME="${config.xdg.configHome}/parallel";
+        export PLATFORMIO_CORE_DIR="${config.xdg.dataHome}/platformio";
+        export R_ENVIRON_USER="${config.xdg.configHome}/r/.Renviron";
+        export RUSTUP_HOME="${config.xdg.dataHome}/rustup";
+        export SCREENRC="${config.xdg.configHome}/screen/screenrc";
+        export TEXMFVAR="${config.xdg.cacheHome}/texlive/texmf-var";
+
         # Commands that should be applied only for interactive shells.
         [[ $- == *i* ]] || return
 
