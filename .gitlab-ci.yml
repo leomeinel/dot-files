@@ -9,6 +9,7 @@ regen-codium-extensions:
     - git config user.email "$MAIN_BOT_EMAIL"
     - git remote add gitlab_origin https://$MAIN_BOT_USERNAME:$MAIN_BOT_TOKEN@$CI_SERVER_FQDN/public-leo/$CI_PROJECT_NAME.git
     - git add ./home-manager/codium-extensions/codium-extensions.nix
+    - git add ./home-manager/codium-extensions/config.toml
     - DATE="$(/usr/bin/date +"%F-%H")"
     - git commit -m "Regen codium-extensions.nix - CI $DATE"
     - git push gitlab_origin HEAD:main -o ci.skip
