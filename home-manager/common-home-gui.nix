@@ -83,42 +83,42 @@
       common-home = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
         # Define functions
         sed_exit() {
-            echo "ERROR: 'sed' didn't replace, report this @"
-            echo "       https://github.com/leomeinel/dot-files/issues"
-            exit 1
+            run echo "ERROR: 'sed' didn't replace, report this @"
+            run echo "       https://github.com/leomeinel/dot-files/issues"
+            run exit 1
         }
 
         # Create dirs
-        mkdir -p ~/Documents/Pictures/Screenshots
-        mkdir -p ~/.ssh
-        chmod 700 ~/.ssh
-        mkdir -p ~/src
-        chmod 700 ~/src
+        run mkdir -p ~/Documents/Pictures/Screenshots
+        run mkdir -p ~/.ssh
+        run chmod 700 ~/.ssh
+        run mkdir -p ~/src
+        run chmod 700 ~/src
 
         # Create XDG dirs
-        mkdir -p ${config.xdg.cacheHome}
-        mkdir -p ${config.xdg.configHome}
-        mkdir -p ${config.xdg.dataHome}
-        mkdir -p ${config.xdg.stateHome}
-        mkdir -p ${config.xdg.configHome}/java
-        mkdir -p ${config.xdg.dataHome}/android
-        mkdir -p ${config.xdg.dataHome}/cargo
-        mkdir -p ${config.xdg.dataHome}/go
-        mkdir -p ${config.xdg.dataHome}/gradle
-        mkdir -p ${config.xdg.configHome}/gtk-2.0
-        mkdir -p ${config.xdg.stateHome}/bash
-        mkdir -p ${config.xdg.configHome}/parallel
-        mkdir -p ${config.xdg.dataHome}/platformio
-        mkdir -p ${config.xdg.configHome}/r
-        mkdir -p ${config.xdg.dataHome}/r/library
-        mkdir -p ${config.xdg.stateHome}/r
-        mkdir -p ${config.xdg.dataHome}/rustup
-        mkdir -p ${config.xdg.configHome}/screen
-        mkdir -p ${config.xdg.cacheHome}/texlive
+        run mkdir -p ${config.xdg.cacheHome}
+        run mkdir -p ${config.xdg.configHome}
+        run mkdir -p ${config.xdg.dataHome}
+        run mkdir -p ${config.xdg.stateHome}
+        run mkdir -p ${config.xdg.configHome}/java
+        run mkdir -p ${config.xdg.dataHome}/android
+        run mkdir -p ${config.xdg.dataHome}/cargo
+        run mkdir -p ${config.xdg.dataHome}/go
+        run mkdir -p ${config.xdg.dataHome}/gradle
+        run mkdir -p ${config.xdg.configHome}/gtk-2.0
+        run mkdir -p ${config.xdg.stateHome}/bash
+        run mkdir -p ${config.xdg.configHome}/parallel
+        run mkdir -p ${config.xdg.dataHome}/platformio
+        run mkdir -p ${config.xdg.configHome}/r
+        run mkdir -p ${config.xdg.dataHome}/r/library
+        run mkdir -p ${config.xdg.stateHome}/r
+        run mkdir -p ${config.xdg.dataHome}/rustup
+        run mkdir -p ${config.xdg.configHome}/screen
+        run mkdir -p ${config.xdg.cacheHome}/texlive
 
         # Set keyboard layout for sway
         # FIXME: localectl, awk unknown command
-        #LAYOUT="$(localectl status | grep "X11 Layout:" | awk '{print $3}')"
+        #LAYOUT="$(run localectl status | run grep "X11 Layout:" | run awk '{print $3}')"
         ### START sed
         #FILE=${config.xdg.configHome}/sway/config.d/input
         ###
@@ -126,17 +126,17 @@
         #    {
         #        ##
         #        STRING="^    xkb_layout .*"
-        #        grep -q "$STRING" "$FILE" || sed_exit
-        #        sed -i "s/$STRING/    xkb_layout $LAYOUT/" "$FILE"
+        #        run grep -q "$STRING" "$FILE" || sed_exit
+        #        run sed -i "s/$STRING/    xkb_layout $LAYOUT/" "$FILE"
         #        ## END sed
         #    }
 
         # Set default rust if rustup is installed
-        [[ -n $(which rustup) ]] >/dev/null 2>&1 &&
-            rustup default stable
+        [[ -n $(run which rustup) ]] >/dev/null 2>&1 &&
+            run rustup default stable
 
         # Initialize nvim
-        nvim --headless -c 'sleep 5' -c 'q!' >/dev/null 2>&1
+        run nvim --headless -c 'sleep 5' -c 'q!' >/dev/null 2>&1
       '';
     };
   };
