@@ -98,11 +98,11 @@
         }
 
         # Create dirs
-        run mkdir -p ~/Documents/Pictures/Screenshots
-        run mkdir -p ~/.ssh
-        run chmod 700 ~/.ssh
-        run mkdir -p ~/src
-        run chmod 700 ~/src
+        run mkdir -p ${config.home.homeDirectory}/Documents/Pictures/Screenshots
+        run mkdir -p ${config.home.homeDirectory}/.ssh
+        run chmod 700 ${config.home.homeDirectory}/.ssh
+        run mkdir -p ${config.home.homeDirectory}/src
+        run chmod 700 ${config.home.homeDirectory}/src
 
         # Create XDG dirs
         run mkdir -p ${config.xdg.cacheHome}

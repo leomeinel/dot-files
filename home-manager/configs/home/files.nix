@@ -14,7 +14,7 @@
 }:
 
 {
-  # Files in $HOME
+  # Files
   files = {
     "${config.home.homeDirectory}/.bash_aliases" = {
       text = ''
@@ -76,9 +76,9 @@
         [[ -n $(/usr/bin/which rustup) ]] >/dev/null 2>&1 &&
             /usr/bin/rustup update >/dev/null 2>&1
 
-        # Source ~/.bashrc
-        [[ -f "$HOME"/.bashrc ]] && [[ -n "$BASH_VERSION" ]] &&
-            source "$HOME"/.bashrc
+        # Source ${config.home.homeDirectory}/.bashrc
+        [[ -f ${config.home.homeDirectory}/.bashrc ]] && [[ -n "$BASH_VERSION" ]] &&
+            source ${config.home.homeDirectory}/.bashrc
 
         # If sway is not installed, don't do anything
         [[ -z $(/usr/bin/which sway) ]] >/dev/null 2>&1 &&
@@ -117,9 +117,9 @@
         # Commands that should be applied only for interactive shells.
         [[ $- == *i* ]] || return
 
-        # Include ~/.bash_aliases
-        [[ -f "$HOME"/.bash_aliases ]] &&
-            source "$HOME"/.bash_aliases
+        # Include ${config.home.homeDirectory}/.bash_aliases
+        [[ -f ${config.home.homeDirectory}/.bash_aliases ]] &&
+            source ${config.home.homeDirectory}/.bash_aliases
 
         # Key bindings
         bind '"\e[A": history-search-backward'

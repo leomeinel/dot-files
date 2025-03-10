@@ -147,7 +147,7 @@
         "git.autoRepositoryDetection" = "openEditors";
         "git.autoStash" = true;
         "git.confirmSync" = false;
-        "git.defaultCloneDirectory" = "~/src";
+        "git.defaultCloneDirectory" = "${config.home.homeDirectory}/src";
         "git.detectSubmodules" = false;
         "git.detectSubmodulesLimit" = 100;
         "git.enableCommitSigning" = true;
@@ -155,7 +155,7 @@
         "git.enableStatusBarSync" = false;
         "git.fetchOnPull" = true;
         "git.ignoreSubmodules" = true;
-        "git.scanRepositories" = [ "~/src" ];
+        "git.scanRepositories" = [ "${config.home.homeDirectory}/src" ];
         "gitblame.statusBarMessageFormat" = "\${author.name} (\${time.ago})";
         "github.gitProtocol" = "ssh";
         "java.eclipse.downloadSources" = true;

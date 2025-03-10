@@ -642,8 +642,8 @@
           set $menu /usr/bin/wofi --show run
           set $rectangle-screenshot /usr/bin/grim -g "$(/usr/bin/slurp)" "${config.xdg.userDirs.pictures}/Screenshots/$(/usr/bin/date -u +"%Y-%m-%dT%H-%M-%S").png"
           set $screenshot /usr/bin/grim "${config.xdg.userDirs.pictures}/Screenshots/$(/usr/bin/date -u +"%Y-%m-%dT%H-%M-%S").png"
-          set $volume-down ~/.config/sway/scripts/volume.sh --down
-          set $volume-up ~/.config/sway/scripts/volume.sh --up
+          set $volume-down ${config.home.homeDirectory}/config.home.homeDirectory}/.config/sway/scripts/volume.sh --down
+          set $volume-up ${config.home.homeDirectory}/config.home.homeDirectory}/.config/sway/scripts/volume.sh --up
           set $brightness-down /usr/bin/brightnessctl set 5%-
           set $brightness-up /usr/bin/brightnessctl set 5%+
           set $sway-exit /usr/bin/nwg-bar
