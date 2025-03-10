@@ -14,7 +14,9 @@
 
 {
   # Imports
-  imports = [ ../common-home-cli.nix ];
+  imports = [
+    ../common-home-cli.nix
+  ];
 
   # Home options
   home = {

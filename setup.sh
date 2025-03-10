@@ -45,19 +45,20 @@ STRING="REPLACE_YOUTUBEUSER"
 grep -q "$STRING" "$FILE" || sed_exit
 sed -i "s|$STRING|$YOUTUBEUSER|g" "$FILE"
 ## END sed
-## home-manager/common-home-cli.nix
+## home-manager/configs/home/xdg.nix
 ## START sed
-FILE="$SCRIPT_DIR/home-manager/common-home-cli.nix"
+FILE="$SCRIPT_DIR/home-manager/configs/home/xdg.nix"
 STRING="REPLACE_GIT_SIGNING_KEY"
 grep -q "$STRING" "$FILE" || sed_exit
 sed -i "s|$STRING|$GIT_SIGNING_KEY|g" "$FILE"
 ## END sed
-## home-manager/common-home-gui.nix
+## home-manager/configs/home/xdg-gui.nix
 ## START sed
-FILE="$SCRIPT_DIR/home-manager/common-home-gui.nix"
-STRING="REPLACE_GIT_SIGNING_KEY"
+KEYLAYOUT="$(localectl status | grep "X11 Layout:" | awk '{print $3}')"
+FILE="$SCRIPT_DIR/home-manager/configs/home/xdg-gui.nix"
+STRING="REPLACE_KEYLAYOUT"
 grep -q "$STRING" "$FILE" || sed_exit
-sed -i "s|$STRING|$GIT_SIGNING_KEY|g" "$FILE"
+sed -i "s|$STRING|$KEYLAYOUT|g" "$FILE"
 ## END sed
 ## home-manager/configs/GUESTUSER.nix
 ## START sed
@@ -104,4 +105,3 @@ DATE="$(/usr/bin/date +"%F-%H")"
 cd "$SCRIPT_DIR"
 git add .
 git commit -m "Install dot-files - $DATE"
-

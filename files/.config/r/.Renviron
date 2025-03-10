@@ -1,6 +1,0 @@
-R_PROFILE_USER=${XDG_CONFIG_HOME}/r/.Rprofile
-R_LINTR_LINTER_FILE=${XDG_CONFIG_HOME}/r/.lintr
-R_LIBS_USER=${XDG_DATA_HOME}/r/library
-R_HISTFILE=${XDG_STATE_HOME}/r/history
-R_BROWSER=/usr/local/bin/librewolf
-R_PDFVIEWER=/usr/bin/evince

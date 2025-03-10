@@ -1,6 +1,0 @@
-# User configs
-include $HOME/.config/sway/config.d/*
-include /etc/sway/config.d/*
-
-# Enable this if every app is compatible with wayland
-xwayland enable
