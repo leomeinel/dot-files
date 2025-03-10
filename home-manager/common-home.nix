@@ -71,51 +71,51 @@
       common-home = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
         # Define functions
         sed_exit() {
-            run echo "ERROR: 'sed' didn't replace, report this @"
-            run echo "       https://github.com/leomeinel/dot-files/issues"
+            run /usr/bin/echo "ERROR: 'sed' didn't replace, report this @"
+            run /usr/bin/echo "       https://github.com/leomeinel/dot-files/issues"
             run exit 1
         }
 
         # Create dirs
-        run mkdir -p ${config.home.homeDirectory}/Documents/Pictures/Screenshots
-        run mkdir -p ${config.home.homeDirectory}/.ssh
-        run chmod 700 ${config.home.homeDirectory}/.ssh
-        run mkdir -p ${config.home.homeDirectory}/src
-        run chmod 700 ${config.home.homeDirectory}/src
+        run /usr/bin/mkdir -p ${config.home.homeDirectory}/Documents/Pictures/Screenshots
+        run /usr/bin/mkdir -p ${config.home.homeDirectory}/.ssh
+        run /usr/bin/chmod 700 ${config.home.homeDirectory}/.ssh
+        run /usr/bin/mkdir -p ${config.home.homeDirectory}/src
+        run /usr/bin/chmod 700 ${config.home.homeDirectory}/src
 
         # Create XDG dirs
-        run mkdir -p ${config.xdg.cacheHome}
-        run mkdir -p ${config.xdg.configHome}
-        run mkdir -p ${config.xdg.dataHome}
-        run mkdir -p ${config.xdg.stateHome}
-        run mkdir -p ${config.xdg.configHome}/java
-        run mkdir -p ${config.xdg.dataHome}/android
-        run mkdir -p ${config.xdg.dataHome}/cargo
+        run /usr/bin/mkdir -p ${config.xdg.cacheHome}
+        run /usr/bin/mkdir -p ${config.xdg.configHome}
+        run /usr/bin/mkdir -p ${config.xdg.dataHome}
+        run /usr/bin/mkdir -p ${config.xdg.stateHome}
+        run /usr/bin/mkdir -p ${config.xdg.configHome}/java
+        run /usr/bin/mkdir -p ${config.xdg.dataHome}/android
+        run /usr/bin/mkdir -p ${config.xdg.dataHome}/cargo
         run mkdir -p ${config.xdg.dataHome}/gnupg
         run chmod 700 ${config.xdg.dataHome}/gnupg
-        run mkdir -p ${config.xdg.dataHome}/go
-        run mkdir -p ${config.xdg.dataHome}/gradle
-        run mkdir -p ${config.xdg.configHome}/gtk-2.0
-        run mkdir -p ${config.xdg.stateHome}/bash
-        run mkdir -p ${config.xdg.configHome}/parallel
-        run mkdir -p ${config.xdg.dataHome}/platformio
-        run mkdir -p ${config.xdg.configHome}/r
-        run mkdir -p ${config.xdg.dataHome}/r/library
-        run mkdir -p ${config.xdg.stateHome}/r
-        run mkdir -p ${config.xdg.dataHome}/rustup
-        run mkdir -p ${config.xdg.configHome}/screen
-        run mkdir -p ${config.xdg.cacheHome}/texlive
+        run /usr/bin/mkdir -p ${config.xdg.dataHome}/go
+        run /usr/bin/mkdir -p ${config.xdg.dataHome}/gradle
+        run /usr/bin/mkdir -p ${config.xdg.configHome}/gtk-2.0
+        run /usr/bin/mkdir -p ${config.xdg.stateHome}/bash
+        run /usr/bin/mkdir -p ${config.xdg.configHome}/parallel
+        run /usr/bin/mkdir -p ${config.xdg.dataHome}/platformio
+        run /usr/bin/mkdir -p ${config.xdg.configHome}/r
+        run /usr/bin/mkdir -p ${config.xdg.dataHome}/r/library
+        run /usr/bin/mkdir -p ${config.xdg.stateHome}/r
+        run /usr/bin/mkdir -p ${config.xdg.dataHome}/rustup
+        run /usr/bin/mkdir -p ${config.xdg.configHome}/screen
+        run /usr/bin/mkdir -p ${config.xdg.cacheHome}/texlive
 
         # Set default rust if rustup is installed
-        [[ -n $(run which rustup) ]] >/dev/null 2>&1 &&
-            run rustup default stable
+        [[ -n $(run /usr/bin/which rustup) ]] >/dev/null 2>&1 &&
+            run /usr/bin/rustup default stable
 
         # Initialize nvim
-        run nvim --headless -c 'sleep 5' -c 'q!' >/dev/null 2>&1
+        run /usr/bin/nvim --headless -c 'sleep 5' -c 'q!' >/dev/null 2>&1
 
         # Add nixpkgs channel
-        nix-channel --add https://nixos.org/channels/nixos-${nixos-version} nixpkgs
-        nix-channel --update
+        run /nix/var/nix/profiles/default/bin/nix-channel --add https://nixos.org/channels/nixos-${nixos-version} nixpkgs
+        run /nix/var/nix/profiles/default/bin/nix-channel --update
       '';
     };
   };
