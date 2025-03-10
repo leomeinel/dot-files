@@ -19,7 +19,7 @@
 {
   # Imports
   imports = [
-    ./configs/home/file.nix
+    ./configs/home/files.nix
     ./configs/home/gtk-gui.nix
     ./configs/home/programs-gui.nix
     ./configs/home/programs.nix

@@ -19,7 +19,7 @@
 {
   # Imports
   imports = [
-    ./configs/home/file.nix
+    ./configs/home/files.nix
     ./configs/home/programs.nix
     ./configs/home/xdg.nix
   ];
