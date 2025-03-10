@@ -45,9 +45,13 @@ else
     exit 1
 fi
 
+echo "DEBUG: a"
 # Get latest submodule of nix4vscode
 cd "$SCRIPT_DIR"/nix4vscode
+echo "DEBUG: b"
 git submodule update --remote
+echo "DEBUG: c"
 
 # Generate codium-extensions.nix dynamically
 nix develop --command bash -c "cargo run -q -- $SCRIPT_DIR/config.toml" >"$SCRIPT_DIR"/codium-extensions.nix
+echo "DEBUG: d"
