@@ -15,7 +15,7 @@
 
 {
   # Files
-  files = {
+  home.file = {
     "${config.home.homeDirectory}/.bash_aliases" = {
       text = ''
         #
