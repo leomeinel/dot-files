@@ -11,6 +11,7 @@
   pkgs,
   ...
 }:
+
 {
   # Systemd options
   systemd.user = {
