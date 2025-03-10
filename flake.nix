@@ -35,6 +35,8 @@
     {
       # Configurations
       homeConfigurations = {
+        # Set this for non nixos
+        targets.genericLinux.enable = true;
         # Users
         "REPLACE_GUESTUSER" = home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
