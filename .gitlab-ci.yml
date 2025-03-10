@@ -7,6 +7,7 @@ regen-codium-extensions:
     - ./home-manager/codium-extensions/.ci-update.sh
     - git config user.name "$MAIN_BOT_USERNAME"
     - git config user.email "$MAIN_BOT_EMAIL"
+    - git remote remove gitlab_origin || true
     - git remote add gitlab_origin https://$MAIN_BOT_USERNAME:$MAIN_BOT_TOKEN@$CI_SERVER_FQDN/public-leo/$CI_PROJECT_NAME.git
     - git add ./home-manager/codium-extensions/codium-extensions.nix
     - git add ./home-manager/codium-extensions/config.toml
