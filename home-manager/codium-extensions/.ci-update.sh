@@ -11,7 +11,7 @@
 
 # Source config
 SCRIPT_DIR="$(dirname -- "$(readlink -f -- "$0")")"
-source "$SCRIPT_DIR/../../../install.conf"
+source "$SCRIPT_DIR/../../install.conf"
 
 # Fail on error
 set -e
@@ -22,6 +22,12 @@ sed_exit() {
     echo "       https://github.com/leomeinel/dot-files/issues"
     exit 1
 }
+
+# Install nix
+sh <(curl -L https://nixos.org/nix/install) --daemon --yes
+if [ -e '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh' ]; then
+    . '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh'
+fi
 
 # Set current version of codium
 CODIUM_VERSION="$(nix run nixpkgs#nix-search-cli -- -c $NIX_VERSION -n 'vscodium' | grep 'vscodium @' | awk '{print $3}' | awk 'BEGIN{FS=OFS="."}{$NF=""; NF--; print}')"
@@ -42,8 +48,4 @@ cd "$SCRIPT_DIR"/nix4vscode
 git submodule update --remote
 
 # Generate codium-extensions.nix dynamically
-sh <(curl -L https://nixos.org/nix/install) --daemon --yes
-if [ -e '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh' ]; then
-    . '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh'
-fi
 nix develop --command bash -c "cargo run -q -- $SCRIPT_DIR/config.toml" >"$SCRIPT_DIR"/codium-extensions.nix
