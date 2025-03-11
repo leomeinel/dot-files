@@ -1287,6 +1287,26 @@
           }
         '';
       };
+      # Thunar
+      "Thunar/uca.xml" = {
+        text = ''
+          <?xml version="1.0" encoding="UTF-8"?>
+          <actions>
+              <action>
+                  <icon>utilities-terminal</icon>
+                  <name>Open Terminal Here</name>
+                  <submenu></submenu>
+                  <unique-id>1682361916909654-1</unique-id>
+                  <command>&quot;$TERMINAL&quot; --working-directory %F</command>
+                  <description></description>
+                  <range></range>
+                  <patterns>*</patterns>
+                  <startup-notify />
+                  <directories />
+              </action>
+          </actions>
+        '';
+      };
       # waybar
       "waybar/config" = {
         text = ''
@@ -1491,24 +1511,15 @@
           }
         '';
       };
-      # Thunar
-      "Thunar/uca.xml" = {
+      # xfce4
+      "xfce4/xfconf/xfce-perchannel-xml/thunar.xml" = {
         text = ''
           <?xml version="1.0" encoding="UTF-8"?>
-          <actions>
-              <action>
-                  <icon>utilities-terminal</icon>
-                  <name>Open Terminal Here</name>
-                  <submenu></submenu>
-                  <unique-id>1682361916909654-1</unique-id>
-                  <command>&quot;$TERMINAL&quot; --working-directory %F</command>
-                  <description></description>
-                  <range></range>
-                  <patterns>*</patterns>
-                  <startup-notify />
-                  <directories />
-              </action>
-          </actions>
+          <channel name="thunar" version="1.0">
+              <property name="misc-middle-click-in-tab" type="bool" value="true" />
+              <property name="last-restore-tabs" type="bool" value="true" />
+              <property name="misc-show-delete-action" type="bool" value="true" />
+          </channel>
         '';
       };
     };
