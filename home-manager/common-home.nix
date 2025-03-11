@@ -42,13 +42,6 @@
     # Activation script
     activation = {
       common-home = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
-        # Define functions
-        sed_exit() {
-            run /usr/bin/echo "ERROR: 'sed' didn't replace, report this @"
-            run /usr/bin/echo "       https://github.com/leomeinel/dot-files/issues"
-            run exit 1
-        }
-
         # Create dirs
         run /usr/bin/mkdir -p ${config.home.homeDirectory}/Documents/Pictures/Screenshots
         run /usr/bin/mkdir -p ${config.home.homeDirectory}/.ssh
@@ -78,17 +71,6 @@
         run /usr/bin/mkdir -p ${config.xdg.dataHome}/rustup
         run /usr/bin/mkdir -p ${config.xdg.configHome}/screen
         run /usr/bin/mkdir -p ${config.xdg.cacheHome}/texlive
-
-        # Set default rust if rustup is installed
-        [[ -n $(run /usr/bin/which rustup) ]] >/dev/null 2>&1 &&
-            run /usr/bin/rustup default stable
-
-        # Initialize nvim
-        run /usr/bin/nvim --headless -c 'sleep 5' -c 'q!' >/dev/null 2>&1
-
-        # Add nixpkgs channel
-        run /nix/var/nix/profiles/default/bin/nix-channel --add https://nixos.org/channels/nixos-${nixos-version} nixpkgs
-        run /nix/var/nix/profiles/default/bin/nix-channel --update
       '';
     };
   };

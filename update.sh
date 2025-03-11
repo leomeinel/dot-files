@@ -23,6 +23,20 @@ cd "$SCRIPT_DIR"
 nix flake update --commit-lock-file
 # Run home-manager
 nix run home-manager/release-"$NIX_VERSION" -- switch -b "bak" --flake "$SCRIPT_DIR/#$USER"
-DATE="$(/usr/bin/date +"%F-%H")"
+DATE="$(date +"%F-%H")"
 git add .
-git commit -m "Install dot-files - $DATE"
+git commit -m "Update dot-files - $DATE"
+
+# Source ~/.bash_profile
+source ~/.bash_profile
+
+# Set default rust if rustup is installed
+[[ -n $(which rustup) ]] >/dev/null 2>&1 &&
+    rustup default stable
+
+# Initialize nvim
+nvim --headless -c 'sleep 5' -c 'q!' >/dev/null 2>&1
+
+# Add nixpkgs channel
+nix-channel --add https://nixos.org/channels/nixos-${nixos-version} nixpkgs || true
+nix-channel --update
