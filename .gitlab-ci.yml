@@ -1,5 +1,7 @@
 regen-codium-extensions:
   cache: []
+  variables:
+    GIT_SUBMODULE_STRATEGY: normal
   image: "docker.io/ruby:latest"
   stage: deploy
   when: always

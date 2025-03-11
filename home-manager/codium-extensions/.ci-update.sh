@@ -47,7 +47,7 @@ fi
 
 # Get latest submodule of nix4vscode
 cd "$SCRIPT_DIR"/nix4vscode
-git submodule update --init --remote
+git submodule update --remote
 
 # Generate codium-extensions.nix dynamically
 nix develop --command bash -c "cargo run -q -- $SCRIPT_DIR/config.toml" >"$SCRIPT_DIR"/codium-extensions.nix
