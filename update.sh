@@ -25,8 +25,9 @@ nix flake update --commit-lock-file
 nix run home-manager/release-"$NIX_VERSION" -- switch -b "bak" --flake "$SCRIPT_DIR/#$USER"
 DATE="$(date +"%F-%H")"
 git add .
-git commit -m "Update dot-files - $DATE" ||
+if ! git commit -m "Update dot-files - $DATE"; then
     git commit --no-gpg-sign -m "Update dot-files - $DATE"
+fi
 
 # Source ~/.bash_profile
 source ~/.bash_profile
