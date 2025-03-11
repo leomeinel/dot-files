@@ -103,12 +103,10 @@ rm -rf ~/.config/VSCodium
 nix run home-manager/release-"$NIX_VERSION" -- switch -b "bak" --flake "$SCRIPT_DIR/#$USER"
 DATE="$(date +"%F-%H")"
 cd "$SCRIPT_DIR"
-## Don't fail on error
-set +e
-git commit -m "Install dot-files - $DATE" ||
+git add .
+if ! git commit -m "Install dot-files - $DATE"; then
     git commit --no-gpg-sign -m "Install dot-files - $DATE"
-## Fail on error
-set -e
+fi
 
 # Source ~/.bash_profile
 source ~/.bash_profile

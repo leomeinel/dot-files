@@ -93,7 +93,7 @@
         export TEXMFVAR="${config.xdg.cacheHome}/texlive/texmf-var";
 
         # Commands that should be applied only for interactive shells.
-        [[ $- == *i* ]] || return
+        [[ $- != *i* ]] && return
 
         # Start ssh-agent if it is not already started
         [[ -z "$SSH_AUTH_SOCK" ]] &&
@@ -142,7 +142,7 @@
         #
 
         # Commands that should be applied only for interactive shells.
-        [[ $- == *i* ]] || return
+        [[ $- != *i* ]] && return
 
         # Include ${config.home.homeDirectory}/.bash_aliases
         [[ -f ${config.home.homeDirectory}/.bash_aliases ]] &&
