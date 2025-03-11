@@ -104,7 +104,8 @@ nix run home-manager/release-"$NIX_VERSION" -- switch -b "bak" --flake "$SCRIPT_
 DATE="$(date +"%F-%H")"
 cd "$SCRIPT_DIR"
 git add .
-git commit -m "Install dot-files - $DATE"
+git commit -m "Install dot-files - $DATE" ||
+    git commit --no-gpg-sign -m "Install dot-files - $DATE"
 
 # Source ~/.bash_profile
 source ~/.bash_profile
