@@ -47,6 +47,6 @@ fi
 
 # Generate codium-extensions.nix dynamically
 cd "$SCRIPT_DIR"/nix4vscode
-nix develop --command bash -c "cargo run -q -- $SCRIPT_DIR/config.toml" >"$SCRIPT_DIR"/codium-extensions.nix
+nix develop --command bash -c "cargo run -q -- $SCRIPT_DIR/config.toml -o "$SCRIPT_DIR"/codium-extensions.nix"
 
 # FIXME: Sort top-level entries in codium-extensions.nix; See https://github.com/nix-community/nix4vscode/pull/240
