@@ -1,4 +1,5 @@
 regen-codium-extensions:
+  cache: []
   image: "docker.io/ruby:latest"
   stage: deploy
   when: always
