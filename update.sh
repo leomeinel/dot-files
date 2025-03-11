@@ -40,5 +40,5 @@ source ~/.bash_profile
 nvim --headless -c 'sleep 5' -c 'q!' >/dev/null 2>&1
 
 # Add nixpkgs channel
-nix-channel --add https://nixos.org/channels/nixos-${nixos-version} nixpkgs || true
+nix-channel --add https://nixos.org/channels/nixos-"$NIX_VERSION" nixpkgs || true
 nix-channel --update
