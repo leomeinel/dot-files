@@ -71,6 +71,9 @@
         run /usr/bin/mkdir -p ${config.xdg.dataHome}/rustup
         run /usr/bin/mkdir -p ${config.xdg.configHome}/screen
         run /usr/bin/mkdir -p ${config.xdg.cacheHome}/texlive
+
+        # Delete wofi cache to prevent saving deprecated symlinks
+        run rm -f ${config.xdg.cacheHome}/wofi-run
       '';
     };
   };
