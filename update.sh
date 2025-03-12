@@ -23,14 +23,16 @@ cd "$SCRIPT_DIR"
 nix flake update --commit-lock-file
 # Run home-manager
 nix run home-manager/release-"$NIX_VERSION" -- switch -b "bak" --flake "$SCRIPT_DIR/#$USER"
+
+# Source ~/.bash_profile
+source ~/.bash_profile
+
+# Commit
 DATE="$(date +"%F-%H")"
 git add .
 if ! git commit -m "Update dot-files - $DATE"; then
     git commit --no-gpg-sign -m "Update dot-files - $DATE"
 fi
-
-# Source ~/.bash_profile
-source ~/.bash_profile
 
 # Set default rust if rustup is installed
 [[ -n $(which rustup) ]] >/dev/null 2>&1 &&
