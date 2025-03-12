@@ -18,7 +18,6 @@
   imports = [
     ./configs/home/gtk-gui.nix
     ./configs/home/programs-gui.nix
-    ./configs/home/systemd-gui.nix
     ./configs/home/xdg-gui.nix
   ];
 
