@@ -43,7 +43,6 @@
     activation = {
       common-home = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
         # Create dirs
-        run /usr/bin/mkdir -p ${config.home.homeDirectory}/Documents/Pictures/Screenshots
         run /usr/bin/mkdir -p ${config.home.homeDirectory}/.ssh
         run /usr/bin/chmod 700 ${config.home.homeDirectory}/.ssh
         run /usr/bin/mkdir -p ${config.home.homeDirectory}/src
@@ -71,9 +70,6 @@
         run /usr/bin/mkdir -p ${config.xdg.dataHome}/rustup
         run /usr/bin/mkdir -p ${config.xdg.configHome}/screen
         run /usr/bin/mkdir -p ${config.xdg.cacheHome}/texlive
-
-        # Delete wofi cache to prevent saving deprecated symlinks
-        run rm -f ${config.xdg.cacheHome}/wofi-run
       '';
     };
   };

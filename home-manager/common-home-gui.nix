@@ -50,6 +50,16 @@
         usbguard-notifier
         R-with-my-packages
       ];
+    # Activation script
+    activation = {
+      common-home-gui = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
+        # Create dirs
+        run /usr/bin/mkdir -p ${config.home.homeDirectory}/Documents/Pictures/Screenshots
+
+        # Delete wofi cache to prevent saving deprecated symlinks
+        run rm -f ${config.xdg.cacheHome}/wofi-run
+      '';
+    };
   };
 
   # Allow unfree packages to install VSCode extensions
