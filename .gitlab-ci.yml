@@ -7,7 +7,7 @@ regen-codium-extensions:
   stage: deploy
   when: always
   script:
-    - chmod +x ./home-manager/codium-extensions/.ci-update.sh
+    - chmod 755 ./home-manager/codium-extensions/.ci-update.sh
     - ./home-manager/codium-extensions/.ci-update.sh
     - git config user.name "$MAIN_BOT_USERNAME"
     - git config user.email "$MAIN_BOT_EMAIL"
