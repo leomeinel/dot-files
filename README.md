@@ -1,6 +1,8 @@
 # dot-files
 
-Configuration files and miscellaneous files for my personal linux setups
+Configuration files and miscellaneous files for my personal linux setups.
+
+Meant for general purpose systems with a GUI.
 
 ## Installation
 
