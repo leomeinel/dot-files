@@ -9,6 +9,8 @@
 */
 
 {
+  lib,
+  config,
   pkgs,
   ...
 }:
