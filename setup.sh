@@ -41,9 +41,9 @@ sed -i "s|$STRING|$SYSUSER|g" "$FILE"
 STRING="REPLACE_VIRTUSER"
 grep -q "$STRING" "$FILE" || sed_exit
 sed -i "s|$STRING|$VIRTUSER|g" "$FILE"
-STRING="REPLACE_YOUTUBEUSER"
+STRING="REPLACE_WORKUSER"
 grep -q "$STRING" "$FILE" || sed_exit
-sed -i "s|$STRING|$YOUTUBEUSER|g" "$FILE"
+sed -i "s|$STRING|$WORKUSER|g" "$FILE"
 ## END sed
 ## home-manager/configs/home/xdg.nix
 ## START sed
@@ -88,12 +88,12 @@ STRING="REPLACE_VIRTUSER"
 grep -q "$STRING" "$FILE" || sed_exit
 sed -i "s|$STRING|$VIRTUSER|g" "$FILE"
 ## END sed
-## home-manager/configs/YOUTUBEUSER.nix
+## home-manager/configs/WORKUSER.nix
 ## START sed
-FILE="$SCRIPT_DIR/home-manager/configs/YOUTUBEUSER.nix"
-STRING="REPLACE_YOUTUBEUSER"
+FILE="$SCRIPT_DIR/home-manager/configs/WORKUSER.nix"
+STRING="REPLACE_WORKUSER"
 grep -q "$STRING" "$FILE" || sed_exit
-sed -i "s|$STRING|$YOUTUBEUSER|g" "$FILE"
+sed -i "s|$STRING|$WORKUSER|g" "$FILE"
 ## END sed
 
 # Remove codium configs for home-manager to be able to regenerate them

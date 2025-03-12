@@ -73,12 +73,12 @@
           # Modules to use
           modules = [ ./home-manager/configs/VIRTUSER.nix ];
         };
-        "REPLACE_YOUTUBEUSER" = home-manager.lib.homeManagerConfiguration {
+        "REPLACE_WORKUSER" = home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
           # Args to parse
           extraSpecialArgs = { inherit nixos-version; };
           # Modules to use
-          modules = [ ./home-manager/configs/YOUTUBEUSER.nix ];
+          modules = [ ./home-manager/configs/WORKUSER.nix ];
         };
       };
     };

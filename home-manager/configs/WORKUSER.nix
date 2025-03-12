@@ -1,5 +1,5 @@
 /*
-  File: YOUTUBEUSER.nix
+  File: WORKUSER.nix
   Author: Leopold Meinel (leo@meinel.dev)
   -----
   Copyright (c) 2025 Leopold Meinel & contributors
@@ -21,7 +21,7 @@
 
   # Home options
   home = {
-    username = "REPLACE_YOUTUBEUSER";
-    homeDirectory = "/home/REPLACE_YOUTUBEUSER";
+    username = "REPLACE_WORKUSER";
+    homeDirectory = "/home/REPLACE_WORKUSER";
   };
 }
