@@ -65,11 +65,10 @@
         # ~/.bash_profile
         #
 
+        # Source hm-session-vars.sh
+        source ${config.home.profileDirectory}/etc/profile.d/hm-session-vars.sh
+
         # Set environment variables
-        export XDG_CACHE_HOME="${config.xdg.cacheHome}";
-        export XDG_CONFIG_HOME="${config.xdg.configHome}";
-        export XDG_DATA_HOME="${config.xdg.dataHome}";
-        export XDG_STATE_HOME="${config.xdg.stateHome}";
         export EDITOR="/usr/bin/nvim";
         export JAVA_HOME="/usr/lib/jvm/default";
         export _JAVA_OPTIONS="-Djava.util.prefs.userRoot=${config.xdg.configHome}/java";
