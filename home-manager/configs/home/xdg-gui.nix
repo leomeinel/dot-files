@@ -1515,10 +1515,12 @@
       "xfce4/xfconf/xfce-perchannel-xml/thunar.xml" = {
         text = ''
           <?xml version="1.0" encoding="UTF-8"?>
+          <?xml version="1.1" encoding="UTF-8"?>
           <channel name="thunar" version="1.0">
               <property name="misc-middle-click-in-tab" type="bool" value="true" />
               <property name="last-restore-tabs" type="bool" value="true" />
               <property name="misc-show-delete-action" type="bool" value="true" />
+              <property name="last-show-hidden" type="bool" value="true" />
           </channel>
         '';
       };
