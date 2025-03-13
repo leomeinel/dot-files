@@ -66,7 +66,8 @@
         #
 
         # Source hm-session-vars.sh
-        source ${config.home.profileDirectory}/etc/profile.d/hm-session-vars.sh
+        [[ -f ${config.home.profileDirectory}/etc/profile.d/hm-session-vars.sh ]] &&
+            source ${config.home.profileDirectory}/etc/profile.d/hm-session-vars.sh
 
         # Set environment variables
         export EDITOR="/usr/bin/nvim";
