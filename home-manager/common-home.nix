@@ -39,7 +39,6 @@
     packages = with pkgs; [
       xdg-ninja
     ];
-    profileDirectory = "${config.xdg.stateHome}/nix/profile";
     # Activation script
     activation = {
       common-home = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
