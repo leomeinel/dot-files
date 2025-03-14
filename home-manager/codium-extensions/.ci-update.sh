@@ -11,7 +11,7 @@
 
 # Source config
 SCRIPT_DIR="$(dirname -- "$(readlink -f -- "$0")")"
-source "$SCRIPT_DIR/../../install.conf"
+. "$SCRIPT_DIR"/../../install.conf
 
 # Fail on error
 set -e
@@ -27,7 +27,7 @@ sed_exit() {
 sh <(curl -L https://nixos.org/nix/install) --daemon --yes
 mkdir -p /etc/nix/
 echo "experimental-features = nix-command flakes" >>/etc/nix/nix.conf
-source /nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh
+. /nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh
 
 # Set current version of codium
 CODIUM_VERSION="$(nix run nixpkgs#nix-search-cli -- -c $NIX_VERSION -n 'vscodium' | grep 'vscodium @' | awk '{print $3}' | awk 'BEGIN{FS=OFS="."}{$NF=""; NF--; print}')"

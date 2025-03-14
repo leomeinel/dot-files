@@ -67,7 +67,7 @@
 
         # Source hm-session-vars.sh
         [[ -f ${config.xdg.stateHome}/nix/profile/etc/profile.d/hm-session-vars.sh ]] &&
-            source ${config.xdg.stateHome}/nix/profile/etc/profile.d/hm-session-vars.sh
+            . ${config.xdg.stateHome}/nix/profile/etc/profile.d/hm-session-vars.sh
 
         # Set environment variables
         export EDITOR="/usr/bin/nvim";
@@ -105,7 +105,7 @@
 
         # Source ${config.home.homeDirectory}/.bashrc
         [[ -f ${config.home.homeDirectory}/.bashrc ]] && [[ -n "$BASH_VERSION" ]] &&
-            source ${config.home.homeDirectory}/.bashrc
+            . ${config.home.homeDirectory}/.bashrc
 
         # If sway is not installed, don't do anything
         [[ -z $(/usr/bin/which sway) ]] >/dev/null 2>&1 &&
@@ -146,7 +146,7 @@
 
         # Include ${config.home.homeDirectory}/.bash_aliases
         [[ -f ${config.home.homeDirectory}/.bash_aliases ]] &&
-            source ${config.home.homeDirectory}/.bash_aliases
+            . ${config.home.homeDirectory}/.bash_aliases
 
         # Key bindings
         bind '"\e[A": history-search-backward'

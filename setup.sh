@@ -10,7 +10,7 @@
 ###
 # Source config
 SCRIPT_DIR="$(dirname -- "$(readlink -f -- "$0")")"
-source "$SCRIPT_DIR/install.conf"
+. "$SCRIPT_DIR"/install.conf
 
 # Fail on error
 set -e
@@ -103,7 +103,7 @@ rm -rf ~/.config/VSCodium
 nix run home-manager/release-"$NIX_VERSION" -- switch -b "bak" --flake "$SCRIPT_DIR/#$USER"
 
 # Source ~/.bash_profile
-source ~/.bash_profile
+. ~/.bash_profile
 
 # Commit
 DATE="$(date +"%F-%H")"
