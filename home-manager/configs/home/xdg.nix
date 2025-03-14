@@ -70,6 +70,7 @@
       };
       # nvim
       "nvim" = {
+        # FIXME: Find out if also sourcing in lua/plugin is necessary
         source = ../../files/.config/nvim;
         recursive = true;
       }
