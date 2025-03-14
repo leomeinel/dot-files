@@ -71,7 +71,7 @@
       # nvim
       "nvim/init.lua" = {
         source = ../../files/.config/nvim/init.lua;
-      }
+      };
     };
   };
 }
