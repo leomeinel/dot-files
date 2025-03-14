@@ -28,17 +28,17 @@
         {
           plugin = gruvbox-nvim;
           type = "lua";
-          config = builtins.readFile "${config.xdg.configHome}/nvim/lua/plugin/gruvbox-nvim.lua";
+          config = builtins.readFile ./nvim/lua/plugin/gruvbox-nvim.lua;
         }
         {
           plugin = nvim-tree-lua;
           type = "lua";
-          config = builtins.readFile "${config.xdg.configHome}/nvim/lua/plugin/nvim-tree-lua.lua";
+          config = builtins.readFile ./nvim/lua/plugin/nvim-tree-lua.lua;
         }
         {
           plugin = nvim-web-devicons;
           type = "lua";
-          config = builtins.readFile "${config.xdg.configHome}/nvim/lua/plugin/nvim-web-devicons.lua";
+          config = builtins.readFile ./nvim/lua/plugin/nvim-web-devicons.lua;
         }
       ];
     };
