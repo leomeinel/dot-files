@@ -30,7 +30,6 @@
           type = "lua";
           config = builtins.readFile "${config.xdg.configHome}/nvim/lua/plugin/gruvbox-nvim.lua";
         }
-
         {
           plugin = nvim-tree-lua;
           type = "lua";
