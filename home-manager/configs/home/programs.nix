@@ -9,6 +9,8 @@
 */
 
 {
+  config,
+  pkgs,
   ...
 }:
 
@@ -16,5 +18,30 @@
 {
   programs = {
     home-manager.enable = true;
+    neovim = {
+      enable = true;
+      defaultEditor = true;
+      viAlias = true;
+      vimAlias = true;
+      vimdiffAlias = true;
+      plugins = with pkgs.vimPlugins; [
+        {
+          plugin = gruvbox-nvim;
+          type = "lua";
+          config = builtins.readFile "${config.xdg.configHome}/nvim/lua/plugin/gruvbox-nvim.lua";
+        }
+
+        {
+          plugin = nvim-tree-lua;
+          type = "lua";
+          config = builtins.readFile "${config.xdg.configHome}/nvim/lua/plugin/nvim-tree-lua.lua";
+        }
+        {
+          plugin = nvim-web-devicons;
+          type = "lua";
+          config = builtins.readFile "${config.xdg.configHome}/nvim/lua/plugin/nvim-web-devicons.lua";
+        }
+      ];
+    };
   };
 }

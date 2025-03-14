@@ -69,102 +69,60 @@
         '';
       };
       # nvim
-      "nvim/lua/colors/gruvbox.lua" = {
+      "nvim/lua/plugin/gruvbox-nvim.lua" = {
         text = ''
-          require("gruvbox").setup({
-              undercurl = true,
-              underline = true,
-              bold = true,
-              italic = {
-                  strings = true,
-                  comments = true,
-                  operators = false,
-                  folds = true,
-              },
-              strikethrough = true,
-              invert_selection = false,
-              invert_signs = false,
-              invert_tabline = false,
-              invert_intend_guides = false,
-              inverse = true,
-              contrast = "",
-              palette_overrides = {},
-              overrides = {},
-              dim_inactive = false,
-              transparent_mode = false,
+          require'gruvbox'.setup({
+            terminal_colors = true,
+            undercurl = true,
+            underline = true,
+            bold = true,
+            italic = {
+              strings = true,
+              emphasis = true,
+              comments = true,
+              operators = false,
+              folds = true,
+            },
+            strikethrough = true,
+            invert_selection = false,
+            invert_signs = false,
+            invert_tabline = false,
+            invert_intend_guides = false,
+            inverse = true,
+            contrast = "",
+            palette_overrides = {},
+            overrides = {},
+            dim_inactive = false,
+            transparent_mode = false,
           })
-
           vim.cmd("colorscheme gruvbox")
         '';
       };
-      "nvim/lua/plugin/nvim-tree.lua" = {
+      "nvim/lua/plugin/nvim-tree-lua.lua" = {
         text = ''
-          require("nvim-tree").setup({
-              sort_by = "case_sensitive",
-              view = {
-                  width = 30,
-              },
-              renderer = {
-                  group_empty = true,
-              },
-              filters = {
-                  dotfiles = true,
-              },
+          require'nvim-tree'.setup({
+            sort = {
+              sorter = "case_sensitive",
+            },
+            view = {
+              width = 30,
+            },
+            renderer = {
+              group_empty = true,
+            },
+            filters = {
+              dotfiles = true,
+            },
           })
         '';
       };
       "nvim/lua/plugin/nvim-web-devicons.lua" = {
         text = ''
           require'nvim-web-devicons'.setup {
-              color_icons = true;
-              default = true;
-              strict = true;
+            color_icons = true;
+            default = true;
+            strict = true;
           }
-        '';
-      };
-      "nvim/lua/plugins.lua" = {
-        text = ''
-          local ensure_packer = function()
-              local fn = vim.fn
-              local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
-              if fn.empty(fn.glob(install_path)) > 0 then
-                  fn.system({'/usr/bin/git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path})
-                  vim.cmd [[packadd packer.nvim]]
-                  return true
-              end
-              return false
-          end
-
-          local packer_bootstrap = ensure_packer()
-
-          vim.cmd([[
-              augroup packer_user_config
-                  autocmd!
-                  autocmd BufWritePost plugins.lua source <afile> | PackerCompile
-              augroup end
-          ]])
-
-          return require('packer').startup(function(use)
-              -- Packer can manage itself
-              use 'wbthomason/packer.nvim'
-
-              -- Gruvbox
-              use { "ellisonleao/gruvbox.nvim" }
-              
-              -- nvim-tree
-              use { 'nvim-tree/nvim-tree.lua', requires = { 'nvim-tree/nvim-web-devicons' } }
-
-              if packer_bootstrap then
-                  require('packer').sync()
-              end
-          end)
-        '';
-      };
-      "nvim/lua/setup.lua" = {
-        text = ''
-          require('colors/gruvbox')
-          require('plugin/nvim-web-devicons')
-          require('plugin/nvim-tree')
         '';
       };
       "nvim/init.lua" = {
@@ -172,10 +130,6 @@
           -- disable netrw
           vim.g.loaded_netrw = 1
           vim.g.loaded_netrwPlugin = 1
-
-          -- Plugins
-          require('plugins')
-          require('setup')
 
           -- Set highlight on search
           vim.o.hlsearch = true
