@@ -9,10 +9,10 @@
 */
 
 {
-  lib,
   config,
-  pkgs,
+  lib,
   nixos-version,
+  pkgs,
   ...
 }:
 
