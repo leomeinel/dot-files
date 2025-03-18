@@ -10,6 +10,7 @@
 
 {
   config,
+  pkgs,
   ...
 }:
 
@@ -70,12 +71,12 @@
             . ${config.xdg.stateHome}/nix/profile/etc/profile.d/hm-session-vars.sh
 
         # Set environment variables
-        export EDITOR="/usr/bin/nvim";
+        export EDITOR="${pkgs.neovim}/bin/nvim";
         export JAVA_HOME="/usr/lib/jvm/default";
         export _JAVA_OPTIONS="-Djava.util.prefs.userRoot=${config.xdg.configHome}/java";
         export MYSQL_HOME="/var/lib/mysql";
         export PAGER="/usr/bin/less";
-        export VISUAL="/usr/bin/nvim";
+        export VISUAL="${pkgs.neovim}/bin/nvim";
         export MANPAGER="/usr/bin/sh -c '/usr/bin/col -bx | /usr/bin/bat -l man -p'";
         export MANROFFOPT="-c";
         export ANDROID_HOME="${config.xdg.dataHome}/android";
