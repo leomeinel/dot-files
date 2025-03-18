@@ -23,6 +23,7 @@
       viAlias = true;
       vimAlias = true;
       vimdiffAlias = true;
+      extraLuaConfig = builtins.readFile ../../files/.config/nvim/init.lua;
       plugins = with pkgs.vimPlugins; [
         {
           plugin = gruvbox-nvim;

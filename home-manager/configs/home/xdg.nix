@@ -68,10 +68,6 @@
           helper = /usr/lib/git-core/git-credential-libsecret
         '';
       };
-      # nvim
-      "nvim/init.lua" = {
-        source = ../../files/.config/nvim/init.lua;
-      };
     };
   };
 }
