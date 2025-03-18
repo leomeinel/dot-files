@@ -17,30 +17,35 @@
 {
   programs = {
     home-manager.enable = true;
-    neovim = {
-      enable = true;
-      defaultEditor = true;
-      viAlias = true;
-      vimAlias = true;
-      vimdiffAlias = true;
-      extraLuaConfig = builtins.readFile ../../files/.config/nvim/init.lua;
-      plugins = with pkgs.vimPlugins; [
-        {
-          plugin = gruvbox-nvim;
-          type = "lua";
-          config = builtins.readFile ../../files/.config/nvim/lua/plugin/gruvbox-nvim.lua;
-        }
-        {
-          plugin = nvim-tree-lua;
-          type = "lua";
-          config = builtins.readFile ../../files/.config/nvim/lua/plugin/nvim-tree-lua.lua;
-        }
-        {
-          plugin = nvim-web-devicons;
-          type = "lua";
-          config = builtins.readFile ../../files/.config/nvim/lua/plugin/nvim-web-devicons.lua;
-        }
-      ];
-    };
+    neovim =
+      let
+        toLuaFile = file: ''
+          lua <<EOF
+          ${builtins.readFile file}
+          EOF
+        '';
+      in
+      {
+        enable = true;
+        defaultEditor = true;
+        viAlias = true;
+        vimAlias = true;
+        vimdiffAlias = true;
+        extraLuaConfig = builtins.readFile ../../files/.config/nvim/init.lua;
+        plugins = with pkgs.vimPlugins; [
+          {
+            plugin = gruvbox-nvim;
+            config = toLuaFile ../../files/.config/nvim/lua/plugin/gruvbox-nvim.lua;
+          }
+          {
+            plugin = nvim-tree-lua;
+            config = toLuaFile ../../files/.config/nvim/lua/plugin/nvim-tree-lua.lua;
+          }
+          {
+            plugin = nvim-web-devicons;
+            config = toLuaFile ../../files/.config/nvim/lua/plugin/nvim-web-devicons.lua;
+          }
+        ];
+      };
   };
 }
