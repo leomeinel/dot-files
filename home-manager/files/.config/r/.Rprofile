@@ -1,0 +1,33 @@
+###
+# File = .Rprofile
+# Author = Leopold Meinel (leo@meinel.dev)
+# -----
+# Copyright (c) 2025 Leopold Meinel & contributors
+# SPDX ID = MIT
+# URL = https://opensource.org/licenses/MIT
+# -----
+###
+
+###
+# https://wiki.archlinux.org/title/r#Profile
+###
+
+# Called at the end
+.First <- function() {
+    message(
+        "Welcome back ", Sys.getenv("USER"), "!\n",
+        "Working directory is: ", getwd()
+    )
+}
+# General
+options(digits = 12)
+options(scipen = 2)
+options(show.signif.stars = FALSE)
+# Parallelization
+local({
+    n <- max(parallel::detectCores() - 2L, 1L)
+    options(Ncpus = n)
+    options(mc.cores = n)
+})
+# Debugging
+error <- quote(dump.frames("${R_HOME_USER}/testdump", TRUE))

@@ -1,0 +1,76 @@
+/*
+ * File = style.css
+ * Author = Leopold Meinel (leo@meinel.dev)
+ * -----
+ * Copyright (c) 2025 Leopold Meinel & contributors
+ * SPDX ID = MIT
+ * URL = https://opensource.org/licenses/MIT
+ * -----
+ */
+
+@define-color white #ebdbb2;
+@define-color dark #1d2021;
+@define-color primary #fd472f;
+@define-color secondary #689d6a;
+@define-color hint #fabd2f;
+
+* {
+  border: none;
+  border-radius: 0px;
+  font-family: "Hasklig";
+  font-size: 12px;
+  min-height: 0;
+  color: @white;
+}
+
+window#waybar {
+  background: @dark;
+}
+
+#clock,
+#workspaces {
+  font-weight: 800;
+}
+
+#tray * {
+  color: @dark;
+}
+
+#workspaces button label {
+  color: @secondary;
+}
+#workspaces button.focused label {
+  color: @dark;
+}
+#workspaces button.focused {
+  background: @secondary;
+}
+
+#clock {
+  font-family: "Nerd Font Symbols Mono";
+  color: @hint;
+}
+
+#pulseaudio.muted {
+  color: @primary;
+}
+
+#backlight,
+#battery,
+#clock,
+#custom-notification,
+#idle_inhibitor,
+#pulseaudio,
+#tray {
+  padding: 0 8px;
+  margin: 0;
+}
+
+#backlight,
+#battery,
+#custom-notification,
+#idle_inhibitor,
+#pulseaudio,
+#tray {
+  font-family: "Font Awesome 6 Free";
+}

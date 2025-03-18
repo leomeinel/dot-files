@@ -45,20 +45,33 @@ STRING="REPLACE_WORKUSER"
 grep -q "$STRING" "$FILE" || sed_exit
 sed -i "s|$STRING|$WORKUSER|g" "$FILE"
 ## END sed
-## home-manager/configs/home/xdg.nix
+## home-manager/files/.config/git/config
 ## START sed
-FILE="$SCRIPT_DIR/home-manager/configs/home/xdg.nix"
+FILE="$SCRIPT_DIR/home-manager/files/.config/git/config"
+STRING="REPLACE_GIT_EMAIL"
+grep -q "$STRING" "$FILE" || sed_exit
+sed -i "s|$STRING|$GIT_EMAIL|g" "$FILE"
+STRING="REPLACE_GIT_NAME"
+grep -q "$STRING" "$FILE" || sed_exit
+sed -i "s|$STRING|$GIT_NAME|g" "$FILE"
 STRING="REPLACE_GIT_SIGNING_KEY"
 grep -q "$STRING" "$FILE" || sed_exit
 sed -i "s|$STRING|$GIT_SIGNING_KEY|g" "$FILE"
 ## END sed
-## home-manager/configs/home/xdg-gui.nix
+## home-manager/files/.config/sway/config.d/input
 ## START sed
 KEYLAYOUT="$(localectl status | grep "X11 Layout:" | awk '{print $3}')"
-FILE="$SCRIPT_DIR/home-manager/configs/home/xdg-gui.nix"
+FILE="$SCRIPT_DIR/home-manager/files/.config/sway/config.d/input"
 STRING="REPLACE_KEYLAYOUT"
 grep -q "$STRING" "$FILE" || sed_exit
 sed -i "s|$STRING|$KEYLAYOUT|g" "$FILE"
+## END sed
+## home-manager/files/.config/sway/config.d/output
+## START sed
+FILE="$SCRIPT_DIR/home-manager/files/.config/sway/config.d/output"
+STRING="REPLACE_SWAY_OUTPUT"
+grep -q "$STRING" "$FILE" || sed_exit
+sed -i "s|$STRING|$SWAY_OUTPUT|g" "$FILE"
 ## END sed
 ## home-manager/configs/GUESTUSER.nix
 ## START sed

@@ -1,0 +1,23 @@
+# Dbus
+exec /usr/bin/dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
+
+# polkit-gnome
+exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+
+# Gnome Keyring
+exec /usr/bin/gnome-keyring-daemon --daemonize --start --components=gpg,pkcs11,secrets,ssh
+
+# Notifications
+exec /usr/bin/swaync
+exec /usr/bin/aa-notify -p -s 1 -w 60 -f /var/log/audit/audit.log
+
+# Outputs
+exec /usr/bin/kanshi
+
+# XDG Desktop Portal
+exec /usr/lib/xdg-desktop-portal
+
+# Tray
+exec /usr/bin/nm-applet --indicator
+exec /usr/bin/blueman-applet
+exec /usr/bin/nextcloud --background

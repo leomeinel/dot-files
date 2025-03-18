@@ -1,0 +1,35 @@
+/*
+ * File = style.css
+ * Author = Leopold Meinel (leo@meinel.dev)
+ * -----
+ * Copyright (c) 2025 Leopold Meinel & contributors
+ * SPDX ID = MIT
+ * URL = https://opensource.org/licenses/MIT
+ * -----
+ */
+
+@define-color white #ebdbb2;
+@define-color dark #1d2021;
+@define-color dark2 #282c2e;
+@define-color secondary #689d6a;
+
+* {
+  border-radius: 3px;
+  border: none;
+  font-family: "Hasklig";
+  font-size: 20px;
+}
+
+window {
+  background-color: @dark;
+  color: white;
+}
+
+#input {
+  background-color: @dark2;
+  color: @dark;
+}
+
+#entry:selected {
+  background-color: @secondary;
+}

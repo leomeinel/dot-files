@@ -31,19 +31,19 @@
         viAlias = true;
         vimAlias = true;
         vimdiffAlias = true;
-        extraLuaConfig = builtins.readFile ../../files/.config/nvim/init.lua;
+        extraLuaConfig = builtins.readFile ../../files/programs/neovim/init.lua;
         plugins = with pkgs.vimPlugins; [
           {
             plugin = gruvbox-nvim;
-            config = toLuaFile ../../files/.config/nvim/lua/plugin/gruvbox-nvim.lua;
+            config = toLuaFile ../../files/programs/neovim/plugin/gruvbox-nvim.lua;
           }
           {
             plugin = nvim-tree-lua;
-            config = toLuaFile ../../files/.config/nvim/lua/plugin/nvim-tree-lua.lua;
+            config = toLuaFile ../../files/programs/neovim/plugin/nvim-tree-lua.lua;
           }
           {
             plugin = nvim-web-devicons;
-            config = toLuaFile ../../files/.config/nvim/lua/plugin/nvim-web-devicons.lua;
+            config = toLuaFile ../../files/programs/neovim/plugin/nvim-web-devicons.lua;
           }
         ];
       };

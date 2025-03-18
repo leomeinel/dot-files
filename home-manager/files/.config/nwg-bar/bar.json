@@ -1,0 +1,22 @@
+[
+  {
+    "label": "Lock",
+    "exec": "/usr/bin/swaylock -f -c 001d2021",
+    "icon": "/usr/share/nwg-bar/images/system-lock-screen.svg"
+  },
+  {
+    "label": "Logout",
+    "exec": "/usr/local/bin/sway-logout",
+    "icon": "/usr/share/nwg-bar/images/system-log-out.svg"
+  },
+  {
+    "label": "Reboot",
+    "exec": "/usr/bin/systemctl reboot",
+    "icon": "/usr/share/nwg-bar/images/system-reboot.svg"
+  },
+  {
+    "label": "Shutdown",
+    "exec": "/usr/bin/systemctl -i poweroff",
+    "icon": "/usr/share/nwg-bar/images/system-shutdown.svg"
+  }
+]
