@@ -177,6 +177,7 @@
           "search.showLineNumbers" = true;
           "search.smartCase" = true;
           "search.useIgnoreFiles" = false;
+          "shellcheck.executablePath" = "shellcheck";
           "telemetry.telemetryLevel" = "off";
           "terminal.external.linuxExec" = "alacritty";
           "terminal.integrated.defaultProfile.linux" = "bash";
