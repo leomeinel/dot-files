@@ -112,8 +112,8 @@ merge
         "htmlhint"."vscode-htmlhint" = vscode-utils.extensionFromVscodeMarketplace {
           name = "vscode-htmlhint";
           publisher = "htmlhint";
-          version = "1.0.5";
-          sha256 = "079rpiy0fxhzsd6cli4nxbl3r9kmw98wcjmssm304ab1f4ghlj1c";
+          version = "1.0.7";
+          sha256 = "06hrh1j9fy9q5v23mylpkfahhiw5qc3xx7kachgq8zkz2j50pwbi";
 
         };
         "jeff-hykin"."better-cpp-syntax" = vscode-utils.extensionFromVscodeMarketplace {
