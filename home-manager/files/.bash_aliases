@@ -26,5 +26,5 @@ alias neofetch='/usr/bin/macchina'
 alias bench='/usr/bin/hyperfine -w 3 -r 12 --style auto'
 
 # xdg-ninja recommendations
-alias adb='HOME="$XDG_DATA_HOME"/android adb'
-alias wget='wget --hsts-file="$XDG_DATA_HOME/wget-hsts"'
+alias adb='HOME="${XDG_DATA_HOME}"/android adb'
+alias wget='wget --hsts-file="${XDG_DATA_HOME}"/wget-hsts'

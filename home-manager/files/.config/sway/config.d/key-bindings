@@ -8,7 +8,7 @@ set $down j
 set $up k
 set $right l
 ## Preferred applications
-set $term "$TERMINAL"
+set $term "${TERMINAL}"
 set $menu /usr/bin/wofi --show run
 set $rectangle-screenshot /usr/bin/grim -g "$(/usr/bin/slurp)" "$(/usr/bin/xdg-user-dir PICTURES)/Screenshots/$(/usr/bin/date -u +"%Y-%m-%dT%H-%M-%S").png"
 set $screenshot /usr/bin/grim "$(/usr/bin/xdg-user-dir PICTURES)/Screenshots/$(/usr/bin/date -u +"%Y-%m-%dT%H-%M-%S").png"

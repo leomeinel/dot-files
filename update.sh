@@ -10,8 +10,8 @@
 ###
 
 # Source config
-SCRIPT_DIR="$(dirname -- "$(readlink -f -- "$0")")"
-. "$SCRIPT_DIR"/install.conf
+SCRIPT_DIR="$(dirname -- "$(readlink -f -- "${0}")")"
+. "${SCRIPT_DIR}"/install.conf
 
 # Fail on error
 set -e
@@ -19,10 +19,10 @@ set -e
 # Remove codium configs for home-manager to be able to regenerate them
 rm -rf ~/.vscode-oss ~/.vscode-R ~/.config/vscode-sqltools ~/.local/share/vscode-sqltools
 # Update lock file
-cd "$SCRIPT_DIR"
+cd "${SCRIPT_DIR}"
 nix flake update --commit-lock-file
 # Run home-manager
-nix run home-manager/release-"$NIX_VERSION" -- switch -b "bak" --flake "$SCRIPT_DIR/#$USER"
+nix run home-manager/release-"${NIX_VERSION}" -- switch -b "bak" --flake "${SCRIPT_DIR}/#${USER}"
 
 # Source ~/.bash_profile
 . ~/.bash_profile
@@ -30,8 +30,8 @@ nix run home-manager/release-"$NIX_VERSION" -- switch -b "bak" --flake "$SCRIPT_
 # Commit
 DATE="$(date +"%F-%H")"
 git add .
-if ! git commit -m "Update dot-files - $DATE"; then
-    git commit --no-gpg-sign -m "Update dot-files - $DATE"
+if ! git commit -m "Update dot-files - ${DATE}"; then
+    git commit --no-gpg-sign -m "Update dot-files - ${DATE}"
 fi
 
 # Set default rust if rustup is installed
@@ -39,5 +39,5 @@ fi
     rustup default stable
 
 # Add nixpkgs channel
-nix-channel --add https://nixos.org/channels/nixos-"$NIX_VERSION" nixpkgs || true
+nix-channel --add https://nixos.org/channels/nixos-"${NIX_VERSION}" nixpkgs || true
 nix-channel --update

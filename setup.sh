@@ -9,8 +9,8 @@
 # -----
 ###
 # Source config
-SCRIPT_DIR="$(dirname -- "$(readlink -f -- "$0")")"
-. "$SCRIPT_DIR"/install.conf
+SCRIPT_DIR="$(dirname -- "$(readlink -f -- "${0}")")"
+. "${SCRIPT_DIR}"/install.conf
 
 # Fail on error
 set -e
@@ -25,105 +25,105 @@ sed_exit() {
 # Set variables
 ## flake.nix
 ## START sed
-FILE="$SCRIPT_DIR/flake.nix"
+FILE="${SCRIPT_DIR}/flake.nix"
 STRING="REPLACE_NIX_VERSION"
-grep -q "$STRING" "$FILE" || sed_exit
-sed -i "s|$STRING|$NIX_VERSION|g" "$FILE"
+grep -q "${STRING}" "${FILE}" || sed_exit
+sed -i "s|${STRING}|${NIX_VERSION}|g" "${FILE}"
 STRING="REPLACE_GUESTUSER"
-grep -q "$STRING" "$FILE" || sed_exit
-sed -i "s|$STRING|$GUESTUSER|g" "$FILE"
+grep -q "${STRING}" "${FILE}" || sed_exit
+sed -i "s|${STRING}|${GUESTUSER}|g" "${FILE}"
 STRING="REPLACE_HOMEUSER"
-grep -q "$STRING" "$FILE" || sed_exit
-sed -i "s|$STRING|$HOMEUSER|g" "$FILE"
+grep -q "${STRING}" "${FILE}" || sed_exit
+sed -i "s|${STRING}|${HOMEUSER}|g" "${FILE}"
 STRING="REPLACE_SYSUSER"
-grep -q "$STRING" "$FILE" || sed_exit
-sed -i "s|$STRING|$SYSUSER|g" "$FILE"
+grep -q "${STRING}" "${FILE}" || sed_exit
+sed -i "s|${STRING}|${SYSUSER}|g" "${FILE}"
 STRING="REPLACE_VIRTUSER"
-grep -q "$STRING" "$FILE" || sed_exit
-sed -i "s|$STRING|$VIRTUSER|g" "$FILE"
+grep -q "${STRING}" "${FILE}" || sed_exit
+sed -i "s|${STRING}|${VIRTUSER}|g" "${FILE}"
 STRING="REPLACE_WORKUSER"
-grep -q "$STRING" "$FILE" || sed_exit
-sed -i "s|$STRING|$WORKUSER|g" "$FILE"
+grep -q "${STRING}" "${FILE}" || sed_exit
+sed -i "s|${STRING}|${WORKUSER}|g" "${FILE}"
 ## END sed
 ## home-manager/files/.config/git/config
 ## START sed
-FILE="$SCRIPT_DIR/home-manager/files/.config/git/config"
+FILE="${SCRIPT_DIR}/home-manager/files/.config/git/config"
 STRING="REPLACE_GIT_EMAIL"
-grep -q "$STRING" "$FILE" || sed_exit
-sed -i "s|$STRING|$GIT_EMAIL|g" "$FILE"
+grep -q "${STRING}" "${FILE}" || sed_exit
+sed -i "s|${STRING}|${GIT_EMAIL}|g" "${FILE}"
 STRING="REPLACE_GIT_NAME"
-grep -q "$STRING" "$FILE" || sed_exit
-sed -i "s|$STRING|$GIT_NAME|g" "$FILE"
+grep -q "${STRING}" "${FILE}" || sed_exit
+sed -i "s|${STRING}|${GIT_NAME}|g" "${FILE}"
 STRING="REPLACE_GIT_SIGNING_KEY"
-grep -q "$STRING" "$FILE" || sed_exit
-sed -i "s|$STRING|$GIT_SIGNING_KEY|g" "$FILE"
+grep -q "${STRING}" "${FILE}" || sed_exit
+sed -i "s|${STRING}|${GIT_SIGNING_KEY}|g" "${FILE}"
 ## END sed
 ## home-manager/files/.config/sway/config.d/input
 ## START sed
 KEYLAYOUT="$(localectl status | grep "X11 Layout:" | awk '{print $3}')"
-FILE="$SCRIPT_DIR/home-manager/files/.config/sway/config.d/input"
+FILE="${SCRIPT_DIR}/home-manager/files/.config/sway/config.d/input"
 STRING="REPLACE_KEYLAYOUT"
-grep -q "$STRING" "$FILE" || sed_exit
-sed -i "s|$STRING|$KEYLAYOUT|g" "$FILE"
+grep -q "${STRING}" "${FILE}" || sed_exit
+sed -i "s|${STRING}|${KEYLAYOUT}|g" "${FILE}"
 ## END sed
 ## home-manager/files/.config/sway/config.d/output
 ## START sed
-FILE="$SCRIPT_DIR/home-manager/files/.config/sway/config.d/output"
+FILE="${SCRIPT_DIR}/home-manager/files/.config/sway/config.d/output"
 STRING="REPLACE_SWAY_OUTPUT"
-grep -q "$STRING" "$FILE" || sed_exit
-sed -i "s|$STRING|$SWAY_OUTPUT|g" "$FILE"
+grep -q "${STRING}" "${FILE}" || sed_exit
+sed -i "s|${STRING}|${SWAY_OUTPUT}|g" "${FILE}"
 ## END sed
 ## home-manager/configs/GUESTUSER.nix
 ## START sed
-FILE="$SCRIPT_DIR/home-manager/configs/GUESTUSER.nix"
+FILE="${SCRIPT_DIR}/home-manager/configs/GUESTUSER.nix"
 STRING="REPLACE_GUESTUSER"
-grep -q "$STRING" "$FILE" || sed_exit
-sed -i "s|$STRING|$GUESTUSER|g" "$FILE"
+grep -q "${STRING}" "${FILE}" || sed_exit
+sed -i "s|${STRING}|${GUESTUSER}|g" "${FILE}"
 ## END sed
 ## home-manager/configs/HOMEUSER.nix
 ## START sed
-FILE="$SCRIPT_DIR/home-manager/configs/HOMEUSER.nix"
+FILE="${SCRIPT_DIR}/home-manager/configs/HOMEUSER.nix"
 STRING="REPLACE_HOMEUSER"
-grep -q "$STRING" "$FILE" || sed_exit
-sed -i "s|$STRING|$HOMEUSER|g" "$FILE"
+grep -q "${STRING}" "${FILE}" || sed_exit
+sed -i "s|${STRING}|${HOMEUSER}|g" "${FILE}"
 ## END sed
 ## home-manager/configs/SYSUSER.nix
 ## START sed
-FILE="$SCRIPT_DIR/home-manager/configs/SYSUSER.nix"
+FILE="${SCRIPT_DIR}/home-manager/configs/SYSUSER.nix"
 STRING="REPLACE_SYSUSER"
-grep -q "$STRING" "$FILE" || sed_exit
-sed -i "s|$STRING|$SYSUSER|g" "$FILE"
+grep -q "${STRING}" "${FILE}" || sed_exit
+sed -i "s|${STRING}|${SYSUSER}|g" "${FILE}"
 ## END sed
 ## home-manager/configs/VIRTUSER.nix
 ## START sed
-FILE="$SCRIPT_DIR/home-manager/configs/VIRTUSER.nix"
+FILE="${SCRIPT_DIR}/home-manager/configs/VIRTUSER.nix"
 STRING="REPLACE_VIRTUSER"
-grep -q "$STRING" "$FILE" || sed_exit
-sed -i "s|$STRING|$VIRTUSER|g" "$FILE"
+grep -q "${STRING}" "${FILE}" || sed_exit
+sed -i "s|${STRING}|${VIRTUSER}|g" "${FILE}"
 ## END sed
 ## home-manager/configs/WORKUSER.nix
 ## START sed
-FILE="$SCRIPT_DIR/home-manager/configs/WORKUSER.nix"
+FILE="${SCRIPT_DIR}/home-manager/configs/WORKUSER.nix"
 STRING="REPLACE_WORKUSER"
-grep -q "$STRING" "$FILE" || sed_exit
-sed -i "s|$STRING|$WORKUSER|g" "$FILE"
+grep -q "${STRING}" "${FILE}" || sed_exit
+sed -i "s|${STRING}|${WORKUSER}|g" "${FILE}"
 ## END sed
 
 # Remove codium configs for home-manager to be able to regenerate them
 rm -rf ~/.vscode-oss ~/.vscode-R ~/.config/vscode-sqltools ~/.local/share/vscode-sqltools
 rm -rf ~/.config/VSCodium
 # Run home-manager
-nix run home-manager/release-"$NIX_VERSION" -- switch -b "bak" --flake "$SCRIPT_DIR/#$USER"
+nix run home-manager/release-"${NIX_VERSION}" -- switch -b "bak" --flake "${SCRIPT_DIR}/#${USER}"
 
 # Source ~/.bash_profile
 . ~/.bash_profile
 
 # Commit
 DATE="$(date +"%F-%H")"
-cd "$SCRIPT_DIR"
+cd "${SCRIPT_DIR}"
 git add .
-if ! git commit -m "Install dot-files - $DATE"; then
-    git commit --no-gpg-sign -m "Install dot-files - $DATE"
+if ! git commit -m "Install dot-files - ${DATE}"; then
+    git commit --no-gpg-sign -m "Install dot-files - ${DATE}"
 fi
 
 # Set default rust if rustup is installed
@@ -131,5 +131,5 @@ fi
     rustup default stable
 
 # Add nixpkgs channel
-nix-channel --add https://nixos.org/channels/nixos-"$NIX_VERSION" nixpkgs || true
+nix-channel --add https://nixos.org/channels/nixos-"${NIX_VERSION}" nixpkgs || true
 nix-channel --update
