@@ -9,10 +9,10 @@
 ###
 
 # Source hm-session-vars.sh
-[[ -f "${XDG_STATE_HOME}"/nix/profile/etc/profile.d/hm-session-vars.sh ]] &&
+[[ -f ~/.local/state/nix/profile/etc/profile.d/hm-session-vars.sh ]] &&
     {
         # shellcheck source=/dev/null
-        . "${XDG_STATE_HOME}"/nix/profile/etc/profile.d/hm-session-vars.sh
+        . ~/.local/state/nix/profile/etc/profile.d/hm-session-vars.sh
     }
 
 # Set environment variables
