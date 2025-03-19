@@ -77,7 +77,7 @@ sed -i "s|${STRING}|${KEYLAYOUT}|g" "${FILE}"
 FILE="${SCRIPT_DIR}/home-manager/files/.config/sway/config.d/output"
 STRING="REPLACE_SWAY_OUTPUT"
 grep -q "${STRING}" "${FILE}" || awk_exit
-tmpfile="$(mktemp /tmp/dot-files-XXX)"
+tmpfile="$(mktemp /tmp/dot-files-XXXXXX)"
 cp "${FILE}" "${tmpfile}" &&
     awk -v a="${STRING}" -v b="${SWAY_OUTPUT}" '{gsub(a,b)}1' "${tmpfile}" >"${FILE}"
 rm -f "${tmpfile}"
