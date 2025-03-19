@@ -47,7 +47,7 @@
         nixd
         nixfmt-rfc-style
         ocrmypdf
-        python312Packages.radian
+        radianWrapper
         usbguard-notifier
         R-with-my-packages
       ];
