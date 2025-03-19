@@ -10,6 +10,7 @@
 ###
 # Source config
 SCRIPT_DIR="$(dirname -- "$(readlink -f -- "${0}")")"
+# shellcheck source=/dev/null
 . "${SCRIPT_DIR}"/install.conf
 
 # Fail on error
@@ -72,7 +73,7 @@ grep -q "${STRING}" "${FILE}" || sed_exit
 sed -i "s|${STRING}|${KEYLAYOUT}|g" "${FILE}"
 ## END sed
 ## home-manager/files/.config/sway/config.d/output
-## START sed
+## START awk
 FILE="${SCRIPT_DIR}/home-manager/files/.config/sway/config.d/output"
 STRING="REPLACE_SWAY_OUTPUT"
 grep -q "${STRING}" "${FILE}" || awk_exit
@@ -80,7 +81,7 @@ tmpfile="$(mktemp)"
 cp "${FILE}" "${tmpfile}" &&
     awk -v a="${STRING}" -v b="${SWAY_OUTPUT}" '{gsub(a,b)}1' "${tmpfile}" >"${FILE}"
 rm -f "${tmpfile}"
-## END sed
+## END awk
 ## home-manager/configs/GUESTUSER.nix
 ## START sed
 FILE="${SCRIPT_DIR}/home-manager/configs/GUESTUSER.nix"
@@ -124,6 +125,7 @@ rm -rf ~/.config/VSCodium
 nix run home-manager/release-"${NIX_VERSION}" -- switch -b "bak" --flake "${SCRIPT_DIR}/#${USER}"
 
 # Source ~/.bash_profile
+# shellcheck source=/dev/null
 . ~/.bash_profile
 
 # Commit

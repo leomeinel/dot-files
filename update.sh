@@ -11,6 +11,7 @@
 
 # Source config
 SCRIPT_DIR="$(dirname -- "$(readlink -f -- "${0}")")"
+# shellcheck source=/dev/null
 . "${SCRIPT_DIR}"/install.conf
 
 # Fail on error
@@ -25,6 +26,7 @@ nix flake update --commit-lock-file
 nix run home-manager/release-"${NIX_VERSION}" -- switch -b "bak" --flake "${SCRIPT_DIR}/#${USER}"
 
 # Source ~/.bash_profile
+# shellcheck source=/dev/null
 . ~/.bash_profile
 
 # Commit

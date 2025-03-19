@@ -13,7 +13,10 @@
 
 # Include ~/.bash_aliases
 [[ -f ~/.bash_aliases ]] &&
-    . ~/.bash_aliases
+    {
+        # shellcheck source=/dev/null
+        . ~/.bash_aliases
+    }
 
 # Key bindings
 bind '"\e[A": history-search-backward'

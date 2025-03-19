@@ -10,7 +10,10 @@
 
 # Source hm-session-vars.sh
 [[ -f "${XDG_STATE_HOME}"/nix/profile/etc/profile.d/hm-session-vars.sh ]] &&
-    . "${XDG_STATE_HOME}"/nix/profile/etc/profile.d/hm-session-vars.sh
+    {
+        # shellcheck source=/dev/null
+        . "${XDG_STATE_HOME}"/nix/profile/etc/profile.d/hm-session-vars.sh
+    }
 
 # Set environment variables
 export EDITOR="nvim"
@@ -48,7 +51,10 @@ export TEXMFVAR="${XDG_CACHE_HOME}/texlive/texmf-var"
 
 # Source ~/.bashrc
 [[ -f ~/.bashrc ]] && [[ -n "${BASH_VERSION}" ]] &&
-    . ~/.bashrc
+    {
+        # shellcheck source=/dev/null
+        . ~/.bashrc
+    }
 
 # If sway is not installed, don't do anything
 [[ -z $(/usr/bin/which sway) ]] >/dev/null 2>&1 &&
