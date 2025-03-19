@@ -90,6 +90,7 @@
           vscode-extensions.reditorsupport.r
           vscode-extensions.rust-lang.rust-analyzer
           vscode-extensions.tamasfe.even-better-toml
+          vscode-extensions.timonwong.shellcheck
           vscode-extensions.usernamehw.errorlens
           vscode-extensions.vscjava.vscode-java-pack
           vscode-extensions.redhat.java
