@@ -54,4 +54,4 @@ exec /usr/bin/gsettings set org.gnome.desktop.wm.preferences theme 'Arc-Dark'
 exec /usr/bin/gsettings set org.gnome.desktop.interface icon-theme 'Papirus-Dark'
 
 # Background
-exec /usr/bin/swaybg -i /usr/share/wallpapers/Custom/content/simple_tree.png
+exec /usr/bin/swaybg -i "§{XDG_STATE_HOME}"/backgrounds/arch-install/sunrise.jpg

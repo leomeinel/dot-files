@@ -115,6 +115,11 @@
       };
     };
     dataFile = {
+      # backgrounds/arch-install
+      "backgrounds/arch-install" = {
+        recursive = true;
+        source = ../../files/.local/share/backgrounds/arch-install;
+      };
       # gnupg
       "gnupg/gpg-agent.conf" = {
         source = ../../files/.local/share/gnupg/gpg-agent.conf;
