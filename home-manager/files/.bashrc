@@ -40,7 +40,7 @@ complete -cf /usr/bin/doas
 
 # Prompt
 if [[ ${TERM} != "dumb" ]]; then
-    eval "$(/usr/bin/starship init /usr/bin/bash)"
+    eval "$(/usr/bin/starship init /bin/bash)"
 fi
 
 # List number of outdated packages
