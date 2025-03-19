@@ -16,6 +16,11 @@ SCRIPT_DIR="$(dirname -- "$(readlink -f -- "${0}")")"
 set -e
 
 # Define functions
+awk_exit() {
+    echo "ERROR: 'awk' didn't replace, report this @"
+    echo "       https://github.com/leomeinel/dot-files/issues"
+    exit 1
+}
 sed_exit() {
     echo "ERROR: 'sed' didn't replace, report this @"
     echo "       https://github.com/leomeinel/dot-files/issues"
@@ -70,8 +75,11 @@ sed -i "s|${STRING}|${KEYLAYOUT}|g" "${FILE}"
 ## START sed
 FILE="${SCRIPT_DIR}/home-manager/files/.config/sway/config.d/output"
 STRING="REPLACE_SWAY_OUTPUT"
-grep -q "${STRING}" "${FILE}" || sed_exit
-sed -i "s|${STRING}|${SWAY_OUTPUT}|g" "${FILE}"
+grep -q "${STRING}" "${FILE}" || awk_exit
+tmpfile="$(mktemp)"
+cp "${FILE}" "${tmpfile}" &&
+    awk -v a="${STRING}" -v b="${SWAY_OUTPUT}" '{gsub(a,b)}1' "${tmpfile}" >"${FILE}"
+rm -f "${tmpfile}"
 ## END sed
 ## home-manager/configs/GUESTUSER.nix
 ## START sed
