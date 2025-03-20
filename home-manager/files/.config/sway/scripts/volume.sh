@@ -9,12 +9,12 @@
 # -----
 ###
 
-CURRENT=$(/usr/bin/pactl get-sink-volume @DEFAULT_SINK@ | /usr/bin/grep -e '%' | /usr/bin/sed 's/ //g' | /usr/bin/cut -d "/" -f 2 | /usr/bin/sed 's/%//')
+CURRENT="$(/usr/bin/pactl get-sink-volume @DEFAULT_SINK@ | /usr/bin/grep -e '%' | /usr/bin/sed 's/ //g' | /usr/bin/cut -d "/" -f 2 | /usr/bin/sed 's/%//')"
 
 up() {
     new="$((CURRENT + 5))"
-    if [ $new -lt 100 ]; then
-        /usr/bin/pactl set-sink-volume @DEFAULT_SINK@ $new%
+    if [ "${new}" -lt 100 ]; then
+        /usr/bin/pactl set-sink-volume @DEFAULT_SINK@ "${new}"%
     else
         /usr/bin/pactl set-sink-volume @DEFAULT_SINK@ 100%
     fi
@@ -22,15 +22,15 @@ up() {
 
 down() {
     new="$((CURRENT - 5))"
-    if [ $new -gt 0 ]; then
-        /usr/bin/pactl set-sink-volume @DEFAULT_SINK@ $new%
+    if [ "${new}" -gt 0 ]; then
+        /usr/bin/pactl set-sink-volume @DEFAULT_SINK@ "${new}"%
     else
         /usr/bin/pactl set-sink-volume @DEFAULT_SINK@ 0%
     fi
 }
 
-if [[ "$1" == "--up" ]]; then
+if [[ "${1}" == "--up" ]]; then
     up
-elif [[ "$1" == "--down" ]]; then
+elif [[ "${1}" == "--down" ]]; then
     down
 fi
