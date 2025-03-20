@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 ###
 # File = .bash_profile
 # Author = Leopold Meinel (leo@meinel.dev)

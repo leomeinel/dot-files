@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 ###
 # File = .bash_logout
 # Author = Leopold Meinel (leo@meinel.dev)

@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 ###
 # File = .bashrc
 # Author = Leopold Meinel (leo@meinel.dev)

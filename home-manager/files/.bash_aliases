@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 ###
 # File = .bash_aliases
 # Author = Leopold Meinel (leo@meinel.dev)
