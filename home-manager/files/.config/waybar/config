@@ -37,7 +37,7 @@
         "🔊"
       ]
     },
-    "on-click": "/usr/bin/pavucontrol"
+    "on-click": "/usr/local/bin/pwvucontrol"
   },
   "backlight": {
     "format": "{percent}% {icon}",
