@@ -6,7 +6,7 @@
   },
   {
     "label": "Logout",
-    "exec": "/usr/local/bin/sway-logout",
+    "exec": "/usr/local/bin/swaymsg exit",
     "icon": "/usr/share/nwg-bar/images/system-log-out.svg"
   },
   {
