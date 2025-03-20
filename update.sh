@@ -9,6 +9,9 @@
 # -----
 ###
 
+# INFO: This file is not needed for the installation.
+#       It enables you to update your dot-files. You will have to pull changes via git manually.
+
 # Source config
 SCRIPT_DIR="$(dirname -- "$(readlink -f -- "${0}")")"
 # shellcheck source=/dev/null
