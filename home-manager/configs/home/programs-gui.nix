@@ -270,6 +270,7 @@
             {
               "language" = "nix";
               "begin" = "/*";
+              "prefix" = "  ";
               "end" = " */";
             }
             {
