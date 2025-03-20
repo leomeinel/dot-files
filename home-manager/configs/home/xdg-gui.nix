@@ -93,6 +93,7 @@
       };
       # Thunar
       "Thunar/uca.xml" = {
+        force = true;
         source = ../../files/.config/Thunar/uca.xml;
       };
       # waybar
@@ -111,6 +112,7 @@
       };
       # xfce4
       "xfce4/xfconf/xfce-perchannel-xml/thunar.xml" = {
+        force = true;
         source = ../../files/.config/xfce4/xfconf/xfce-perchannel-xml/thunar.xml;
       };
     };
