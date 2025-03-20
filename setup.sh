@@ -60,9 +60,12 @@ sed -i "s|${STRING}|${GIT_EMAIL}|g" "${FILE}"
 STRING="REPLACE_GIT_NAME"
 grep -q "${STRING}" "${FILE}" || sed_exit
 sed -i "s|${STRING}|${GIT_NAME}|g" "${FILE}"
-STRING="REPLACE_GIT_SIGNING_KEY"
+STRING="REPLACE_GIT_SIGNINGKEY"
 grep -q "${STRING}" "${FILE}" || sed_exit
-sed -i "s|${STRING}|${GIT_SIGNING_KEY}|g" "${FILE}"
+sed -i "s|${STRING}|${GIT_SIGNINGKEY}|g" "${FILE}"
+STRING="REPLACE_GIT_GPGSIGN"
+grep -q "${STRING}" "${FILE}" || sed_exit
+sed -i "s|${STRING}|${GIT_GPGSIGN}|g" "${FILE}"
 ## END sed
 ## home-manager/files/.config/sway/config.d/input
 ## START sed
