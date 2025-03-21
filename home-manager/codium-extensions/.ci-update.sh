@@ -24,12 +24,8 @@ sed_exit() {
     exit 1
 }
 
-# Install nix
-sh <(curl -L https://nixos.org/nix/install) --daemon --yes
-mkdir -p /etc/nix/
+# Configure
 echo "experimental-features = nix-command flakes" >>/etc/nix/nix.conf
-# shellcheck source=/dev/null
-. /nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh
 
 # Set current version of codium
 CODIUM_VERSION="$(nix run nixpkgs#nix-search-cli -- -c "${NIX_VERSION}" -n 'vscodium' | grep 'vscodium @' | awk '{print $3}' | awk 'BEGIN{FS=OFS="."}{$NF=""; NF--; print}')"
