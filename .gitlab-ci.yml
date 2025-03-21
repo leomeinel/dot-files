@@ -7,7 +7,6 @@ regen-codium-extensions:
   stage: deploy
   when: always
   script:
-    - . ./install.conf
     - echo "experimental-features = nix-command flakes" >>/etc/nix/nix.conf
     - nix profile install nixpkgs#git nixpkgs#gawk nixpkgs#nix-search-cli nixpkgs#gnused
     - chmod 755 ./home-manager/codium-extensions/.ci-update.sh
