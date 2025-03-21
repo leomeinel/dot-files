@@ -6,7 +6,7 @@
   },
   {
     "label": "Logout",
-    "exec": "/usr/bin/pkill -u \"${USER}\" -v nwg-bar",
+    "exec": "/usr/bin/pkill -u \"${USER}\" --inverse nwg-bar",
     "icon": "/usr/share/nwg-bar/images/system-log-out.svg"
   },
   {
