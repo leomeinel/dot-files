@@ -7,7 +7,7 @@ regen-codium-extensions:
   stage: deploy
   when: always
   script:
-    - nix-env -iA nixos.git nixos.gawk nixos.nix-search-cli
+    - nix-shell -p git gawk nix-search-cli
     - chmod 755 ./home-manager/codium-extensions/.ci-update.sh
     - ./home-manager/codium-extensions/.ci-update.sh
     - git config user.name "${MAIN_BOT_USERNAME}"
