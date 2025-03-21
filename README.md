@@ -12,7 +12,6 @@ There might be other packages that are needed for scripts and configs to functio
 
 - [alacritty](https://archlinux.org/packages/extra/x86_64/alacritty/)
 - [apparmor](https://archlinux.org/packages/extra/x86_64/apparmor/)
-- [arc-gtk-theme](https://archlinux.org/packages/extra/any/arc-gtk-theme/)
 - [autotiling](https://archlinux.org/packages/extra/any/autotiling/)
 - [bat](https://archlinux.org/packages/extra/x86_64/bat/)
 - [blueman](https://archlinux.org/packages/extra/x86_64/blueman/)
