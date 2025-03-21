@@ -24,9 +24,6 @@ sed_exit() {
     exit 1
 }
 
-# Configure /etc/nix/nix.conf
-echo "experimental-features = nix-command flakes" >>/etc/nix/nix.conf
-
 # Set current version of codium
 CODIUM_VERSION="$(nix-search -c "${NIX_VERSION}" -n 'vscodium' | grep 'vscodium @' | awk '{print $3}' | awk 'BEGIN{FS=OFS="."}{$NF=""; NF--; print}')"
 if [[ -n "${CODIUM_VERSION}" ]] >/dev/null 2>&1; then

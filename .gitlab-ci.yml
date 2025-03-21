@@ -8,9 +8,8 @@ regen-codium-extensions:
   when: always
   script:
     - . ./install.conf
-    - nix-channel --add https://nixos.org/channels/nixos-"${NIX_VERSION}" nixpkgs || true
-    - nix-channel --update
-    - nix-env -iA nixpkgs.git nixpkgs.gawk nixpkgs.nix-search-cli
+    - echo "experimental-features = nix-command flakes" >>/etc/nix/nix.conf
+    - nix profile install nixpkgs#git nixpkgs#gawk nixpkgs#nix-search-cli nixpkgs#gnused
     - chmod 755 ./home-manager/codium-extensions/.ci-update.sh
     - ./home-manager/codium-extensions/.ci-update.sh
     - git config user.name "${MAIN_BOT_USERNAME}"
