@@ -8,7 +8,7 @@ regen-codium-extensions:
   when: always
   script:
     - echo "experimental-features = nix-command flakes" >>/etc/nix/nix.conf
-    - nix profile install nixpkgs#git nixpkgs#gawk nixpkgs#nix-search-cli nixpkgs#gnused
+    - nix profile install nixpkgs#git nixpkgs#gawk nixpkgs#nix-search-cli nixpkgs#gnused --priority 1
     - chmod 755 ./home-manager/codium-extensions/.ci-update.sh
     - ./home-manager/codium-extensions/.ci-update.sh
     - git config user.name "${MAIN_BOT_USERNAME}"
