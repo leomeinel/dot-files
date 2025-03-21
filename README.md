@@ -26,9 +26,7 @@ There might be other packages that are needed for scripts and configs to functio
 - [libsecret](https://archlinux.org/packages/core/x86_64/libsecret/)
 - [network-manager-applet](https://archlinux.org/packages/extra/x86_64/network-manager-applet/)
 - [nextcloud-client](https://archlinux.org/packages/extra/x86_64/nextcloud-client/)
-- [noto-fonts](https://archlinux.org/packages/extra/any/noto-fonts/)
 - [nwg-bar](https://archlinux.org/packages/extra/x86_64/nwg-bar/)
-- [papirus-icon-theme](https://archlinux.org/packages/extra/any/papirus-icon-theme/)
 - [pipewire-pulse](https://archlinux.org/packages/extra/x86_64/pipewire-pulse/)
 - [polkit-gnome](https://archlinux.org/packages/extra/x86_64/polkit-gnome/)
 - [rustup](https://archlinux.org/packages/extra/x86_64/rustup/)
@@ -44,11 +42,9 @@ There might be other packages that are needed for scripts and configs to functio
 - [xdg-desktop-portal](https://archlinux.org/packages/extra/x86_64/xdg-desktop-portal/)
 - [xdg-user-dirs](https://archlinux.org/packages/extra/x86_64/xdg-user-dirs/)
 - [xorg-xwayland](https://archlinux.org/packages/extra/x86_64/xorg-xwayland/)
-
 # AUR
 
 - [kvantum-theme-arc](https://aur.archlinux.org/packages/kvantum-theme-arc)
-- [ttf-hasklig](https://aur.archlinux.org/packages/ttf-hasklig)
 
 ### Flatpak
 

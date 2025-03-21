@@ -8,6 +8,7 @@
   -----
 */
 {
+  pkgs,
   config,
   ...
 }:
@@ -16,16 +17,19 @@
   # GTK Options
   gtk = {
     enable = true;
-    cursorTheme = {
-      name = "Adwaita";
-      size = 24;
-    };
-    font = {
+    font = with pkgs; {
+      package = noto-fonts;
       name = "Noto Sans";
       size = 10;
     };
-    iconTheme.name = "Papirus-Dark";
-    theme.name = "Arc-Dark";
+    iconTheme = with pkgs; {
+      package = papirus-icon-theme;
+      name = "Papirus-Dark";
+    };
+    theme = with pkgs; {
+      package = arc-theme;
+      name = "Arc-Dark";
+    };
     gtk2 = {
       configLocation = "${config.xdg.configHome}/gtk-2.0/gtkrc";
       extraConfig = ''

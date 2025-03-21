@@ -19,7 +19,9 @@
   # Imports
   imports = [
     ./configs/home/gtk-gui.nix
+    ./configs/home/pointer-cursor-gui.nix
     ./configs/home/programs-gui.nix
+    ./configs/home/qt-gui.nix
     ./configs/home/xdg-gui.nix
   ];
 
@@ -44,12 +46,13 @@
       in
       [
         cmake-format
+        hasklig
         nixd
         nixfmt-rfc-style
         ocrmypdf
+        R-with-my-packages
         radianWrapper
         usbguard-notifier
-        R-with-my-packages
       ];
     # Activation script
     activation = {
