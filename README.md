@@ -48,16 +48,10 @@ There might be other packages that are needed for scripts and configs to functio
 
 ### Flatpak
 
-#### Apps
-
 Executables should be stored in /usr/local/bin
 
 - [librewolf](https://flathub.org/apps/io.gitlab.librewolf-community)
 - [pwvucontrol](https://flathub.org/apps/com.saivert.pwvucontrol)
-
-#### Themes
-
-- org.gtk.Gtk3theme.Arc-Dark
 
 ### Custom
 
