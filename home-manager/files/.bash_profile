@@ -17,7 +17,6 @@
     }
 
 # Set environment variables
-export EDITOR=nvim
 export JAVA_HOME=/usr/lib/jvm/default
 export _JAVA_OPTIONS="-Djava.util.prefs.userRoot=${XDG_CONFIG_HOME}/java"
 export MYSQL_HOME=/var/lib/mysql
@@ -79,6 +78,7 @@ if [[ -z "${WAYLAND_DISPLAY}" ]] && [[ "${XDG_VTNR}" -eq 1 ]]; then
     export TERMINAL=/usr/bin/alacritty
     export WLR_NO_HARDWARE_CURSORS=1
     export WLR_RENDERER_ALLOW_SOFTWARE=1
+    export XCURSOR_PATH="${XDG_STATE_HOME}/nix/profile/share/icons${XCURSOR_PATH:+:${XCURSOR_PATH}}"
     export XDG_CURRENT_DESKTOP=sway
     export XDG_SESSION_DESKTOP=sway
     export XDG_SESSION_TYPE=wayland
