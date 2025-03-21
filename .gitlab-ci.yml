@@ -19,7 +19,7 @@ regen-codium-extensions:
     - git add ./home-manager/codium-extensions/codium-extensions.nix
     - git add ./home-manager/codium-extensions/config.toml
     - |
-      DATE="$(/usr/bin/date +"%F-%H")"
+      DATE="$(date +"%F-%H")"
       if git commit -m "Regen codium-extensions.nix - CI ${DATE}"; then
           git push gitlab_origin HEAD:main -o ci.skip
       fi
