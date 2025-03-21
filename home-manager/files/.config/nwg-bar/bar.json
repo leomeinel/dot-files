@@ -6,7 +6,7 @@
   },
   {
     "label": "Logout",
-    "exec": "/usr/bin/pkill -u \"${USER}\"",
+    "exec": "/usr/bin/pkill -u ${USER}",
     "icon": "/usr/share/nwg-bar/images/system-log-out.svg"
   },
   {
