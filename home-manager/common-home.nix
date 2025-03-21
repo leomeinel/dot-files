@@ -70,6 +70,9 @@
         run /usr/bin/mkdir -p ${config.xdg.dataHome}/rustup
         run /usr/bin/mkdir -p ${config.xdg.configHome}/screen
         run /usr/bin/mkdir -p ${config.xdg.cacheHome}/texlive
+
+        # Workaround to fix home-manager sometimes defaulting to ~/.nix-profile
+        ln -sfn ${config.xdg.dataHome}/nix/profiles/profile ${config.home.homeDirectory}/.nix-profile
       '';
     };
   };
