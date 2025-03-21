@@ -21,7 +21,6 @@
     ./configs/home/gtk-gui.nix
     ./configs/home/pointer-cursor-gui.nix
     ./configs/home/programs-gui.nix
-    ./configs/home/qt-gui.nix
     ./configs/home/xdg-gui.nix
   ];
 
