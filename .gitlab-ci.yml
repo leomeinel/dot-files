@@ -7,17 +7,18 @@ regen-codium-extensions:
   stage: deploy
   when: always
   script:
+    - nix-env -iA nixos.git nixos.gawk nixos.nix-search-cli
     - chmod 755 ./home-manager/codium-extensions/.ci-update.sh
     - ./home-manager/codium-extensions/.ci-update.sh
-    - nix run nixpkgs#git config user.name "${MAIN_BOT_USERNAME}"
-    - nix run nixpkgs#git config user.email "${MAIN_BOT_EMAIL}"
-    - nix run nixpkgs#git remote remove gitlab_origin || true
-    - nix run nixpkgs#git remote add gitlab_origin https://${MAIN_BOT_USERNAME}:${MAIN_BOT_TOKEN}@${CI_SERVER_FQDN}/public-leo/${CI_PROJECT_NAME}.git
-    - nix run nixpkgs#git add ./home-manager/codium-extensions/nix4vscode
-    - nix run nixpkgs#git add ./home-manager/codium-extensions/codium-extensions.nix
-    - nix run nixpkgs#git add ./home-manager/codium-extensions/config.toml
+    - git config user.name "${MAIN_BOT_USERNAME}"
+    - git config user.email "${MAIN_BOT_EMAIL}"
+    - git remote remove gitlab_origin || true
+    - git remote add gitlab_origin https://${MAIN_BOT_USERNAME}:${MAIN_BOT_TOKEN}@${CI_SERVER_FQDN}/public-leo/${CI_PROJECT_NAME}.git
+    - git add ./home-manager/codium-extensions/nix4vscode
+    - git add ./home-manager/codium-extensions/codium-extensions.nix
+    - git add ./home-manager/codium-extensions/config.toml
     - |
       DATE="$(/usr/bin/date +"%F-%H")"
-      if nix run nixpkgs#git commit -m "Regen codium-extensions.nix - CI ${DATE}"; then
-          nix run nixpkgs#git push gitlab_origin HEAD:main -o ci.skip
+      if git commit -m "Regen codium-extensions.nix - CI ${DATE}"; then
+          git push gitlab_origin HEAD:main -o ci.skip
       fi
