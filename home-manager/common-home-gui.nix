@@ -61,6 +61,11 @@
 
         # Delete wofi cache to prevent saving deprecated symlinks
         run rm -f ${config.xdg.cacheHome}/wofi-run
+
+        # Workaround for using the correct font in all applications
+        ln -sfn ${config.xdg.stateHome}/nix/profile/share/fonts ${config.xdg.dataHome}/fonts
+        # Workaround for using the correct GTK theme in all applications
+        ln -sfn ${config.xdg.stateHome}/nix/profile/share/themes ${config.xdg.dataHome}/themes
       '';
     };
   };
