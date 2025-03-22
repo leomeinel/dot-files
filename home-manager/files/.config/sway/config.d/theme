@@ -1,10 +1,10 @@
 # Colors
-set $purple  #342f73
-set $purple2 #99a2ea
 set $dark    #1d2021
 set $dark2   #282c2e
 set $light   #ebdbb2
 set $primary #f0614e
+set $purple  #342f73
+set $purple2 #99a2ea
 set $white   #ffffff
 
 set $focused_bgcolor $white
