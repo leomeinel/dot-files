@@ -42,8 +42,8 @@
   "backlight": {
     "format": "{percent}% {icon}",
     "format-icons": [
-      "󰌶",
-      "󰌵"
+      "󰃞",
+      "󰃠"
     ]
   },
   "battery": {
@@ -70,8 +70,8 @@
     ]
   },
   "tray": {
-    "icon-size": 12,
-    "spacing": 12
+    "icon-size": 10,
+    "spacing": 10
   },
   "clock": {
     "format": "{:%Y-%m-%d - %H:%M}"
