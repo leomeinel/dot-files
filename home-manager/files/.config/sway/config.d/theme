@@ -1,29 +1,27 @@
 # Colors
-set $c1 #fd472f
-set $c2 #d79921
-set $c3 #99a2ea
-set $c4 #333142
-set $c5 #342f73
-
-set $white #f4f4f8
-set $dark  #333333
-set $dim   #666666
+set $blue1   #342f73
+set $blue2   #99a2ea
+set $dark    #1d2021
+set $dark2   #282c2e
+set $light   #ebdbb2
+set $primary #f0614e
+set $white   #ffffff
 
 set $focused_bgcolor $white
 set $focused_textcolor $dark
-set $focused_indicator $c1
+set $focused_indicator $primary
 
-set $inactive_bgcolor $c5
+set $inactive_bgcolor $blue1
 set $inactive_textcolor $white
-set $inactive_indicator $c3
+set $inactive_indicator $blue2
 
-set $unfocused_bgcolor $c4
-set $unfocused_textcolor $dim
-set $unfocused_indicator $c5
+set $unfocused_bgcolor $dark2
+set $unfocused_textcolor $light
+set $unfocused_indicator $blue1
 
-set $urgent_bgcolor $c1
-set $urgent_textcolor $c4
-set $urgent_indicator $c3
+set $urgent_bgcolor $primary
+set $urgent_textcolor $dark2
+set $urgent_indicator $blue2
 
 # Gaps
 gaps inner 0
