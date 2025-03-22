@@ -39,7 +39,14 @@ window#waybar {
 }
 
 #backlight,
-#notification {
+#battery,
+#idle_inhibitor,
+#pulseaudio {
+    font-size: 14px;
+}
+
+#backlight,
+#custom-notification {
   font-size: 12px;
 }
 
