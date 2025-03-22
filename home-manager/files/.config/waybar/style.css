@@ -18,9 +18,13 @@
   border: none;
   border-radius: 0px;
   font-family: "Hasklug Nerd Font";
-  font-size: 12px;
+  font-size: 14px;
   min-height: 0;
   color: @white;
+}
+
+window#waybar {
+  background: @dark;
 }
 
 #backlight,
@@ -34,29 +38,14 @@
   margin: 0;
 }
 
-window#waybar {
-  background: @dark;
+#backlight,
+#notification {
+  font-size: 12px;
 }
 
 #clock,
 #workspaces {
   font-weight: 800;
-}
-
-#tray {
-  padding: 0 8px;
-  margin: 0;
-  color: @white;
-}
-
-#workspaces button label {
-  color: @secondary;
-}
-#workspaces button.focused label {
-  color: @dark;
-}
-#workspaces button.focused {
-  background: @secondary;
 }
 
 #clock {
@@ -67,3 +56,19 @@ window#waybar {
 #pulseaudio.muted {
   color: @primary;
 }
+
+#workspaces button label {
+    color: @secondary;
+  }
+  #workspaces button.focused label {
+    color: @dark;
+  }
+  #workspaces button.focused {
+    background: @secondary;
+  }
+
+#tray {
+    padding: 0 8px;
+    margin: 0;
+    color: @white;
+  }
