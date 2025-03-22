@@ -14,9 +14,9 @@
 /*
 :root {
   --dark: rgb(29, 32, 33);
+  --hint: rgb(250, 189, 47);
   --primary: rgb(253, 71, 47);
   --secondary: rgb(104, 157, 106);
-  --hint: rgb(250, 189, 47);
 }
 */
 
@@ -30,7 +30,7 @@
 }
 
 window#waybar {
-  background: var(--dark);
+  background: rgb(29, 32, 33) /* var(--dark) */;
 }
 
 #backlight,
@@ -63,21 +63,21 @@ window#waybar {
 
 #clock {
   font-family: "Hasklug Nerd Font Mono";
-  color: var(--hint);
+  color: rgb(250, 189, 47) /* var(--hint) */;
 }
 
 #pulseaudio.muted {
-  color: var(--primary);
+  color: rgb(253, 71, 47) /* var(--primary) */;
 }
 
 #workspaces button label {
-  color: var(--secondary);
+  color: rgb(104, 157, 106) /* var(--secondary) */;
 }
 #workspaces button.focused label {
-  color: var(--dark);
+  color: rgb(29, 32, 33) /* var(--dark) */;
 }
 #workspaces button.focused {
-  background: var(--secondary);
+  background: rgb(104, 157, 106) /* var(--secondary) */;
 }
 
 #tray {

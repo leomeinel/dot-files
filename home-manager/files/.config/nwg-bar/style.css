@@ -19,7 +19,7 @@
 */
 
 window {
-  background-color: var(--dark);
+  background-color: rgb(29, 32, 33) /* var(--dark) */;
 }
 
 /* Outer bar container, takes all the window width/height */
@@ -29,7 +29,7 @@ window {
 
 /* Inner bar container, surrounds buttons */
 #inner-box {
-  background-color: var(--dark);
+  background-color: rgb(29, 32, 33) /* var(--dark) */;
   border-radius: 10px;
   border-style: none;
   border-width: 1px;
@@ -52,5 +52,5 @@ button {
 }
 
 button:hover {
-  background-color: var(--secondary);
+  background-color: rgb(104, 157, 106) /* var(--secondary) */;
 }

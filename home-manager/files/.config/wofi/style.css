@@ -14,8 +14,8 @@
 /*
 :root {
   --dark: rgb(29, 32, 33);
-  --secondary: rgb(104, 157, 106);
   --dark2: ​rgb(40, 44, 46);
+  --secondary: rgb(104, 157, 106);
 }
 */
 
@@ -27,15 +27,15 @@
 }
 
 window {
-  background-color: var(--dark);
+  background-color: rgb(29, 32, 33) /* var(--dark) */;
   color: white;
 }
 
 #input {
-  background-color: var(--dark2);
-  color: var(--dark);
+  background-color: ​rgb(40, 44, 46)/* var(--dark2) */;
+  color: rgb(29, 32, 33) /* var(--dark) */;
 }
 
 #entry:selected {
-  background-color: var(--secondary);
+  background-color: rgb(104, 157, 106) /* var(--secondary) */;
 }
