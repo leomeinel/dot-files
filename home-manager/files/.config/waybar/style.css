@@ -35,17 +35,6 @@ window#waybar {
 
 #backlight,
 #battery,
-#clock,
-#custom-notification,
-#idle_inhibitor,
-#pulseaudio,
-#tray {
-  padding: 0 8px;
-  margin: 0;
-}
-
-#backlight,
-#battery,
 #idle_inhibitor,
 #pulseaudio {
   font-size: 14px;
@@ -78,13 +67,4 @@ window#waybar {
 }
 #workspaces button.focused {
   background: rgb(104, 157, 106) /* var(--secondary) */;
-}
-
-#tray {
-  padding: 0 8px;
-  margin: 0;
-}
-
-#tray * {
-  color: white;
 }
