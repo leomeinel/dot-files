@@ -17,7 +17,7 @@
 * {
   border: none;
   border-radius: 0px;
-  font-family: "Hasklig";
+  font-family: "Hasklug Nerd Font Mono";
   font-size: 12px;
   min-height: 0;
   color: @white;
@@ -47,7 +47,7 @@ window#waybar {
 }
 
 #clock {
-  font-family: "Nerd Font Symbols Mono";
+  font-family: "Hasklug Nerd Font Mono";
   color: @hint;
 }
 
@@ -72,5 +72,5 @@ window#waybar {
 #idle_inhibitor,
 #pulseaudio,
 #tray {
-  font-family: "Font Awesome 6 Free";
+  font-family: "Hasklug Nerd Font Mono";
 }

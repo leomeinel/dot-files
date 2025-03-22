@@ -18,8 +18,8 @@
   gtk = {
     enable = true;
     font = with pkgs; {
-      package = noto-fonts;
-      name = "Noto Sans";
+      package = nerdfonts;
+      name = "Hasklug Nerd Font Mono";
       size = 10;
     };
     iconTheme = with pkgs; {
