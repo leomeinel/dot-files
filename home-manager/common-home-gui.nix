@@ -66,6 +66,7 @@
         # Reset flatpak override to make sure that no unnecessary overrides are added
         run /usr/bin/flatpak override -u --reset
         # Workaround for using the correct font in all applications
+        run ln -sfn ${config.xdg.stateHome}/nix/profile/share/fonts ${config.xdg.dataHome}/fonts
         run /usr/bin/flatpak override -u --filesystem=xdg-data/fonts:ro --filesystem=${config.xdg.stateHome}/nix/profile/share/fonts:ro --filesystem=${pkgs.nerdfonts}/share/fonts:ro
         # Workaround for using the correct icons in all applications
         run /usr/bin/flatpak override -u --filesystem=xdg-data/icons:ro --filesystem=${config.xdg.stateHome}/nix/profile/share/icons:ro --filesystem=${pkgs.papirus-icon-theme}/share/icons:ro --filesystem=${pkgs.phinger-cursors}/share/icons:ro
