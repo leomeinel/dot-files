@@ -17,9 +17,9 @@
   # QT options
   qt = with pkgs; {
     enable = true;
-    platformTheme.name = "gtk";
+    platformTheme.name = "gtk3";
     style = {
-      name = "adwaita-dark";
+      name = "gtk2";
       package = adwaita-qt;
     };
   };
