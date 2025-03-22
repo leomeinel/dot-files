@@ -9,6 +9,7 @@
 */
 
 {
+  pkgs,
   ...
 }:
 
@@ -25,6 +26,7 @@
         source = ../../files/.config/eclipse-style-guides/java.xml;
       };
       # Kvantum
+      "Kvantum/ArcDark".source = "${pkgs.arc-kde-theme}/share/Kvantum/ArcDark";
       "Kvantum/kvantum.kvconfig" = {
         source = ../../files/.config/Kvantum/kvantum.kvconfig;
       };
@@ -34,10 +36,6 @@
       };
       "nwg-bar/style.css" = {
         source = ../../files/.config/nwg-bar/style.css;
-      };
-      # qt6ct
-      "qt6ct/qt6ct.conf" = {
-        source = ../../files/.config/qt6ct/qt6ct.conf;
       };
       # r
       "r/.Renviron" = {
