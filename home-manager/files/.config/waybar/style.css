@@ -14,7 +14,7 @@
 /*
 :root {
   --dark: rgb(29, 32, 33);
-  --hint: rgb(62, 170, 189);
+  --hint: rgb(240, 240, 80);
   --primary: rgb(240, 97, 78);
   --secondary: rgb(104, 157, 106);
 }
@@ -52,7 +52,7 @@ window#waybar {
 
 #clock {
   font-family: "Hasklug Nerd Font Mono";
-  color: rgb(62, 170, 189) /* var(--hint) */;
+  color: rgb(240, 240, 80) /* var(--hint) */;
 }
 
 #pulseaudio.muted {
