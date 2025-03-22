@@ -8,7 +8,6 @@
  * -----
  */
 
-@define-color white #ebdbb2;
 @define-color dark #1d2021;
 @define-color primary #fd472f;
 @define-color secondary #689d6a;
@@ -20,7 +19,7 @@
   font-family: "Hasklug Nerd Font";
   font-size: 14px;
   min-height: 0;
-  color: @white;
+  color: white;
 }
 
 window#waybar {
@@ -77,9 +76,9 @@ window#waybar {
 #tray {
   padding: 0 8px;
   margin: 0;
-  color: @white;
+  color: white;
 }
 
 #tray * {
-  color: @white;
+  color: white;
 }

@@ -8,7 +8,6 @@
  * -----
  */
 
-@define-color white #ebdbb2;
 @define-color dark #1d2021;
 @define-color secondary #689d6a;
 
@@ -27,7 +26,7 @@ window {
   border-radius: 10px;
   border-style: none;
   border-width: 1px;
-  border-color: @white;
+  border-color: white;
   padding: 5px;
   margin: 5px;
 }
