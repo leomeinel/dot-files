@@ -13,6 +13,7 @@
 }:
 
 {
+  # pointerCursor options
   home.pointerCursor = with pkgs; {
     name = "phinger-cursors-dark";
     package = phinger-cursors;

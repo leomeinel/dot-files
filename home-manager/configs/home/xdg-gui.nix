@@ -13,6 +13,7 @@
 }:
 
 {
+  # XDG options
   xdg = {
     configFile = {
       # alacritty

@@ -13,6 +13,7 @@
 }:
 
 {
+  # Fontconfig options
   fonts.fontconfig = {
     enable = true;
     defaultFonts = {

@@ -14,7 +14,7 @@
 }:
 
 {
-  # Files
+  # File options
   home.file = {
     "${config.home.homeDirectory}/.bash_aliases" = {
       source = ../../files/.bash_aliases;

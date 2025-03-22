@@ -15,8 +15,8 @@
   ...
 }:
 
-# Vscode options
 {
+  # Programs options
   programs = {
     vscode =
       let

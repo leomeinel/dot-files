@@ -13,8 +13,8 @@
   ...
 }:
 
-# Vscode options
 {
+  # Programs options
   programs = {
     home-manager.enable = true;
     neovim =
