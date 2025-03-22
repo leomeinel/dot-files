@@ -17,7 +17,7 @@
 * {
   border: none;
   border-radius: 0px;
-  font-family: "Hasklug Nerd Font Mono";
+  font-family: "Hasklug Nerd Font";
   font-size: 12px;
   min-height: 0;
   color: @white;
@@ -72,5 +72,5 @@ window#waybar {
 #idle_inhibitor,
 #pulseaudio,
 #tray {
-  font-family: "Hasklug Nerd Font Mono";
+  font-family: "Hasklug Nerd Font";
 }

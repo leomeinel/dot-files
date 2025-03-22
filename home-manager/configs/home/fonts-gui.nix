@@ -16,10 +16,10 @@
   fonts.fontconfig = {
     enable = true;
     defaultFonts = {
-      emoji = [ "Hasklug Nerd Font Mono" ];
+      emoji = [ "Hasklug Nerd Font" ];
       monospace = [ "Hasklug Nerd Font Mono" ];
-      sansSerif = [ "Hasklug Nerd Font Mono" ];
-      serif = [ "Hasklug Nerd Font Mono" ];
+      sansSerif = [ "Hasklug Nerd Font" ];
+      serif = [ "Hasklug Nerd Font" ];
     };
   };
 }

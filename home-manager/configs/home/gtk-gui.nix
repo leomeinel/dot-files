@@ -19,7 +19,7 @@
     enable = true;
     font = with pkgs; {
       package = nerdfonts;
-      name = "Hasklug Nerd Font Mono";
+      name = "Hasklug Nerd Font";
       size = 10;
     };
     iconTheme = with pkgs; {
