@@ -36,7 +36,8 @@
 
 .notification-row:focus .notification,
 .notification-row:hover .notification {
-  box-shadow: 0px 0px 0px 3px rgb(104, 157, 106) /* var(--secondary) */;
+  box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 50%) /* color(black, alpha(50%)) */
+    0px 0px 0px 3px rgb(104, 157, 106) /* var(--secondary) */;
 }
 
 .control-center .notification {
@@ -51,7 +52,7 @@
   transition: all 200ms ease;
   border-radius: 12px;
   margin: 6px 6px;
-  box-shadow: 0 1px 3px 1px color(black, alpha(50%));
+  box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 50%) /* color(black, alpha(50%)) */;
   padding: 0;
 }
 
@@ -62,7 +63,7 @@
 }
 
 .close-button {
-  background: color((rgb(235, 219, 178) /* var(--light) */, alpha(10%)));
+  background: rgba(235, 219, 178, 10%) /* color((var(--light), alpha(10%))) */;
   color: white;
   text-shadow: none;
   padding: 0;
@@ -77,7 +78,7 @@
 
 .close-button:hover {
   box-shadow: none;
-  background: color((rgb(235, 219, 178) /* var(--light) */, alpha(15%)));
+  background: rgba(235, 219, 178, 15%) /* color((var(--light), alpha(15%))) */;
   transition: all 0.15s ease-in-out;
   border: none;
 }
@@ -87,8 +88,9 @@
   padding: 4px;
   margin: 0;
   box-shadow: none;
-  background: color((​rgb(40, 44, 46) /* var(--dark2) */, alpha(80%)));
-  border: 1px solid color((rgb(235, 219, 178) /* var(--light) */, alpha(15%)));
+  background: ​rgba(40, 44, 46, 80%) /* color((var(--dark2), alpha(80%))) */;
+  border: 1px solid rgba(235, 219, 178, 15%)
+    /* color((var(--light), alpha(15%))) */;
   color: white;
   transition: all 200ms ease;
 }
@@ -96,7 +98,7 @@
 .notification-default-action:hover,
 .notification-action:hover {
   -gtk-icon-effect: none;
-  background: color((rgb(51, 55, 58) /* var(--dark3) */, alpha(80%)));
+  background: rgba(51, 55, 58, 80%) /* color((var(--dark3), alpha(80%))) */;
 }
 
 .notification-default-action {
@@ -122,8 +124,8 @@
 
 .notification-action:last-child {
   border-bottom-right-radius: 10px;
-  border-right: 1px solid
-    color((rgb(235, 219, 178) /* var(--light) */, alpha(15%)));
+  border-right: 1px solid rgba(235, 219, 178, 15%)
+    /* color((var(--light), alpha(15%))) */;
 }
 
 .body-image {
@@ -158,14 +160,13 @@
 }
 
 .control-center {
-  background: color((rgb(29, 32, 33) /* var(--dark) */, alpha(80%)));
+  background: rgba(29, 32, 33, 80%) /* color((var(--dark), alpha(80%))) */;
   border-radius: 12px;
   background-clip: border-box;
   padding: 4px;
-  box-shadow:
-    0 0 0 1px color(black, alpha(30%)),
-    0 1px 3px 1px color(black, alpha(70%)),
-    0 2px 6px 2px color(black, alpha(30%));
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 30%) /* color(black, alpha(30%)), */ 0 1px
+    3px 1px rgba(0, 0, 0, 70%) /* color(black, alpha(70%)), */ 0 2px 6px 2px
+    rgba(0, 0, 0, 30%); /* color(black, alpha(30%)) */
 }
 
 .control-center-list {
@@ -196,13 +197,14 @@
   font-size: initial;
   color: white;
   text-shadow: none;
-  background: color((​rgb(40, 44, 46) /* var(--dark2) */, alpha(80%)));
-  border: 1px solid color((rgb(235, 219, 178) /* var(--light) */, alpha(15%)));
+  background: ​rgba(40, 44, 46, 80%) /* color((var(--dark2), alpha(80%))) */;
+  border: 1px solid rgba(235, 219, 178, 15%)
+    /* color((var(--light), alpha(15%))) */;
   box-shadow: none;
   border-radius: 12px;
 }
 .widget-title > button:hover {
-  background: color((rgb(51, 55, 58) /* var(--dark3) */, alpha(80%)));
+  background: rgba(51, 55, 58, 80%) /* color((var(--dark3), alpha(80%))) */;
 }
 
 .widget-dnd {
@@ -212,15 +214,16 @@
 .widget-dnd > switch {
   font-size: initial;
   border-radius: 12px;
-  background: color((​rgb(40, 44, 46) /* var(--dark2) */, alpha(80%)));
-  border: 1px solid color((rgb(235, 219, 178) /* var(--light) */, alpha(15%)));
+  background: ​rgba(40, 44, 46, 80%) /* color((var(--dark2), alpha(80%))) */;
+  border: 1px solid rgba(235, 219, 178, 15%)
+    /* color((var(--light), alpha(15%))) */;
   box-shadow: none;
 }
 .widget-dnd > switch:checked {
   background: rgb(104, 157, 106) /* var(--secondary) */;
 }
 .widget-dnd > switch slider {
-  background: color((rgb(51, 55, 58) /* var(--dark3) */, alpha(80%)));
+  background: rgba(51, 55, 58, 80%) /* color((var(--dark3), alpha(80%))) */;
   border-radius: 12px;
 }
 
@@ -234,7 +237,8 @@
 .widget-mpris-player {
   padding: 8px;
   margin: 8px;
-  background-color: color((​rgb(40, 44, 46) /* var(--dark2) */, alpha(80%)));
+  background-color: ​rgba(40, 44, 46, 80%)
+    /* color((var(--dark2), alpha(80%))) */;
   border-radius: 12px;
 }
 .widget-mpris-title {
@@ -249,16 +253,17 @@
   padding: 8px;
   margin: 8px;
   border-radius: 12px;
-  background-color: color((​rgb(40, 44, 46) /* var(--dark2) */, alpha(80%)));
+  background-color: ​rgba(40, 44, 46, 80%)
+    /* color((var(--dark2), alpha(80%))) */;
 }
 
 .widget-buttons-grid > flowbox > flowboxchild > button {
-  background: color((​rgb(40, 44, 46) /* var(--dark2) */, alpha(80%)));
+  background: ​rgba(40, 44, 46, 80%) /* color((var(--dark2), alpha(80%))) */;
   border-radius: 12px;
 }
 
 .widget-buttons-grid > flowbox > flowboxchild > button:hover {
-  background: color((rgb(51, 55, 58) /* var(--dark3) */, alpha(80%)));
+  background: rgba(51, 55, 58, 80%) /* color((var(--dark3), alpha(80%))) */;
 }
 
 .widget-menubar > box > .menu-button-bar > button {
@@ -272,14 +277,16 @@
 }
 
 .widget-volume {
-  background-color: color((​rgb(40, 44, 46) /* var(--dark2) */, alpha(80%)));
+  background-color: ​rgba(40, 44, 46, 80%)
+    /* color((var(--dark2), alpha(80%))) */;
   padding: 8px;
   margin: 8px;
   border-radius: 12px;
 }
 
 .widget-backlight {
-  background-color: color((​rgb(40, 44, 46) /* var(--dark2) */, alpha(80%)));
+  background-color: ​rgba(40, 44, 46, 80%)
+    /* color((var(--dark2), alpha(80%))) */;
   padding: 8px;
   margin: 8px;
   border-radius: 12px;
@@ -293,11 +300,12 @@
   font-size: initial;
   color: white;
   text-shadow: none;
-  background: color((​rgb(40, 44, 46) /* var(--dark2) */, alpha(80%)));
-  border: 1px solid color((rgb(235, 219, 178) /* var(--light) */, alpha(15%)));
+  background: ​rgba(40, 44, 46, 80%) /* color((var(--dark2), alpha(80%))) */;
+  border: 1px solid rgba(235, 219, 178, 15%)
+    /* color((var(--light), alpha(15%))) */;
   box-shadow: none;
   border-radius: 12px;
 }
 .widget-inhibitors > button:hover {
-  background: color((rgb(51, 55, 58) /* var(--dark3) */, alpha(80%)));
+  background: rgba(51, 55, 58, 80%) /* color((var(--dark3), alpha(80%))) */;
 }
