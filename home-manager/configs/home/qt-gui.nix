@@ -9,18 +9,14 @@
 */
 
 {
-  pkgs,
   ...
 }:
 
 {
   # QT options
-  qt = with pkgs; {
+  qt = {
     enable = true;
-    platformTheme.name = "gtk3";
-    style = {
-      name = "gtk2";
-      package = adwaita-qt;
-    };
+    platformTheme.name = "qtct";
+    style.name = "kvantum";
   };
 }
