@@ -46,7 +46,6 @@
       in
       [
         cmake-format
-        nerdfonts
         nixd
         nixfmt-rfc-style
         ocrmypdf
