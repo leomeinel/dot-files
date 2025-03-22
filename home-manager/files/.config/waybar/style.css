@@ -9,10 +9,10 @@
  */
 
 :root {
-  --dark: #1d2021;
-  --primary: #fd472f;
-  --secondary: #689d6a;
-  --hint: #fabd2f;
+  --dark: rgb(29, 32, 33);
+  --primary: rgb(253, 71, 47);
+  --secondary: rgb(104, 157, 106);
+  --hint: rgb(250, 189, 47);
 }
 
 * {

@@ -9,11 +9,11 @@
  */
 
 :root {
-  --light: #ebdbb2;
-  --dark: #1d2021;
-  --dark2: ​#282c2e;
-  --dark3: #33373a;
-  --secondary: #689d6a;
+  --light: rgb(235, 219, 178);
+  --dark: rgb(29, 32, 33);
+  --dark2: ​rgb(40, 44, 46);
+  --dark3: rgb(51, 55, 58);
+  --secondary: rgb(104, 157, 106);
 }
 
 .notification-row {

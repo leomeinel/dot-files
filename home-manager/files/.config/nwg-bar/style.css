@@ -9,8 +9,8 @@
  */
 
 :root {
-  --dark: #1d2021;
-  --secondary: #689d6a;
+  --dark: rgb(29, 32, 33);
+  --secondary: rgb(104, 157, 106);
 }
 
 window {
