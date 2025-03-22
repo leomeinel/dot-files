@@ -8,11 +8,13 @@
  * -----
  */
 
-@define-color dark #1d2021;
-@define-color secondary #689d6a;
+:root {
+  --dark: #1d2021;
+  --secondary: #689d6a;
+}
 
 window {
-  background-color: @dark;
+  background-color: var(--dark);
 }
 
 /* Outer bar container, takes all the window width/height */
@@ -22,7 +24,7 @@ window {
 
 /* Inner bar container, surrounds buttons */
 #inner-box {
-  background-color: @dark;
+  background-color: var(--dark);
   border-radius: 10px;
   border-style: none;
   border-width: 1px;
@@ -45,5 +47,5 @@ button {
 }
 
 button:hover {
-  background-color: @secondary;
+  background-color: var(--secondary);
 }

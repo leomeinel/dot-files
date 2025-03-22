@@ -8,9 +8,11 @@
  * -----
  */
 
-@define-color dark #1d2021;
-@define-color dark2 #282c2e;
-@define-color secondary #689d6a;
+:root {
+  --dark: #1d2021;
+  --dark2: #282c2e;
+  --secondary: #689d6a;
+}
 
 * {
   border-radius: 3px;
@@ -20,15 +22,15 @@
 }
 
 window {
-  background-color: @dark;
+  background-color: var(--dark);
   color: white;
 }
 
 #input {
-  background-color: @dark2;
-  color: @dark;
+  background-color: var(--dark2);
+  color: var(--dark);
 }
 
 #entry:selected {
-  background-color: @secondary;
+  background-color: var(--secondary);
 }

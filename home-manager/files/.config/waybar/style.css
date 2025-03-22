@@ -8,10 +8,12 @@
  * -----
  */
 
-@define-color dark #1d2021;
-@define-color primary #fd472f;
-@define-color secondary #689d6a;
-@define-color hint #fabd2f;
+:root {
+  --dark: #1d2021;
+  --primary: #fd472f;
+  --secondary: #689d6a;
+  --hint: #fabd2f;
+}
 
 * {
   border: none;
@@ -23,7 +25,7 @@
 }
 
 window#waybar {
-  background: @dark;
+  background: var(--dark);
 }
 
 #backlight,
@@ -56,21 +58,21 @@ window#waybar {
 
 #clock {
   font-family: "Hasklug Nerd Font Mono";
-  color: @hint;
+  color: var(--hint);
 }
 
 #pulseaudio.muted {
-  color: @primary;
+  color: var(--primary);
 }
 
 #workspaces button label {
-  color: @secondary;
+  color: var(--secondary);
 }
 #workspaces button.focused label {
-  color: @dark;
+  color: var(--dark);
 }
 #workspaces button.focused {
-  background: @secondary;
+  background: var(--secondary);
 }
 
 #tray {
