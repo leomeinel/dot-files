@@ -73,12 +73,17 @@
       '';
     };
   };
-  nix.settings = {
-    auto-optimise-store = true;
-    experimental-features = [
-      "nix-command"
-      "flakes"
-    ];
-    use-xdg-base-directories = true;
+
+  # Nix options
+  nix = with pkgs; {
+    package = nix;
+    settings = {
+      auto-optimise-store = true;
+      experimental-features = [
+        "nix-command"
+        "flakes"
+      ];
+      use-xdg-base-directories = true;
+    };
   };
 }
