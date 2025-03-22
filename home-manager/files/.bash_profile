@@ -73,8 +73,6 @@ if [[ -z "${WAYLAND_DISPLAY}" ]] && [[ "${XDG_VTNR}" -eq 1 ]]; then
     export PDF_VIEWER=/usr/bin/evince
     export QT_AUTO_SCREEN_SCALE_FACTOR=1
     export QT_QPA_PLATFORM="wayland;xcb"
-    export QT_QPA_PLATFORMTHEME=qt6ct
-    export QT_STYLE_OVERRIDE=kvantum
     export QT_WAYLAND_DISABLE_WINDOWDECORATION=1
     export TERMINAL=/usr/bin/alacritty
     export WLR_NO_HARDWARE_CURSORS=1
