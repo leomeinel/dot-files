@@ -8,11 +8,16 @@
  * -----
  */
 
+/* FIXME: Reuse whenever support is implemented. GTK4 CSS apparently support this https://docs.gtk.org/gtk4/css-properties.html
+          Not supported by GTK3 CSS, not sure why. See: https://docs.gtk.org/gtk3/css-overview.html#color and https://docs.gtk.org/gtk3/css-properties.html
+*/
+/*
 :root {
   --dark: rgb(29, 32, 33);
   --secondary: rgb(104, 157, 106);
   --dark2: ​rgb(40, 44, 46);
 }
+*/
 
 * {
   border-radius: 3px;

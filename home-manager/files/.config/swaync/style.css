@@ -8,6 +8,10 @@
  * -----
  */
 
+/* FIXME: Reuse whenever support is implemented. GTK4 CSS apparently support this https://docs.gtk.org/gtk4/css-properties.html
+          Not supported by GTK3 CSS, not sure why. See: https://docs.gtk.org/gtk3/css-overview.html#color and https://docs.gtk.org/gtk3/css-properties.html
+*/
+/*
 :root {
   --light: rgb(235, 219, 178);
   --dark: rgb(29, 32, 33);
@@ -15,6 +19,7 @@
   --dark3: rgb(51, 55, 58);
   --secondary: rgb(104, 157, 106);
 }
+*/
 
 .notification-row {
   transition: all 200ms ease;
@@ -31,7 +36,6 @@
 
 .notification-row:focus .notification,
 .notification-row:hover .notification {
-  box-shadow: 0 1px 3px 1px rgba(black, 0.5);
   box-shadow: 0px 0px 0px 3px var(--secondary);
 }
 
@@ -40,14 +44,14 @@
 }
 
 .control-center .notification-row {
-  opacity: 0.5;
+  opacity: 50%;
 }
 
 .notification {
   transition: all 200ms ease;
   border-radius: 12px;
   margin: 6px 6px;
-  box-shadow: 0 1px 3px 1px rgba(black, 0.5);
+  box-shadow: 0 1px 3px 1px color(black, alpha(50%));
   padding: 0;
 }
 
@@ -58,7 +62,7 @@
 }
 
 .close-button {
-  background: rgba((var(--light), 0.1));
+  background: color((var(--light), alpha(10%)));
   color: white;
   text-shadow: none;
   padding: 0;
@@ -73,7 +77,7 @@
 
 .close-button:hover {
   box-shadow: none;
-  background: rgba((var(--light), 0.15));
+  background: color((var(--light), alpha(15%)));
   transition: all 0.15s ease-in-out;
   border: none;
 }
@@ -83,8 +87,8 @@
   padding: 4px;
   margin: 0;
   box-shadow: none;
-  background: rgba((var(--dark2), 0.8));
-  border: 1px solid rgba((var(--light), 0.15));
+  background: color((var(--dark2), alpha(80%)));
+  border: 1px solid color((var(--light), alpha(15%)));
   color: white;
   transition: all 200ms ease;
 }
@@ -92,7 +96,7 @@
 .notification-default-action:hover,
 .notification-action:hover {
   -gtk-icon-effect: none;
-  background: rgba((var(--dark3), 0.8));
+  background: color((var(--dark3), alpha(80%)));
 }
 
 .notification-default-action {
@@ -118,7 +122,7 @@
 
 .notification-action:last-child {
   border-bottom-right-radius: 10px;
-  border-right: 1px solid rgba((var(--light), 0.15));
+  border-right: 1px solid color((var(--light), alpha(15%)));
 }
 
 .body-image {
@@ -153,14 +157,14 @@
 }
 
 .control-center {
-  background: rgba((var(--dark), 0.8));
+  background: color((var(--dark), alpha(80%)));
   border-radius: 12px;
   background-clip: border-box;
   padding: 4px;
   box-shadow:
-    0 0 0 1px rgba(black, 0.3),
-    0 1px 3px 1px rgba(black, 0.7),
-    0 2px 6px 2px rgba(black, 0.3);
+    0 0 0 1px color(black, alpha(30%)),
+    0 1px 3px 1px color(black, alpha(70%)),
+    0 2px 6px 2px color(black, alpha(30%));
 }
 
 .control-center-list {
@@ -168,7 +172,7 @@
 }
 
 .control-center-list-placeholder {
-  opacity: 0.5;
+  opacity: 50%;
 }
 
 .floating-notifications {
@@ -191,13 +195,13 @@
   font-size: initial;
   color: white;
   text-shadow: none;
-  background: rgba((var(--dark2), 0.8));
-  border: 1px solid rgba((var(--light), 0.15));
+  background: color((var(--dark2), alpha(80%)));
+  border: 1px solid color((var(--light), alpha(15%)));
   box-shadow: none;
   border-radius: 12px;
 }
 .widget-title > button:hover {
-  background: rgba((var(--dark3), 0.8));
+  background: color((var(--dark3), alpha(80%)));
 }
 
 .widget-dnd {
@@ -207,15 +211,15 @@
 .widget-dnd > switch {
   font-size: initial;
   border-radius: 12px;
-  background: rgba((var(--dark2), 0.8));
-  border: 1px solid rgba((var(--light), 0.15));
+  background: color((var(--dark2), alpha(80%)));
+  border: 1px solid color((var(--light), alpha(15%)));
   box-shadow: none;
 }
 .widget-dnd > switch:checked {
   background: var(--secondary);
 }
 .widget-dnd > switch slider {
-  background: rgba((var(--dark3), 0.8));
+  background: color((var(--dark3), alpha(80%)));
   border-radius: 12px;
 }
 
@@ -229,7 +233,7 @@
 .widget-mpris-player {
   padding: 8px;
   margin: 8px;
-  background-color: rgba((var(--dark2), 0.8));
+  background-color: color((var(--dark2), alpha(80%)));
   border-radius: 12px;
 }
 .widget-mpris-title {
@@ -244,16 +248,16 @@
   padding: 8px;
   margin: 8px;
   border-radius: 12px;
-  background-color: rgba((var(--dark2), 0.8));
+  background-color: color((var(--dark2), alpha(80%)));
 }
 
 .widget-buttons-grid > flowbox > flowboxchild > button {
-  background: rgba((var(--dark2), 0.8));
+  background: color((var(--dark2), alpha(80%)));
   border-radius: 12px;
 }
 
 .widget-buttons-grid > flowbox > flowboxchild > button:hover {
-  background: rgba((var(--dark3), 0.8));
+  background: color((var(--dark3), alpha(80%)));
 }
 
 .widget-menubar > box > .menu-button-bar > button {
@@ -267,14 +271,14 @@
 }
 
 .widget-volume {
-  background-color: rgba((var(--dark2), 0.8));
+  background-color: color((var(--dark2), alpha(80%)));
   padding: 8px;
   margin: 8px;
   border-radius: 12px;
 }
 
 .widget-backlight {
-  background-color: rgba((var(--dark2), 0.8));
+  background-color: color((var(--dark2), alpha(80%)));
   padding: 8px;
   margin: 8px;
   border-radius: 12px;
@@ -288,11 +292,11 @@
   font-size: initial;
   color: white;
   text-shadow: none;
-  background: rgba((var(--dark2), 0.8));
-  border: 1px solid rgba((var(--light), 0.15));
+  background: color((var(--dark2), alpha(80%)));
+  border: 1px solid color((var(--light), alpha(15%)));
   box-shadow: none;
   border-radius: 12px;
 }
 .widget-inhibitors > button:hover {
-  background: rgba((var(--dark3), 0.8));
+  background: color((var(--dark3), alpha(80%)));
 }
