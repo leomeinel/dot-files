@@ -23,18 +23,18 @@
   "idle_inhibitor": {
     "format": "{icon}",
     "format-icons": {
-      "activated": "🏀",
-      "deactivated": "🍪"
+      "activated": "󱐋",
+      "deactivated": "󱐌"
     }
   },
   "pulseaudio": {
     "format": "{icon}",
-    "format-muted": "🔈️",
+    "format-muted": "󰸈",
     "format-icons": {
       "default": [
-        "🔈️",
-        "🔉",
-        "🔊"
+        "󰕿",
+        "󰖀",
+        "󰕾"
       ]
     },
     "on-click": "/usr/local/bin/pwvucontrol"
@@ -42,8 +42,8 @@
   "backlight": {
     "format": "{percent}% {icon}",
     "format-icons": [
-      "",
-      ""
+      "󰌶",
+      "󰌵"
     ]
   },
   "battery": {
@@ -53,15 +53,20 @@
       "critical": 15
     },
     "format": "{capacity}% {icon}",
-    "format-charging": "{capacity}% ",
-    "format-plugged": "{capacity}% ",
+    "format-charging": "{capacity}% 󰂄",
+    "format-plugged": "{capacity}% 󰚥",
     "format-full": "",
     "format-icons": [
-      "",
-      "",
-      "",
-      "",
-      ""
+      "󰁺",
+      "󰁻",
+      "󰁼",
+      "󰁽",
+      "󰁾",
+      "󰁿",
+      "󰂀",
+      "󰂁",
+      "󰂂",
+      "󰁹"
     ]
   },
   "tray": {
@@ -75,14 +80,14 @@
     "tooltip": false,
     "format": "{icon}",
     "format-icons": {
-      "notification": "<span foreground='red'><sup></sup></span>",
-      "none": "",
-      "dnd-notification": "<span foreground='red'><sup></sup></span>",
-      "dnd-none": "",
-      "inhibited-notification": "<span foreground='red'><sup></sup></span>",
-      "inhibited-none": "",
-      "dnd-inhibited-notification": "<span foreground='red'><sup></sup></span>",
-      "dnd-inhibited-none": ""
+      "notification": "󰂜<span foreground='red'><sup>󰀨</sup></span>",
+      "none": "󰂜",
+      "dnd-notification": "󰪑<span foreground='red'><sup>󰀨</sup></span>",
+      "dnd-none": "󰪑",
+      "inhibited-notification": "󰂜<span foreground='red'><sup>󰀨</sup></span>",
+      "inhibited-none": "󰂜",
+      "dnd-inhibited-notification": "󰪑<span foreground='red'><sup>󰀨</sup></span>",
+      "dnd-inhibited-none": "󰪑"
     },
     "return-type": "json",
     "exec-if": "which swaync-client",
