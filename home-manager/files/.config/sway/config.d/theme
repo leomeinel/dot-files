@@ -1,6 +1,6 @@
 # Colors
-set $blue1   #342f73
-set $blue2   #99a2ea
+set $purple  #342f73
+set $purple2 #99a2ea
 set $dark    #1d2021
 set $dark2   #282c2e
 set $light   #ebdbb2
@@ -11,17 +11,17 @@ set $focused_bgcolor $white
 set $focused_textcolor $dark
 set $focused_indicator $primary
 
-set $inactive_bgcolor $blue1
+set $inactive_bgcolor $purple
 set $inactive_textcolor $white
-set $inactive_indicator $blue2
+set $inactive_indicator $purple2
 
 set $unfocused_bgcolor $dark2
 set $unfocused_textcolor $light
-set $unfocused_indicator $blue1
+set $unfocused_indicator $purple
 
 set $urgent_bgcolor $primary
 set $urgent_textcolor $dark2
-set $urgent_indicator $blue2
+set $urgent_indicator $purple2
 
 # Gaps
 gaps inner 0
