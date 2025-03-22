@@ -9,7 +9,6 @@
 */
 
 {
-  pkgs,
   ...
 }:
 
@@ -24,11 +23,6 @@
       # eclipse-style-guides
       "eclipse-style-guides/java.xml" = {
         source = ../../files/.config/eclipse-style-guides/java.xml;
-      };
-      # Kvantum
-      "Kvantum/ArcDark".source = "${pkgs.arc-kde-theme}/share/Kvantum/ArcDark";
-      "Kvantum/kvantum.kvconfig" = {
-        source = ../../files/.config/Kvantum/kvantum.kvconfig;
       };
       # nwg-bar
       "nwg-bar/bar.json" = {
