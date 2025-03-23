@@ -94,7 +94,7 @@ window#waybar {
 
 #tray {
   padding-left: 10px;
-  padding-right: 5px;
+  padding-right: 0px;
 }
 
 #workspaces button label {
