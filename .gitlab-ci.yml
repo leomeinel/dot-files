@@ -7,7 +7,7 @@ regen-codium-extensions:
   stage: deploy
   when: always
   script:
-    - apk add --update --no-cache bash curl gawk git grep openssl sed xz
+    - apk add --update --no-cache bash curl gawk git grep openssl sed shadow sudo xz
     - chmod 755 ./home-manager/codium-extensions/.ci-update.sh
     - ./home-manager/codium-extensions/.ci-update.sh
     - git config user.name "${MAIN_BOT_USERNAME}"
