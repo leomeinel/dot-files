@@ -34,21 +34,19 @@ window#waybar {
 }
 
 #tray {
-  padding-left: 6px;
-  padding-right: 6px;
+  padding-left: 10px;
+  padding-right: 5px;
 }
 
 #battery,
 #custom-notification,
 #idle_inhibitor,
-#network {
+#network,
+#pulseaudio,
+#bluetooth,
+#clock {
   padding-left: 10px;
   padding-right: 10px;
-}
-
-#bluetooth {
-  padding-left: 6px;
-  padding-right: 6px;
 }
 
 #clock,
@@ -61,9 +59,35 @@ window#waybar {
   color: rgb(240, 240, 80) /* var(--hint) */;
 }
 
-#pulseaudio {
-  padding-left: 6px;
-  padding-right: 10px;
+#battery.warning {
+  color: rgb(240, 240, 80) /* var(--hint) */;
+}
+
+#battery.critical {
+  color: rgb(240, 97, 78) /* var(--primary) */;
+}
+
+#network.ethernet,
+#network.wifi {
+  color: rgb(104, 157, 106) /* var(--secondary) */;
+}
+
+#network.disconnected,
+#network.linked {
+  color: rgb(240, 240, 80) /* var(--hint) */;
+}
+
+#network.disabled {
+  color: rgb(240, 97, 78) /* var(--primary) */;
+}
+
+#bluetooth.connected {
+  color: rgb(104, 157, 106) /* var(--secondary) */;
+}
+
+#bluetooth.off,
+#bluetooth.disabled {
+  color: rgb(240, 97, 78) /* var(--primary) */;
 }
 
 #pulseaudio.muted {

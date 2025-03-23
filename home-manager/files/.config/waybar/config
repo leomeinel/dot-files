@@ -8,11 +8,11 @@
   "modules-center": [],
   "modules-right": [
     "idle_inhibitor",
-    "tray",
-    "bluetooth",
-    "network",
     "battery",
+    "network",
+    "bluetooth",
     "pulseaudio",
+    "tray",
     "clock",
     "custom/notification"
   ],
@@ -27,17 +27,30 @@
       "activated": "󰅶",
       "deactivated": "󰛊"
     },
-    "tooltip": false
+    "tooltip": true,
+    "tooltip-format-activated": "Click to sleep when idle",
+    "tooltip-format-deactivated": "Click to not sleep when idle"
   },
-  "bluetooth": {
-    "format": "󰂯",
-    "format-disabled": "󰂲",
-    "format-off": "󰂲",
-    "format-on": "󰂯",
-    "format-connected": "󰂱",
-    "format-no-controller": "",
-    "on-click": "/usr/bin/blueman-manager",
-    "on-click-right": "/usr/bin/bluetoothctl show | /usr/bin/grep -Uvq \"Powered: no$\\n.*PowerState: off\" && /usr/bin/bluetoothctl power off || /usr/bin/bluetoothctl power on",
+  "battery": {
+    "states": {
+      "warning": 30,
+      "critical": 15
+    },
+    "format": "{icon}",
+    "format-charging": "󰂄",
+    "format-plugged": "󰚥",
+    "format-full": "",
+    "format-icons": [
+      "󰁺",
+      "󰁻",
+      "󰁼",
+      "󰁽",
+      "󰁾",
+      "󰁿",
+      "󰂀",
+      "󰂁",
+      "󰂂"
+    ],
     "tooltip": false
   },
   "network": {
@@ -57,28 +70,15 @@
     "on-click-right": "/usr/bin/nmcli networking connectivity | /usr/bin/grep -vq \"^none$\" && /usr/bin/nmcli networking off || /usr/bin/nmcli networking on",
     "tooltip": false
   },
-  "battery": {
-    "states": {
-      "good": 95,
-      "warning": 30,
-      "critical": 15
-    },
-    "format": "{icon}",
-    "format-charging": "󰂄",
-    "format-plugged": "󰚥",
-    "format-full": "",
-    "format-icons": [
-      "󰁺",
-      "󰁻",
-      "󰁼",
-      "󰁽",
-      "󰁾",
-      "󰁿",
-      "󰂀",
-      "󰂁",
-      "󰂂",
-      "󰁹"
-    ],
+  "bluetooth": {
+    "format": "󰂯",
+    "format-disabled": "󰂲",
+    "format-off": "󰂲",
+    "format-on": "󰂯",
+    "format-connected": "󰂱",
+    "format-no-controller": "",
+    "on-click": "/usr/bin/blueman-manager",
+    "on-click-right": "/usr/bin/bluetoothctl show | /usr/bin/grep -Uvq \"Powered: no$\\n.*PowerState: off\" && /usr/bin/bluetoothctl power off || /usr/bin/bluetoothctl power on",
     "tooltip": false
   },
   "pulseaudio": {
@@ -95,8 +95,8 @@
     "tooltip": false
   },
   "tray": {
-    "icon-size": 12,
-    "spacing": 12
+    "icon-size": 14,
+    "spacing": 10
   },
   "clock": {
     "format": "{:%Y-%m-%d - %H:%M}",
