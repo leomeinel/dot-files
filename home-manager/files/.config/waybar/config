@@ -9,7 +9,6 @@
   "modules-right": [
     "idle_inhibitor",
     "battery",
-    "network",
     "bluetooth",
     "pulseaudio",
     "tray",
@@ -51,23 +50,6 @@
       "󰂁",
       "󰂂"
     ],
-    "tooltip": false
-  },
-  "network": {
-    "format": "󰲝",
-    "format-ethernet": "󰈀",
-    "format-wifi": "{icon}",
-    "format-linked": "󰲊",
-    "format-disconnected": "󰲚",
-    "format-disabled": "󰲜",
-    "format-icons": [
-      "󰤟",
-      "󰤢",
-      "󰤥",
-      "󰤨"
-    ],
-    "on-click": "/usr/bin/nm-connection-editor",
-    "on-click-right": "/usr/bin/nmcli networking connectivity | /usr/bin/grep -vq \"^none$\" && /usr/bin/nmcli networking off || /usr/bin/nmcli networking on",
     "tooltip": false
   },
   "bluetooth": {

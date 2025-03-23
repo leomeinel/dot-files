@@ -20,7 +20,6 @@ There might be other packages that are needed for scripts and configs to functio
 - [gnupg](https://archlinux.org/packages/core/x86_64/gnupg/)
 - [gsettings](https://archlinux.org/packages/extra/any/gsettings-desktop-schemas/)
 - [libsecret](https://archlinux.org/packages/core/x86_64/libsecret/)
-- [nm-connection-editor](https://archlinux.org/packages/extra/x86_64/nm-connection-editor/)
 - [nwg-bar](https://archlinux.org/packages/extra/x86_64/nwg-bar/)
 - [pipewire-pulse](https://archlinux.org/packages/extra/x86_64/pipewire-pulse/)
 - [polkit-gnome](https://archlinux.org/packages/extra/x86_64/polkit-gnome/)

@@ -51,6 +51,7 @@
         go
         gradle
         maven
+        networkmanagerapplet
         nixd
         nixfmt-rfc-style
         nodePackages.prettier
