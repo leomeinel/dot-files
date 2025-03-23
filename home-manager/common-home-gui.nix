@@ -46,12 +46,31 @@
         };
       in
       [
+        autotiling-rs
+        bat
+        brightnessctl
         cmake-format
+        duf
+        dust
+        eza
+        fastfetch
+        fd
+        glow
+        hyperfine
+        kanshi
+        nextcloud-client
         nixd
         nixfmt-rfc-style
+        nodePackages.prettier
         ocrmypdf
+        procs
         R-with-my-packages
         radianWrapper
+        ripgrep
+        ruff
+        rustup
+        shellcheck
+        shfmt
         usbguard-notifier
       ];
     # Activation script

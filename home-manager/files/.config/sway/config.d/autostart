@@ -12,10 +12,10 @@ exec /usr/bin/swaync
 exec /usr/bin/aa-notify -p -s 1 -w 60 -f /var/log/audit/audit.log
 
 # Outputs
-exec /usr/bin/kanshi
+exec kanshi
 
 # XDG Desktop Portal
 exec /usr/lib/xdg-desktop-portal
 
 # Tray
-exec /usr/bin/nextcloud --background
+exec nextcloud --background

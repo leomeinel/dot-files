@@ -10,12 +10,12 @@ set $right l
 ## Preferred applications
 set $term "${TERMINAL}"
 set $menu /usr/bin/wofi --show run
-set $rectangle-screenshot /usr/bin/grim -g "$(/usr/bin/slurp)" "$(/usr/bin/xdg-user-dir PICTURES)/Screenshots/$(/usr/bin/date -u +"%Y-%m-%dT%H-%M-%S").png"
+set $rectangle-screenshot /usr/bin/grim -g "$(slurp)" "$(/usr/bin/xdg-user-dir PICTURES)/Screenshots/$(/usr/bin/date -u +"%Y-%m-%dT%H-%M-%S").png"
 set $screenshot /usr/bin/grim "$(/usr/bin/xdg-user-dir PICTURES)/Screenshots/$(/usr/bin/date -u +"%Y-%m-%dT%H-%M-%S").png"
 set $volume-down ${XDG_CONFIG_HOME}/sway/scripts/volume.sh --down
 set $volume-up ${XDG_CONFIG_HOME}/sway/scripts/volume.sh --up
-set $brightness-down /usr/bin/brightnessctl set 5%-
-set $brightness-up /usr/bin/brightnessctl set 5%+
+set $brightness-down brightnessctl set 5%-
+set $brightness-up brightnessctl set 5%+
 set $sway-exit /usr/bin/nwg-bar
 set $sway-notifications /usr/bin/swaync-client -t -sw
 
