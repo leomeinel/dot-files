@@ -17,6 +17,7 @@ There might be other packages that are needed for scripts and configs to functio
 - [blueman](https://archlinux.org/packages/extra/x86_64/blueman/)
 - [brightnessctl](https://archlinux.org/packages/extra/x86_64/brightnessctl/)
 - [evince](https://archlinux.org/packages/extra/x86_64/evince/)
+- [flatpak](https://archlinux.org/packages/extra/x86_64/flatpak/)
 - [git](https://archlinux.org/packages/extra/x86_64/git/)
 - [gnome-keyring](https://archlinux.org/packages/extra/x86_64/gnome-keyring/)
 - [gnupg](https://archlinux.org/packages/core/x86_64/gnupg/)
@@ -24,6 +25,7 @@ There might be other packages that are needed for scripts and configs to functio
 - [kanshi](https://archlinux.org/packages/extra/x86_64/kanshi/)
 - [libsecret](https://archlinux.org/packages/core/x86_64/libsecret/)
 - [nextcloud-client](https://archlinux.org/packages/extra/x86_64/nextcloud-client/)
+- [nm-connection-editor](https://archlinux.org/packages/extra/x86_64/nm-connection-editor/)
 - [nwg-bar](https://archlinux.org/packages/extra/x86_64/nwg-bar/)
 - [pipewire-pulse](https://archlinux.org/packages/extra/x86_64/pipewire-pulse/)
 - [polkit-gnome](https://archlinux.org/packages/extra/x86_64/polkit-gnome/)
@@ -31,16 +33,15 @@ There might be other packages that are needed for scripts and configs to functio
 - [slurp](https://archlinux.org/packages/extra/x86_64/slurp/)
 - [sway](https://archlinux.org/packages/extra/x86_64/sway/)
 - [swaybg](https://archlinux.org/packages/extra/x86_64/swaybg/)
+- [swayidle](https://archlinux.org/packages/?name=swayidle)
 - [swaylock](https://archlinux.org/packages/extra/x86_64/swaylock/)
 - [swaync](https://archlinux.org/packages/extra/x86_64/swaync/)
-- [swayidle](https://archlinux.org/packages/?name=swayidle)
 - [systemd](https://archlinux.org/packages/core/x86_64/systemd/)
 - [waybar](https://archlinux.org/packages/extra/x86_64/waybar/)
 - [wofi](https://archlinux.org/packages/extra/x86_64/wofi/)
 - [xdg-desktop-portal](https://archlinux.org/packages/extra/x86_64/xdg-desktop-portal/)
 - [xdg-user-dirs](https://archlinux.org/packages/extra/x86_64/xdg-user-dirs/)
 - [xorg-xwayland](https://archlinux.org/packages/extra/x86_64/xorg-xwayland/)
-- [flatpak](https://archlinux.org/packages/extra/x86_64/flatpak/)
 
 ### AUR
 
