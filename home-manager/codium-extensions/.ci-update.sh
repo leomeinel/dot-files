@@ -40,4 +40,4 @@ fi
 
 # Generate codium-extensions.nix dynamically
 cd "${SCRIPT_DIR}"/nix4vscode
-nix develop --command bash -c "cargo run -q -- ${SCRIPT_DIR}/config.toml -o ${SCRIPT_DIR}/codium-extensions.nix"
+OPENSSL_DIR="$(openssl version -d | awk '{print $2}' | sed 's/"//g')" nix develop --command bash -c "cargo run -q -- ${SCRIPT_DIR}/config.toml -o ${SCRIPT_DIR}/codium-extensions.nix"
