@@ -14,7 +14,7 @@
 /*
 :root {
   --dark: rgb(29, 32, 33);
-  --dark2: ​rgb(40, 44, 46);
+  --dark2: ​rgb(35, 39, 41);
   --secondary: rgb(104, 157, 106);
 }
 */
@@ -32,7 +32,7 @@ window {
 }
 
 #input {
-  background-color: ​rgb(40, 44, 46)/* var(--dark2) */;
+  background-color: ​rgb(35, 39, 41)/* var(--dark2) */;
   color: rgb(29, 32, 33) /* var(--dark) */;
 }
 

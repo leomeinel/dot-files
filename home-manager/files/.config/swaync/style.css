@@ -15,22 +15,22 @@
 :root {
   --darker: rgb(24, 27, 30);
   --dark: rgb(29, 32, 33);
-  --dark2: rgb(40, 44, 46);
-  --dark3: rgb(51, 55, 58);
-  --dark4: rgb(56, 60, 63);
+  --dark2: rgb(35, 39, 41);
+  --dark3: rgb(45, 50, 53);
+  --dark4: rgb(52, 54, 56);
   --light: rgb(235, 219, 178);
   --secondary: rgb(104, 157, 106);
 }
 */
 
-@define-color cc-bg rgba(40, 44, 46, 0.7);
+@define-color cc-bg rgba(35, 39, 41, 0.7);
 @define-color noti-border-color rgba(255, 255, 255, 0.15);
 @define-color noti-bg rgba(29, 32, 33, 0.8);
-@define-color noti-bg-opaque rgb(40, 44, 46);
+@define-color noti-bg-opaque rgb(35, 39, 41);
 @define-color noti-bg-darker rgb(24, 27, 30);
-@define-color noti-bg-hover rgb(51, 55, 58);
-@define-color noti-bg-hover-opaque rgb(51, 55, 58);
-@define-color noti-bg-focus rgba(56, 60, 63, 0.6);
+@define-color noti-bg-hover rgb(45, 50, 53);
+@define-color noti-bg-hover-opaque rgb(45, 50, 53);
+@define-color noti-bg-focus rgba(52, 54, 56, 0.6);
 @define-color noti-close-bg rgba(255, 255, 255, 0.1);
 @define-color noti-close-bg-hover rgba(255, 255, 255, 0.15);
 @define-color text-color white;
