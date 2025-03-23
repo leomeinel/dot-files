@@ -92,6 +92,7 @@
       ]
     },
     "on-click": "/usr/local/bin/pwvucontrol",
+    "on-click-right": "/usr/bin/pactl set-sink-mute @DEFAULT_SINK@ toggle",
     "tooltip": false
   },
   "tray": {
