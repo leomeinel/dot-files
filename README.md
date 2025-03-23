@@ -12,7 +12,6 @@ There might be other packages that are needed for scripts and configs to functio
 
 - [alacritty](https://archlinux.org/packages/extra/x86_64/alacritty/)
 - [apparmor](https://archlinux.org/packages/extra/x86_64/apparmor/)
-- [blueman](https://archlinux.org/packages/extra/x86_64/blueman/)
 - [flatpak](https://archlinux.org/packages/extra/x86_64/flatpak/)
 - [git-delta](https://archlinux.org/packages/extra/x86_64/git-delta/)
 - [git](https://archlinux.org/packages/extra/x86_64/git/)

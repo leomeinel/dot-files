@@ -47,6 +47,7 @@
       in
       [
         autotiling-rs
+        blueman
         cmake-format
         go
         gradle
