@@ -32,7 +32,7 @@ window {
 }
 
 #input {
-  background-color: ​rgb(35, 39, 41)/* var(--dark2) */;
+  background-color: ​rgb(35, 39, 41) /* var(--dark2) */;
   color: rgb(29, 32, 33) /* var(--dark) */;
 }
 
