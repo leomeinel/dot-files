@@ -33,16 +33,22 @@ window#waybar {
   background: rgb(29, 32, 33) /* var(--dark) */;
 }
 
-#backlight,
-#battery,
-#idle_inhibitor,
-#pulseaudio {
-  font-size: 14px;
+#tray {
+  padding-left: 6px;
+  padding-right: 6px;
 }
 
-#backlight,
-#custom-notification {
-  font-size: 12px;
+#battery,
+#custom-notification,
+#idle_inhibitor,
+#network {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+#bluetooth {
+  padding-left: 6px;
+  padding-right: 6px;
 }
 
 #clock,
@@ -53,6 +59,11 @@ window#waybar {
 #clock {
   font-family: "Hasklug Nerd Font Mono";
   color: rgb(240, 240, 80) /* var(--hint) */;
+}
+
+#pulseaudio {
+  padding-left: 6px;
+  padding-right: 10px;
 }
 
 #pulseaudio.muted {

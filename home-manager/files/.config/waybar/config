@@ -1,7 +1,7 @@
 {
   "layer": "top",
   "position": "top",
-  "height": 8,
+  "height": 0,
   "modules-left": [
     "sway/workspaces"
   ],
@@ -9,9 +9,10 @@
   "modules-right": [
     "idle_inhibitor",
     "tray",
-    "pulseaudio",
-    "backlight",
+    "bluetooth",
+    "network",
     "battery",
+    "pulseaudio",
     "clock",
     "custom/notification"
   ],
@@ -25,27 +26,36 @@
     "format-icons": {
       "activated": "󰅶",
       "deactivated": "󰛊"
-    }
-  },
-  "pulseaudio": {
-    "format": "{icon}",
-    "format-muted": "󰸈",
-    "format-icons": {
-      "default": [
-        "󰕿",
-        "󰖀",
-        "󰕾"
-      ]
     },
-    "on-click": "/usr/local/bin/pwvucontrol"
+    "tooltip": false
   },
-  "backlight": {
-    "format": "{percent}% {icon}",
+  "bluetooth": {
+    "format": "󰂯",
+    "format-disabled": "󰂲",
+    "format-off": "󰂲",
+    "format-on": "󰂯",
+    "format-connected": "󰂱",
+    "format-no-controller": "",
+    "on-click": "/usr/bin/blueman-manager",
+    "on-click-right": "/usr/bin/bluetoothctl show | /usr/bin/grep -Uvq \"Powered: no$\\n.*PowerState: off\" && /usr/bin/bluetoothctl power off || /usr/bin/bluetoothctl power on",
+    "tooltip": false
+  },
+  "network": {
+    "format": "󰲝",
+    "format-ethernet": "󰈀",
+    "format-wifi": "{icon}",
+    "format-linked": "󰲊",
+    "format-disconnected": "󰲚",
+    "format-disabled": "󰲜",
     "format-icons": [
-      "󰃞",
-      "󰃟",
-      "󰃠"
-    ]
+      "󰤟",
+      "󰤢",
+      "󰤥",
+      "󰤨"
+    ],
+    "on-click": "/usr/bin/nm-connection-editor",
+    "on-click-right": "/usr/bin/nmcli networking connectivity | /usr/bin/grep -vq \"^none$\" && /usr/bin/nmcli networking off || /usr/bin/nmcli networking on",
+    "tooltip": false
   },
   "battery": {
     "states": {
@@ -53,9 +63,9 @@
       "warning": 30,
       "critical": 15
     },
-    "format": "{capacity}% {icon}",
-    "format-charging": "{capacity}% 󰂄",
-    "format-plugged": "{capacity}% 󰚥",
+    "format": "{icon}",
+    "format-charging": "󰂄",
+    "format-plugged": "󰚥",
     "format-full": "",
     "format-icons": [
       "󰁺",
@@ -68,26 +78,40 @@
       "󰂁",
       "󰂂",
       "󰁹"
-    ]
+    ],
+    "tooltip": false
+  },
+  "pulseaudio": {
+    "format": "{icon}",
+    "format-muted": "󰸈",
+    "format-icons": {
+      "default": [
+        "󰕿",
+        "󰖀",
+        "󰕾"
+      ]
+    },
+    "on-click": "/usr/local/bin/pwvucontrol",
+    "tooltip": false
   },
   "tray": {
     "icon-size": 12,
     "spacing": 12
   },
   "clock": {
-    "format": "{:%Y-%m-%d - %H:%M}"
+    "format": "{:%Y-%m-%d - %H:%M}",
+    "tooltip": false
   },
   "custom/notification": {
-    "tooltip": false,
     "format": "{icon}",
     "format-icons": {
-      "notification": "󰂜<span foreground='red'><sup>󰧞</sup></span>",
+      "notification": "󰂜<span foreground='red'><sup></sup></span>",
       "none": "󰂜",
-      "dnd-notification": "󰪑<span foreground='red'><sup>󰧞</sup></span>",
+      "dnd-notification": "󰪑<span foreground='red'><sup></sup></span>",
       "dnd-none": "󰪑",
-      "inhibited-notification": "󰂜<span foreground='red'><sup>󰧞</sup></span>",
+      "inhibited-notification": "󰂜<span foreground='red'><sup></sup></span>",
       "inhibited-none": "󰂜",
-      "dnd-inhibited-notification": "󰪑<span foreground='red'><sup>󰧞</sup></span>",
+      "dnd-inhibited-notification": "󰪑<span foreground='red'><sup></sup></span>",
       "dnd-inhibited-none": "󰪑"
     },
     "return-type": "json",
@@ -95,6 +119,7 @@
     "exec": "/usr/bin/swaync-client -swb",
     "on-click": "/usr/bin/swaync-client -t -sw",
     "on-click-right": "/usr/bin/swaync-client -d -sw",
-    "escape": true
+    "escape": true,
+    "tooltip": false
   }
 }

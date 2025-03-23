@@ -18,6 +18,4 @@ exec /usr/bin/kanshi
 exec /usr/lib/xdg-desktop-portal
 
 # Tray
-exec /usr/bin/nm-applet --indicator
-exec /usr/bin/blueman-applet
 exec /usr/bin/nextcloud --background

@@ -29,7 +29,14 @@
   "hide-on-action": true,
   "script-fail-notify": true,
 
-  "widgets": ["inhibitors", "title", "dnd", "mpris", "notifications"],
+  "widgets": [
+    "inhibitors",
+    "title",
+    "dnd",
+    "backlight",
+    "mpris",
+    "notifications"
+  ],
   "widget-config": {
     "inhibitors": {
       "text": "Inhibitors",
@@ -43,6 +50,11 @@
     },
     "dnd": {
       "text": "Do Not Disturb"
+    },
+    "backlight": {
+      "label": "󰃞 ",
+      "device": "REPLACE_BACKLIGHT_DEVICE",
+      "subsystem": "backlight"
     },
     "label": {
       "max-lines": 5,
