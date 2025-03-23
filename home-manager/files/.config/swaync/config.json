@@ -1,26 +1,27 @@
 {
   "$schema": "/etc/xdg/swaync/configSchema.json",
-
   "positionX": "right",
   "positionY": "top",
-  "control-center-positionX": "none",
-  "control-center-positionY": "top",
+  "layer": "overlay",
+  "control-center-layer": "top",
+  "layer-shell": true,
+  "cssPriority": "user",
   "control-center-margin-top": 8,
   "control-center-margin-bottom": 8,
   "control-center-margin-right": 8,
   "control-center-margin-left": 8,
-  "control-center-width": 500,
-  "control-center-height": 600,
-  "fit-to-screen": false,
-
-  "layer": "overlay",
-  "cssPriority": "user",
+  "notification-2fa-action": true,
+  "notification-inline-replies": false,
   "notification-icon-size": 64,
   "notification-body-image-height": 100,
   "notification-body-image-width": 200,
   "timeout": 10,
   "timeout-low": 5,
   "timeout-critical": 0,
+  "fit-to-screen": false,
+  "relative-timestamps": true,
+  "control-center-width": 500,
+  "control-center-height": 600,
   "notification-window-width": 500,
   "keyboard-shortcuts": true,
   "image-visibility": "when-available",
@@ -34,6 +35,7 @@
     "title",
     "dnd",
     "backlight",
+    "volume",
     "mpris",
     "notifications"
   ],
@@ -56,13 +58,16 @@
       "device": "REPLACE_BACKLIGHT_DEVICE",
       "subsystem": "backlight"
     },
-    "label": {
-      "max-lines": 5,
-      "text": "Label Text"
+    "volume": {
+      "label": "󰕾 "
     },
     "mpris": {
       "image-size": 96,
       "image-radius": 12
+    },
+    "label": {
+      "max-lines": 5,
+      "text": "Label Text"
     }
   }
 }
