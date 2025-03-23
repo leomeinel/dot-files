@@ -78,13 +78,13 @@
         # Reset flatpak override to make sure that no unnecessary overrides are added
         run /usr/bin/flatpak override -u --reset
         # Workaround for using the correct font in all applications
-        run ln -sfn ${config.xdg.stateHome}/nix/profile/share/fonts ${config.xdg.dataHome}/fonts
-        run /usr/bin/flatpak override -u --filesystem=xdg-data/fonts:ro --filesystem=${config.xdg.stateHome}/nix/profile/share/fonts:ro --filesystem=${pkgs.nerdfonts}/share/fonts:ro
+        run ln -sfn ${config.home.profileDirectory}/share/fonts ${config.xdg.dataHome}/fonts
+        run /usr/bin/flatpak override -u --filesystem=xdg-data/fonts:ro --filesystem=${config.home.profileDirectory}/share/fonts:ro --filesystem=${pkgs.nerdfonts}/share/fonts:ro
         # Workaround for using the correct icons in all applications
-        run /usr/bin/flatpak override -u --filesystem=xdg-data/icons:ro --filesystem=${config.xdg.stateHome}/nix/profile/share/icons:ro --filesystem=${pkgs.papirus-icon-theme}/share/icons:ro --filesystem=${pkgs.phinger-cursors}/share/icons:ro
+        run /usr/bin/flatpak override -u --filesystem=xdg-data/icons:ro --filesystem=${config.home.profileDirectory}/share/icons:ro --filesystem=${pkgs.papirus-icon-theme}/share/icons:ro --filesystem=${pkgs.phinger-cursors}/share/icons:ro
         # Workaround for using the correct GTK theme in all applications
-        run ln -sfn ${config.xdg.stateHome}/nix/profile/share/themes ${config.xdg.dataHome}/themes
-        run /usr/bin/flatpak override -u --filesystem=xdg-data/themes:ro --filesystem=${config.xdg.stateHome}/nix/profile/share/themes:ro --filesystem=${pkgs.arc-theme}/share/themes:ro
+        run ln -sfn ${config.home.profileDirectory}/share/themes ${config.xdg.dataHome}/themes
+        run /usr/bin/flatpak override -u --filesystem=xdg-data/themes:ro --filesystem=${config.home.profileDirectory}/share/themes:ro --filesystem=${pkgs.arc-theme}/share/themes:ro
       '';
     };
   };

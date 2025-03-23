@@ -125,7 +125,7 @@
           "activitusbar.activeColour" = "statusBar.foreground";
           "activitusbar.inactiveColour" = "statusBar.foreground";
           "code-runner.enableAppInsights" = false;
-          "prettier.prettierPath" = "prettier";
+          "prettier.prettierPath" = "${config.home.profileDirectory}/lib/node_modules/prettier/";
           "debug.showInStatusBar" = "never";
           "editor.detectIndentation" = false;
           "editor.foldingImportsByDefault" = true;
