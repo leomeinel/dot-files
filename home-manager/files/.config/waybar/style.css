@@ -33,18 +33,13 @@ window#waybar {
   background: rgb(29, 32, 33) /* var(--dark) */;
 }
 
-#tray {
-  padding-left: 10px;
-  padding-right: 5px;
-}
-
 #battery,
+#bluetooth,
+#clock,
 #custom-notification,
 #idle_inhibitor,
 #network,
-#pulseaudio,
-#bluetooth,
-#clock {
+#pulseaudio {
   padding-left: 10px;
   padding-right: 10px;
 }
@@ -54,16 +49,30 @@ window#waybar {
   font-weight: 800;
 }
 
+#battery.warning {
+  color: rgb(240, 240, 80) /* var(--hint) */;
+}
+#battery.critical {
+  color: rgb(240, 97, 78) /* var(--primary) */;
+}
+
+#bluetooth.connected {
+  color: rgb(104, 157, 106) /* var(--secondary) */;
+}
+#bluetooth.off,
+#bluetooth.disabled {
+  color: rgb(240, 97, 78) /* var(--primary) */;
+}
+
 #clock {
   font-family: "Hasklug Nerd Font Mono";
   color: rgb(240, 240, 80) /* var(--hint) */;
 }
 
-#battery.warning {
-  color: rgb(240, 240, 80) /* var(--hint) */;
+#idle_inhibitor.activated {
+  color: rgb(104, 157, 106) /* var(--secondary) */;
 }
-
-#battery.critical {
+#idle_inhibitor.deactivated {
   color: rgb(240, 97, 78) /* var(--primary) */;
 }
 
@@ -71,27 +80,21 @@ window#waybar {
 #network.wifi {
   color: rgb(104, 157, 106) /* var(--secondary) */;
 }
-
 #network.disconnected,
 #network.linked {
   color: rgb(240, 240, 80) /* var(--hint) */;
 }
-
 #network.disabled {
-  color: rgb(240, 97, 78) /* var(--primary) */;
-}
-
-#bluetooth.connected {
-  color: rgb(104, 157, 106) /* var(--secondary) */;
-}
-
-#bluetooth.off,
-#bluetooth.disabled {
   color: rgb(240, 97, 78) /* var(--primary) */;
 }
 
 #pulseaudio.muted {
   color: rgb(240, 97, 78) /* var(--primary) */;
+}
+
+#tray {
+  padding-left: 10px;
+  padding-right: 5px;
 }
 
 #workspaces button label {
