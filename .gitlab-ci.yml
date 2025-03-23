@@ -3,11 +3,12 @@ regen-codium-extensions:
     GIT_STRATEGY: clone
     GIT_SUBMODULE_STRATEGY: recursive
     GIT_SUBMODULE_UPDATE_FLAGS: --remote
-  image: "docker.io/alpine:latest"
+  image: "nixos/nix:latest"
   stage: deploy
   when: always
   script:
-    - apk add --update --no-cache bash curl gawk git grep openssl pkgconf sed shadow sudo xz
+    - echo "experimental-features = nix-command flakes" >>/etc/nix/nix.conf
+    - nix profile install --priority 1 nixpkgs#gawk nixpkgs#git nixpkgs#gnused nixpkgs#nix-search-cli nixpkgs#openssl nixpkgs#pkgconf
     - chmod 755 ./home-manager/codium-extensions/.ci-update.sh
     - ./home-manager/codium-extensions/.ci-update.sh
     - git config user.name "${MAIN_BOT_USERNAME}"
