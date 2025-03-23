@@ -108,12 +108,12 @@
     "format-icons": {
       "notification": "󰂜<span foreground='#f0614e'><sup></sup></span>",
       "none": "󰂜",
-      "dnd-notification": "󰪑<span foreground='#f0614e'><sup></sup></span>",
-      "dnd-none": "󰪑",
+      "dnd-notification": "<span foreground='#f0614e'>󰪑<sup></sup></span>",
+      "dnd-none": "<span foreground='#f0614e'>󰪑</span>",
       "inhibited-notification": "󰂜<span foreground='#f0614e'><sup></sup></span>",
       "inhibited-none": "󰂜",
-      "dnd-inhibited-notification": "󰪑<span foreground='#f0614e'><sup></sup></span>",
-      "dnd-inhibited-none": "󰪑"
+      "dnd-inhibited-notification": "<span foreground='#f0614e'>󰪑<sup></sup></span>",
+      "dnd-inhibited-none": "<span foreground='#f0614e'>󰪑</span>"
     },
     "return-type": "json",
     "exec-if": "which swaync-client",
