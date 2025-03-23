@@ -17,14 +17,14 @@ alias sudo='/usr/bin/sudo '
 alias df='/usr/bin/btrfs fi df'
 
 # Rust core-utils aliases
-alias ls='eza -la --color=automatic'
-alias cat='bat --decorations auto --color auto'
-alias grep='rg -s --color auto'
-alias find='fd -Hs -c auto'
-alias du='dust'
-alias ps='procs'
-alias neofetch='fastfetch'
-alias bench='hyperfine -w 3 -r 12 --style auto'
+alias ls='/usr/bin/eza -la --color=automatic'
+alias cat='/usr/bin/bat --decorations auto --color auto'
+alias grep='/usr/bin/rg -s --color auto'
+alias find='/usr/bin/fd -Hs -c auto'
+alias du='/usr/bin/dust'
+alias ps='/usr/bin/procs'
+alias neofetch='/usr/bin/fastfetch'
+alias bench='/usr/bin/hyperfine -w 3 -r 12 --style auto'
 
 # xdg-ninja recommendations
 alias adb='HOME="${XDG_DATA_HOME}"/android adb'

@@ -47,31 +47,23 @@
       in
       [
         autotiling-rs
-        bat
-        brightnessctl
         cmake-format
-        duf
-        dust
-        eza
-        fastfetch
-        fd
-        glow
-        hyperfine
-        kanshi
-        nextcloud-client
+        go
+        gradle
+        maven
         nixd
         nixfmt-rfc-style
         nodePackages.prettier
         ocrmypdf
-        procs
         R-with-my-packages
         radianWrapper
-        ripgrep
         ruff
         rustup
         shellcheck
         shfmt
+        slurp
         usbguard-notifier
+        wl-clipboard-rs
       ];
     # Activation script
     activation = {
