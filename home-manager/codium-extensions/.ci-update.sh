@@ -41,4 +41,5 @@ fi
 # Generate codium-extensions.nix dynamically
 cd "${SCRIPT_DIR}"/nix4vscode
 # FIXME: Specifying OPENSSL_DIR here is a hack, remove this!
-OPENSSL_DIR="$(openssl version -d | awk '{print $2}' | sed 's/"//g')" nix develop --command bash -c "cargo run -q -- ${SCRIPT_DIR}/config.toml -o ${SCRIPT_DIR}/codium-extensions.nix"
+STRING="$(readlink "$(which openssl)")"
+PKG_CONFIG_PATH="${STRING//\/bin\/*/\/lib\/pkgconfig}" nix develop --command bash -c "cargo run -q -- ${SCRIPT_DIR}/config.toml -o ${SCRIPT_DIR}/codium-extensions.nix"
