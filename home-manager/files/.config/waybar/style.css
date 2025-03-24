@@ -8,7 +8,8 @@
  * -----
  */
 
-/* FIXME: Reuse whenever support is implemented. GTK4 CSS apparently support this https://docs.gtk.org/gtk4/css-properties.html
+/* FIXME: Reuse whenever support is implemented.
+          GTK4 CSS apparently supports this https://docs.gtk.org/gtk4/css-properties.html
           Not supported by GTK3 CSS, not sure why. See: https://docs.gtk.org/gtk3/css-overview.html#color and https://docs.gtk.org/gtk3/css-properties.html
 */
 /*
