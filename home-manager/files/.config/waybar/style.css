@@ -38,7 +38,6 @@ window#waybar {
 #clock,
 #custom-notification,
 #idle_inhibitor,
-#network,
 #pulseaudio {
   padding-left: 10px;
   padding-right: 10px;
@@ -73,18 +72,6 @@ window#waybar {
   color: rgb(104, 157, 106) /* var(--secondary) */;
 }
 #idle_inhibitor.deactivated {
-  color: rgb(240, 97, 78) /* var(--primary) */;
-}
-
-#network.ethernet,
-#network.wifi {
-  color: rgb(104, 157, 106) /* var(--secondary) */;
-}
-#network.disconnected,
-#network.linked {
-  color: rgb(240, 240, 80) /* var(--hint) */;
-}
-#network.disabled {
   color: rgb(240, 97, 78) /* var(--primary) */;
 }
 
