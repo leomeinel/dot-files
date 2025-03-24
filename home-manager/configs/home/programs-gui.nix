@@ -171,6 +171,7 @@
           "oneDarkPro.editorTheme" = "One Dark Pro Darker";
           "phpfmt.indent_with_space" = 4;
           "r.plot.useHttpgd" = true;
+          "r.rpath.linux" = "${rWrapper}/bin/R";
           "redhat.telemetry.enabled" = false;
           "rust-analyzer.check.command" = "${rustup}/bin/cargo-clippy";
           "rust-analyzer.checkOnSave" = true;
