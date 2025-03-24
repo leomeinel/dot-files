@@ -17,14 +17,7 @@
     }
 
 # Set environment variables
-export JAVA_HOME=/usr/lib/jvm/default
 export _JAVA_OPTIONS="-Djava.util.prefs.userRoot=${XDG_CONFIG_HOME}/java"
-export MYSQL_HOME=/var/lib/mysql
-export PAGER=/usr/bin/less
-# FIXME: nix packages should ideally also use absolute paths
-export VISUAL=nvim
-export MANPAGER="/bin/sh -c '/usr/bin/col -bx | /usr/bin/bat -l man -p'"
-export MANROFFOPT="-c"
 export ANDROID_HOME="${XDG_DATA_HOME}"/android
 export ANDROID_USER_HOME="${XDG_DATA_HOME}"/android
 export CARGO_HOME="${XDG_DATA_HOME}"/cargo
@@ -32,9 +25,14 @@ export GNUPGHOME="${XDG_DATA_HOME}"/gnupg
 export GOPATH="${XDG_DATA_HOME}"/go
 export GRADLE_USER_HOME="${XDG_DATA_HOME}"/gradle
 export HISTFILE="${XDG_STATE_HOME}"/bash/history
+export JAVA_HOME=/usr/lib/jvm/default
+export MANPAGER="/bin/sh -c '/usr/bin/col -bx | /usr/bin/bat -l man -p'"
+export MANROFFOPT="-c"
+export MYSQL_HOME=/var/lib/mysql
+export PAGER=/usr/bin/less
 export PARALLEL_HOME="${XDG_CONFIG_HOME}"/parallel
 export PLATFORMIO_CORE_DIR="${XDG_DATA_HOME}"/platformio
-export R_ENVIRON_USER="${XDG_CONFIG_HOME}"/r/.Renviron
+export R_ENVIRON_USER="${XDG_CONFIG_HOME}"/r/Renviron
 export RUSTUP_HOME="${XDG_DATA_HOME}"/rustup
 export SCREENRC="${XDG_CONFIG_HOME}"/screen/screenrc
 export TEXMFVAR="${XDG_CACHE_HOME}"/texlive/texmf-var

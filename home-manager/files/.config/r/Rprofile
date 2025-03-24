@@ -19,15 +19,20 @@
         "Working directory is: ", getwd()
     )
 }
+
 # General
+options(browser = ${R_BROWSER})
 options(digits = 12)
 options(scipen = 2)
 options(show.signif.stars = FALSE)
+
 # Parallelization
 local({
     n <- max(parallel::detectCores() - 2L, 1L)
+    Sys.setenv(MAKEFLAGS = paste0("-j",n))
     options(Ncpus = n)
     options(mc.cores = n)
 })
+
 # Debugging
 error <- quote(dump.frames("${R_HOME_USER}/testdump", TRUE))

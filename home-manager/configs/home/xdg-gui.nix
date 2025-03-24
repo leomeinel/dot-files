@@ -38,14 +38,18 @@
         source = ../../files/.config/nwg-bar/style.css;
       };
       # r
-      "r/.Renviron" = {
-        source = ../../files/.config/r/.Renviron;
+      "r/Renviron" = {
+        source = ../../files/.config/r/Renviron;
       };
-      "r/.Rprofile" = {
-        source = ../../files/.config/r/.Rprofile;
+      "r/Rprofile" = {
+        source = ../../files/.config/r/Rprofile;
       };
-      "r/.lintr" = {
-        source = ../../files/.config/r/.lintr;
+      "r/lintr" = {
+        source = ../../files/.config/r/lintr;
+      };
+      # radian/profile
+      "radian/profile" = {
+        source = ../../files/.config/radian/profile;
       };
       # sway
       "sway/config.d/autostart" = {
