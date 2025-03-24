@@ -11,6 +11,7 @@ regen-codium-extensions:
     - nix profile install --priority 1 nixpkgs#gawk nixpkgs#git nixpkgs#gnused nixpkgs#nix-search-cli nixpkgs#pkgconf
     - chmod 755 ./home-manager/codium-extensions/.ci-update.sh
     - ./home-manager/codium-extensions/.ci-update.sh
+    - exit
     - git config user.name "${MAIN_BOT_USERNAME}"
     - git config user.email "${MAIN_BOT_EMAIL}"
     - git remote remove gitlab_origin || true
