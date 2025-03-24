@@ -147,7 +147,7 @@ if ! git commit -m "Install dot-files - ${DATE}"; then
 fi
 
 # Set default rust if rustup is installed
-[[ -n $(which rustup) ]] >/dev/null 2>&1 &&
+[[ -n "$(which rustup)" ]] >/dev/null 2>&1 &&
     rustup default stable
 
 # Add nixpkgs channel

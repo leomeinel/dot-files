@@ -3,5 +3,5 @@ exec_always /usr/bin/swaync-client -R
 exec_always /usr/bin/swaync-client -rs
 
 # Reload autotiling
-# FIXME: nix packages should ideally also use absolute paths
-exec_always autotiling-rs
+## FIXME: Find a better way to reference nix packages by absolute path
+exec_always "${XDG_STATE_HOME}"/nix/profile/bin/autotiling-rs

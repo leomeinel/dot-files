@@ -10,7 +10,7 @@
 ###
 
 # Commands that should be applied only for interactive shells.
-[[ $- != *i* ]] && return
+[[ "${-}" != *i* ]] && return
 
 # Include ~/.bash_aliases
 [[ -f ~/.bash_aliases ]] &&
@@ -40,7 +40,7 @@ complete -cf doas
     return
 
 # Prompt
-if [[ ${TERM} != "dumb" ]]; then
+if [[ "${TERM}" != "dumb" ]]; then
     eval "$(/usr/bin/starship init /bin/bash)"
 fi
 

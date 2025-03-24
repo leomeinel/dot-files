@@ -4,8 +4,8 @@ name = "REPLACE_GIT_NAME"
 signingkey = "REPLACE_GIT_SIGNINGKEY"
 
 [core]
-# FIXME: nix packages should ideally also use absolute paths
-editor = nvim
+# FIXME: Find a better way to reference nix packages by absolute path
+editor = "${XDG_STATE_HOME}"/nix/profile/bin/nvim
 pager = /usr/bin/delta
 autocrlf = input
 

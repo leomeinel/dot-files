@@ -18,6 +18,6 @@ exec /usr/bin/kanshi
 exec /usr/lib/xdg-desktop-portal
 
 # Tray
-## FIXME: nix packages should ideally also use absolute paths
-exec nm-applet
+## FIXME: Find a better way to reference nix packages by absolute path
+exec "${XDG_STATE_HOME}"/nix/profile/bin/nm-applet
 exec /usr/bin/nextcloud --background
