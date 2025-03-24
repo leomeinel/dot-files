@@ -21,21 +21,43 @@
 */
 
 * {
+  font-family: HasklugNerdFont, Regular;
+  font-size: 14px;
   border: none;
   border-radius: 0px;
-  font-family: "Hasklug Nerd Font";
-  font-size: 14px;
-  min-height: 0;
   color: white;
 }
 
 window#waybar {
-  background: rgb(29, 32, 33) /* var(--dark) */;
+  background-color: rgb(29, 32, 33) /* var(--dark) */;
+  transition-property: background-color;
+  transition-duration: 0.5s;
+}
+
+#battery,
+#bluetooth,
+#clock,
+#custom-notification,
+#idle_inhibitor,
+#pulseaudio,
+#tray {
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-right: 10px;
+  padding-left: 10px;
 }
 
 #clock,
 #workspaces {
   font-weight: 800;
+}
+
+#window,
+#workspaces {
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-right: 10px;
+  margin-left: 10px;
 }
 
 #battery.warning {
@@ -72,9 +94,12 @@ window#waybar {
 #workspaces button label {
   color: rgb(104, 157, 106) /* var(--secondary) */;
 }
+#workspaces button.focused {
+  background: rgb(104, 157, 106) /* var(--secondary) */;
+}
 #workspaces button.focused label {
   color: rgb(29, 32, 33) /* var(--dark) */;
 }
-#workspaces button.focused {
-  background: rgb(104, 157, 106) /* var(--secondary) */;
+.modules-left > widget:first-child > #workspaces {
+  margin-left: 0;
 }
