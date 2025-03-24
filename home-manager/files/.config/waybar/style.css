@@ -33,16 +33,6 @@ window#waybar {
   background: rgb(29, 32, 33) /* var(--dark) */;
 }
 
-#battery,
-#bluetooth,
-#clock,
-#custom-notification,
-#idle_inhibitor,
-#pulseaudio {
-  padding-left: 10px;
-  padding-right: 10px;
-}
-
 #clock,
 #workspaces {
   font-weight: 800;
@@ -77,11 +67,6 @@ window#waybar {
 
 #pulseaudio.muted {
   color: rgb(240, 97, 78) /* var(--primary) */;
-}
-
-#tray {
-  padding-left: 10px;
-  padding-right: 5px;
 }
 
 #workspaces button label {

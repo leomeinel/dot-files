@@ -1,10 +1,10 @@
 {
   "layer": "top",
   "position": "top",
-  "height": 0,
-  "modules-left": [
-    "sway/workspaces"
-  ],
+  // "height": 30,
+  // "width": 1280,
+  "spacing": 20,
+  "modules-left": ["sway/workspaces"],
   "modules-center": [],
   "modules-right": [
     "idle_inhibitor",
@@ -39,17 +39,7 @@
     "format-charging": "󰂄",
     "format-plugged": "󰚥",
     "format-full": "",
-    "format-icons": [
-      "󰁺",
-      "󰁻",
-      "󰁼",
-      "󰁽",
-      "󰁾",
-      "󰁿",
-      "󰂀",
-      "󰂁",
-      "󰂂"
-    ],
+    "format-icons": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂"],
     "tooltip": false
   },
   "bluetooth": {
@@ -67,11 +57,7 @@
     "format": "{icon}",
     "format-muted": "󰸈",
     "format-icons": {
-      "default": [
-        "󰕿",
-        "󰖀",
-        "󰕾"
-      ]
+      "default": ["󰕿", "󰖀", "󰕾"]
     },
     "on-click": "/usr/local/bin/pwvucontrol",
     "on-click-right": "/usr/bin/pactl set-sink-mute @DEFAULT_SINK@ toggle",
@@ -88,6 +74,7 @@
   "custom/notification": {
     "format": "{icon}",
     "format-icons": {
+      // FIXME: This should use rgb(240, 97, 78)
       "notification": "󰂜<span foreground='#f0614e'><sup></sup></span>",
       "none": "󰂜",
       "dnd-notification": "<span foreground='#f0614e'>󰪑<sup></sup></span>",

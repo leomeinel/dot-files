@@ -96,8 +96,8 @@
         source = ../../files/.config/Thunar/uca.xml;
       };
       # waybar
-      "waybar/config" = {
-        source = ../../files/.config/waybar/config;
+      "waybar/config.jsonc" = {
+        source = ../../files/.config/waybar/config.jsonc;
       };
       "waybar/style.css" = {
         source = ../../files/.config/waybar/style.css;
