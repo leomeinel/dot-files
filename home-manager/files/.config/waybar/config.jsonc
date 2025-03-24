@@ -9,8 +9,8 @@
   "modules-right": [
     "idle_inhibitor",
     "battery",
-    "bluetooth",
     "pulseaudio",
+    "bluetooth",
     "tray",
     "clock",
     "custom/notification"
@@ -42,6 +42,16 @@
     "format-icons": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂"],
     "tooltip": false
   },
+  "pulseaudio": {
+    "format": "{icon}",
+    "format-muted": "󰸈",
+    "format-icons": {
+      "default": ["󰕿", "󰖀", "󰕾"]
+    },
+    "on-click": "/usr/local/bin/pwvucontrol",
+    "on-click-right": "/usr/bin/pactl set-sink-mute @DEFAULT_SINK@ toggle",
+    "tooltip": false
+  },
   "bluetooth": {
     "format": "󰂯",
     "format-disabled": "󰂲",
@@ -53,19 +63,9 @@
     "on-click-right": "/usr/bin/bluetoothctl show | /usr/bin/grep -Uvq \"Powered: no$\\n.*PowerState: off\" && /usr/bin/bluetoothctl power off || /usr/bin/bluetoothctl power on",
     "tooltip": false
   },
-  "pulseaudio": {
-    "format": "{icon}",
-    "format-muted": "󰸈",
-    "format-icons": {
-      "default": ["󰕿", "󰖀", "󰕾"]
-    },
-    "on-click": "/usr/local/bin/pwvucontrol",
-    "on-click-right": "/usr/bin/pactl set-sink-mute @DEFAULT_SINK@ toggle",
-    "tooltip": false
-  },
   "tray": {
-    "icon-size": 12,
-    "spacing": 10
+    "icon-size": 13,
+    "spacing": 17
   },
   "clock": {
     "format": "{:%Y-%m-%d - %H:%M}",

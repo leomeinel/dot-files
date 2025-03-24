@@ -43,8 +43,21 @@ window#waybar {
 #tray {
   padding-top: 0;
   padding-bottom: 0;
-  padding-right: 10px;
-  padding-left: 10px;
+  padding-right: 5px;
+  padding-left: 5px;
+}
+
+#clock {
+  font-size: 15px;
+}
+
+#custom-notification {
+  padding-left: 2px;
+}
+
+#tray {
+  padding-top: 1px;
+  padding-right: 2px;
 }
 
 #clock,
@@ -52,7 +65,6 @@ window#waybar {
   font-weight: 800;
 }
 
-#window,
 #workspaces {
   margin-top: 0;
   margin-bottom: 0;
