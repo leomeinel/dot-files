@@ -42,6 +42,7 @@
           packages = with rPackages; [
             httpgd
             languageserver
+            jsonlite
           ];
         };
       in
