@@ -67,6 +67,7 @@
         run /usr/bin/mkdir -p ${config.xdg.configHome}/r
         run /usr/bin/mkdir -p ${config.xdg.dataHome}/r/library
         run /usr/bin/mkdir -p ${config.xdg.stateHome}/r
+        run /usr/bin/mkdir -p ${config.xdg.stateHome}/radian
         run /usr/bin/mkdir -p ${config.xdg.dataHome}/rustup
         run /usr/bin/mkdir -p ${config.xdg.configHome}/screen
         run /usr/bin/mkdir -p ${config.xdg.cacheHome}/texlive
