@@ -81,7 +81,7 @@ window#waybar {
 
 #tray {
   padding-left: 10px;
-  padding-right: 0px;
+  padding-right: 5px;
 }
 
 #workspaces button label {
