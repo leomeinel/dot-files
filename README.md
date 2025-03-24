@@ -16,6 +16,7 @@ Not all packages listed here are a hard requirement and this list might not be e
 - [apparmor](https://archlinux.org/packages/extra/x86_64/apparmor/)
 - [bash-completion](https://archlinux.org/packages/extra/any/bash-completion/)
 - [bat](https://archlinux.org/packages/extra/x86_64/bat/)
+- [blueman](https://archlinux.org/packages/extra/x86_64/blueman/)
 - [brightnessctl](https://archlinux.org/packages/extra/x86_64/brightnessctl/)
 - [dbus](https://archlinux.org/packages/core/x86_64/dbus/)
 - [devtools](https://archlinux.org/packages/extra/any/devtools/)

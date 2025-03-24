@@ -48,7 +48,6 @@
       in
       [
         autotiling-rs
-        blueman
         cmake
         cmake-format
         go
