@@ -13,15 +13,20 @@
   description = "home-manager configuration";
 
   # Input options
-  inputs = {
-    # nixpkgs
-    # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-REPLACE_NIX_VERSION"; # FIXME: This should be defined only once
-    # home-manager
-    # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
-    home-manager.url = "github:nix-community/home-manager/release-REPLACE_NIX_VERSION"; # FIXME: This should be defined only once
-    home-manager.inputs.nixpkgs.follows = "nixpkgs";
-  };
+  inputs =
+    let
+      # FIXME: This should be defined only once
+      nixos-version = "REPLACE_NIX_VERSION";
+    in
+    {
+      # nixpkgs
+      # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
+      nixpkgs.url = "github:nixos/nixpkgs/nixos-${nixos-version}";
+      # home-manager
+      # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
+      home-manager.url = "github:nix-community/home-manager/release-${nixos-version}";
+      home-manager.inputs.nixpkgs.follows = "nixpkgs";
+    };
 
   # Output options
   outputs =
