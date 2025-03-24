@@ -40,6 +40,7 @@ fi
 
 # Generate codium-extensions.nix dynamically
 cd "${SCRIPT_DIR}"/nix4vscode
-# FIXME: Specifying OPENSSL_DIR here is a hack, remove this!
-STRING="$(readlink "$(which openssl)")"
-PKG_CONFIG_PATH="${STRING//\/bin\/*/\/lib\/pkgconfig}" nix develop --command bash -c "cargo run -q -- ${SCRIPT_DIR}/config.toml -o ${SCRIPT_DIR}/codium-extensions.nix"
+nix run nixpkgs#nix-index
+nix run nixpkgs#nix-index#nix-locate -- "nm-applet"
+# FIXME: Specifying PKG_CONFIG_PATH here is a hack, remove this!
+PKG_CONFIG_PATH="$(nix profile install --priority 1 nixpkgs#openssl.dev | grep '/nix/store/*openssl-*-dev$' | tr -d "[:space:]" | echo -n '/lib/pkgconfig')" nix develop --command bash -c "cargo run -q -- ${SCRIPT_DIR}/config.toml -o ${SCRIPT_DIR}/codium-extensions.nix"
