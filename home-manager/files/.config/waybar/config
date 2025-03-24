@@ -79,7 +79,7 @@
   },
   "tray": {
     "icon-size": 14,
-    "spacing": 10
+    "spacing": 12
   },
   "clock": {
     "format": "{:%Y-%m-%d - %H:%M}",
