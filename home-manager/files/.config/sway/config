@@ -1,5 +1,5 @@
 # User configs
-include ${XDG_CONFIG_HOME}/sway/config.d/*
+include "${XDG_CONFIG_HOME}"/sway/config.d/*
 include /etc/sway/config.d/*
 
 # Enable this if every app is compatible with wayland

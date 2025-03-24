@@ -170,16 +170,16 @@
           "oneDarkPro.editorTheme" = "One Dark Pro Darker";
           "phpfmt.indent_with_space" = 4;
           "redhat.telemetry.enabled" = false;
-          "rust-analyzer.check.command" = "clippy";
+          "rust-analyzer.check.command" = "${clippy}/bin/clippy";
           "rust-analyzer.checkOnSave" = true;
           "rust-analyzer.debug.engine" = "vadimcn.vscode-lldb";
           "scm.repositories.sortOrder" = "name";
           "search.showLineNumbers" = true;
           "search.smartCase" = true;
           "search.useIgnoreFiles" = false;
-          "shellcheck.executablePath" = "shellcheck";
+          "shellcheck.executablePath" = "${shellcheck}/bin/shellcheck";
           "telemetry.telemetryLevel" = "off";
-          "terminal.external.linuxExec" = "alacritty";
+          "terminal.external.linuxExec" = "/usr/bin/alacritty";
           "terminal.integrated.defaultProfile.linux" = "bash";
           "terminal.integrated.ignoreProcessNames" = [
             "starship"

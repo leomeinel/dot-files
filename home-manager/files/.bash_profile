@@ -21,6 +21,7 @@ export JAVA_HOME=/usr/lib/jvm/default
 export _JAVA_OPTIONS="-Djava.util.prefs.userRoot=${XDG_CONFIG_HOME}/java"
 export MYSQL_HOME=/var/lib/mysql
 export PAGER=/usr/bin/less
+# FIXME: nix packages should ideally also use absolute paths
 export VISUAL=nvim
 export MANPAGER="/bin/sh -c '/usr/bin/col -bx | /usr/bin/bat -l man -p'"
 export MANROFFOPT="-c"
@@ -46,6 +47,7 @@ export TEXMFVAR="${XDG_CACHE_HOME}"/texlive/texmf-var
     eval "$(/usr/bin/ssh-agent -s)" >/dev/null 2>&1
 
 # Update rust toolchains if rustup is installed
+# FIXME: nix packages should ideally also use absolute paths
 [[ -n $(/usr/bin/which rustup) ]] >/dev/null 2>&1 &&
     rustup update >/dev/null 2>&1
 

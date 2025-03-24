@@ -60,4 +60,4 @@ italic = { family = "Hasklug Nerd Font Mono", style = "Italic" }
 bold_italic = { family = "Hasklug Nerd Font Mono", style = "Bold Italic" }
 
 [env]
-TERM = "alacritty"
+TERM = "/usr/bin/alacritty"

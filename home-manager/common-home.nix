@@ -56,8 +56,8 @@
         run /usr/bin/mkdir -p ${config.xdg.configHome}/java
         run /usr/bin/mkdir -p ${config.xdg.dataHome}/android
         run /usr/bin/mkdir -p ${config.xdg.dataHome}/cargo
-        run mkdir -p ${config.xdg.dataHome}/gnupg
-        run chmod 700 ${config.xdg.dataHome}/gnupg
+        run /usr/bin/mkdir -p ${config.xdg.dataHome}/gnupg
+        run /usr/bin/chmod 700 ${config.xdg.dataHome}/gnupg
         run /usr/bin/mkdir -p ${config.xdg.dataHome}/go
         run /usr/bin/mkdir -p ${config.xdg.dataHome}/gradle
         run /usr/bin/mkdir -p ${config.xdg.configHome}/gtk-2.0

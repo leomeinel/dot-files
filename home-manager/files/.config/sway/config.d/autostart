@@ -18,5 +18,6 @@ exec /usr/bin/kanshi
 exec /usr/lib/xdg-desktop-portal
 
 # Tray
+## FIXME: nix packages should ideally also use absolute paths
 exec nm-applet
 exec /usr/bin/nextcloud --background
