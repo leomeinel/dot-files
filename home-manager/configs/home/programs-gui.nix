@@ -170,7 +170,7 @@
           "oneDarkPro.editorTheme" = "One Dark Pro Darker";
           "phpfmt.indent_with_space" = 4;
           "redhat.telemetry.enabled" = false;
-          "rust-analyzer.check.command" = "${clippy}/bin/clippy";
+          "rust-analyzer.check.command" = "${rustup}/bin/cargo-clippy";
           "rust-analyzer.checkOnSave" = true;
           "rust-analyzer.debug.engine" = "vadimcn.vscode-lldb";
           "scm.repositories.sortOrder" = "name";

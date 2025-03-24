@@ -48,7 +48,6 @@
       [
         autotiling-rs
         blueman
-        clippy
         cmake
         cmake-format
         go
