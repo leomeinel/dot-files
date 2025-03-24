@@ -38,9 +38,6 @@
         source = ../../files/.config/nwg-bar/style.css;
       };
       # r
-      "r/Renviron" = {
-        source = ../../files/.config/r/Renviron;
-      };
       "r/Rprofile" = {
         source = ../../files/.config/r/Rprofile;
       };
