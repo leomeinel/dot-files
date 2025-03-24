@@ -21,7 +21,7 @@
 }
 
 # General
-options(browser = ${R_BROWSER})
+options(browser = "${R_BROWSER}")
 options(digits = 12)
 options(scipen = 2)
 options(show.signif.stars = FALSE)
