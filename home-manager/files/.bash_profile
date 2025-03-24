@@ -36,6 +36,8 @@ export R_ENVIRON_USER="${XDG_CONFIG_HOME}"/r/Renviron
 export RUSTUP_HOME="${XDG_DATA_HOME}"/rustup
 export SCREENRC="${XDG_CONFIG_HOME}"/screen/screenrc
 export TEXMFVAR="${XDG_CACHE_HOME}"/texlive/texmf-var
+# FIXME: nix packages should ideally also use absolute paths
+export VISUAL=nvim
 
 # Commands that should be applied only for interactive shells.
 [[ $- != *i* ]] && return
