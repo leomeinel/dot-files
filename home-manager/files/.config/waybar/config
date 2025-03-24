@@ -38,7 +38,7 @@
     "format": "{icon}",
     "format-charging": "󰂄",
     "format-plugged": "󰚥",
-    "format-full": "",
+    "format-full": "{}",
     "format-icons": [
       "󰁺",
       "󰁻",
@@ -58,7 +58,7 @@
     "format-off": "󰂲",
     "format-on": "󰂯",
     "format-connected": "󰂱",
-    "format-no-controller": "",
+    "format-no-controller": "{}",
     "on-click": "blueman-manager",
     "on-click-right": "/usr/bin/bluetoothctl show | /usr/bin/grep -Uvq \"Powered: no$\\n.*PowerState: off\" && /usr/bin/bluetoothctl power off || /usr/bin/bluetoothctl power on",
     "tooltip": false
