@@ -89,7 +89,7 @@
         run ln -sfn ${config.home.profileDirectory}/share/themes ${config.xdg.dataHome}/themes
         run /usr/bin/flatpak override -u --filesystem=xdg-data/themes:ro --filesystem=${config.home.profileDirectory}/share/themes:ro --filesystem=${pkgs.arc-theme}/share/themes:ro
       '';
-      common-home-gui-post-linkGeneration = lib.hm.dag.entryAfter [ "linkGeneration" ] ''
+      common-home-gui-post-installPackages = lib.hm.dag.entryAfter [ "installPackages" ] ''
         # Workaround for using the correct QT theme in all applications
         run /usr/bin/flatpak override -u --filesystem=xdg-config/Kvantum:ro --filesystem=${pkgs.arc-kde-theme}/share/Kvantum:ro
         run readarray -t LINKS< <(run readlink -qs ${config.xdg.configHome}/Kvantum/*)
