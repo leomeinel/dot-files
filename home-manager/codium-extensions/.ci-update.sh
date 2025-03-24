@@ -42,7 +42,7 @@ fi
 cd "${SCRIPT_DIR}"/nix4vscode
 # FIXME: Specifying PKG_CONFIG_PATH here is a hack, remove this!
 echo "---------------------A"
-nix profile install --priority 1 nixpkgs#openssl.dev | grep -m 1 '/nix/store/.*openssl-.*-dev$'
+nix profile install --priority 1 nixpkgs#openssl.dev | grep -e -m 1 '/nix/store/.*openssl-.*-dev$'
 #nix profile install --priority 1 nixpkgs#openssl.dev | grep -m 1 '/nix/store/.*openssl-.*-dev$' | tr -d "[:space:]" | sed 's|$|/lib/pkgconfig|'
 echo "---------------------B"
 exit
