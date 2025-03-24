@@ -44,7 +44,7 @@ options(radian.insert_new_line = TRUE)
 options(radian.history_size = 20000)
 # where the global history is stored, environmental variables will be expanded
 # note that "~" is expanded to %USERPROFILE% or %HOME% in Windows
-options(radian.global_history_file = Sys.getenv(XDG_STATE_HOME)"/radian/history")
+options(radian.global_history_file = "${RADIAN_HISTFILE}")
 # the filename that local history is stored, this file would be used instead of
 # `radian.global_history_file` if it exists in the current working directory
 options(radian.local_history_file = ".radian_history")
