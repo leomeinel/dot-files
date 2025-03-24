@@ -170,6 +170,11 @@
           "nix.serverPath" = "nixd";
           "oneDarkPro.editorTheme" = "One Dark Pro Darker";
           "phpfmt.indent_with_space" = 4;
+          "r.libPaths" = [
+            "${rPackages.languageserver}/library"
+            "${rPackages.jsonlite}/library"
+            "${rPackages.httpgd}/library"
+          ];
           "r.plot.useHttpgd" = true;
           "r.rpath.linux" = "${rWrapper}/bin/R";
           "redhat.telemetry.enabled" = false;
