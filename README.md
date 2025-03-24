@@ -44,6 +44,7 @@ Not all packages listed here are a hard requirement and this list might not be e
 - [pipewire](https://archlinux.org/packages/extra/x86_64/pipewire/)
 - [polkit-gnome](https://archlinux.org/packages/extra/x86_64/polkit-gnome/)
 - [procs](https://archlinux.org/packages/extra/x86_64/procs/)
+- [python](https://archlinux.org/packages/core/x86_64/python/)
 - [ripgrep](https://archlinux.org/packages/extra/x86_64/ripgrep/)
 - [sway](https://archlinux.org/packages/extra/x86_64/sway/)
 - [swaybg](https://archlinux.org/packages/extra/x86_64/swaybg/)

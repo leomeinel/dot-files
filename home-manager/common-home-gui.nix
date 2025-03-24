@@ -58,7 +58,6 @@
         nixfmt-rfc-style
         nodePackages.prettier
         ocrmypdf
-        python
         R-with-my-packages
         radianWrapper
         ruff
