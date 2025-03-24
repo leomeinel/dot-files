@@ -13,7 +13,7 @@ CURRENT="$(/usr/bin/pactl get-sink-volume @DEFAULT_SINK@ | /usr/bin/grep -e '%' 
 
 up() {
     new="$((CURRENT + 5))"
-    if [ "${new}" -lt 100 ]; then
+    if [[ "${new}" -lt 100 ]]; then
         /usr/bin/pactl set-sink-volume @DEFAULT_SINK@ "${new}"%
     else
         /usr/bin/pactl set-sink-volume @DEFAULT_SINK@ 100%
@@ -22,7 +22,7 @@ up() {
 
 down() {
     new="$((CURRENT - 5))"
-    if [ "${new}" -gt 0 ]; then
+    if [[ "${new}" -gt 0 ]]; then
         /usr/bin/pactl set-sink-volume @DEFAULT_SINK@ "${new}"%
     else
         /usr/bin/pactl set-sink-volume @DEFAULT_SINK@ 0%
