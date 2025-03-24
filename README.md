@@ -6,37 +6,58 @@ Meant for general purpose systems with a GUI.
 
 ## Requirements
 
-There might be other packages that are needed for scripts and configs to function.
+I have only included links and packages relevant for Arch.
+
+Not all packages listed here are a hard requirement and this list might not be exhaustive.
 
 ### Arch repo
 
 - [alacritty](https://archlinux.org/packages/extra/x86_64/alacritty/)
 - [apparmor](https://archlinux.org/packages/extra/x86_64/apparmor/)
+- [bash-completion](https://archlinux.org/packages/extra/any/bash-completion/)
+- [bat](https://archlinux.org/packages/extra/x86_64/bat/)
+- [brightnessctl](https://archlinux.org/packages/extra/x86_64/brightnessctl/)
+- [dbus](https://archlinux.org/packages/core/x86_64/dbus/)
+- [devtools](https://archlinux.org/packages/extra/any/devtools/)
+- [dust](https://archlinux.org/packages/extra/x86_64/dust/)
+- [eza](https://archlinux.org/packages/extra/x86_64/eza/)
+- [fastfetch](https://archlinux.org/packages/extra/x86_64/fastfetch/)
+- [fd](https://archlinux.org/packages/extra/x86_64/fd/)
 - [flatpak](https://archlinux.org/packages/extra/x86_64/flatpak/)
 - [git-delta](https://archlinux.org/packages/extra/x86_64/git-delta/)
 - [git](https://archlinux.org/packages/extra/x86_64/git/)
+- [glow](https://archlinux.org/packages/extra/x86_64/glow/)
 - [gnome-keyring](https://archlinux.org/packages/extra/x86_64/gnome-keyring/)
 - [gnupg](https://archlinux.org/packages/core/x86_64/gnupg/)
-- [gsettings](https://archlinux.org/packages/extra/any/gsettings-desktop-schemas/)
+- [grim](https://archlinux.org/packages/extra/x86_64/grim/)
+- [gsettings-desktop-schemas](https://archlinux.org/packages/extra/any/gsettings-desktop-schemas/)
+- [hyperfine](https://archlinux.org/packages/extra/x86_64/hyperfine/)
+- [kanshi](https://archlinux.org/packages/extra/x86_64/kanshi/)
 - [libsecret](https://archlinux.org/packages/core/x86_64/libsecret/)
+- [nextcloud-client](https://archlinux.org/packages/extra/x86_64/nextcloud-client/)
 - [nwg-bar](https://archlinux.org/packages/extra/x86_64/nwg-bar/)
+- [pacman-contrib](https://archlinux.org/packages/extra/x86_64/pacman-contrib/)
+- [pipewire-alsa](https://archlinux.org/packages/extra/x86_64/pipewire-alsa/)
+- [pipewire-jack](https://archlinux.org/packages/extra/x86_64/pipewire-jack/)
 - [pipewire-pulse](https://archlinux.org/packages/extra/x86_64/pipewire-pulse/)
+- [pipewire](https://archlinux.org/packages/extra/x86_64/pipewire/)
 - [polkit-gnome](https://archlinux.org/packages/extra/x86_64/polkit-gnome/)
+- [procs](https://archlinux.org/packages/extra/x86_64/procs/)
+- [ripgrep](https://archlinux.org/packages/extra/x86_64/ripgrep/)
 - [sway](https://archlinux.org/packages/extra/x86_64/sway/)
 - [swaybg](https://archlinux.org/packages/extra/x86_64/swaybg/)
 - [swayidle](https://archlinux.org/packages/?name=swayidle)
 - [swaylock](https://archlinux.org/packages/extra/x86_64/swaylock/)
 - [swaync](https://archlinux.org/packages/extra/x86_64/swaync/)
 - [systemd](https://archlinux.org/packages/core/x86_64/systemd/)
+- [usbguard](https://archlinux.org/packages/extra/x86_64/usbguard/)
 - [waybar](https://archlinux.org/packages/extra/x86_64/waybar/)
 - [wofi](https://archlinux.org/packages/extra/x86_64/wofi/)
-- [xdg-desktop-portal](https://archlinux.org/packages/extra/x86_64/xdg-desktop-portal/)
+- [xdg-dbus-proxy](https://archlinux.org/packages/extra/x86_64/xdg-dbus-proxy/)
+- [xdg-desktop-portal-wlr](https://archlinux.org/packages/extra/x86_64/xdg-desktop-portal-wlr/)
 - [xdg-user-dirs](https://archlinux.org/packages/extra/x86_64/xdg-user-dirs/)
+- [xdg-utils](https://archlinux.org/packages/extra/any/xdg-utils/)
 - [xorg-xwayland](https://archlinux.org/packages/extra/x86_64/xorg-xwayland/)
-
-### AUR
-
-- [kvantum-theme-arc](https://aur.archlinux.org/packages/kvantum-theme-arc)
 
 ### Flatpak
 
