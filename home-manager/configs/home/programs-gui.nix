@@ -199,7 +199,7 @@
           "terminal.integrated.windowsEnableConpty" = false;
           "update.mode" = "none";
           "update.showReleaseNotes" = false;
-          "window.autoDetectColorScheme" = true;
+          "window.autoDetectColorScheme" = false;
           "workbench.activityBar.location" = "hidden";
           "workbench.colorTheme" = "One Dark Pro Darker";
           "workbench.commandPalette.history" = 500;
