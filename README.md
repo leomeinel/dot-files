@@ -57,6 +57,7 @@ Not all packages listed here are a hard requirement and this list might not be e
 - [waybar](https://archlinux.org/packages/extra/x86_64/waybar/)
 - [wofi](https://archlinux.org/packages/extra/x86_64/wofi/)
 - [xdg-dbus-proxy](https://archlinux.org/packages/extra/x86_64/xdg-dbus-proxy/)
+- [xdg-desktop-portal-gtk](https://archlinux.org/packages/extra/x86_64/xdg-desktop-portal-gtk/)
 - [xdg-desktop-portal-wlr](https://archlinux.org/packages/extra/x86_64/xdg-desktop-portal-wlr/)
 - [xdg-user-dirs](https://archlinux.org/packages/extra/x86_64/xdg-user-dirs/)
 - [xdg-utils](https://archlinux.org/packages/extra/any/xdg-utils/)
