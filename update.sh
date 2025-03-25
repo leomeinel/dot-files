@@ -46,3 +46,6 @@ fi
 # Add nixpkgs channel
 nix-channel --add https://nixos.org/channels/nixos-"${NIX_VERSION}" nixpkgs || true
 nix-channel --update
+
+# Notify user if script has finished successfully
+echo "$(basename "${0}") has finished successfully."
