@@ -83,7 +83,7 @@ sh <(curl -L https://nixos.org/nix/install) --daemon --yes --nix-extra-conf-file
 Edit `install.conf` to specify the usernames matching your system. If any of the users are not needed by you, you can just leave them how they are.
 
 ```sh
-# Instead of main, you can also use a tag.
+# Instead of main, you can also use a tag
 git clone -b main https://github.com/leomeinel/dot-files.git ~/.config/dot-files
 chmod +x ~/.config/dot-files/setup.sh
 ~/.config/dot-files/setup.sh

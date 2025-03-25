@@ -9,10 +9,10 @@
 # -----
 ###
 
-# Commands that should be applied only for interactive shells.
+# Commands that should be applied only for interactive shells
 [[ "${-}" != *i* ]] && return
 
-# Include ~/.bash_aliases
+# Source ~/.bash_aliases
 [[ -f ~/.bash_aliases ]] &&
     {
         # shellcheck source=/dev/null

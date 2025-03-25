@@ -42,7 +42,7 @@ export TEXMFVAR="${XDG_CACHE_HOME}"/texlive/texmf-var
 ## FIXME: Find a better way to reference nix packages by absolute path
 export VISUAL="${XDG_STATE_HOME}"/nix/profile/bin/nvim
 
-# Commands that should be applied only for interactive shells.
+# Commands that should be applied only for interactive shells
 [[ "${-}" != *i* ]] && return
 
 # Start ssh-agent if it is not already started

@@ -9,8 +9,7 @@
 # -----
 ###
 
-# INFO: This file is not needed for the installation.
-#       It enables you to update your dot-files. You will have to pull changes via git manually.
+# INFO: This file is not needed for the installation
 
 # Source config
 SCRIPT_DIR="$(dirname -- "$(readlink -f -- "${0}")")"
