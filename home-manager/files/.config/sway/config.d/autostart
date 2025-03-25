@@ -11,12 +11,6 @@ exec /usr/bin/gnome-keyring-daemon --daemonize --start --components=gpg,pkcs11,s
 exec /usr/bin/swaync
 exec /usr/bin/aa-notify -p -s 1 -w 60 -f /var/log/audit/audit.log
 
-# Outputs
-exec /usr/bin/kanshi
-
-# XDG Desktop Portal
-exec /usr/lib/xdg-desktop-portal
-
 # Tray
 ## FIXME: Find a better way to reference nix packages by absolute path
 exec "${XDG_STATE_HOME}"/nix/profile/bin/nm-applet

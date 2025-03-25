@@ -33,7 +33,6 @@ Not all packages listed here are a hard requirement and this list might not be e
 - [grim](https://archlinux.org/packages/extra/x86_64/grim/)
 - [gsettings-desktop-schemas](https://archlinux.org/packages/extra/any/gsettings-desktop-schemas/)
 - [hyperfine](https://archlinux.org/packages/extra/x86_64/hyperfine/)
-- [kanshi](https://archlinux.org/packages/extra/x86_64/kanshi/)
 - [libsecret](https://archlinux.org/packages/core/x86_64/libsecret/)
 - [networkmanager](https://archlinux.org/packages/extra/x86_64/networkmanager/)
 - [nextcloud-client](https://archlinux.org/packages/extra/x86_64/nextcloud-client/)
