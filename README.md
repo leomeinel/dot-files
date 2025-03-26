@@ -6,9 +6,9 @@ Meant for general purpose systems with a GUI.
 
 ## Requirements
 
-I have only included links and packages relevant for Arch.
+:information_source: | I have only included links and packages for Arch Linux.
 
-Not all packages listed here are a hard requirement and this list might not be exhaustive.
+:information_source: | Not all packages listed here are hard requirements and this list might not be exhaustive.
 
 ### Arch repo
 
@@ -64,14 +64,12 @@ Not all packages listed here are a hard requirement and this list might not be e
 
 ### Flatpak
 
-Executables should be stored in /usr/local/bin
+:information_source: | Store executables in `/usr/local/bin`.
 
 - [librewolf](https://flathub.org/apps/io.gitlab.librewolf-community)
 - [pwvucontrol](https://flathub.org/apps/com.saivert.pwvucontrol)
 
-### Custom
-
-- nix
+### Nix
 
 ```sh
 # Execute as root
@@ -80,7 +78,7 @@ sh <(curl -L https://nixos.org/nix/install) --daemon --yes --nix-extra-conf-file
 
 ## Installation
 
-Edit `install.conf` to specify the usernames matching your system. If any of the users are not needed by you, you can just leave them how they are.
+Edit `install.conf` to specify the usernames matching your system. If any of the users are not needed by you, just ignore them.
 
 ```sh
 # Instead of main, you can also use a tag
