@@ -15,9 +15,14 @@ regen-codium-extensions:
     - git config user.email "${MAIN_BOT_EMAIL}"
     - git remote remove gitlab_origin || true
     - git remote add gitlab_origin https://"${MAIN_BOT_USERNAME}":"${MAIN_BOT_TOKEN}"@"${CI_SERVER_FQDN}"/public-leo/"${CI_PROJECT_NAME}".git
-    - git add ./home-manager/codium-extensions/nix4vscode ./home-manager/codium-extensions/codium-extensions.nix ./home-manager/codium-extensions/config.toml
+    - git add ./home-manager/codium-extensions/nix4vscode
+    - DATE="$(date +"%F-%H")"
     - |
-      DATE="$(date +"%F-%H")"
-      if git commit -m "Regen codium-extensions.nix - CI ${DATE}"; then
+      if git commit -m "Update submodule nix4vscode [ci skip] ${DATE}"; then
+          git push -o ci.skip gitlab_origin HEAD:main
+      fi
+    - git add ./home-manager/codium-extensions/codium-extensions.nix ./home-manager/codium-extensions/config.toml
+    - |
+      if git commit -m "Regen codium-extensions.nix [ci skip] ${DATE}"; then
           git push -o ci.skip gitlab_origin HEAD:main
       fi
