@@ -75,6 +75,15 @@ STRING="REPLACE_KEYLAYOUT"
 grep -q "${STRING}" "${FILE}" || sed_exit
 sed -i "s|${STRING}|${KEYLAYOUT}|g" "${FILE}"
 ## END sed
+## home-manager/files/.config/sway/config.d/autostart
+## START awk
+FILE="${SCRIPT_DIR}/home-manager/files/.config/sway/config.d/autostart"
+STRING="REPLACE_SWAY_AUTOSTART"
+grep -q "${STRING}" "${FILE}" || awk_exit
+tmpfile="$(mktemp /tmp/dot-files-XXXXXX)"
+cp "${FILE}" "${tmpfile}" &&
+    awk -v a="${STRING}" -v b="${SWAY_AUTOSTART}" '{gsub(a,b)}1' "${tmpfile}" >"${FILE}"
+## END awk
 ## home-manager/files/.config/sway/config.d/output
 ## START awk
 FILE="${SCRIPT_DIR}/home-manager/files/.config/sway/config.d/output"
@@ -83,7 +92,6 @@ grep -q "${STRING}" "${FILE}" || awk_exit
 tmpfile="$(mktemp /tmp/dot-files-XXXXXX)"
 cp "${FILE}" "${tmpfile}" &&
     awk -v a="${STRING}" -v b="${SWAY_OUTPUT}" '{gsub(a,b)}1' "${tmpfile}" >"${FILE}"
-rm -f "${tmpfile}"
 ## END awk
 ## home-manager/files/.config/swaync/config.json
 ## START sed
