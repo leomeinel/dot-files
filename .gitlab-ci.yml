@@ -14,7 +14,7 @@ regen-codium-extensions:
     - git remote remove gitlab_origin || true
     - git remote add gitlab_origin https://"${MAIN_BOT_USERNAME}":"${MAIN_BOT_TOKEN}"@"${CI_SERVER_FQDN}"/public-leo/"${CI_PROJECT_NAME}".git
     - git add ./home-manager/codium-extensions/nix4vscode
-    - DATE="$(date +"%F-%H")"
+    - DATE="$(date +"%FT%H-%M-%S")"
     - |
       if git commit -m "Update submodule nix4vscode [ci skip] ${DATE}"; then
           git push -o ci.skip gitlab_origin HEAD:main
