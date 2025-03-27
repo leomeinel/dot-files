@@ -52,9 +52,6 @@
         source = ../../files/.config/radian/profile;
       };
       # sway
-      "sway/config.d/autostart" = {
-        source = ../../files/.config/sway/config.d/autostart;
-      };
       "sway/config.d/bar" = {
         source = ../../files/.config/sway/config.d/bar;
       };
