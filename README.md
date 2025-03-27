@@ -73,7 +73,7 @@ Meant for general purpose systems with a GUI.
 
 ```sh
 # Execute as root
-sh <(curl -L https://nixos.org/nix/install) --daemon --yes --nix-extra-conf-file ~/.config/dot-files/nix.conf
+/bin/sh <(curl -L https://nixos.org/nix/install) --daemon --yes --nix-extra-conf-file ~/.config/dot-files/nix.conf
 ```
 
 ## Installation
