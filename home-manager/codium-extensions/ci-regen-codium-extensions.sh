@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 ###
-# File: .ci-update.sh
+# File: ci-regen-codium-extensions.sh
 # Author: Leopold Meinel (leo@meinel.dev)
 # -----
 # Copyright (c) 2025 Leopold Meinel & contributors

@@ -19,8 +19,8 @@ regen-codium-extensions:
       if git commit -m "Update submodule nix4vscode [ci skip] ${DATE}"; then
           git push -o ci.skip gitlab_origin HEAD:main
       fi
-    - chmod 755 ./home-manager/codium-extensions/.ci-update.sh
-    - ./home-manager/codium-extensions/.ci-update.sh
+    - chmod 755 ./home-manager/codium-extensions/ci-regen-codium-extensions.sh
+    - ./home-manager/codium-extensions/ci-regen-codium-extensions.sh
     - git add ./home-manager/codium-extensions/codium-extensions.nix ./home-manager/codium-extensions/config.toml
     - |
       if git commit -m "Regen codium-extensions.nix [ci skip] ${DATE}"; then
