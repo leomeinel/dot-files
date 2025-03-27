@@ -1,12 +1,14 @@
 # Colors
+## Standard colors
 set $dark    #1d2021
-set $dark2   #282c2e
-set $light   #ebdbb2
+set $dark2   #232729
 set $primary #f0614e
 set $purple  #342f73
 set $purple2 #99a2ea
 set $white   #ffffff
+set $light   #ebdbb2
 
+## Sway
 set $focused_bgcolor $white
 set $focused_textcolor $dark
 set $focused_indicator $primary

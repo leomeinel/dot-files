@@ -1,13 +1,14 @@
-# Input
-## Disable mouse acceleration
+# Disable mouse acceleration
 input "type:pointer" accel_profile flat
-## Touchpad
+
+# Touchpad
 input "type:touchpad" {
     tap enable
     natural_scroll enable
     scroll_factor 0.5
 }
-## Keyboard
+
+# Keyboard
 input "type:keyboard" {
     xkb_layout REPLACE_KEYLAYOUT
 }
