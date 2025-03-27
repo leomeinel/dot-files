@@ -8,6 +8,7 @@
 # URL: https://opensource.org/licenses/MIT
 # -----
 ###
+
 # Source config
 SCRIPT_DIR="$(dirname -- "$(readlink -f -- "${0}")")"
 # shellcheck source=/dev/null

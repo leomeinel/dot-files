@@ -9,6 +9,8 @@
 # -----
 ###
 
+# INFO: This file is for CI and not needed for the installation
+
 # Source config
 SCRIPT_DIR="$(dirname -- "$(readlink -f -- "${0}")")"
 # shellcheck source=/dev/null
