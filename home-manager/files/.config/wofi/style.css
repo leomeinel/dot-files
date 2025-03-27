@@ -15,28 +15,56 @@
 /*
 :root {
   --dark: rgb(29, 32, 33);
-  --dark2: ​rgb(35, 39, 41);
+  --dark2: rgb(35, 39, 41);
   --secondary: rgb(104, 157, 106);
 }
 */
 
 * {
-  border-radius: 3px;
+  border-radius: 5px;
   border: none;
   font-family: "Hasklug Nerd Font";
-  font-size: 20px;
+  font-size: 24px;
 }
 
 window {
-  background-color: rgb(29, 32, 33) /* var(--dark) */;
-  color: white;
+  opacity: 0.9;
 }
 
 #input {
-  background-color: ​rgb(35, 39, 41) /* var(--dark2) */;
-  color: rgb(29, 32, 33) /* var(--dark) */;
+  padding: 10px;
+  margin: 0px;
+  background-color: rgb(35, 39, 41) /* var(--dark2) */;
+  color: white;
 }
 
-#entry:selected {
-  background-color: rgb(104, 157, 106) /* var(--secondary) */;
+#inner-box {
+  margin: 0px;
+  color: white;
+  background-color: rgb(29, 32, 33); /* var(--dark) */
+}
+
+#outer-box {
+  margin: 0px;
+  background-color: rgb(29, 32, 33); /* var(--dark) */
+}
+
+#selected {
+  background-color: rgb(104, 157, 106); /* var(--secondary) */
+}
+
+#entry {
+  padding: 0px;
+  margin: 0px;
+  background-color: rgb(29, 32, 33); /* var(--dark) */
+}
+
+#scroll {
+  margin: 5px;
+  background-color: rgb(29, 32, 33); /* var(--dark) */
+}
+
+#text {
+  margin: 0px;
+  padding: 2px 2px 2px 10px;
 }
