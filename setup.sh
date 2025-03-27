@@ -142,9 +142,7 @@ nix run home-manager/release-"${NIX_VERSION}" -- switch -b "bak" --flake "${SCRI
 DATE="$(date +"%F-%H")"
 cd "${SCRIPT_DIR}"
 git add .
-if ! git commit -m "Install dot-files - ${DATE}"; then
-    git commit --no-gpg-sign -m "Install dot-files - ${DATE}"
-fi
+git commit --no-gpg-sign -m "Install dot-files - ${DATE}"
 
 # Set default rust if rustup is installed
 [[ -n "$(which rustup)" ]] >/dev/null 2>&1 &&
