@@ -52,6 +52,9 @@
         source = ../../files/.config/radian/profile;
       };
       # sway
+      "sway/config.d/autostart" = {
+        source = ../../files/.config/sway/config.d/autostart;
+      };
       "sway/config.d/bar" = {
         source = ../../files/.config/sway/config.d/bar;
       };
@@ -66,9 +69,6 @@
       };
       "sway/config.d/output" = {
         source = ../../files/.config/sway/config.d/output;
-      };
-      "sway/config.d/reload" = {
-        source = ../../files/.config/sway/config.d/reload;
       };
       "sway/config.d/theme" = {
         source = ../../files/.config/sway/config.d/theme;
