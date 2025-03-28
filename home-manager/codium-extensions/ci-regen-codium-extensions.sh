@@ -14,17 +14,19 @@
 # Fail on error
 set -e
 
+# Define functions
+log_err() {
+    /usr/bin/logger -s -p local0.err <<<"${@}"
+}
+sed_exit() {
+    log_err "'sed' didn't replace, report this at https://github.com/leomeinel/dot-files/issues."
+    exit 1
+}
+
 # Source config
 SCRIPT_DIR="$(dirname -- "$(readlink -f -- "${0}")")"
 # shellcheck source=/dev/null
 . "${SCRIPT_DIR}"/../../install.conf
-
-# Define functions
-sed_exit() {
-    echo "ERROR: 'sed' didn't replace, report this @"
-    echo "       https://github.com/leomeinel/dot-files/issues"
-    exit 1
-}
 
 # Set current version of codium
 CODIUM_VERSION="$(nix-search -c "${NIX_VERSION}" -n 'vscodium' | grep 'vscodium @' | awk '{print $3}' | awk 'BEGIN{FS=OFS="."}{$NF=""; NF--; print}')"
@@ -36,7 +38,7 @@ if [[ -n "${CODIUM_VERSION}" ]] >/dev/null 2>&1; then
     sed -i "s/${STRING}/vscode_version = \"${CODIUM_VERSION}\"/" "${FILE}"
     ## END sed
 else
-    echo "ERROR: Unable to get CODIUM_VERSION"
+    log_err "Unable to get 'CODIUM_VERSION'."
     exit 1
 fi
 

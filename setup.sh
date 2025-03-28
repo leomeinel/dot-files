@@ -12,22 +12,23 @@
 # Fail on error
 set -e
 
+# Define functions
+log_err() {
+    /usr/bin/logger -s -p local0.err <<<"${@}"
+}
+awk_exit() {
+    log_err "'awk' didn't replace, report this at https://github.com/leomeinel/dot-files/issues."
+    exit 1
+}
+sed_exit() {
+    log_err "'sed' didn't replace, report this at https://github.com/leomeinel/dot-files/issues."
+    exit 1
+}
+
 # Source config
 SCRIPT_DIR="$(dirname -- "$(readlink -f -- "${0}")")"
 # shellcheck source=/dev/null
 . "${SCRIPT_DIR}"/install.conf
-
-# Define functions
-awk_exit() {
-    echo "ERROR: 'awk' didn't replace, report this @"
-    echo "       https://github.com/leomeinel/dot-files/issues"
-    exit 1
-}
-sed_exit() {
-    echo "ERROR: 'sed' didn't replace, report this @"
-    echo "       https://github.com/leomeinel/dot-files/issues"
-    exit 1
-}
 
 # Set variables
 ## flake.nix
@@ -162,4 +163,4 @@ nix-channel --add https://nixos.org/channels/nixos-"${NIX_VERSION}" nixpkgs || t
 nix-channel --update
 
 # Notify user if script has finished successfully
-echo "INFO: $(basename "${0}") has finished successfully."
+echo "'$(basename "${0}")' has finished successfully."
