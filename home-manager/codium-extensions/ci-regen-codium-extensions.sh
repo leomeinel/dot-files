@@ -16,7 +16,7 @@ set -e
 
 # Define functions
 log_err() {
-    /usr/bin/logger -s -p local0.err <<<"${@}"
+    /usr/bin/logger -s -p local0.err <<<"'$(basename "${0}"):' ${*}"
 }
 sed_exit() {
     log_err "'sed' didn't replace, report this at https://github.com/leomeinel/dot-files/issues."
