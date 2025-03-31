@@ -23,7 +23,7 @@ SCRIPT_DIR="$(dirname -- "$(readlink -f -- "${0}")")"
 rm -rf ~/.vscode-oss ~/.vscode-R ~/.config/vscode-sqltools ~/.local/share/vscode-sqltools
 # Update lock file
 cd "${SCRIPT_DIR}"
-nix flake update --commit-lock-file
+nix flake update
 # Run home-manager
 nix run home-manager/release-"${NIX_VERSION}" -- switch -b "bak" --flake "${SCRIPT_DIR}/#${USER}"
 
