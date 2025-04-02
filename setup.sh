@@ -25,6 +25,16 @@ sed_exit() {
     exit 1
 }
 
+# Users
+## Individual users
+### SYSUSER can be renamed, but removing is not supported
+SYSUSER="systux"
+### To remove a user, just remove any of the following lines
+GUESTUSER="guest"
+HOMEUSER="leo"
+VIRTUSER="virt"
+WORKUSER="servedsmart"
+
 # Source config
 SCRIPT_DIR="$(dirname -- "$(readlink -f -- "${0}")")"
 # shellcheck source=/dev/null
