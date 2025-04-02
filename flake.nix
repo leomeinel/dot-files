@@ -38,20 +38,6 @@
         # Set this for non nixos
         targets.genericLinux.enable = true;
         # Users
-        "REPLACE_GUESTUSER" = home-manager.lib.homeManagerConfiguration {
-          inherit pkgs;
-          # Args to parse
-          extraSpecialArgs = { inherit nixos-version; };
-          # Modules to use
-          modules = [ ./home-manager/configs/GUESTUSER.nix ];
-        };
-        "REPLACE_HOMEUSER" = home-manager.lib.homeManagerConfiguration {
-          inherit pkgs;
-          # Args to parse
-          extraSpecialArgs = { inherit nixos-version; };
-          # Modules to use
-          modules = [ ./home-manager/configs/HOMEUSER.nix ];
-        };
         "root" = home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
           # Args to parse
@@ -65,6 +51,20 @@
           extraSpecialArgs = { inherit nixos-version; };
           # Modules to use
           modules = [ ./home-manager/configs/SYSUSER.nix ];
+        };
+        "REPLACE_GUESTUSER" = home-manager.lib.homeManagerConfiguration {
+          inherit pkgs;
+          # Args to parse
+          extraSpecialArgs = { inherit nixos-version; };
+          # Modules to use
+          modules = [ ./home-manager/configs/GUESTUSER.nix ];
+        };
+        "REPLACE_HOMEUSER" = home-manager.lib.homeManagerConfiguration {
+          inherit pkgs;
+          # Args to parse
+          extraSpecialArgs = { inherit nixos-version; };
+          # Modules to use
+          modules = [ ./home-manager/configs/HOMEUSER.nix ];
         };
         "REPLACE_VIRTUSER" = home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
