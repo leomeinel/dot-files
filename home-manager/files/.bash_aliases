@@ -10,8 +10,8 @@
 ###
 
 # Aliases for sudo/doas to also use functions
-alias doas="/usr/bin/doas "
-alias sudo="/usr/bin/sudo "
+alias doas='/usr/bin/doas '
+alias sudo='/usr/bin/sudo '
 
 # Rust core-utils
 eza() {
