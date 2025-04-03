@@ -32,7 +32,7 @@ shopt -s histappend
 # Line wrap on window resize
 shopt -s checkwinsize
 
-# Tab completion for doas and sudo
+# Tab completion for doas
 complete -F _command doas
 
 # If GUI isn't available and not connected through ssh, don't do anything
