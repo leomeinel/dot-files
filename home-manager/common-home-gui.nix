@@ -48,10 +48,14 @@
       in
       [
         autotiling-rs
+        clang
         cmake
         cmake-format
         go
         gradle
+        libllvm
+        lld
+        lldb
         maven
         networkmanagerapplet
         nixd
