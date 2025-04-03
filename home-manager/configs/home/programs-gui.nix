@@ -279,7 +279,7 @@
               "language" = "nix";
               "begin" = "/*";
               "prefix" = "  ";
-              "end" = " */";
+              "end" = "*/";
             }
             {
               "language" = "dockerfile";
