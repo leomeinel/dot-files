@@ -81,8 +81,8 @@ Meant for general purpose systems with a GUI.
 Edit `install.conf` to specify the usernames matching your system. If any of the users are not needed by you, just ignore them.
 
 ```sh
-# Instead of main, you can also use a tag
-git clone -b main https://github.com/leomeinel/dot-files.git ~/.config/dot-files
+# Instead of server, you can also use a tag
+git clone -b server https://github.com/leomeinel/dot-files.git ~/.config/dot-files
 chmod +x ~/.config/dot-files/setup.sh
 ~/.config/dot-files/setup.sh
 ```
