@@ -35,43 +35,17 @@
   # Home options
   home = {
     # Packages
-    packages =
-      with pkgs;
-      let
-        R-with-my-packages = rWrapper.override {
-          packages = with rPackages; [
-            httpgd
-            languageserver
-            jsonlite
-          ];
-        };
-      in
-      [
-        autotiling-rs
-        clang
-        cmake
-        cmake-format
-        go
-        gradle
-        libllvm
-        lld
-        lldb
-        maven
-        networkmanagerapplet
-        nixd
-        nixfmt-rfc-style
-        nodePackages.prettier
-        ocrmypdf
-        R-with-my-packages
-        radianWrapper
-        ruff
-        rustup
-        shellcheck
-        shfmt
-        slurp
-        usbguard-notifier
-        wl-clipboard-rs
-      ];
+    packages = with pkgs; [
+      autotiling-rs
+      networkmanagerapplet
+      nodePackages.prettier
+      ruff
+      shellcheck
+      shfmt
+      slurp
+      usbguard-notifier
+      wl-clipboard-rs
+    ];
     # Activation script
     activation = {
       common-home-gui = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
