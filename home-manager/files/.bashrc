@@ -33,8 +33,7 @@ shopt -s histappend
 shopt -s checkwinsize
 
 # Tab completion for doas and sudo
-complete -cf doas
-complete -cf sudo
+complete -F _command doas
 
 # If GUI isn't available and not connected through ssh, don't do anything
 [[ -z "${XDG_CURRENT_DESKTOP}" ]] && [[ -z "${SSH_CLIENT}" ]] && [[ -z "${SSH_TTY}" ]] &&
