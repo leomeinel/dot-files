@@ -9,27 +9,27 @@
 # -----
 ###
 
-# Rust core-utils aliases
+# Rust core-utils
 eza() {
-    /usr/bin/eza -la --color=automatic "${@}"
+    command /usr/bin/eza -la --color=automatic "${@}"
 }
 bat() {
-    /usr/bin/bat --decorations auto --color auto "${@}"
+    command /usr/bin/bat --decorations auto --color auto "${@}"
 }
 rg() {
-    /usr/bin/rg -s --color auto "${@}"
+    command /usr/bin/rg -s --color auto "${@}"
 }
 fd() {
-    /usr/bin/fd -Hs -c auto "${@}"
+    command /usr/bin/fd -Hs -c auto "${@}"
 }
 hyperfine() {
-    /usr/bin/hyperfine -w 3 -r 12 --style auto "${@}"
+    command /usr/bin/hyperfine -w 3 -r 12 --style auto "${@}"
 }
 
 # xdg-ninja recommendations
 adb() {
-    HOME="${XDG_DATA_HOME}"/android /usr/bin/adb "${@}"
+    HOME="${XDG_DATA_HOME}"/android command /usr/bin/adb "${@}"
 }
 wget() {
-    /usr/bin/wget --hsts-file="${XDG_DATA_HOME}"/wget-hsts "${@}"
+    command /usr/bin/wget --hsts-file="${XDG_DATA_HOME}"/wget-hsts "${@}"
 }
