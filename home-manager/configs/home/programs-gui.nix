@@ -120,15 +120,15 @@
           "nix.serverPath" = "nixd";
           "oneDarkPro.editorTheme" = "One Dark Pro Darker";
           "phpfmt.indent_with_space" = 4;
-          "r.libPaths" = [
-            "${rPackages.languageserver}/library"
-            "${rPackages.jsonlite}/library"
-            "${rPackages.httpgd}/library"
-          ];
+          #"r.libPaths" = [
+          #  "${rPackages.languageserver}/library"
+          #  "${rPackages.jsonlite}/library"
+          #  "${rPackages.httpgd}/library"
+          #];
           "r.plot.useHttpgd" = true;
-          "r.rpath.linux" = "${rWrapper}/bin/R";
+          #"r.rpath.linux" = "${rWrapper}/bin/R";
           "redhat.telemetry.enabled" = false;
-          "rust-analyzer.check.command" = "${rustup}/bin/cargo-clippy";
+          #"rust-analyzer.check.command" = "${rustup}/bin/cargo-clippy";
           "rust-analyzer.checkOnSave" = true;
           "rust-analyzer.debug.engine" = "vadimcn.vscode-lldb";
           "scm.repositories.sortOrder" = "name";
