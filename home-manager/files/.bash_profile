@@ -53,11 +53,6 @@ export GPG_TTY
 [[ -z "${SSH_AUTH_SOCK}" ]] &&
     eval "$(/usr/bin/ssh-agent -s)" >/dev/null 2>&1
 
-# Update rust toolchains if rustup is installed
-## FIXME: Find a better way to reference nix packages by absolute path
-[[ -n "$(/usr/bin/which rustup)" ]] >/dev/null 2>&1 &&
-    "${XDG_STATE_HOME}"/nix/profile/bin/rustup update >/dev/null 2>&1
-
 # Source ~/.bashrc
 [[ -f ~/.bashrc ]] && [[ -n "${BASH_VERSION}" ]] &&
     {
