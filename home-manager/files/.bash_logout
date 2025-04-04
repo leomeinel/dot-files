@@ -14,5 +14,5 @@
     eval "$(/usr/bin/ssh-agent -k)"
 
 # Clear screen
-[[ "${SHLVL}" = 1 ]] &&
+[[ "${SHLVL}" -eq 1 ]] &&
     /usr/bin/clear
