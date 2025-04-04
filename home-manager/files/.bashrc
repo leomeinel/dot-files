@@ -10,14 +10,14 @@
 ###
 
 # Commands that should be applied only for interactive shells
-[[ "${-}" != *i* ]] && return
+[[ "${-}" != *i* ]] &&
+    return
 
 # Source ~/.bash_aliases
-[[ -f ~/.bash_aliases ]] &&
-    {
-        # shellcheck source=/dev/null
-        . ~/.bash_aliases
-    }
+if [[ -f ~/.bash_aliases ]]; then
+    # shellcheck source=/dev/null
+    . ~/.bash_aliases
+fi
 
 # Key bindings
 bind '"\e[A": history-search-backward'
@@ -48,3 +48,6 @@ fi
 UPDATES="$(/usr/bin/timeout 4 /usr/bin/checkupdates 2>/dev/null | /usr/bin/wc -l)"
 [[ "${UPDATES}" -gt 0 ]] &&
     /usr/bin/echo -e "\e[31m${UPDATES}\e[0m packages are out of date."
+
+# Avoid non 0 exit status
+true
