@@ -48,3 +48,6 @@ fi
 UPDATES="$(/usr/bin/timeout 4 /usr/bin/checkupdates 2>/dev/null | /usr/bin/wc -l)"
 [[ "${UPDATES}" -gt 0 ]] &&
     /usr/bin/echo -e "\e[31m${UPDATES}\e[0m packages are out of date."
+
+# return explicitly to avoid non 0 exit status
+return
