@@ -17,5 +17,5 @@
 [[ "${SHLVL}" -eq 1 ]] &&
     /usr/bin/clear
 
-# return explicitly to avoid non 0 exit status
-return
+# Avoid non 0 exit status
+true
