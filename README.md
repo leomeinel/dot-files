@@ -72,8 +72,14 @@ Meant for general purpose systems with a GUI.
 ### Nix
 
 ```sh
-# Execute as root
-/bin/sh <(curl -L https://nixos.org/nix/install) --daemon --yes --nix-extra-conf-file ~/.config/dot-files/nix.conf
+# Download nix upstream installation script
+tmpfile="$(mktemp /tmp/arch-install-nixos-XXXXXX.sh)"
+curl --proto '=https' --tlsv1.2 -sSfL https://nixos.org/nix/install -o "${tmpfile}"
+# View nix upstream installation script
+bat --decorations auto --color auto "${tmpfile}"
+# Execute nix upstream installation script as root
+chmod +x "${tmpfile}"
+"${tmpfile}" --daemon --yes --nix-extra-conf-file ~/.config/dot-files/nix.conf
 ```
 
 ## Installation
