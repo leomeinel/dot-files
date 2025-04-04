@@ -10,14 +10,14 @@
 ###
 
 # Commands that should be applied only for interactive shells
-[[ "${-}" != *i* ]] && return
+[[ "${-}" != *i* ]] &&
+    return
 
 # Source ~/.bash_aliases
-[[ -f ~/.bash_aliases ]] &&
-    {
-        # shellcheck source=/dev/null
-        . ~/.bash_aliases
-    }
+if [[ -f ~/.bash_aliases ]]; then
+    # shellcheck source=/dev/null
+    . ~/.bash_aliases
+fi
 
 # Key bindings
 bind '"\e[A": history-search-backward'

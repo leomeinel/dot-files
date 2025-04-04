@@ -37,36 +37,31 @@ FILE="${SCRIPT_DIR}/flake.nix"
 STRING="REPLACE_NIX_VERSION"
 grep -q "${STRING}" "${FILE}" || sed_exit
 sed -i "s|${STRING}|${NIX_VERSION}|g" "${FILE}"
-[[ -n "${SYSUSER}" ]] &&
-    {
-        STRING="REPLACE_SYSUSER"
-        grep -q "${STRING}" "${FILE}" || sed_exit
-        sed -i "s|${STRING}|${SYSUSER}|g" "${FILE}"
-    }
-[[ -n "${GUESTUSER}" ]] &&
-    {
-        STRING="REPLACE_GUESTUSER"
-        grep -q "${STRING}" "${FILE}" || sed_exit
-        sed -i "s|${STRING}|${GUESTUSER}|g" "${FILE}"
-    }
-[[ -n "${HOMEUSER}" ]] &&
-    {
-        STRING="REPLACE_HOMEUSER"
-        grep -q "${STRING}" "${FILE}" || sed_exit
-        sed -i "s|${STRING}|${HOMEUSER}|g" "${FILE}"
-    }
-[[ -n "${VIRTUSER}" ]] &&
-    {
-        STRING="REPLACE_VIRTUSER"
-        grep -q "${STRING}" "${FILE}" || sed_exit
-        sed -i "s|${STRING}|${VIRTUSER}|g" "${FILE}"
-    }
-[[ -n "${WORKUSER}" ]] &&
-    {
-        STRING="REPLACE_WORKUSER"
-        grep -q "${STRING}" "${FILE}" || sed_exit
-        sed -i "s|${STRING}|${WORKUSER}|g" "${FILE}"
-    }
+if [[ -n "${SYSUSER}" ]]; then
+    STRING="REPLACE_SYSUSER"
+    grep -q "${STRING}" "${FILE}" || sed_exit
+    sed -i "s|${STRING}|${SYSUSER}|g" "${FILE}"
+fi
+if [[ -n "${GUESTUSER}" ]]; then
+    STRING="REPLACE_GUESTUSER"
+    grep -q "${STRING}" "${FILE}" || sed_exit
+    sed -i "s|${STRING}|${GUESTUSER}|g" "${FILE}"
+fi
+if [[ -n "${HOMEUSER}" ]]; then
+    STRING="REPLACE_HOMEUSER"
+    grep -q "${STRING}" "${FILE}" || sed_exit
+    sed -i "s|${STRING}|${HOMEUSER}|g" "${FILE}"
+fi
+if [[ -n "${VIRTUSER}" ]]; then
+    STRING="REPLACE_VIRTUSER"
+    grep -q "${STRING}" "${FILE}" || sed_exit
+    sed -i "s|${STRING}|${VIRTUSER}|g" "${FILE}"
+fi
+if [[ -n "${WORKUSER}" ]]; then
+    STRING="REPLACE_WORKUSER"
+    grep -q "${STRING}" "${FILE}" || sed_exit
+    sed -i "s|${STRING}|${WORKUSER}|g" "${FILE}"
+fi
 ## END sed
 ## home-manager/files/.config/git/config
 ## START sed
@@ -118,55 +113,50 @@ grep -q "${STRING}" "${FILE}" || sed_exit
 sed -i "s|${STRING}|${BACKLIGHT_DEVICE}|g" "${FILE}"
 ## END sed
 ## home-manager/configs/SYSUSER.nix
-[[ -n "${SYSUSER}" ]] &&
-    {
-        ## START sed
-        FILE="${SCRIPT_DIR}/home-manager/configs/SYSUSER.nix"
-        STRING="REPLACE_SYSUSER"
-        grep -q "${STRING}" "${FILE}" || sed_exit
-        sed -i "s|${STRING}|${SYSUSER}|g" "${FILE}"
-        ## END sed
-    }
+if [[ -n "${SYSUSER}" ]]; then
+    ## START sed
+    FILE="${SCRIPT_DIR}/home-manager/configs/SYSUSER.nix"
+    STRING="REPLACE_SYSUSER"
+    grep -q "${STRING}" "${FILE}" || sed_exit
+    sed -i "s|${STRING}|${SYSUSER}|g" "${FILE}"
+## END sed
+fi
 ## home-manager/configs/GUESTUSER.nix
-[[ -n "${GUESTUSER}" ]] &&
-    {
-        ## START sed
-        FILE="${SCRIPT_DIR}/home-manager/configs/GUESTUSER.nix"
-        STRING="REPLACE_GUESTUSER"
-        grep -q "${STRING}" "${FILE}" || sed_exit
-        sed -i "s|${STRING}|${GUESTUSER}|g" "${FILE}"
-        ## END sed
-    }
+if [[ -n "${GUESTUSER}" ]]; then
+    ## START sed
+    FILE="${SCRIPT_DIR}/home-manager/configs/GUESTUSER.nix"
+    STRING="REPLACE_GUESTUSER"
+    grep -q "${STRING}" "${FILE}" || sed_exit
+    sed -i "s|${STRING}|${GUESTUSER}|g" "${FILE}"
+    ## END sed
+fi
 ## home-manager/configs/HOMEUSER.nix
-[[ -n "${HOMEUSER}" ]] &&
-    {
-        ## START sed
-        FILE="${SCRIPT_DIR}/home-manager/configs/HOMEUSER.nix"
-        STRING="REPLACE_HOMEUSER"
-        grep -q "${STRING}" "${FILE}" || sed_exit
-        sed -i "s|${STRING}|${HOMEUSER}|g" "${FILE}"
-        ## END sed
-    }
+if [[ -n "${HOMEUSER}" ]]; then
+    ## START sed
+    FILE="${SCRIPT_DIR}/home-manager/configs/HOMEUSER.nix"
+    STRING="REPLACE_HOMEUSER"
+    grep -q "${STRING}" "${FILE}" || sed_exit
+    sed -i "s|${STRING}|${HOMEUSER}|g" "${FILE}"
+    ## END sed
+fi
 ## home-manager/configs/VIRTUSER.nix
-[[ -n "${VIRTUSER}" ]] &&
-    {
-        ## START sed
-        FILE="${SCRIPT_DIR}/home-manager/configs/VIRTUSER.nix"
-        STRING="REPLACE_VIRTUSER"
-        grep -q "${STRING}" "${FILE}" || sed_exit
-        sed -i "s|${STRING}|${VIRTUSER}|g" "${FILE}"
-        ## END sed
-    }
+if [[ -n "${VIRTUSER}" ]]; then
+    ## START sed
+    FILE="${SCRIPT_DIR}/home-manager/configs/VIRTUSER.nix"
+    STRING="REPLACE_VIRTUSER"
+    grep -q "${STRING}" "${FILE}" || sed_exit
+    sed -i "s|${STRING}|${VIRTUSER}|g" "${FILE}"
+    ## END sed
+fi
 ## home-manager/configs/WORKUSER.nix
-[[ -n "${WORKUSER}" ]] &&
-    {
-        ## START sed
-        FILE="${SCRIPT_DIR}/home-manager/configs/WORKUSER.nix"
-        STRING="REPLACE_WORKUSER"
-        grep -q "${STRING}" "${FILE}" || sed_exit
-        sed -i "s|${STRING}|${WORKUSER}|g" "${FILE}"
-        ## END sed
-    }
+if [[ -n "${WORKUSER}" ]]; then
+    ## START sed
+    FILE="${SCRIPT_DIR}/home-manager/configs/WORKUSER.nix"
+    STRING="REPLACE_WORKUSER"
+    grep -q "${STRING}" "${FILE}" || sed_exit
+    sed -i "s|${STRING}|${WORKUSER}|g" "${FILE}"
+    ## END sed
+fi
 
 # Remove codium configs for home-manager to be able to regenerate them
 rm -rf ~/.vscode-oss ~/.vscode-R ~/.config/vscode-sqltools ~/.local/share/vscode-sqltools

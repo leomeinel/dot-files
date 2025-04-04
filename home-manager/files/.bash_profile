@@ -10,11 +10,10 @@
 ###
 
 # Source hm-session-vars.sh
-[[ -f ~/.local/state/nix/profile/etc/profile.d/hm-session-vars.sh ]] &&
-    {
-        # shellcheck source=/dev/null
-        . ~/.local/state/nix/profile/etc/profile.d/hm-session-vars.sh
-    }
+if [[ -f ~/.local/state/nix/profile/etc/profile.d/hm-session-vars.sh ]]; then
+    # shellcheck source=/dev/null
+    . ~/.local/state/nix/profile/etc/profile.d/hm-session-vars.sh
+fi
 
 # Set environment variables
 export _JAVA_OPTIONS="-Djava.util.prefs.userRoot=${XDG_CONFIG_HOME}/java"
@@ -47,18 +46,18 @@ GPG_TTY="$(tty)"
 export GPG_TTY
 
 # Commands that should be applied only for interactive shells
-[[ "${-}" != *i* ]] && return
+[[ "${-}" != *i* ]] &&
+    return
 
 # Start ssh-agent if it is not already started
 [[ -z "${SSH_AUTH_SOCK}" ]] &&
     eval "$(/usr/bin/ssh-agent -s)" >/dev/null 2>&1
 
 # Source ~/.bashrc
-[[ -f ~/.bashrc ]] && [[ -n "${BASH_VERSION}" ]] &&
-    {
-        # shellcheck source=/dev/null
-        . ~/.bashrc
-    }
+if [[ -f ~/.bashrc ]] && [[ -n "${BASH_VERSION}" ]]; then
+    # shellcheck source=/dev/null
+    . ~/.bashrc
+fi
 
 # If sway is not installed, don't do anything
 [[ -z "$(/usr/bin/which sway)" ]] >/dev/null 2>&1 &&
