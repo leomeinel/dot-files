@@ -53,6 +53,9 @@
         cmake-format
         go
         gradle
+        kdePackages.ark
+        kdePackages.kdenlive
+        kid3
         libllvm
         lld
         lldb
