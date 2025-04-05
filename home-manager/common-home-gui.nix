@@ -61,6 +61,7 @@
         lldb
         maven
         networkmanagerapplet
+        nextcloud-client
         nixd
         nixfmt-rfc-style
         nodePackages.prettier
