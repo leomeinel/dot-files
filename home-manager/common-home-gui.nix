@@ -53,15 +53,11 @@
         cmake-format
         go
         gradle
-        kdePackages.ark
-        kdePackages.kdenlive
-        kid3
         libllvm
         lld
         lldb
         maven
         networkmanagerapplet
-        nextcloud-client
         nixd
         nixfmt-rfc-style
         nodePackages.prettier
