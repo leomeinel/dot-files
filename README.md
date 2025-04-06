@@ -65,12 +65,12 @@ Meant for general purpose systems with a GUI.
 
 :information_source: | Store executables in `/usr/local/bin`.
 
-- [com.nextcloud.desktopclient.nextcloud](https://flathub.org/apps/com.nextcloud.desktopclient.nextcloud)
+- [calibre](https://flathub.org/apps/com.calibre_ebook.calibre)
 - [librewolf](https://flathub.org/apps/io.gitlab.librewolf-community)
-- [org.raspberrypi.rpi-imager](https://flathub.org/apps/org.raspberrypi.rpi-imager)
+- [nextcloud](https://flathub.org/apps/com.nextcloud.desktopclient.nextcloud)
+- [nitrokey-app2](https://flathub.org/apps/com.nitrokey.nitrokey-app2)
 - [pwvucontrol](https://flathub.org/apps/com.saivert.pwvucontrol)
-- [com.calibre_ebook.calibre](https://flathub.org/apps/com.calibre_ebook.calibre)
-- [com.nitrokey.nitrokey-app2](https://flathub.org/apps/com.nitrokey.nitrokey-app2)
+- [rpi-imager](https://flathub.org/apps/org.raspberrypi.rpi-imager)
 
 ### Nix
 
