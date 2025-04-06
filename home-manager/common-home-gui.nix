@@ -95,6 +95,8 @@
         # Workaround for using the correct QT theme in all applications (should actually use Arc-Dark, but that isn't available)
         run /usr/bin/flatpak override -u --env=QT_STYLE_OVERRIDE="Adwaita-Dark"
         run /usr/bin/flatpak override -u --env=QT_STYLE_OVERRIDE="" org.raspberrypi.rpi-imager
+        run /usr/bin/flatpak override -u --env=QT_STYLE_OVERRIDE="" com.calibre_ebook.calibre
+        run /usr/bin/flatpak override -u --env=QT_STYLE_OVERRIDE="" com.nitrokey.nitrokey-app2
       '';
     };
   };
