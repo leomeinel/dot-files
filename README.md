@@ -68,6 +68,7 @@ Meant for general purpose systems with a GUI.
 
 - [librewolf](https://flathub.org/apps/io.gitlab.librewolf-community)
 - [pwvucontrol](https://flathub.org/apps/com.saivert.pwvucontrol)
+- [com.nextcloud.desktopclient.nextcloud](https://flathub.org/apps/com.nextcloud.desktopclient.nextcloud)
 
 ### Nix
 
