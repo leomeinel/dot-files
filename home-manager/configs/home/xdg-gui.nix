@@ -110,6 +110,10 @@
       "wofi/style.css" = {
         source = ../../files/.config/wofi/style.css;
       };
+
+      "xdg-desktop-portal/sway-portals.conf" = {
+        source = ../../files/.config/xdg-desktop-portal/sway-portals.conf;
+      };
       # xfce4
       "xfce4/xfconf/xfce-perchannel-xml/thunar.xml" = {
         force = true;
