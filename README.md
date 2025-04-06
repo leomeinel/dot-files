@@ -69,6 +69,8 @@ Meant for general purpose systems with a GUI.
 - [librewolf](https://flathub.org/apps/io.gitlab.librewolf-community)
 - [org.raspberrypi.rpi-imager](https://flathub.org/apps/org.raspberrypi.rpi-imager)
 - [pwvucontrol](https://flathub.org/apps/com.saivert.pwvucontrol)
+- [com.calibre_ebook.calibre](https://flathub.org/apps/com.calibre_ebook.calibre)
+- [com.nitrokey.nitrokey-app2](https://flathub.org/apps/com.nitrokey.nitrokey-app2)
 
 ### Nix
 
