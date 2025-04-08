@@ -193,6 +193,13 @@ merge
           sha256 = "0rfs00s3im85b3ip1af1jv4qf33dcx8wzr9nlfl08sbjb4b20gk9";
 
         };
+        "njqdev"."vscode-python-typehint" = vscode-utils.extensionFromVscodeMarketplace {
+          name = "vscode-python-typehint";
+          publisher = "njqdev";
+          version = "1.5.1";
+          sha256 = "0ra3jg8xwa8vssz33cgfkjbn4chsir1xlzshij0jn37zmw42q8q8";
+
+        };
         "pranaygp"."vscode-css-peek" = vscode-utils.extensionFromVscodeMarketplace {
           name = "vscode-css-peek";
           publisher = "pranaygp";
