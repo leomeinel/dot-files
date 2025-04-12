@@ -168,8 +168,8 @@ merge
         "mtxr"."sqltools-driver-mssql" = vscode-utils.extensionFromVscodeMarketplace {
           name = "sqltools-driver-mssql";
           publisher = "mtxr";
-          version = "0.4.4";
-          sha256 = "1fznfdc2mk7g8pafdw3vzls69l0qv2wgcrmzxghyj5bsf06ig666";
+          version = "0.4.6";
+          sha256 = "0ispbym9wgs4n6f87dk058dh1ffcdmx6r8wi87p6g14n7srrnpsj";
 
         };
         "mtxr"."sqltools-driver-mysql" = vscode-utils.extensionFromVscodeMarketplace {
