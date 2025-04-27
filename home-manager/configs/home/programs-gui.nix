@@ -475,12 +475,12 @@
             {
               "language" = "*";
               "template" = [
-                "File = <<fileName>>"
-                "Author = <<author>> (<<author_email>>)"
+              "File: <<fileName>>"
+              "Author: <<author>> (<<author_email>>)"
                 "-----"
                 "Copyright (c) <<year>> <<author>> & contributors"
-                "SPDX ID = <<spdxid>>"
-                "URL = <<licenseurl>>"
+              "SPDX ID: <<spdxid>>"
+              "URL: <<licenseurl>>"
                 "-----"
               ];
             }
