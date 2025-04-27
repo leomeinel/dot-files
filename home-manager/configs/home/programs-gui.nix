@@ -108,7 +108,7 @@
         zhuangtongfa.material-theme
         zignd.html-css-class-completion
       ];
-      userSettings = {
+      userSettings = with pkgs; {
         "activitusbar.activeColour" = "statusBar.foreground";
         "activitusbar.inactiveColour" = "statusBar.foreground";
         "code-runner.enableAppInsights" = false;
