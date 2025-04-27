@@ -11,6 +11,7 @@
 {
   config,
   lib,
+  nix-vscode-extensions,
   pkgs,
   ...
 }:
@@ -28,7 +29,7 @@
 
   # Nixpkgs options
   nixpkgs = {
-    overlays = [ ];
+    overlays = [ nix-vscode-extensions.overlays.default ];
     config = { };
   };
 
@@ -38,6 +39,8 @@
     packages = with pkgs; [
       autotiling-rs
       networkmanagerapplet
+      nixd
+      nixfmt-rfc-style
       nodePackages.prettier
       ruff
       shellcheck
@@ -66,6 +69,11 @@
         # Workaround for using the correct GTK theme in all applications
         run /usr/bin/ln -sfn ${config.home.profileDirectory}/share/themes ${config.xdg.dataHome}/themes
         run /usr/bin/flatpak override -u --filesystem=xdg-data/themes:ro --filesystem=${config.home.profileDirectory}/share/themes:ro --filesystem=${pkgs.arc-theme}/share/themes:ro
+        # Workaround for using the correct QT theme in all applications (should actually use Arc-Dark, but that isn't available)
+        run /usr/bin/flatpak override -u --env=QT_STYLE_OVERRIDE="Adwaita-Dark"
+        run /usr/bin/flatpak override -u --env=QT_STYLE_OVERRIDE="" org.raspberrypi.rpi-imager
+        run /usr/bin/flatpak override -u --env=QT_STYLE_OVERRIDE="" com.calibre_ebook.calibre
+        run /usr/bin/flatpak override -u --env=QT_STYLE_OVERRIDE="" com.nitrokey.nitrokey-app2
       '';
     };
   };

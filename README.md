@@ -35,7 +35,6 @@ Meant for general purpose systems with a GUI.
 - [hyperfine](https://archlinux.org/packages/extra/x86_64/hyperfine/)
 - [libsecret](https://archlinux.org/packages/core/x86_64/libsecret/)
 - [networkmanager](https://archlinux.org/packages/extra/x86_64/networkmanager/)
-- [nextcloud-client](https://archlinux.org/packages/extra/x86_64/nextcloud-client/)
 - [nwg-bar](https://archlinux.org/packages/extra/x86_64/nwg-bar/)
 - [pacman-contrib](https://archlinux.org/packages/extra/x86_64/pacman-contrib/)
 - [pipewire-alsa](https://archlinux.org/packages/extra/x86_64/pipewire-alsa/)
