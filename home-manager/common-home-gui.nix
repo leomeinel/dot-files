@@ -11,6 +11,7 @@
 {
   config,
   lib,
+  nix-vscode-extensions,
   pkgs,
   ...
 }:
@@ -28,7 +29,7 @@
 
   # Nixpkgs options
   nixpkgs = {
-    overlays = [ ];
+    overlays = [ nix-vscode-extensions.overlays.default ];
     config = { };
   };
 
@@ -49,6 +50,7 @@
       [
         autotiling-rs
         clang
+        clang-tools
         cmake
         cmake-format
         go

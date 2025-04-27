@@ -21,11 +21,19 @@
     # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
     home-manager.url = "github:nix-community/home-manager/release-REPLACE_NIX_VERSION"; # FIXME: This should be defined only once
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
+    # nix-vscode-extensions
+    # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
+    nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
   };
 
   # Output options
   outputs =
-    { nixpkgs, home-manager, ... }:
+    {
+      nixpkgs,
+      home-manager,
+      nix-vscode-extensions,
+      ...
+    }:
     let
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
@@ -48,35 +56,35 @@
         "REPLACE_SYSUSER" = home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
           # Args to parse
-          extraSpecialArgs = { inherit nixos-version; };
+          extraSpecialArgs = { inherit nixos-version nix-vscode-extensions; };
           # Modules to use
           modules = [ ./home-manager/configs/SYSUSER.nix ];
         };
         "REPLACE_GUESTUSER" = home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
           # Args to parse
-          extraSpecialArgs = { inherit nixos-version; };
+          extraSpecialArgs = { inherit nixos-version nix-vscode-extensions; };
           # Modules to use
           modules = [ ./home-manager/configs/GUESTUSER.nix ];
         };
         "REPLACE_HOMEUSER" = home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
           # Args to parse
-          extraSpecialArgs = { inherit nixos-version; };
+          extraSpecialArgs = { inherit nixos-version nix-vscode-extensions; };
           # Modules to use
           modules = [ ./home-manager/configs/HOMEUSER.nix ];
         };
         "REPLACE_VIRTUSER" = home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
           # Args to parse
-          extraSpecialArgs = { inherit nixos-version; };
+          extraSpecialArgs = { inherit nixos-version nix-vscode-extensions; };
           # Modules to use
           modules = [ ./home-manager/configs/VIRTUSER.nix ];
         };
         "REPLACE_WORKUSER" = home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
           # Args to parse
-          extraSpecialArgs = { inherit nixos-version; };
+          extraSpecialArgs = { inherit nixos-version nix-vscode-extensions; };
           # Modules to use
           modules = [ ./home-manager/configs/WORKUSER.nix ];
         };
