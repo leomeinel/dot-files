@@ -23,7 +23,7 @@
       enableExtensionUpdateCheck = false;
       enableUpdateCheck = false;
       extensions = with pkgs.open-vsx; [
-        "13xforever".language-x86-64-assembly
+        13xforever.language-x86-64-assembly
         bbenoist.doxygen
         bierner.color-info
         charliermarsh.ruff
