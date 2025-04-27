@@ -17,98 +17,98 @@
 {
   # Programs options
   programs = {
-    vscode = {
+    vscode = with pkgs; {
       enable = true;
-      package = pkgs.vscodium;
+      package = vscodium;
       enableExtensionUpdateCheck = false;
       enableUpdateCheck = false;
-      extensions = with pkgs.open-vsx; [
-        13xforever.language-x86-64-assembly
-        bbenoist.doxygen
-        bierner.color-info
-        charliermarsh.ruff
-        cheshirekow.cmake-format
-        christian-kohler.path-intellisense
-        cschlosser.doxdocgen
-        dotjoshjohnson.xml
-        editorconfig.editorconfig
-        esbenp.prettier-vscode
-        fill-labs.dependi
-        formulahendry.auto-close-tag
-        formulahendry.auto-rename-tag
-        formulahendry.code-runner
-        franneck94.c-cpp-runner
-        franneck94.vscode-c-cpp-config
-        franneck94.vscode-c-cpp-dev-extension-pack
-        franneck94.vscode-python-config
-        franneck94.vscode-python-dev-extension-pack
-        franneck94.workspace-formatter
-        fwcd.kotlin
-        gitlab.gitlab-workflow
-        golang.go
-        gruntfuggly.activitusbar
-        hangxingliu.vscode-nginx-conf-hint
-        hbenl.vscode-test-explorer
-        htmlhint.vscode-htmlhint
-        jeff-hykin.better-cpp-syntax
-        jnoortheen.nix-ide
-        jock.svg
-        kisstkondoros.vscode-gutter-preview
-        kokororin.vscode-phpfmt
-        llvm-vs-code-extensions.vscode-clangd
-        mikestead.dotenv
-        mkhl.shfmt
-        ms-python.black-formatter
-        ms-python.isort
-        ms-python.mypy-type-checker
-        ms-python.python
-        ms-toolsai.jupyter
-        ms-toolsai.jupyter-keymap
-        ms-toolsai.jupyter-renderers
-        ms-toolsai.vscode-jupyter-cell-tags
-        ms-toolsai.vscode-jupyter-slideshow
-        ms-vscode.cmake-tools
-        ms-vscode.cpptools-themes
-        ms-vscode.live-server
-        ms-vscode.test-adapter-converter
-        mtxr.sqltools
-        mtxr.sqltools-driver-mssql
-        mtxr.sqltools-driver-mysql
-        mtxr.sqltools-driver-pg
-        mtxr.sqltools-driver-sqlite
-        naumovs.color-highlight
-        njpwerner.autodocstring
-        njqdev.vscode-python-typehint
-        pkief.material-icon-theme
-        pkief.material-product-icons
-        pranaygp.vscode-css-peek
-        psioniq.psi-header
-        rebornix.ruby
-        redhat.java
-        redhat.vscode-xml
-        redhat.vscode-yaml
-        reditorsupport.r
-        rust-lang.rust-analyzer
-        swellaby.vscode-rust-test-adapter
-        tamasfe.even-better-toml
-        timonwong.shellcheck
-        twxs.cmake
-        usernamehw.errorlens
-        vadimcn.vscode-lldb
-        vscjava.vscode-gradle
-        vscjava.vscode-java-debug
-        vscjava.vscode-java-dependency
-        vscjava.vscode-java-pack
-        vscjava.vscode-java-test
-        vscjava.vscode-maven
-        waderyan.gitblame
-        wingrunr21.vscode-ruby
-        yzane.markdown-pdf
-        yzhang.markdown-all-in-one
-        zhuangtongfa.material-theme
-        zignd.html-css-class-completion
+      extensions = [
+        open-vsx."13xforever".language-x86-64-assembly
+        open-vsx.bbenoist.doxygen
+        open-vsx.bierner.color-info
+        open-vsx.charliermarsh.ruff
+        open-vsx.cheshirekow.cmake-format
+        open-vsx.christian-kohler.path-intellisense
+        open-vsx.cschlosser.doxdocgen
+        open-vsx.dotjoshjohnson.xml
+        open-vsx.editorconfig.editorconfig
+        open-vsx.esbenp.prettier-vscode
+        open-vsx.fill-labs.dependi
+        open-vsx.formulahendry.auto-close-tag
+        open-vsx.formulahendry.auto-rename-tag
+        open-vsx.formulahendry.code-runner
+        open-vsx.franneck94.c-cpp-runner
+        open-vsx.franneck94.vscode-c-cpp-config
+        open-vsx.franneck94.vscode-c-cpp-dev-extension-pack
+        open-vsx.franneck94.vscode-python-config
+        open-vsx.franneck94.vscode-python-dev-extension-pack
+        open-vsx.franneck94.workspace-formatter
+        open-vsx.fwcd.kotlin
+        open-vsx.gitlab.gitlab-workflow
+        open-vsx.golang.go
+        open-vsx.gruntfuggly.activitusbar
+        open-vsx.hangxingliu.vscode-nginx-conf-hint
+        open-vsx.hbenl.vscode-test-explorer
+        open-vsx.htmlhint.vscode-htmlhint
+        open-vsx.jeff-hykin.better-cpp-syntax
+        open-vsx.jnoortheen.nix-ide
+        open-vsx.jock.svg
+        open-vsx.kisstkondoros.vscode-gutter-preview
+        open-vsx.kokororin.vscode-phpfmt
+        open-vsx.llvm-vs-code-extensions.vscode-clangd
+        open-vsx.mikestead.dotenv
+        open-vsx.mkhl.shfmt
+        open-vsx.ms-python.black-formatter
+        open-vsx.ms-python.isort
+        open-vsx.ms-python.mypy-type-checker
+        open-vsx.ms-python.python
+        open-vsx.ms-toolsai.jupyter
+        open-vsx.ms-toolsai.jupyter-keymap
+        open-vsx.ms-toolsai.jupyter-renderers
+        open-vsx.ms-toolsai.vscode-jupyter-cell-tags
+        open-vsx.ms-toolsai.vscode-jupyter-slideshow
+        open-vsx.ms-vscode.cmake-tools
+        open-vsx.ms-vscode.cpptools-themes
+        open-vsx.ms-vscode.live-server
+        open-vsx.ms-vscode.test-adapter-converter
+        open-vsx.mtxr.sqltools
+        open-vsx.mtxr.sqltools-driver-mssql
+        open-vsx.mtxr.sqltools-driver-mysql
+        open-vsx.mtxr.sqltools-driver-pg
+        open-vsx.mtxr.sqltools-driver-sqlite
+        open-vsx.naumovs.color-highlight
+        open-vsx.njpwerner.autodocstring
+        open-vsx.njqdev.vscode-python-typehint
+        open-vsx.pkief.material-icon-theme
+        open-vsx.pkief.material-product-icons
+        open-vsx.pranaygp.vscode-css-peek
+        open-vsx.psioniq.psi-header
+        open-vsx.rebornix.ruby
+        open-vsx.redhat.java
+        open-vsx.redhat.vscode-xml
+        open-vsx.redhat.vscode-yaml
+        open-vsx.reditorsupport.r
+        open-vsx.rust-lang.rust-analyzer
+        open-vsx.swellaby.vscode-rust-test-adapter
+        open-vsx.tamasfe.even-better-toml
+        open-vsx.timonwong.shellcheck
+        open-vsx.twxs.cmake
+        open-vsx.usernamehw.errorlens
+        open-vsx.vadimcn.vscode-lldb
+        open-vsx.vscjava.vscode-gradle
+        open-vsx.vscjava.vscode-java-debug
+        open-vsx.vscjava.vscode-java-dependency
+        open-vsx.vscjava.vscode-java-pack
+        open-vsx.vscjava.vscode-java-test
+        open-vsx.vscjava.vscode-maven
+        open-vsx.waderyan.gitblame
+        open-vsx.wingrunr21.vscode-ruby
+        open-vsx.yzane.markdown-pdf
+        open-vsx.yzhang.markdown-all-in-one
+        open-vsx.zhuangtongfa.material-theme
+        open-vsx.zignd.html-css-class-completion
       ];
-      userSettings = with pkgs; {
+      userSettings = {
         "activitusbar.activeColour" = "statusBar.foreground";
         "activitusbar.inactiveColour" = "statusBar.foreground";
         "code-runner.enableAppInsights" = false;
