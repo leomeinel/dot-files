@@ -157,6 +157,7 @@
         "nix.serverPath" = "nixd";
         "python.languageServer" = "Jedi";
         "oneDarkPro.editorTheme" = "One Dark Pro Darker";
+        "phpfmt.php_bin" = "${php}/bin/php";
         "phpfmt.indent_with_space" = 4;
         "r.libPaths" = [
           "${rPackages.languageserver}/library"
