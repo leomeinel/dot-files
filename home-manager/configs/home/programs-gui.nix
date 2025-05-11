@@ -41,7 +41,6 @@
         open-vsx.jnoortheen.nix-ide
         open-vsx.jock.svg
         open-vsx.kisstkondoros.vscode-gutter-preview
-        open-vsx.kokororin.vscode-phpfmt
         open-vsx.mkhl.shfmt
         open-vsx.ms-python.black-formatter
         open-vsx.ms-python.isort
@@ -116,6 +115,7 @@
         "nix.serverPath" = "nixd";
         "python.languageServer" = "Jedi";
         "oneDarkPro.editorTheme" = "One Dark Pro Darker";
+        #"phpfmt.php_bin" = "${php}/bin/php";
         "phpfmt.indent_with_space" = 4;
         #"r.libPaths" = [
         #  "${rPackages.languageserver}/library"
