@@ -38,6 +38,7 @@
     # Packages
     packages = with pkgs; [
       autotiling-rs
+      eslint
       networkmanagerapplet
       nixd
       nixfmt-rfc-style
