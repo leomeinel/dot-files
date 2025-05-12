@@ -30,6 +30,7 @@
         open-vsx.cheshirekow.cmake-format
         open-vsx.christian-kohler.path-intellisense
         open-vsx.cschlosser.doxdocgen
+        open-vsx.dbaeumer.vscode-eslint
         open-vsx.dotjoshjohnson.xml
         open-vsx.editorconfig.editorconfig
         open-vsx.esbenp.prettier-vscode
@@ -112,7 +113,7 @@
         "activitusbar.activeColour" = "statusBar.foreground";
         "activitusbar.inactiveColour" = "statusBar.foreground";
         "code-runner.enableAppInsights" = false;
-        "prettier.prettierPath" = "${config.home.profileDirectory}/lib/node_modules/prettier/";
+        "prettier.prettierPath" = "${prettier}/lib/node_modules/prettier/";
         "prettier.trailingComma" = "none";
         "debug.showInStatusBar" = "never";
         "editor.detectIndentation" = false;
@@ -127,6 +128,7 @@
         "editor.scrollBeyondLastLine" = false;
         "editor.tabCompletion" = "on";
         "editor.unfoldOnClickAfterEndOfLine" = true;
+        "eslint.nodePath" = "${eslint}/lib/node_modules/";
         "evenBetterToml.formatter.indentString" = " ";
         "explorer.confirmDelete" = false;
         "files.autoSave" = "afterDelay";
@@ -135,7 +137,7 @@
         "git.autoStash" = true;
         "git.confirmSync" = false;
         "git.defaultCloneDirectory" = "${config.home.homeDirectory}/src";
-        "git.detectSubmodules" = false;
+        "git.detectSubmodules" = true;
         "git.detectSubmodulesLimit" = 100;
         "git.enableCommitSigning" = true;
         "git.enableSmartCommit" = true;
