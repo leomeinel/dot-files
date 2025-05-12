@@ -53,6 +53,7 @@
         clang-tools
         cmake
         cmake-format
+        eslint
         go
         gradle
         libllvm

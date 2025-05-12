@@ -30,6 +30,7 @@
         open-vsx.cheshirekow.cmake-format
         open-vsx.christian-kohler.path-intellisense
         open-vsx.cschlosser.doxdocgen
+        open-vsx.dbaeumer.vscode-eslint
         open-vsx.dotjoshjohnson.xml
         open-vsx.editorconfig.editorconfig
         open-vsx.esbenp.prettier-vscode
@@ -127,6 +128,7 @@
         "editor.scrollBeyondLastLine" = false;
         "editor.tabCompletion" = "on";
         "editor.unfoldOnClickAfterEndOfLine" = true;
+        "eslint.nodePath" = "${eslint}/lib/node_modules/";
         "evenBetterToml.formatter.indentString" = " ";
         "explorer.confirmDelete" = false;
         "files.autoSave" = "afterDelay";
