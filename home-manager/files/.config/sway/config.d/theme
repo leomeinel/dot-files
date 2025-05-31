@@ -39,7 +39,7 @@ client.unfocused $unfocused_bgcolor $unfocused_bgcolor $unfocused_textcolor $unf
 client.urgent $urgent_bgcolor $urgent_bgcolor $urgent_textcolor $urgent_indicator $urgent_bgcolor
 
 # Font
-font pango: Hasklig Regular 10
+font pango: HasklugNerdFont Regular 10
 
 # Title Bars
 for_window [app_id="^.*"] opacity 1
