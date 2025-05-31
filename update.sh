@@ -45,5 +45,9 @@ git commit --no-gpg-sign -m "Update dot-files - ${DATE}" || true
 [[ -n "$(which rustup)" ]] >/dev/null 2>&1 &&
     rustup default stable
 
+# Rebuild font cache
+[[ -n "$(which fc-cache)" ]] >/dev/null 2>&1 &&
+    fc-cache -f
+
 # Notify user if script has finished successfully
 echo "'$(basename "${0}")' has finished successfully."

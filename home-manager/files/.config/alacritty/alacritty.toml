@@ -54,10 +54,10 @@ hide_when_typing = true
 
 [font]
 size = 10
-normal = { family = "Hasklig Mono", style = "Regular" }
-bold = { family = "Hasklig Mono", style = "Bold" }
-italic = { family = "Hasklig Mono", style = "Italic" }
-bold_italic = { family = "Hasklig Mono", style = "Bold Italic" }
+normal = { family = "HaskligMono", style = "Regular" }
+bold = { family = "HaskligMono", style = "Bold" }
+italic = { family = "HaskligMono", style = "Italic" }
+bold_italic = { family = "HaskligMono", style = "Bold Italic" }
 
 [env]
 TERM = "alacritty"
