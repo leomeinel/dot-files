@@ -61,7 +61,6 @@
         lld
         lldb
         maven
-        nerd-fonts.noto
         networkmanagerapplet
         nixd
         nixfmt-rfc-style

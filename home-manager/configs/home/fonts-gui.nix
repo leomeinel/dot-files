@@ -9,18 +9,25 @@
 */
 
 {
+  pkgs,
   ...
 }:
 
 {
   # Fontconfig options
-  fonts.fontconfig = {
-    enable = true;
-    defaultFonts = {
-      emoji = [ "Hasklug Nerd Font" ];
-      monospace = [ "Hasklug Nerd Font Mono" ];
-      sansSerif = [ "Hasklug Nerd Font" ];
-      serif = [ "Hasklug Nerd Font" ];
+  fonts = {
+    packages = with pkgs; [
+      nerd-fonts.hasklug
+      nerd-fonts.noto
+    ];
+    fontconfig = {
+      enable = true;
+      defaultFonts = {
+        emoji = [ "Hasklig" ];
+        monospace = [ "Hasklig Mono" ];
+        sansSerif = [ "Hasklig" ];
+        serif = [ "Hasklig" ];
+      };
     };
   };
 }

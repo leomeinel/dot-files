@@ -22,7 +22,7 @@
 */
 
 * {
-  font-family: HasklugNerdFont, Regular;
+  font-family: Hasklig, Regular;
   font-size: 14px;
   border: none;
   border-radius: 0px;
@@ -89,7 +89,7 @@ window#waybar {
 }
 
 #clock {
-  font-family: "Hasklug Nerd Font Mono";
+  font-family: "Hasklig Mono";
   color: rgb(240, 240, 80) /* var(--hint) */;
 }
 
