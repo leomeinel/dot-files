@@ -161,8 +161,13 @@ fi
 # Remove codium configs for home-manager to be able to regenerate them
 rm -rf ~/.vscode-oss ~/.vscode-R ~/.config/vscode-sqltools ~/.local/share/vscode-sqltools
 rm -rf ~/.config/VSCodium
+
+# Add nixpkgs channel
+nix-channel --add https://nixos.org/channels/nixos-"${NIX_VERSION}" nixpkgs || true
+nix-channel --update
+
 # Run home-manager
-nix run home-manager/release-"${NIX_VERSION}" -- switch -b "bak" --flake "${SCRIPT_DIR}/#${USER}"
+nix-shell -p home-manager --command "home-manager switch -b "bak" --flake "${SCRIPT_DIR}/#${USER}""
 
 # Source ~/.bash_profile
 # shellcheck source=/dev/null
@@ -177,10 +182,6 @@ git commit --no-gpg-sign -m "Install dot-files - ${DATE}"
 # Set default rust if rustup is installed
 [[ -n "$(which rustup)" ]] >/dev/null 2>&1 &&
     rustup default stable
-
-# Add nixpkgs channel
-nix-channel --add https://nixos.org/channels/nixos-"${NIX_VERSION}" nixpkgs || true
-nix-channel --update
 
 # Notify user if script has finished successfully
 echo "'$(basename "${0}")' has finished successfully."
