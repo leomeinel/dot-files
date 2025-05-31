@@ -16,7 +16,6 @@ if [[ -f ~/.local/state/nix/profile/etc/profile.d/hm-session-vars.sh ]]; then
 fi
 
 # Set environment variables
-export _JAVA_OPTIONS="-Djava.util.prefs.userRoot=${XDG_CONFIG_HOME}/java"
 export ANDROID_HOME="${XDG_DATA_HOME}"/android
 export ANDROID_USER_HOME="${XDG_DATA_HOME}"/android
 export BROWSER=/usr/local/bin/librewolf
