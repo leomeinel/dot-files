@@ -24,7 +24,7 @@
       enable = true;
       defaultFonts = {
         emoji = [ "Hasklig" ];
-        monospace = [ "Hasklig Mono" ];
+        monospace = [ "HaskligMono" ];
         sansSerif = [ "Hasklig" ];
         serif = [ "Hasklig" ];
       };

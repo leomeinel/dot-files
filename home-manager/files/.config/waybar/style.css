@@ -89,7 +89,7 @@ window#waybar {
 }
 
 #clock {
-  font-family: "Hasklig Mono";
+  font-family: "HaskligMono";
   color: rgb(240, 240, 80) /* var(--hint) */;
 }
 
