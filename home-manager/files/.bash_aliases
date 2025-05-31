@@ -24,3 +24,6 @@ alias rg='/usr/bin/rg -s --color auto'
 # xdg-ninja recommendations
 alias adb='HOME="${XDG_DATA_HOME}"/android command /usr/bin/adb'
 alias wget='/usr/bin/wget --hsts-file="${XDG_DATA_HOME}"/wget-hsts'
+
+# Miscellaneous programs
+alias java='java -Djava.util.prefs.userRoot=${XDG_CONFIG_HOME}/java'
