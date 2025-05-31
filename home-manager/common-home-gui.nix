@@ -93,7 +93,7 @@
         run /usr/bin/flatpak override -u --reset
         # Workaround for using the correct font in all applications
         run /usr/bin/ln -sfn ${config.home.profileDirectory}/share/fonts ${config.xdg.dataHome}/fonts
-        run /usr/bin/flatpak override -u --filesystem=xdg-data/fonts:ro --filesystem=${config.home.profileDirectory}/share/fonts:ro --filesystem=${pkgs.nerdfonts}/share/fonts:ro
+        run /usr/bin/flatpak override -u --filesystem=xdg-data/fonts:ro --filesystem=${config.home.profileDirectory}/share/fonts:ro --filesystem=${pkgs.nerd-fonts.hasklug}/share/fonts:ro
         # Workaround for using the correct icons in all applications
         run /usr/bin/flatpak override -u --filesystem=xdg-data/icons:ro --filesystem=${config.home.profileDirectory}/share/icons:ro --filesystem=${pkgs.papirus-icon-theme}/share/icons:ro --filesystem=${pkgs.phinger-cursors}/share/icons:ro
         # Workaround for using the correct GTK theme in all applications

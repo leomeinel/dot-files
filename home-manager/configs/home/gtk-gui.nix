@@ -18,7 +18,7 @@
   gtk = {
     enable = true;
     font = with pkgs; {
-      package = nerdfonts;
+      package = nerd-fonts.hasklug;
       name = "Hasklug Nerd Font";
       size = 10;
     };
