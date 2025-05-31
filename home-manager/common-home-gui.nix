@@ -56,6 +56,7 @@
         eslint
         go
         gradle
+        html-xml-utils
         libllvm
         lld
         lldb
@@ -73,8 +74,10 @@
         shellcheck
         shfmt
         slurp
+        toml2json
         usbguard-notifier
         wl-clipboard-rs
+        yaml2json
       ];
     # Activation script
     activation = {

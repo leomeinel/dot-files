@@ -90,6 +90,12 @@
         open-vsx.redhat.vscode-yaml
         open-vsx.reditorsupport.r
         open-vsx.rust-lang.rust-analyzer
+        open-vsx.streetsidesoftware.code-spell-checker
+        open-vsx.streetsidesoftware.code-spell-checker-dutch
+        open-vsx.streetsidesoftware.code-spell-checker-french
+        open-vsx.streetsidesoftware.code-spell-checker-german
+        open-vsx.streetsidesoftware.code-spell-checker-medical-terms
+        open-vsx.streetsidesoftware.code-spell-checker-scientific-terms
         open-vsx.swellaby.vscode-rust-test-adapter
         open-vsx.tamasfe.even-better-toml
         open-vsx.timonwong.shellcheck
