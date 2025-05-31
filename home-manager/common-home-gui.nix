@@ -39,6 +39,8 @@
     packages = with pkgs; [
       autotiling-rs
       eslint
+      nerd-fonts.hasklug
+      nerd-fonts.noto
       networkmanagerapplet
       nixd
       nixfmt-rfc-style
