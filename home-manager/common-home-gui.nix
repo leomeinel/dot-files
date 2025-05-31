@@ -56,6 +56,7 @@
         eslint
         go
         gradle
+        html-xml-utils
         libllvm
         lld
         lldb
