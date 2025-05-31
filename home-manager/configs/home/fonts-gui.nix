@@ -15,19 +15,13 @@
 
 {
   # Fontconfig options
-  fonts = {
-    packages = with pkgs; [
-      nerd-fonts.hasklug
-      nerd-fonts.noto
-    ];
-    fontconfig = {
-      enable = true;
-      defaultFonts = {
-        emoji = [ "Hasklig" ];
-        monospace = [ "HaskligMono" ];
-        sansSerif = [ "Hasklig" ];
-        serif = [ "Hasklig" ];
-      };
+  fonts .fontconfig = {
+    enable = true;
+    defaultFonts = {
+      emoji = [ "Hasklig" ];
+      monospace = [ "HaskligMono" ];
+      sansSerif = [ "Hasklig" ];
+      serif = [ "Hasklig" ];
     };
   };
 }
