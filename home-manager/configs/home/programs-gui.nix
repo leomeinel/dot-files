@@ -85,7 +85,6 @@
           open-vsx.pkief.material-product-icons
           open-vsx.pranaygp.vscode-css-peek
           open-vsx.psioniq.psi-header
-          open-vsx.rebornix.ruby
           open-vsx.redhat.java
           open-vsx.redhat.vscode-xml
           open-vsx.redhat.vscode-yaml
@@ -118,7 +117,6 @@
           open-vsx.vscjava.vscode-java-test
           open-vsx.vscjava.vscode-maven
           open-vsx.waderyan.gitblame
-          open-vsx.wingrunr21.vscode-ruby
           open-vsx.yzane.markdown-pdf
           open-vsx.yzhang.markdown-all-in-one
           open-vsx.zhuangtongfa.material-theme
