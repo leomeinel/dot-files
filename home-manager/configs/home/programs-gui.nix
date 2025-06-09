@@ -25,8 +25,8 @@
         enableUpdateCheck = false;
         extensions = [
           open-vsx."13xforever".language-x86-64-assembly
+          open-vsx.anseki.vscode-color
           open-vsx.bbenoist.doxygen
-          open-vsx.bierner.color-info
           open-vsx.charliermarsh.ruff
           open-vsx.cheshirekow.cmake-format
           open-vsx.christian-kohler.path-intellisense
@@ -39,11 +39,6 @@
           open-vsx.formulahendry.auto-close-tag
           open-vsx.formulahendry.auto-rename-tag
           open-vsx.formulahendry.code-runner
-          open-vsx.franneck94.c-cpp-runner
-          open-vsx.franneck94.vscode-c-cpp-config
-          open-vsx.franneck94.vscode-c-cpp-dev-extension-pack
-          open-vsx.franneck94.vscode-python-config
-          open-vsx.franneck94.vscode-python-dev-extension-pack
           open-vsx.franneck94.workspace-formatter
           open-vsx.fwcd.kotlin
           open-vsx.gitlab.gitlab-workflow
@@ -64,21 +59,12 @@
           open-vsx.ms-python.isort
           open-vsx.ms-python.mypy-type-checker
           open-vsx.ms-python.python
-          open-vsx.ms-toolsai.jupyter
-          open-vsx.ms-toolsai.jupyter-keymap
-          open-vsx.ms-toolsai.jupyter-renderers
-          open-vsx.ms-toolsai.vscode-jupyter-cell-tags
-          open-vsx.ms-toolsai.vscode-jupyter-slideshow
-          open-vsx.ms-vscode.cmake-tools
-          open-vsx.ms-vscode.cpptools-themes
-          open-vsx.ms-vscode.live-server
           open-vsx.ms-vscode.test-adapter-converter
           open-vsx.mtxr.sqltools
           open-vsx.mtxr.sqltools-driver-mssql
           open-vsx.mtxr.sqltools-driver-mysql
           open-vsx.mtxr.sqltools-driver-pg
           open-vsx.mtxr.sqltools-driver-sqlite
-          open-vsx.naumovs.color-highlight
           open-vsx.njpwerner.autodocstring
           open-vsx.njqdev.vscode-python-typehint
           open-vsx.pkief.material-icon-theme
@@ -101,6 +87,17 @@
           open-vsx.timonwong.shellcheck
           open-vsx.twxs.cmake
           open-vsx.usernamehw.errorlens
+          open-vsx.vscjava.vscode-gradle
+          open-vsx.vscjava.vscode-java-debug
+          open-vsx.vscjava.vscode-java-dependency
+          open-vsx.vscjava.vscode-java-test
+          open-vsx.vscjava.vscode-maven
+          open-vsx.waderyan.gitblame
+          open-vsx.yandeu.five-server
+          open-vsx.yzane.markdown-pdf
+          open-vsx.yzhang.markdown-all-in-one
+          open-vsx.zhuangtongfa.material-theme
+          open-vsx.zignd.html-css-class-completion
           # FIXME: Use open-vsx version; It seems like this fails because 1.11.5 is maybe not supported in current nixpkgs
           #        error: failed to run custom build command for `lldb-stub v1.0.0 (/build/source/adapter/lldb-stub)`
           #        Caused by:
@@ -110,17 +107,6 @@
           #          LLDB_DYLIB: NotPresent
           #          note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
           vscode-extensions.vadimcn.vscode-lldb
-          open-vsx.vscjava.vscode-gradle
-          open-vsx.vscjava.vscode-java-debug
-          open-vsx.vscjava.vscode-java-dependency
-          open-vsx.vscjava.vscode-java-pack
-          open-vsx.vscjava.vscode-java-test
-          open-vsx.vscjava.vscode-maven
-          open-vsx.waderyan.gitblame
-          open-vsx.yzane.markdown-pdf
-          open-vsx.yzhang.markdown-all-in-one
-          open-vsx.zhuangtongfa.material-theme
-          open-vsx.zignd.html-css-class-completion
         ];
         userSettings = {
           "activitusbar.activeColour" = "statusBar.foreground";

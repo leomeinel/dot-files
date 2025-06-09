@@ -57,6 +57,7 @@
         go
         gradle
         html-xml-utils
+        htmlhint
         libllvm
         lld
         lldb
