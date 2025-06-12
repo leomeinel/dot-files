@@ -24,7 +24,7 @@
         enableExtensionUpdateCheck = false;
         enableUpdateCheck = false;
         extensions = [
-          open-vsx.bierner.color-info
+          open-vsx.anseki.vscode-color
           open-vsx.charliermarsh.ruff
           open-vsx.christian-kohler.path-intellisense
           open-vsx.dbaeumer.vscode-eslint
@@ -34,8 +34,8 @@
           open-vsx.fill-labs.dependi
           open-vsx.formulahendry.auto-close-tag
           open-vsx.formulahendry.auto-rename-tag
+          open-vsx.formulahendry.code-runner
           open-vsx.franneck94.vscode-python-config
-          open-vsx.franneck94.vscode-python-dev-extension-pack
           open-vsx.franneck94.workspace-formatter
           open-vsx.gitlab.gitlab-workflow
           open-vsx.gruntfuggly.activitusbar
@@ -48,7 +48,6 @@
           open-vsx.ms-python.isort
           open-vsx.ms-python.mypy-type-checker
           open-vsx.ms-python.python
-          open-vsx.naumovs.color-highlight
           open-vsx.njpwerner.autodocstring
           open-vsx.njqdev.vscode-python-typehint
           open-vsx.pkief.material-icon-theme
@@ -66,12 +65,13 @@
           open-vsx.zhuangtongfa.material-theme
           open-vsx.zignd.html-css-class-completion
         ];
-        userSettings = {
+        userSettings = {    
           "activitusbar.activeColour" = "statusBar.foreground";
           "activitusbar.inactiveColour" = "statusBar.foreground";
+          "code-runner.clearPreviousOutput" = true;
           "code-runner.enableAppInsights" = false;
-          "prettier.prettierPath" = "${nodePackages.prettier}/lib/node_modules/prettier/";
-          "prettier.trailingComma" = "none";
+          "code-runner.runInTerminal" = true;
+          "code-runner.saveFileBeforeRun" = true;
           "debug.showInStatusBar" = "never";
           "editor.detectIndentation" = false;
           "editor.foldingImportsByDefault" = true;
@@ -114,10 +114,12 @@
           "material-icon-theme.hidesExplorerArrows" = true;
           "nix.enableLanguageServer" = true;
           "nix.serverPath" = "nixd";
-          "python.languageServer" = "Jedi";
           "oneDarkPro.editorTheme" = "One Dark Pro Darker";
-          #"phpfmt.php_bin" = "${php}/bin/php";
           "phpfmt.indent_with_space" = 4;
+          #"phpfmt.php_bin" = "${php}/bin/php";
+          "prettier.prettierPath" = "${nodePackages.prettier}/lib/node_modules/prettier/";
+          "prettier.trailingComma" = "none";
+          "python.languageServer" = "Jedi";
           #"r.libPaths" = [
           #  "${rPackages.languageserver}/library"
           #  "${rPackages.jsonlite}/library"
