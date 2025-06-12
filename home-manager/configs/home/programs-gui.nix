@@ -111,7 +111,10 @@
         userSettings = {
           "activitusbar.activeColour" = "statusBar.foreground";
           "activitusbar.inactiveColour" = "statusBar.foreground";
+          "code-runner.clearPreviousOutput" = true;
           "code-runner.enableAppInsights" = false;
+          "code-runner.runInTerminal" = true;
+          "code-runner.saveFileBeforeRun" = true;
           "prettier.prettierPath" = "${nodePackages.prettier}/lib/node_modules/prettier/";
           "prettier.trailingComma" = "none";
           "debug.showInStatusBar" = "never";
