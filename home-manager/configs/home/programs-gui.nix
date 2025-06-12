@@ -108,15 +108,13 @@
           #          note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
           vscode-extensions.vadimcn.vscode-lldb
         ];
-        userSettings = {
+        userSettings = {    
           "activitusbar.activeColour" = "statusBar.foreground";
           "activitusbar.inactiveColour" = "statusBar.foreground";
           "code-runner.clearPreviousOutput" = true;
           "code-runner.enableAppInsights" = false;
           "code-runner.runInTerminal" = true;
           "code-runner.saveFileBeforeRun" = true;
-          "prettier.prettierPath" = "${nodePackages.prettier}/lib/node_modules/prettier/";
-          "prettier.trailingComma" = "none";
           "debug.showInStatusBar" = "never";
           "editor.detectIndentation" = false;
           "editor.foldingImportsByDefault" = true;
@@ -160,10 +158,12 @@
           "material-icon-theme.hidesExplorerArrows" = true;
           "nix.enableLanguageServer" = true;
           "nix.serverPath" = "nixd";
-          "python.languageServer" = "Jedi";
           "oneDarkPro.editorTheme" = "One Dark Pro Darker";
-          "phpfmt.php_bin" = "${php}/bin/php";
           "phpfmt.indent_with_space" = 4;
+          "phpfmt.php_bin" = "${php}/bin/php";
+          "prettier.prettierPath" = "${nodePackages.prettier}/lib/node_modules/prettier/";
+          "prettier.trailingComma" = "none";
+          "python.languageServer" = "Jedi";
           "r.libPaths" = [
             "${rPackages.languageserver}/library"
             "${rPackages.jsonlite}/library"
