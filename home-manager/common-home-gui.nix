@@ -57,6 +57,7 @@
         go
         gradle
         html-xml-utils
+        htmlhint
         libllvm
         lld
         lldb
@@ -66,6 +67,7 @@
         networkmanagerapplet
         nixd
         nixfmt-rfc-style
+        nodejs
         nodePackages.prettier
         ocrmypdf
         php
