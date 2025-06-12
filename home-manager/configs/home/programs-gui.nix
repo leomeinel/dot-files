@@ -119,7 +119,6 @@
           "editor.detectIndentation" = false;
           "editor.foldingImportsByDefault" = true;
           "editor.foldingMaximumRegions" = 50000;
-          "editor.fontFamily" = "HasklugNerdFontMono";
           "editor.formatOnSave" = true;
           "editor.guides.bracketPairs" = "active";
           "editor.guides.highlightActiveBracketPair" = false;
