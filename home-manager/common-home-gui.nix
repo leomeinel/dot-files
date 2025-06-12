@@ -67,6 +67,7 @@
         networkmanagerapplet
         nixd
         nixfmt-rfc-style
+        nodejs
         nodePackages.prettier
         ocrmypdf
         php
