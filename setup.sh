@@ -183,5 +183,12 @@ git commit --no-gpg-sign -m "Install dot-files - ${DATE}"
 [[ -n "$(which rustup)" ]] >/dev/null 2>&1 &&
     rustup default stable
 
+# Rebuild font cache
+[[ -n "$(which fc-cache)" ]] >/dev/null 2>&1 &&
+    {
+        rm -rf ~/.cache/fontconfig
+        fc-cache -r
+    }
+
 # Notify user if script has finished successfully
 echo "'$(basename "${0}")' has finished successfully."
