@@ -47,7 +47,7 @@ git commit --no-gpg-sign -m "Update dot-files - ${DATE}" || true
 
 # Rebuild font cache
 [[ -n "$(which fc-cache)" ]] >/dev/null 2>&1 &&
-    fc-cache -f
+    fc-cache -r
 
 # Notify user if script has finished successfully
 echo "'$(basename "${0}")' has finished successfully."
