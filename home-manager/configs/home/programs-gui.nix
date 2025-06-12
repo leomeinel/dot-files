@@ -39,6 +39,8 @@
           open-vsx.formulahendry.auto-close-tag
           open-vsx.formulahendry.auto-rename-tag
           open-vsx.formulahendry.code-runner
+          open-vsx.franneck94.vscode-c-cpp-config
+          open-vsx.franneck94.vscode-python-config
           open-vsx.franneck94.workspace-formatter
           open-vsx.fwcd.kotlin
           open-vsx.gitlab.gitlab-workflow
