@@ -53,6 +53,7 @@
           open-vsx.jnoortheen.nix-ide
           open-vsx.jock.svg
           open-vsx.kisstkondoros.vscode-gutter-preview
+          open-vsx.kofuk.hugo-utils
           open-vsx.kokororin.vscode-phpfmt
           open-vsx.llvm-vs-code-extensions.vscode-clangd
           open-vsx.mikestead.dotenv
@@ -84,6 +85,7 @@
           open-vsx.streetsidesoftware.code-spell-checker-german
           open-vsx.streetsidesoftware.code-spell-checker-medical-terms
           open-vsx.streetsidesoftware.code-spell-checker-scientific-terms
+          open-vsx.svelte.svelte-vscode
           open-vsx.swellaby.vscode-rust-test-adapter
           open-vsx.tamasfe.even-better-toml
           open-vsx.timonwong.shellcheck
@@ -108,9 +110,10 @@
           #          thread 'main' panicked at adapter/lldb-stub/build.rs:23:43:
           #          LLDB_DYLIB: NotPresent
           #          note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+          #        SEE: https://github.com/nix-community/nix-vscode-extensions/issues/127
           vscode-extensions.vadimcn.vscode-lldb
         ];
-        userSettings = {    
+        userSettings = {
           "activitusbar.activeColour" = "statusBar.foreground";
           "activitusbar.inactiveColour" = "statusBar.foreground";
           "code-runner.clearPreviousOutput" = true;
@@ -177,6 +180,7 @@
           "rust-analyzer.checkOnSave" = true;
           "rust-analyzer.debug.engine" = "vadimcn.vscode-lldb";
           "scm.repositories.sortOrder" = "name";
+          "svelte.enable-ts-plugin" = true;
           "search.showLineNumbers" = true;
           "search.smartCase" = true;
           "search.useIgnoreFiles" = false;
@@ -515,6 +519,9 @@
           };
           "[xml]" = {
             "editor.defaultFormatter" = "DotJoshJohnson.xml";
+          };
+          "[svelte]" = {
+            "editor.defaultFormatter" = "svelte.svelte-vscode";
           };
         };
       };
