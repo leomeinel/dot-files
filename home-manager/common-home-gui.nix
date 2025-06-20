@@ -71,6 +71,7 @@
         nodePackages.prettier
         ocrmypdf
         php
+        prettier-plugin-go-template
         R-with-my-packages
         radianWrapper
         ruff
