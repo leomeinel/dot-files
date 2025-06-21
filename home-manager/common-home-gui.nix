@@ -53,10 +53,8 @@
         clang-tools
         cmake
         cmake-format
-        eslint
         go
         gradle
-        html-xml-utils
         htmlhint
         libllvm
         lld
@@ -71,7 +69,6 @@
         nodePackages.prettier
         ocrmypdf
         php
-        prettier-plugin-go-template
         R-with-my-packages
         radianWrapper
         ruff

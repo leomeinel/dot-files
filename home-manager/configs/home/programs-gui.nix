@@ -133,7 +133,6 @@
           "editor.scrollBeyondLastLine" = false;
           "editor.tabCompletion" = "on";
           "editor.unfoldOnClickAfterEndOfLine" = true;
-          "eslint.nodePath" = "${eslint}/lib/node_modules/";
           "evenBetterToml.formatter.indentString" = " ";
           "explorer.confirmDelete" = false;
           "files.autoSave" = "afterDelay";
@@ -165,7 +164,6 @@
           "oneDarkPro.editorTheme" = "One Dark Pro Darker";
           "phpfmt.indent_with_space" = 4;
           "phpfmt.php_bin" = "${php}/bin/php";
-          "prettier.prettierPath" = "${nodePackages.prettier}/lib/node_modules/prettier/";
           "prettier.trailingComma" = "none";
           "python.languageServer" = "Jedi";
           "r.libPaths" = [
