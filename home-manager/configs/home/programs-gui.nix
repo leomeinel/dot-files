@@ -165,6 +165,7 @@
           "phpfmt.indent_with_space" = 4;
           "phpfmt.php_bin" = "${php}/bin/php";
           "prettier.trailingComma" = "none";
+          "prettier.withNodeModules" = true;
           "python.languageServer" = "Jedi";
           "r.libPaths" = [
             "${rPackages.languageserver}/library"
