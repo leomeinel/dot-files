@@ -38,7 +38,6 @@
     # Packages
     packages = with pkgs; [
       autotiling-rs
-      eslint
       htmlhint
       nerd-fonts.hasklug
       nerd-fonts.noto

@@ -56,6 +56,12 @@
           open-vsx.psioniq.psi-header
           open-vsx.redhat.vscode-xml
           open-vsx.redhat.vscode-yaml
+          open-vsx.streetsidesoftware.code-spell-checker
+          open-vsx.streetsidesoftware.code-spell-checker-dutch
+          open-vsx.streetsidesoftware.code-spell-checker-french
+          open-vsx.streetsidesoftware.code-spell-checker-german
+          open-vsx.streetsidesoftware.code-spell-checker-medical-terms
+          open-vsx.streetsidesoftware.code-spell-checker-scientific-terms
           open-vsx.tamasfe.even-better-toml
           open-vsx.timonwong.shellcheck
           open-vsx.usernamehw.errorlens
@@ -65,7 +71,7 @@
           open-vsx.zhuangtongfa.material-theme
           open-vsx.zignd.html-css-class-completion
         ];
-        userSettings = {    
+        userSettings = {
           "activitusbar.activeColour" = "statusBar.foreground";
           "activitusbar.inactiveColour" = "statusBar.foreground";
           "code-runner.clearPreviousOutput" = true;
@@ -85,7 +91,6 @@
           "editor.scrollBeyondLastLine" = false;
           "editor.tabCompletion" = "on";
           "editor.unfoldOnClickAfterEndOfLine" = true;
-          "eslint.nodePath" = "${eslint}/lib/node_modules/";
           "evenBetterToml.formatter.indentString" = " ";
           "explorer.confirmDelete" = false;
           "files.autoSave" = "afterDelay";
@@ -117,8 +122,8 @@
           "oneDarkPro.editorTheme" = "One Dark Pro Darker";
           "phpfmt.indent_with_space" = 4;
           #"phpfmt.php_bin" = "${php}/bin/php";
-          "prettier.prettierPath" = "${nodePackages.prettier}/lib/node_modules/prettier/";
           "prettier.trailingComma" = "none";
+          "prettier.withNodeModules" = true;
           "python.languageServer" = "Jedi";
           #"r.libPaths" = [
           #  "${rPackages.languageserver}/library"
@@ -132,6 +137,7 @@
           "rust-analyzer.checkOnSave" = true;
           "rust-analyzer.debug.engine" = "vadimcn.vscode-lldb";
           "scm.repositories.sortOrder" = "name";
+          "svelte.enable-ts-plugin" = true;
           "search.showLineNumbers" = true;
           "search.smartCase" = true;
           "search.useIgnoreFiles" = false;
@@ -470,6 +476,9 @@
           };
           "[xml]" = {
             "editor.defaultFormatter" = "DotJoshJohnson.xml";
+          };
+          "[svelte]" = {
+            "editor.defaultFormatter" = "svelte.svelte-vscode";
           };
         };
       };
