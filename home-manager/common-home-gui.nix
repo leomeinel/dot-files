@@ -53,10 +53,8 @@
         clang-tools
         cmake
         cmake-format
-        eslint
         go
         gradle
-        html-xml-utils
         htmlhint
         libllvm
         lld
