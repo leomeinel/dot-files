@@ -179,9 +179,12 @@ cd "${SCRIPT_DIR}"
 git add .
 git commit --no-gpg-sign -m "Install dot-files - ${DATE}"
 
-# Set default rust if rustup is installed
+# Set default rust if rustup is installed and update
 [[ -n "$(which rustup)" ]] >/dev/null 2>&1 &&
-    rustup default stable
+    {
+        rustup default stable
+        rustup update
+    }
 
 # Rebuild font cache
 [[ -n "$(which fc-cache)" ]] >/dev/null 2>&1 &&
