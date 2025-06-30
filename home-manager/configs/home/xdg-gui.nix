@@ -30,6 +30,10 @@
       "Kvantum/kvantum.kvconfig" = {
         source = ../../files/.config/Kvantum/kvantum.kvconfig;
       };
+      # npmrc
+      "npm/npmrc" = {
+        source = ../../files/.config/npm/npmrc;
+      };
       # nwg-bar
       "nwg-bar/bar.json" = {
         source = ../../files/.config/nwg-bar/bar.json;
