@@ -9,8 +9,15 @@
 # -----
 ###
 
+# Fail on error
+set -e
+
 # Define functions
 map_tablet() {
+    ## Return if no OUTPUT is specified
+    [[ -z "${1}" ]] &&
+        return
+
     IDENTIFIERS=(
         "type:tablet_pad"
         "type:tablet_tool"
