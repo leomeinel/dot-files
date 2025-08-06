@@ -77,6 +77,10 @@
       "sway/config.d/theme" = {
         source = ../../files/.config/sway/config.d/theme;
       };
+      "sway/scripts/input-graphics-tablet.sh" = {
+        executable = true;
+        source = ../../files/.config/sway/scripts/input-graphics-tablet.sh;
+      };
       "sway/scripts/volume.sh" = {
         executable = true;
         source = ../../files/.config/sway/scripts/volume.sh;
