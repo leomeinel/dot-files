@@ -9,9 +9,6 @@
 # -----
 ###
 
-# Fail on error
-set -e
-
 # Define functions
 map_tablet() {
     IDENTIFIERS=(
