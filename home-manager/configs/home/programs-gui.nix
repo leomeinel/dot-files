@@ -634,16 +634,16 @@
           };
         in
         {
-          default = defaultprofiles.default;
-          cpp = defaultprofiles.cpp;
-          dataScience = defaultprofiles.dataScience;
-          embedded = defaultprofiles.embedded;
-          go = defaultprofiles.go;
-          java = defaultprofiles.java;
-          python = defaultprofiles.python;
-          rust = defaultprofiles.rust;
-          web = defaultprofiles.web;
-          full = defaultprofiles.full;
+          default = profiles.default;
+          cpp = profiles.cpp;
+          dataScience = profiles.dataScience;
+          embedded = profiles.embedded;
+          go = profiles.go;
+          java = profiles.java;
+          python = profiles.python;
+          rust = profiles.rust;
+          web = profiles.web;
+          full = profiles.full;
         };
     };
   };
