@@ -37,7 +37,7 @@
             open-vsx.franneck94.workspace-formatter
             open-vsx.gruntfuggly.activitusbar
             open-vsx.hangxingliu.vscode-nginx-conf-hint
-            open-vsx.hbenl.test-adapter-converter
+            open-vsx.ms-vscode.test-adapter-converter
             open-vsx.hbenl.vscode-test-explorer
             open-vsx.htmlhint.vscode-htmlhint
             open-vsx.jnoortheen.nix-ide
