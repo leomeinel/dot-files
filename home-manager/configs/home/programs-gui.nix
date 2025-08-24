@@ -581,35 +581,35 @@
             };
             cpp = {
               extensions = minimumExtensions ++ cppExtensions;
-              userSettings = minimumSettings ++ cppSettings;
+              userSettings = minimumSettings // cppSettings;
             };
             dataScience = {
               extensions = minimumExtensions ++ dataScienceExtensions ++ pythonExtensions;
-              userSettings = minimumSettings ++ dataScienceSettings ++ pythonSettings;
+              userSettings = minimumSettings // dataScienceSettings // pythonSettings;
             };
             embedded = {
               extensions = minimumExtensions ++ cppExtensions ++ embeddedExtensions;
-              userSettings = minimumSettings ++ cppSettings ++ embeddedSettings;
+              userSettings = minimumSettings // cppSettings // embeddedSettings;
             };
             go = {
               extensions = minimumExtensions ++ goExtensions;
-              userSettings = minimumSettings ++ goSettings;
+              userSettings = minimumSettings // goSettings;
             };
             java = {
               extensions = minimumExtensions ++ javaExtensions;
-              userSettings = minimumSettings ++ javaSettings;
+              userSettings = minimumSettings // javaSettings;
             };
             python = {
               extensions = minimumExtensions ++ pythonExtensions;
-              userSettings = minimumSettings ++ pythonSettings;
+              userSettings = minimumSettings // pythonSettings;
             };
             rust = {
               extensions = minimumExtensions ++ rustExtensions;
-              userSettings = minimumSettings ++ rustSettings;
+              userSettings = minimumSettings // rustSettings;
             };
             web = {
               extensions = minimumExtensions ++ webExtensions;
-              userSettings = minimumSettings ++ webSettings;
+              userSettings = minimumSettings // webSettings;
             };
             full = {
               extensions =
