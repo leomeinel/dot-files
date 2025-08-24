@@ -23,7 +23,7 @@
       profiles =
         let
           # Extensions
-          minimumExtensions = [
+          defaultExtensions = [
             open-vsx.bbenoist.doxygen
             open-vsx.christian-kohler.path-intellisense
             open-vsx.cschlosser.doxdocgen
@@ -130,7 +130,7 @@
           ];
 
           # Settings
-          minimumSettings = {
+          defaultSettings = {
             "activitusbar.activeColour" = "statusBar.foreground";
             "activitusbar.inactiveColour" = "statusBar.foreground";
             "code-runner.clearPreviousOutput" = true;
@@ -571,49 +571,47 @@
 
           # Profiles
           profiles = {
-            base = {
+            default = {
               enableExtensionUpdateCheck = false;
               enableUpdateCheck = false;
-            };
-            minimum = {
-              extensions = minimumExtensions;
-              userSettings = minimumSettings;
+              extensions = defaultExtensions;
+              userSettings = defaultSettings;
             };
             cpp = {
-              extensions = minimumExtensions ++ cppExtensions;
-              userSettings = minimumSettings // cppSettings;
+              extensions = defaultExtensions ++ cppExtensions;
+              userSettings = defaultSettings // cppSettings;
             };
             dataScience = {
-              extensions = minimumExtensions ++ dataScienceExtensions ++ pythonExtensions;
-              userSettings = minimumSettings // dataScienceSettings // pythonSettings;
+              extensions = defaultExtensions ++ dataScienceExtensions ++ pythonExtensions;
+              userSettings = defaultSettings // dataScienceSettings // pythonSettings;
             };
             embedded = {
-              extensions = minimumExtensions ++ cppExtensions ++ embeddedExtensions;
-              userSettings = minimumSettings // cppSettings // embeddedSettings;
+              extensions = defaultExtensions ++ cppExtensions ++ embeddedExtensions;
+              userSettings = defaultSettings // cppSettings // embeddedSettings;
             };
             go = {
-              extensions = minimumExtensions ++ goExtensions;
-              userSettings = minimumSettings // goSettings;
+              extensions = defaultExtensions ++ goExtensions;
+              userSettings = defaultSettings // goSettings;
             };
             java = {
-              extensions = minimumExtensions ++ javaExtensions;
-              userSettings = minimumSettings // javaSettings;
+              extensions = defaultExtensions ++ javaExtensions;
+              userSettings = defaultSettings // javaSettings;
             };
             python = {
-              extensions = minimumExtensions ++ pythonExtensions;
-              userSettings = minimumSettings // pythonSettings;
+              extensions = defaultExtensions ++ pythonExtensions;
+              userSettings = defaultSettings // pythonSettings;
             };
             rust = {
-              extensions = minimumExtensions ++ rustExtensions;
-              userSettings = minimumSettings // rustSettings;
+              extensions = defaultExtensions ++ rustExtensions;
+              userSettings = defaultSettings // rustSettings;
             };
             web = {
-              extensions = minimumExtensions ++ webExtensions;
-              userSettings = minimumSettings // webSettings;
+              extensions = defaultExtensions ++ webExtensions;
+              userSettings = defaultSettings // webSettings;
             };
             full = {
               extensions =
-                minimumExtensions
+                defaultExtensions
                 ++ cppExtensions
                 ++ dataScienceExtensions
                 ++ embeddedExtensions
@@ -623,7 +621,7 @@
                 ++ rustExtensions
                 ++ webExtensions;
               userSettings =
-                minimumSettings
+                defaultSettings
                 // cppSettings
                 // dataScienceSettings
                 // embeddedSettings
@@ -636,16 +634,16 @@
           };
         in
         {
-          minimum = profiles.base // profiles.minimum;
-          cpp = profiles.base // profiles.cpp;
-          dataScience = profiles.base // profiles.dataScience;
-          embedded = profiles.base // profiles.embedded;
-          go = profiles.base // profiles.go;
-          java = profiles.base // profiles.java;
-          python = profiles.base // profiles.python;
-          rust = profiles.base // profiles.rust;
-          web = profiles.base // profiles.web;
-          full = profiles.base // profiles.full;
+          default = defaultprofiles.default;
+          cpp = defaultprofiles.cpp;
+          dataScience = defaultprofiles.dataScience;
+          embedded = defaultprofiles.embedded;
+          go = defaultprofiles.go;
+          java = defaultprofiles.java;
+          python = defaultprofiles.python;
+          rust = defaultprofiles.rust;
+          web = defaultprofiles.web;
+          full = defaultprofiles.full;
         };
     };
   };
