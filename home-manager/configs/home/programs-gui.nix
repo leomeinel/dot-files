@@ -94,7 +94,7 @@
             open-vsx.reditorsupport.r
           ];
           embeddedExtensions = [
-            open-vsx.davidgomes.platformio-ide-cursor
+            open-vsx.davidgomes.platformio-ide
           ];
           goExtensions = [
             open-vsx.golang.go
