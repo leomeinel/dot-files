@@ -144,6 +144,9 @@
             "editor.formatOnSave" = true;
             "editor.guides.bracketPairs" = "active";
             "editor.guides.highlightActiveBracketPair" = false;
+            "editor.indentSize" = "tabSize";
+            "editor.insertSpaces" = true;
+            "editor.tabSize" = 4;
             "editor.multiCursorModifier" = "ctrlCmd";
             "editor.scrollbar.horizontalScrollbarSize" = 10;
             "editor.scrollbar.verticalScrollbarSize" = 10;
@@ -178,7 +181,6 @@
             "nix.enableLanguageServer" = true;
             "nix.serverPath" = "nixd";
             "oneDarkPro.editorTheme" = "One Dark Pro Darker";
-            "phpfmt.indent_with_space" = 4;
             "phpfmt.php_bin" = "${php}/bin/php";
             "prettier.trailingComma" = "none";
             "prettier.withNodeModules" = true;
