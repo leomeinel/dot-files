@@ -494,30 +494,38 @@
             };
             "[css]" = {
               "editor.defaultFormatter" = "esbenp.prettier-vscode";
+              "editor.tabSize" = 2;
             };
             "[html]" = {
               "editor.defaultFormatter" = "esbenp.prettier-vscode";
+              "editor.tabSize" = 2;
             };
             "[javascript]" = {
               "editor.defaultFormatter" = "esbenp.prettier-vscode";
+              "editor.tabSize" = 2;
             };
             "[sql]" = {
               "editor.defaultFormatter" = "mtxr.sqltools";
             };
             "[typescript]" = {
               "editor.defaultFormatter" = "esbenp.prettier-vscode";
+              "editor.tabSize" = 2;
             };
             "[json]" = {
               "editor.defaultFormatter" = "esbenp.prettier-vscode";
+              "editor.tabSize" = 2;
             };
             "[jsonc]" = {
               "editor.defaultFormatter" = "esbenp.prettier-vscode";
+              "editor.tabSize" = 2;
             };
             "[yaml]" = {
               "editor.defaultFormatter" = "esbenp.prettier-vscode";
+              "editor.tabSize" = 2;
             };
             "[xml]" = {
               "editor.defaultFormatter" = "DotJoshJohnson.xml";
+              "editor.tabSize" = 2;
             };
           };
           cppSettings = {
@@ -565,6 +573,7 @@
             "java.format.settings.url" = "${config.xdg.configHome}/eclipse-style-guides/java.xml";
             "[java]" = {
               "editor.defaultFormatter" = "redhat.java";
+              "editor.tabSize" = 2;
             };
           };
           pythonSettings = {
@@ -582,6 +591,7 @@
             "svelte.enable-ts-plugin" = true;
             "[svelte]" = {
               "editor.defaultFormatter" = "svelte.svelte-vscode";
+              "editor.tabSize" = 2;
             };
           };
 
