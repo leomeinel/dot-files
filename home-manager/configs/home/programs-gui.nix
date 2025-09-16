@@ -519,11 +519,24 @@
             };
           };
           cppSettings = {
+            "clangd.arguments" = [
+              "--clang-tidy"
+            ];
             "[c]" = {
               "editor.defaultFormatter" = "llvm-vs-code-extensions.vscode-clangd";
+              "editor.tabSize" = 2;
             };
             "[cpp]" = {
               "editor.defaultFormatter" = "llvm-vs-code-extensions.vscode-clangd";
+              "editor.tabSize" = 2;
+            };
+            "[objective-c]" = {
+              "editor.defaultFormatter" = "llvm-vs-code-extensions.vscode-clangd";
+              "editor.tabSize" = 2;
+            };
+            "[objective-cpp]" = {
+              "editor.defaultFormatter" = "llvm-vs-code-extensions.vscode-clangd";
+              "editor.tabSize" = 2;
             };
           };
           dataScienceSettings = {
