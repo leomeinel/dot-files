@@ -165,6 +165,7 @@
             "git.enableStatusBarSync" = false;
             "git.fetchOnPull" = true;
             "git.ignoreSubmodules" = true;
+            "git.openRepositoryInParentFolders" = "always";
             "git.scanRepositories" = [ "${config.home.homeDirectory}/src" ];
             "gitblame.statusBarMessageFormat" = "\${author.name} (\${time.ago})";
             "github.gitProtocol" = "ssh";
