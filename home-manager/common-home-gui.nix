@@ -11,7 +11,7 @@
 {
   config,
   lib,
-  nix-vscode-extensions,
+  nix4vscode,
   pkgs,
   ...
 }:
@@ -29,7 +29,7 @@
 
   # Nixpkgs options
   nixpkgs = {
-    overlays = [ nix-vscode-extensions.overlays.default ];
+    overlays = [ nix4vscode.overlays.default ];
     config = { };
   };
 

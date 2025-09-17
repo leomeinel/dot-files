@@ -24,98 +24,98 @@
         let
           # Extensions
           defaultExtensions = [
-            open-vsx.bbenoist.doxygen
-            open-vsx.christian-kohler.path-intellisense
-            open-vsx.cschlosser.doxdocgen
-            open-vsx.dotjoshjohnson.xml
-            open-vsx.editorconfig.editorconfig
-            open-vsx.esbenp.prettier-vscode
-            open-vsx.fill-labs.dependi
-            open-vsx.formulahendry.code-runner
-            open-vsx.franneck94.workspace-formatter
-            open-vsx.gruntfuggly.activitusbar
-            open-vsx.hangxingliu.vscode-nginx-conf-hint
-            open-vsx.ms-vscode.test-adapter-converter
-            open-vsx.hbenl.vscode-test-explorer
-            open-vsx.htmlhint.vscode-htmlhint
-            open-vsx.jnoortheen.nix-ide
-            open-vsx.jock.svg
-            open-vsx.kisstkondoros.vscode-gutter-preview
-            open-vsx.kokororin.vscode-phpfmt
-            open-vsx.mikestead.dotenv
-            open-vsx.mkhl.shfmt
-            open-vsx.mtxr.sqltools
-            open-vsx.mtxr.sqltools-driver-mssql
-            open-vsx.mtxr.sqltools-driver-mysql
-            open-vsx.mtxr.sqltools-driver-pg
-            open-vsx.mtxr.sqltools-driver-sqlite
-            open-vsx.pkief.material-icon-theme
-            open-vsx.pkief.material-product-icons
-            open-vsx.pranaygp.vscode-css-peek
-            open-vsx.psioniq.psi-header
-            open-vsx.redhat.vscode-xml
-            open-vsx.redhat.vscode-yaml
-            open-vsx.streetsidesoftware.code-spell-checker
-            open-vsx.streetsidesoftware.code-spell-checker-dutch
-            open-vsx.streetsidesoftware.code-spell-checker-french
-            open-vsx.streetsidesoftware.code-spell-checker-german
-            open-vsx.streetsidesoftware.code-spell-checker-medical-terms
-            open-vsx.streetsidesoftware.code-spell-checker-scientific-terms
-            open-vsx.tamasfe.even-better-toml
-            open-vsx.timonwong.shellcheck
-            open-vsx.usernamehw.errorlens
-            open-vsx.waderyan.gitblame
-            open-vsx.yzane.markdown-pdf
-            open-vsx.yzhang.markdown-all-in-one
-            open-vsx.zhuangtongfa.material-theme
-            open-vsx.zignd.html-css-class-completion
+            forOpenVsx.bbenoist.doxygen
+            forOpenVsx.christian-kohler.path-intellisense
+            forOpenVsx.cschlosser.doxdocgen
+            forOpenVsx.dotjoshjohnson.xml
+            forOpenVsx.editorconfig.editorconfig
+            forOpenVsx.esbenp.prettier-vscode
+            forOpenVsx.fill-labs.dependi
+            forOpenVsx.formulahendry.code-runner
+            forOpenVsx.franneck94.workspace-formatter
+            forOpenVsx.gruntfuggly.activitusbar
+            forOpenVsx.hangxingliu.vscode-nginx-conf-hint
+            forOpenVsx.ms-vscode.test-adapter-converter
+            forOpenVsx.hbenl.vscode-test-explorer
+            forOpenVsx.htmlhint.vscode-htmlhint
+            forOpenVsx.jnoortheen.nix-ide
+            forOpenVsx.jock.svg
+            forOpenVsx.kisstkondoros.vscode-gutter-preview
+            forOpenVsx.kokororin.vscode-phpfmt
+            forOpenVsx.mikestead.dotenv
+            forOpenVsx.mkhl.shfmt
+            forOpenVsx.mtxr.sqltools
+            forOpenVsx.mtxr.sqltools-driver-mssql
+            forOpenVsx.mtxr.sqltools-driver-mysql
+            forOpenVsx.mtxr.sqltools-driver-pg
+            forOpenVsx.mtxr.sqltools-driver-sqlite
+            forOpenVsx.pkief.material-icon-theme
+            forOpenVsx.pkief.material-product-icons
+            forOpenVsx.pranaygp.vscode-css-peek
+            forOpenVsx.psioniq.psi-header
+            forOpenVsx.redhat.vscode-xml
+            forOpenVsx.redhat.vscode-yaml
+            forOpenVsx.streetsidesoftware.code-spell-checker
+            forOpenVsx.streetsidesoftware.code-spell-checker-dutch
+            forOpenVsx.streetsidesoftware.code-spell-checker-french
+            forOpenVsx.streetsidesoftware.code-spell-checker-german
+            forOpenVsx.streetsidesoftware.code-spell-checker-medical-terms
+            forOpenVsx.streetsidesoftware.code-spell-checker-scientific-terms
+            forOpenVsx.tamasfe.even-better-toml
+            forOpenVsx.timonwong.shellcheck
+            forOpenVsx.usernamehw.errorlens
+            forOpenVsx.waderyan.gitblame
+            forOpenVsx.yzane.markdown-pdf
+            forOpenVsx.yzhang.markdown-all-in-one
+            forOpenVsx.zhuangtongfa.material-theme
+            forOpenVsx.zignd.html-css-class-completion
           ];
           cppExtensions = [
-            open-vsx."13xforever".language-x86-64-assembly
-            open-vsx.cheshirekow.cmake-format
-            open-vsx.franneck94.vscode-c-cpp-config
-            open-vsx.jeff-hykin.better-cpp-syntax
-            open-vsx.llvm-vs-code-extensions.vscode-clangd
-            open-vsx.twxs.cmake
-            open-vsx.vadimcn.vscode-lldb
+            forOpenVsx."13xforever".language-x86-64-assembly
+            forOpenVsx.cheshirekow.cmake-format
+            forOpenVsx.franneck94.vscode-c-cpp-config
+            forOpenVsx.jeff-hykin.better-cpp-syntax
+            forOpenVsx.llvm-vs-code-extensions.vscode-clangd
+            forOpenVsx.twxs.cmake
+            forOpenVsx.vadimcn.vscode-lldb
           ];
           dataScienceExtensions = [
-            open-vsx.reditorsupport.r
+            forOpenVsx.reditorsupport.r
           ];
           embeddedExtensions = [
-            open-vsx.davidgomes.platformio-ide
+            forOpenVsx.davidgomes.platformio-ide
           ];
           goExtensions = [
-            open-vsx.golang.go
+            forOpenVsx.golang.go
           ];
           javaExtensions = [
-            open-vsx.fwcd.kotlin
-            open-vsx.redhat.java
-            open-vsx.vscjava.vscode-gradle
-            open-vsx.vscjava.vscode-java-debug
-            open-vsx.vscjava.vscode-java-dependency
-            open-vsx.vscjava.vscode-java-test
-            open-vsx.vscjava.vscode-maven
+            forOpenVsx.fwcd.kotlin
+            forOpenVsx.redhat.java
+            forOpenVsx.vscjava.vscode-gradle
+            forOpenVsx.vscjava.vscode-java-debug
+            forOpenVsx.vscjava.vscode-java-dependency
+            forOpenVsx.vscjava.vscode-java-test
+            forOpenVsx.vscjava.vscode-maven
           ];
           pythonExtensions = [
-            open-vsx.charliermarsh.ruff
-            open-vsx.franneck94.vscode-python-config
-            open-vsx.ms-python.black-formatter
-            open-vsx.ms-python.isort
-            open-vsx.ms-python.mypy-type-checker
-            open-vsx.ms-python.python
-            open-vsx.njpwerner.autodocstring
-            open-vsx.njqdev.vscode-python-typehint
+            forOpenVsx.charliermarsh.ruff
+            forOpenVsx.franneck94.vscode-python-config
+            forOpenVsx.ms-python.black-formatter
+            forOpenVsx.ms-python.isort
+            forOpenVsx.ms-python.mypy-type-checker
+            forOpenVsx.ms-python.python
+            forOpenVsx.njpwerner.autodocstring
+            forOpenVsx.njqdev.vscode-python-typehint
           ];
           rustExtensions = [
-            open-vsx.rust-lang.rust-analyzer
-            open-vsx.swellaby.vscode-rust-test-adapter
+            forOpenVsx.rust-lang.rust-analyzer
+            forOpenVsx.swellaby.vscode-rust-test-adapter
           ];
           webExtensions = [
-            open-vsx.dbaeumer.vscode-eslint
-            open-vsx.kofuk.hugo-utils
-            open-vsx.svelte.svelte-vscode
-            open-vsx.yandeu.five-server
+            forOpenVsx.dbaeumer.vscode-eslint
+            forOpenVsx.kofuk.hugo-utils
+            forOpenVsx.svelte.svelte-vscode
+            forOpenVsx.yandeu.five-server
           ];
 
           # Settings
