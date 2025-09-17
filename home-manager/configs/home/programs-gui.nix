@@ -85,6 +85,7 @@
           embeddedExtensions = [
             # FIXME: This should use nix4vscode.forOpenVsx [ "davidgomes.platformio-ide" ]
             #        error: Extension davidgomes.platformio-ide not found in /nix/store/XXX-extensions_openvsx.json
+            #   See: https://github.com/nix-community/nix4vscode/issues/337
             vscode-extensions.platformio.platformio-vscode-ide
           ];
           goExtensions = nix4vscode.forOpenVsx [
