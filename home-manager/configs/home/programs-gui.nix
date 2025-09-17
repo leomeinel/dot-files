@@ -24,98 +24,98 @@
         let
           # Extensions
           defaultExtensions = nix4vscode.forOpenVsx [
-            bbenoist.doxygen
-            christian-kohler.path-intellisense
-            cschlosser.doxdocgen
-            dotjoshjohnson.xml
-            editorconfig.editorconfig
-            esbenp.prettier-vscode
-            fill-labs.dependi
-            formulahendry.code-runner
-            franneck94.workspace-formatter
-            gruntfuggly.activitusbar
-            hangxingliu.vscode-nginx-conf-hint
-            ms-vscode.test-adapter-converter
-            hbenl.vscode-test-explorer
-            htmlhint.vscode-htmlhint
-            jnoortheen.nix-ide
-            jock.svg
-            kisstkondoros.vscode-gutter-preview
-            kokororin.vscode-phpfmt
-            mikestead.dotenv
-            mkhl.shfmt
-            mtxr.sqltools
-            mtxr.sqltools-driver-mssql
-            mtxr.sqltools-driver-mysql
-            mtxr.sqltools-driver-pg
-            mtxr.sqltools-driver-sqlite
-            pkief.material-icon-theme
-            pkief.material-product-icons
-            pranaygp.vscode-css-peek
-            psioniq.psi-header
-            redhat.vscode-xml
-            redhat.vscode-yaml
-            streetsidesoftware.code-spell-checker
-            streetsidesoftware.code-spell-checker-dutch
-            streetsidesoftware.code-spell-checker-french
-            streetsidesoftware.code-spell-checker-german
-            streetsidesoftware.code-spell-checker-medical-terms
-            streetsidesoftware.code-spell-checker-scientific-terms
-            tamasfe.even-better-toml
-            timonwong.shellcheck
-            usernamehw.errorlens
-            waderyan.gitblame
-            yzane.markdown-pdf
-            yzhang.markdown-all-in-one
-            zhuangtongfa.material-theme
-            zignd.html-css-class-completion
+            "bbenoist.doxygen"
+            "christian-kohler.path-intellisense"
+            "cschlosser.doxdocgen"
+            "dotjoshjohnson.xml"
+            "editorconfig.editorconfig"
+            "esbenp.prettier-vscode"
+            "fill-labs.dependi"
+            "formulahendry.code-runner"
+            "franneck94.workspace-formatter"
+            "gruntfuggly.activitusbar"
+            "hangxingliu.vscode-nginx-conf-hint"
+            "ms-vscode.test-adapter-converter"
+            "hbenl.vscode-test-explorer"
+            "htmlhint.vscode-htmlhint"
+            "jnoortheen.nix-ide"
+            "jock.svg"
+            "kisstkondoros.vscode-gutter-preview"
+            "kokororin.vscode-phpfmt"
+            "mikestead.dotenv"
+            "mkhl.shfmt"
+            "mtxr.sqltools"
+            "mtxr.sqltools-driver-mssql"
+            "mtxr.sqltools-driver-mysql"
+            "mtxr.sqltools-driver-pg"
+            "mtxr.sqltools-driver-sqlite"
+            "pkief.material-icon-theme"
+            "pkief.material-product-icons"
+            "pranaygp.vscode-css-peek"
+            "psioniq.psi-header"
+            "redhat.vscode-xml"
+            "redhat.vscode-yaml"
+            "streetsidesoftware.code-spell-checker"
+            "streetsidesoftware.code-spell-checker-dutch"
+            "streetsidesoftware.code-spell-checker-french"
+            "streetsidesoftware.code-spell-checker-german"
+            "streetsidesoftware.code-spell-checker-medical-terms"
+            "streetsidesoftware.code-spell-checker-scientific-terms"
+            "tamasfe.even-better-toml"
+            "timonwong.shellcheck"
+            "usernamehw.errorlens"
+            "waderyan.gitblame"
+            "yzane.markdown-pdf"
+            "yzhang.markdown-all-in-one"
+            "zhuangtongfa.material-theme"
+            "zignd.html-css-class-completion"
           ];
-          cppExtensions = [
-            "13xforever".language-x86-64-assembly
-            cheshirekow.cmake-format
-            franneck94.vscode-c-cpp-config
-            jeff-hykin.better-cpp-syntax
-            llvm-vs-code-extensions.vscode-clangd
-            twxs.cmake
-            vadimcn.vscode-lldb
+          cppExtensions = nix4vscode.forOpenVsx [
+            "13xforever.language-x86-64-assembly"
+            "cheshirekow.cmake-format"
+            "franneck94.vscode-c-cpp-config"
+            "jeff-hykin.better-cpp-syntax"
+            "llvm-vs-code-extensions.vscode-clangd"
+            "twxs.cmake"
+            "vadimcn.vscode-lldb"
           ];
-          dataScienceExtensions = [
-            reditorsupport.r
+          dataScienceExtensions = nix4vscode.forOpenVsx [
+            "reditorsupport.r"
           ];
-          embeddedExtensions = [
-            davidgomes.platformio-ide
+          embeddedExtensions = nix4vscode.forOpenVsx [
+            "davidgomes.platformio-ide"
           ];
-          goExtensions = [
-            golang.go
+          goExtensions = nix4vscode.forOpenVsx [
+            "golang.go"
           ];
-          javaExtensions = [
-            fwcd.kotlin
-            redhat.java
-            vscjava.vscode-gradle
-            vscjava.vscode-java-debug
-            vscjava.vscode-java-dependency
-            vscjava.vscode-java-test
-            vscjava.vscode-maven
+          javaExtensions = nix4vscode.forOpenVsx [
+            "fwcd.kotlin"
+            "redhat.java"
+            "vscjava.vscode-gradle"
+            "vscjava.vscode-java-debug"
+            "vscjava.vscode-java-dependency"
+            "vscjava.vscode-java-test"
+            "vscjava.vscode-maven"
           ];
-          pythonExtensions = [
-            charliermarsh.ruff
-            franneck94.vscode-python-config
-            ms-python.black-formatter
-            ms-python.isort
-            ms-python.mypy-type-checker
-            ms-python.python
-            njpwerner.autodocstring
-            njqdev.vscode-python-typehint
+          pythonExtensions = nix4vscode.forOpenVsx [
+            "charliermarsh.ruff"
+            "franneck94.vscode-python-config"
+            "ms-python.black-formatter"
+            "ms-python.isort"
+            "ms-python.mypy-type-checker"
+            "ms-python.python"
+            "njpwerner.autodocstring"
+            "njqdev.vscode-python-typehint"
           ];
-          rustExtensions = [
-            rust-lang.rust-analyzer
-            swellaby.vscode-rust-test-adapter
+          rustExtensions = nix4vscode.forOpenVsx [
+            "rust-lang.rust-analyzer"
+            "swellaby.vscode-rust-test-adapter"
           ];
-          webExtensions = [
-            dbaeumer.vscode-eslint
-            kofuk.hugo-utils
-            svelte.svelte-vscode
-            yandeu.five-server
+          webExtensions = nix4vscode.forOpenVsx [
+            "dbaeumer.vscode-eslint"
+            "kofuk.hugo-utils"
+            "svelte.svelte-vscode"
+            "yandeu.five-server"
           ];
 
           # Settings
