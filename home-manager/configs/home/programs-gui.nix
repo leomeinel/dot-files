@@ -294,7 +294,7 @@
               {
                 "language" = "bat";
                 "begin" = "";
-                "prefix" = "@rem ";
+                "prefix" = "REM ";
                 "end" = "";
               }
               {
@@ -324,19 +324,19 @@
               {
                 "language" = "haml";
                 "begin" = "<!--";
-                "prefix" = "--";
-                "end" = " -->";
+                "prefix" = "  ";
+                "end" = "-->";
               }
               {
                 "language" = "lua";
                 "begin" = "--[[";
-                "prefix" = "--";
+                "prefix" = "  ";
                 "end" = "--]]";
               }
               {
                 "language" = "jade";
                 "begin" = "";
-                "prefix" = "//";
+                "prefix" = "// ";
                 "end" = "";
               }
               {
@@ -369,14 +369,14 @@
               {
                 "language" = "slim";
                 "begin" = "";
-                "prefix" = "/!";
+                "prefix" = "/ ";
                 "end" = "";
               }
               {
                 "language" = "vb";
-                "begin" = "'''";
-                "prefix" = "'";
-                "end" = "'''";
+                "begin" = "";
+                "prefix" = "' ";
+                "end" = "";
               }
               {
                 "language" = "cpp";
