@@ -82,8 +82,10 @@
           dataScienceExtensions = nix4vscode.forOpenVsx [
             "reditorsupport.r"
           ];
-          embeddedExtensions = nix4vscode.forOpenVsx [
-            "davidgomes.platformio-ide"
+          embeddedExtensions = [
+            # FIXME: This should use nix4vscode.forOpenVsx [ "davidgomes.platformio-ide" ]
+            #        error: Extension davidgomes.platformio-ide not found in /nix/store/XXX-extensions_openvsx.json
+            vscode-extensions.platformio.platformio-vscode-ide
           ];
           goExtensions = nix4vscode.forOpenVsx [
             "golang.go"
