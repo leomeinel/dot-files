@@ -23,99 +23,99 @@
       profiles =
         let
           # Extensions
-          defaultExtensions = [
-            forOpenVsx.bbenoist.doxygen
-            forOpenVsx.christian-kohler.path-intellisense
-            forOpenVsx.cschlosser.doxdocgen
-            forOpenVsx.dotjoshjohnson.xml
-            forOpenVsx.editorconfig.editorconfig
-            forOpenVsx.esbenp.prettier-vscode
-            forOpenVsx.fill-labs.dependi
-            forOpenVsx.formulahendry.code-runner
-            forOpenVsx.franneck94.workspace-formatter
-            forOpenVsx.gruntfuggly.activitusbar
-            forOpenVsx.hangxingliu.vscode-nginx-conf-hint
-            forOpenVsx.ms-vscode.test-adapter-converter
-            forOpenVsx.hbenl.vscode-test-explorer
-            forOpenVsx.htmlhint.vscode-htmlhint
-            forOpenVsx.jnoortheen.nix-ide
-            forOpenVsx.jock.svg
-            forOpenVsx.kisstkondoros.vscode-gutter-preview
-            forOpenVsx.kokororin.vscode-phpfmt
-            forOpenVsx.mikestead.dotenv
-            forOpenVsx.mkhl.shfmt
-            forOpenVsx.mtxr.sqltools
-            forOpenVsx.mtxr.sqltools-driver-mssql
-            forOpenVsx.mtxr.sqltools-driver-mysql
-            forOpenVsx.mtxr.sqltools-driver-pg
-            forOpenVsx.mtxr.sqltools-driver-sqlite
-            forOpenVsx.pkief.material-icon-theme
-            forOpenVsx.pkief.material-product-icons
-            forOpenVsx.pranaygp.vscode-css-peek
-            forOpenVsx.psioniq.psi-header
-            forOpenVsx.redhat.vscode-xml
-            forOpenVsx.redhat.vscode-yaml
-            forOpenVsx.streetsidesoftware.code-spell-checker
-            forOpenVsx.streetsidesoftware.code-spell-checker-dutch
-            forOpenVsx.streetsidesoftware.code-spell-checker-french
-            forOpenVsx.streetsidesoftware.code-spell-checker-german
-            forOpenVsx.streetsidesoftware.code-spell-checker-medical-terms
-            forOpenVsx.streetsidesoftware.code-spell-checker-scientific-terms
-            forOpenVsx.tamasfe.even-better-toml
-            forOpenVsx.timonwong.shellcheck
-            forOpenVsx.usernamehw.errorlens
-            forOpenVsx.waderyan.gitblame
-            forOpenVsx.yzane.markdown-pdf
-            forOpenVsx.yzhang.markdown-all-in-one
-            forOpenVsx.zhuangtongfa.material-theme
-            forOpenVsx.zignd.html-css-class-completion
+          defaultExtensions = nix4vscode.forOpenVsx [
+            bbenoist.doxygen
+            christian-kohler.path-intellisense
+            cschlosser.doxdocgen
+            dotjoshjohnson.xml
+            editorconfig.editorconfig
+            esbenp.prettier-vscode
+            fill-labs.dependi
+            formulahendry.code-runner
+            franneck94.workspace-formatter
+            gruntfuggly.activitusbar
+            hangxingliu.vscode-nginx-conf-hint
+            ms-vscode.test-adapter-converter
+            hbenl.vscode-test-explorer
+            htmlhint.vscode-htmlhint
+            jnoortheen.nix-ide
+            jock.svg
+            kisstkondoros.vscode-gutter-preview
+            kokororin.vscode-phpfmt
+            mikestead.dotenv
+            mkhl.shfmt
+            mtxr.sqltools
+            mtxr.sqltools-driver-mssql
+            mtxr.sqltools-driver-mysql
+            mtxr.sqltools-driver-pg
+            mtxr.sqltools-driver-sqlite
+            pkief.material-icon-theme
+            pkief.material-product-icons
+            pranaygp.vscode-css-peek
+            psioniq.psi-header
+            redhat.vscode-xml
+            redhat.vscode-yaml
+            streetsidesoftware.code-spell-checker
+            streetsidesoftware.code-spell-checker-dutch
+            streetsidesoftware.code-spell-checker-french
+            streetsidesoftware.code-spell-checker-german
+            streetsidesoftware.code-spell-checker-medical-terms
+            streetsidesoftware.code-spell-checker-scientific-terms
+            tamasfe.even-better-toml
+            timonwong.shellcheck
+            usernamehw.errorlens
+            waderyan.gitblame
+            yzane.markdown-pdf
+            yzhang.markdown-all-in-one
+            zhuangtongfa.material-theme
+            zignd.html-css-class-completion
           ];
           cppExtensions = [
-            forOpenVsx."13xforever".language-x86-64-assembly
-            forOpenVsx.cheshirekow.cmake-format
-            forOpenVsx.franneck94.vscode-c-cpp-config
-            forOpenVsx.jeff-hykin.better-cpp-syntax
-            forOpenVsx.llvm-vs-code-extensions.vscode-clangd
-            forOpenVsx.twxs.cmake
-            forOpenVsx.vadimcn.vscode-lldb
+            "13xforever".language-x86-64-assembly
+            cheshirekow.cmake-format
+            franneck94.vscode-c-cpp-config
+            jeff-hykin.better-cpp-syntax
+            llvm-vs-code-extensions.vscode-clangd
+            twxs.cmake
+            vadimcn.vscode-lldb
           ];
           dataScienceExtensions = [
-            forOpenVsx.reditorsupport.r
+            reditorsupport.r
           ];
           embeddedExtensions = [
-            forOpenVsx.davidgomes.platformio-ide
+            davidgomes.platformio-ide
           ];
           goExtensions = [
-            forOpenVsx.golang.go
+            golang.go
           ];
           javaExtensions = [
-            forOpenVsx.fwcd.kotlin
-            forOpenVsx.redhat.java
-            forOpenVsx.vscjava.vscode-gradle
-            forOpenVsx.vscjava.vscode-java-debug
-            forOpenVsx.vscjava.vscode-java-dependency
-            forOpenVsx.vscjava.vscode-java-test
-            forOpenVsx.vscjava.vscode-maven
+            fwcd.kotlin
+            redhat.java
+            vscjava.vscode-gradle
+            vscjava.vscode-java-debug
+            vscjava.vscode-java-dependency
+            vscjava.vscode-java-test
+            vscjava.vscode-maven
           ];
           pythonExtensions = [
-            forOpenVsx.charliermarsh.ruff
-            forOpenVsx.franneck94.vscode-python-config
-            forOpenVsx.ms-python.black-formatter
-            forOpenVsx.ms-python.isort
-            forOpenVsx.ms-python.mypy-type-checker
-            forOpenVsx.ms-python.python
-            forOpenVsx.njpwerner.autodocstring
-            forOpenVsx.njqdev.vscode-python-typehint
+            charliermarsh.ruff
+            franneck94.vscode-python-config
+            ms-python.black-formatter
+            ms-python.isort
+            ms-python.mypy-type-checker
+            ms-python.python
+            njpwerner.autodocstring
+            njqdev.vscode-python-typehint
           ];
           rustExtensions = [
-            forOpenVsx.rust-lang.rust-analyzer
-            forOpenVsx.swellaby.vscode-rust-test-adapter
+            rust-lang.rust-analyzer
+            swellaby.vscode-rust-test-adapter
           ];
           webExtensions = [
-            forOpenVsx.dbaeumer.vscode-eslint
-            forOpenVsx.kofuk.hugo-utils
-            forOpenVsx.svelte.svelte-vscode
-            forOpenVsx.yandeu.five-server
+            dbaeumer.vscode-eslint
+            kofuk.hugo-utils
+            svelte.svelte-vscode
+            yandeu.five-server
           ];
 
           # Settings
