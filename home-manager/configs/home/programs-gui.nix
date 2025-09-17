@@ -77,16 +77,7 @@
             open-vsx.jeff-hykin.better-cpp-syntax
             open-vsx.llvm-vs-code-extensions.vscode-clangd
             open-vsx.twxs.cmake
-            # FIXME: Use open-vsx version; It seems like this fails because 1.11.5 is maybe not supported in current nixpkgs
-            #        error: failed to run custom build command for `lldb-stub v1.0.0 (/build/source/adapter/lldb-stub)`
-            #        Caused by:
-            #          process didn't exit successfully: `/build/source/target/release/build/lldb-stub-c2b3f4e211ef7d9c/build-script-build` (exit status: 101)
-            #          --- stderr
-            #          thread 'main' panicked at adapter/lldb-stub/build.rs:23:43:
-            #          LLDB_DYLIB: NotPresent
-            #          note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
-            #        SEE: https://github.com/nix-community/nix-vscode-extensions/issues/127
-            vscode-extensions.vadimcn.vscode-lldb
+            open-vsx.vadimcn.vscode-lldb
           ];
           dataScienceExtensions = [
             open-vsx.reditorsupport.r
