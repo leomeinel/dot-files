@@ -31,8 +31,6 @@
             open-vsx.editorconfig.editorconfig
             open-vsx.esbenp.prettier-vscode
             open-vsx.fill-labs.dependi
-            open-vsx.formulahendry.auto-close-tag
-            open-vsx.formulahendry.auto-rename-tag
             open-vsx.formulahendry.code-runner
             open-vsx.franneck94.workspace-formatter
             open-vsx.gruntfuggly.activitusbar
@@ -146,12 +144,13 @@
             "editor.guides.highlightActiveBracketPair" = false;
             "editor.indentSize" = "tabSize";
             "editor.insertSpaces" = true;
-            "editor.tabSize" = 4;
+            "editor.linkedEditing" = true;
             "editor.multiCursorModifier" = "ctrlCmd";
             "editor.scrollbar.horizontalScrollbarSize" = 10;
             "editor.scrollbar.verticalScrollbarSize" = 10;
             "editor.scrollBeyondLastLine" = false;
             "editor.tabCompletion" = "on";
+            "editor.tabSize" = 4;
             "editor.unfoldOnClickAfterEndOfLine" = true;
             "evenBetterToml.formatter.indentString" = " ";
             "explorer.confirmDelete" = false;
@@ -172,6 +171,8 @@
             "git.scanRepositories" = [ "${config.home.homeDirectory}/src" ];
             "gitblame.statusBarMessageFormat" = "\${author.name} (\${time.ago})";
             "github.gitProtocol" = "ssh";
+            "html.autoClosingTags" = true;
+            "javascript.autoClosingTags" = true;
             "markdown-pdf.displayHeaderFooter" = false;
             "markdown-pdf.omitBackground" = true;
             "markdown-pdf.outputDirectory" = "markdown-pdf";
@@ -201,6 +202,7 @@
             "terminal.integrated.shellIntegration.history" = 500;
             "terminal.integrated.useWslProfiles" = false;
             "terminal.integrated.windowsEnableConpty" = false;
+            "typescript.autoClosingTags" = true;
             "update.mode" = "none";
             "update.showReleaseNotes" = false;
             "window.autoDetectColorScheme" = false;
@@ -211,6 +213,7 @@
             "workbench.preferredDarkColorTheme" = "One Dark Pro Darker";
             "workbench.productIconTheme" = "material-product-icons";
             "workbench.startupEditor" = "none";
+            "xml.completion.autoCloseTags" = true;
             "zenMode.centerLayout" = false;
             "zenMode.hideLineNumbers" = false;
             "zenMode.hideStatusBar" = false;
