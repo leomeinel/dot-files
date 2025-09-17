@@ -24,12 +24,6 @@
     ./configs/home/xdg.nix
   ];
 
-  # Nixpkgs options
-  nixpkgs = {
-    overlays = [ ];
-    config = { };
-  };
-
   # Home options
   home = {
     # State version

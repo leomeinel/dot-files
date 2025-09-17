@@ -41,7 +41,15 @@
     }:
     let
       system = "x86_64-linux";
-      pkgs = nixpkgs.legacyPackages.${system};
+      # FIXME: This should be in common-home*.nix
+      pkgs = import nixpkgs {
+        inherit system;
+        overlays = [ nix4vscode.overlays.default ];
+        config = {
+          # Allow unfree packages to install VSCode extensions
+          allowUnfree = true;
+        };
+      };
       # FIXME: This should be defined only once
       nixos-version = "REPLACE_NIX_VERSION";
     in

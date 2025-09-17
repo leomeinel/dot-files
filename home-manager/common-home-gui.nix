@@ -27,12 +27,6 @@
     ./configs/home/xdg-gui.nix
   ];
 
-  # Nixpkgs options
-  nixpkgs = {
-    overlays = [ nix4vscode.overlays.default ];
-    config = { };
-  };
-
   # Home options
   home = {
     # Packages
@@ -109,7 +103,4 @@
       '';
     };
   };
-
-  # Allow unfree packages to install VSCode extensions
-  nixpkgs.config.allowUnfree = true;
 }
