@@ -11,7 +11,6 @@
 {
   config,
   lib,
-  nix4vscode,
   pkgs,
   ...
 }:
