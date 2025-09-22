@@ -8,7 +8,8 @@ set $up k
 set $right l
 ## Preferred applications
 set $term "${TERMINAL}"
-set $menu /usr/bin/wofi --show run
+set $menu /usr/bin/wofi
+set $menu-run /usr/bin/wofi -S run
 set $rectangle-screenshot /usr/bin/grim -g "$(slurp)" "$(/usr/bin/xdg-user-dir PICTURES)/Screenshots/$(/usr/bin/date -u +"%Y-%m-%dT%H-%M-%S").png"
 set $screenshot /usr/bin/grim "$(/usr/bin/xdg-user-dir PICTURES)/Screenshots/$(/usr/bin/date -u +"%Y-%m-%dT%H-%M-%S").png"
 set $volume-mute /usr/bin/pactl set-sink-mute @DEFAULT_SINK@ toggle
@@ -26,6 +27,7 @@ bindsym $super+Return exec $term
 bindsym $super+q kill
 ## Start launcher
 bindsym $super+d exec $menu
+bindsym $super+Shift+d exec $menu-run
 ## Screenshots
 bindsym $super+Shift+Print exec $rectangle-screenshot
 bindsym $super+Print exec $screenshot
