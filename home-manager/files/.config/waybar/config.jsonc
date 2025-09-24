@@ -27,8 +27,7 @@
       "deactivated": "󰛊"
     },
     "tooltip": true,
-    "tooltip-format-activated": "Click to sleep when idle",
-    "tooltip-format-deactivated": "Click to not sleep when idle"
+    "tooltip-format": "Click to toggle sleep on idle"
   },
   "battery": {
     "states": {
@@ -85,7 +84,7 @@
       "dnd-inhibited-none": "<span foreground='#f0614e'>󰪑</span>"
     },
     "return-type": "json",
-    "exec-if": "which swaync-client",
+    "exec-if": "/usr/bin/which swaync-client",
     "exec": "/usr/bin/swaync-client -swb",
     "on-click": "/usr/bin/swaync-client -t -sw",
     "on-click-right": "/usr/bin/swaync-client -d -sw",
