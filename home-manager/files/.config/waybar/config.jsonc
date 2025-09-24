@@ -11,6 +11,7 @@
     "battery",
     "pulseaudio",
     "bluetooth",
+    "custom/gammastep",
     "tray",
     "clock",
     "custom/notification"
