@@ -117,7 +117,7 @@
       };
       "waybar/scripts/gammastep.sh" = {
         executable = true;
-        source = ../../files/.config/gammastep/scripts/gammastep.sh;
+        source = ../../files/.config/waybar/scripts/gammastep.sh;
       };
       # wofi
       "wofi/config" = {
