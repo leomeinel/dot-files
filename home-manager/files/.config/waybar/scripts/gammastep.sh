@@ -13,15 +13,21 @@
 set -e
 
 # Toggle gammastep
-if pgrep "gammastep" >/dev/null 2>&1; then
+if pgrep -x "gammastep" >/dev/null 2>&1; then
 	if [[ -z "${1}" ]]; then
-		/usr/bin/killall gammastep >/dev/null 2>&1 || true
+		/usr/bin/killall -9 -e gammastep >/dev/null 2>&1 || true
+		STATUS="deactivated"
+	else
+		STATUS="activated"
 	fi
-	STATUS="deactivated"
 else
-	{
-		/usr/bin/gammastep -P &
-	} >/dev/null 2>&1
-	STATUS="activated"
+	if [[ -z "${1}" ]]; then
+		{
+			/usr/bin/gammastep -P &
+		} >/dev/null 2>&1
+		STATUS="activated"
+	else
+		STATUS="deactivated"
+	fi
 fi
-/usr/bin/echo "{\"class\": \"${STATUS}\"}"
+/usr/bin/echo "{\"alt\": \"${STATUS}\", \"class\": \"${STATUS}\", \"tooltip\": \"Toggle night light\"}"

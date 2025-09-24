@@ -70,14 +70,12 @@
       "activated": "󱩌",
       "deactivated": "󱩍"
     },
+    "return-type": "json",
     "exec-if": "/usr/bin/which gammastep",
-    "exec": "${XDG_CONFIG_HOME}/waybar/scripts/gammastep.sh enable",
-    "interval": "once",
+    "exec-on-event": true,
+    "exec": "${XDG_CONFIG_HOME}/waybar/scripts/gammastep.sh info",
     "on-click": "${XDG_CONFIG_HOME}/waybar/scripts/gammastep.sh",
-    "escape": true,
-    "tooltip": true,
-    "tooltip-format-activated": "Toggle night light",
-    "tooltip-format-deactivated": "Toggle night light"
+    "tooltip": true
   },
   "tray": {
     "icon-size": 13,
@@ -105,7 +103,6 @@
     "exec": "/usr/bin/swaync-client -swb",
     "on-click": "/usr/bin/swaync-client -t -sw",
     "on-click-right": "/usr/bin/swaync-client -d -sw",
-    "escape": true,
     "tooltip": true
   }
 }
