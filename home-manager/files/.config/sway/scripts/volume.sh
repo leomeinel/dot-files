@@ -29,8 +29,8 @@ down() {
     fi
 }
 
-if [[ "${1}" == "--up" ]]; then
+if [[ "${1}" == "up" ]]; then
     up
-elif [[ "${1}" == "--down" ]]; then
+elif [[ "${1}" == "down" ]]; then
     down
 fi
