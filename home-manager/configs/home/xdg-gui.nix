@@ -25,6 +25,14 @@
       "eclipse-style-guides/java.xml" = {
         source = ../../files/.config/eclipse-style-guides/java.xml;
       };
+      # eclipse-style-guides
+      "gammastep/config.ini" = {
+        source = ../../files/.config/gammastep/config.ini;
+      };
+      "gammastep/scripts/gammastep.sh" = {
+        executable = true;
+        source = ../../files/.config/gammastep/scripts/gammastep.sh;
+      };
       # Kvantum
       "Kvantum/ArcDark".source = "${pkgs.arc-kde-theme}/share/Kvantum/ArcDark";
       "Kvantum/kvantum.kvconfig" = {
@@ -118,7 +126,7 @@
       "wofi/style.css" = {
         source = ../../files/.config/wofi/style.css;
       };
-
+      # xdg
       "xdg-desktop-portal/sway-portals.conf" = {
         source = ../../files/.config/xdg-desktop-portal/sway-portals.conf;
       };

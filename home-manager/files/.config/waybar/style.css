@@ -93,6 +93,13 @@ window#waybar {
   color: rgb(240, 240, 80) /* var(--hint) */;
 }
 
+#custom-gammastep.activated {
+  color: rgb(104, 157, 106) /* var(--secondary) */;
+}
+#custom-gammastep.deactivated {
+  color: rgb(240, 97, 78) /* var(--primary) */;
+}
+
 #idle_inhibitor.activated {
   color: rgb(104, 157, 106) /* var(--secondary) */;
 }

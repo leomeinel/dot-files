@@ -62,6 +62,17 @@
     "on-click-right": "/usr/bin/bluetoothctl show | /usr/bin/grep -Uvq \"Powered: no$\\n.*PowerState: off\" && /usr/bin/bluetoothctl power off || /usr/bin/bluetoothctl power on",
     "tooltip": false
   },
+  "custom/gammastep": {
+    "format": "{icon}",
+    "format-icons": {
+      "activated": "󱩌",
+      "deactivated": "󱩍"
+    },
+    "exec": "~/.config/waybar/scripts/gammastep.sh",
+    "on-click": "~/.config/waybar/scripts/gammastep.sh",
+    "tooltip": true,
+    "tooltip-format": "Click to toggle night light"
+  },
   "tray": {
     "icon-size": 13,
     "spacing": 17

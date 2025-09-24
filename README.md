@@ -31,6 +31,7 @@ This repository is not entirely licensed as MIT.
 - [fastfetch](https://archlinux.org/packages/extra/x86_64/fastfetch/)
 - [fd](https://archlinux.org/packages/extra/x86_64/fd/)
 - [flatpak](https://archlinux.org/packages/extra/x86_64/flatpak/)
+- [gammastep](https://archlinux.org/packages/extra/x86_64/gammastep/)
 - [git-delta](https://archlinux.org/packages/extra/x86_64/git-delta/)
 - [git](https://archlinux.org/packages/extra/x86_64/git/)
 - [glow](https://archlinux.org/packages/extra/x86_64/glow/)
