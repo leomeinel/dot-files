@@ -14,7 +14,9 @@ set -e
 
 # Toggle gammastep
 if pgrep "gammastep" >/dev/null 2>&1; then
-	/usr/bin/killall gammastep >/dev/null 2>&1 || true
+	if [[ -z "${1}" ]]; then
+		/usr/bin/killall gammastep >/dev/null 2>&1 || true
+	fi
 	/usr/bin/echo "deactivated"
 else
 	{

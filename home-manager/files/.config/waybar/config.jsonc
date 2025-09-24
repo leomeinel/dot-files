@@ -70,7 +70,7 @@
       "deactivated": "󱩍"
     },
     "exec-if": "/usr/bin/which gammastep",
-    "exec": "${XDG_CONFIG_HOME}/waybar/scripts/gammastep.sh",
+    "exec": "${XDG_CONFIG_HOME}/waybar/scripts/gammastep.sh enable",
     "on-click": "${XDG_CONFIG_HOME}/waybar/scripts/gammastep.sh",
     "tooltip": true,
     "tooltip-format": "Click to toggle night light"
