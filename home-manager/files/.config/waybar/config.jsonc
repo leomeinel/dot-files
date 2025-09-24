@@ -70,9 +70,9 @@
       "activated": "󱩌",
       "deactivated": "󱩍"
     },
+    "interval": "once",
     "return-type": "json",
     "exec-if": "/usr/bin/which gammastep",
-    "exec-on-event": true,
     "exec": "${XDG_CONFIG_HOME}/waybar/scripts/gammastep.sh info",
     "on-click": "${XDG_CONFIG_HOME}/waybar/scripts/gammastep.sh",
     "tooltip": true
