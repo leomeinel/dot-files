@@ -69,6 +69,7 @@
       "activated": "󱩌",
       "deactivated": "󱩍"
     },
+    "exec-if": "/usr/bin/which gammastep",
     "exec": "${XDG_CONFIG_HOME}/waybar/scripts/gammastep.sh",
     "on-click": "${XDG_CONFIG_HOME}/waybar/scripts/gammastep.sh",
     "tooltip": true,

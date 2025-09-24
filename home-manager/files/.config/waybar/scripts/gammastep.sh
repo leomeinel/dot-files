@@ -17,6 +17,8 @@ if pgrep "gammastep" >/dev/null 2>&1; then
 	/usr/bin/killall gammastep >/dev/null 2>&1 || true
 	/usr/bin/echo "deactivated"
 else
-	/usr/bin/gammastep -P &
+	{
+		/usr/bin/gammastep -P &
+	} >/dev/null 2>&1
 	/usr/bin/echo "activated"
 fi
