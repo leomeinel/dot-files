@@ -29,10 +29,6 @@
       "gammastep/config.ini" = {
         source = ../../files/.config/gammastep/config.ini;
       };
-      "gammastep/scripts/gammastep.sh" = {
-        executable = true;
-        source = ../../files/.config/gammastep/scripts/gammastep.sh;
-      };
       # Kvantum
       "Kvantum/ArcDark".source = "${pkgs.arc-kde-theme}/share/Kvantum/ArcDark";
       "Kvantum/kvantum.kvconfig" = {
@@ -118,6 +114,10 @@
       };
       "waybar/style.css" = {
         source = ../../files/.config/waybar/style.css;
+      };
+      "waybar/scripts/gammastep.sh" = {
+        executable = true;
+        source = ../../files/.config/gammastep/scripts/gammastep.sh;
       };
       # wofi
       "wofi/config" = {
