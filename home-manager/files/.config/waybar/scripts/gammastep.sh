@@ -17,10 +17,11 @@ if pgrep "gammastep" >/dev/null 2>&1; then
 	if [[ -z "${1}" ]]; then
 		/usr/bin/killall gammastep >/dev/null 2>&1 || true
 	fi
-	/usr/bin/echo "deactivated"
+	STATUS="deactivated"
 else
 	{
 		/usr/bin/gammastep -P &
 	} >/dev/null 2>&1
-	/usr/bin/echo "activated"
+	STATUS="activated"
 fi
+/usr/bin/echo "{\"class\": \"${STATUS}\"}"
