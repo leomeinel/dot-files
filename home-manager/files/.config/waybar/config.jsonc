@@ -8,10 +8,10 @@
   "modules-center": [],
   "modules-right": [
     "idle_inhibitor",
+    "custom/gammastep",
     "battery",
     "pulseaudio",
     "bluetooth",
-    "custom/gammastep",
     "tray",
     "clock",
     "custom/notification"
