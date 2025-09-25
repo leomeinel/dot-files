@@ -690,5 +690,9 @@
           full = profiles.full;
         };
     };
+    kvantum = {
+      enable = true;
+      theme = "Fusion";
+    };
   };
 }

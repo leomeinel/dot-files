@@ -29,11 +29,6 @@
       "gammastep/config.ini" = {
         source = ../../files/.config/gammastep/config.ini;
       };
-      # Kvantum
-      "Kvantum/ArcDark".source = "${pkgs.arc-kde-theme}/share/Kvantum/ArcDark";
-      "Kvantum/kvantum.kvconfig" = {
-        source = ../../files/.config/Kvantum/kvantum.kvconfig;
-      };
       # npmrc
       "npm/npmrc" = {
         source = ../../files/.config/npm/npmrc;

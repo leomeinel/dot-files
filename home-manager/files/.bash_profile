@@ -71,7 +71,7 @@ fi
 
 # Start sway with environment variables
 if [[ -z "${WAYLAND_DISPLAY}" ]] && [[ "${XDG_VTNR}" -eq 1 ]]; then
-    export GTK_THEME="Arc-Dark"
+    export GTK_THEME="Adwaita-dark"
     export MOZ_ENABLE_WAYLAND=1
     export MOZ_WEBRENDER=1
     export QT_AUTO_SCREEN_SCALE_FACTOR=1
