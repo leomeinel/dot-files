@@ -92,8 +92,6 @@
         run /usr/bin/rm -f ${config.xdg.dataHome}/themes
         run /usr/bin/cp -r /usr/share/themes ${config.xdg.dataHome}/themes
         run /usr/bin/flatpak override -u --filesystem=xdg-data/themes:ro
-        run /usr/bin/flatpak mask org.gtk.Gtk3theme.adw-gtk3
-        run /usr/bin/flatpak mask org.gtk.Gtk3theme.adw-gtk3-dark
         # Workaround for using the correct QT theme in all applications
         run /usr/bin/flatpak override -u --env=QT_STYLE_OVERRIDE="breeze"
       '';
