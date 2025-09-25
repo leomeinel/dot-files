@@ -81,15 +81,15 @@
         # Reset flatpak override to make sure that no unnecessary overrides are added
         run /usr/bin/flatpak override -u --reset
         # Workaround for using the correct font in all applications
-        run /usr/bin/rm -f ${config.xdg.dataHome}/fonts || /usr/bin/true
+        run /usr/bin/rm -rf ${config.xdg.dataHome}/fonts
         run /usr/bin/cp -r /usr/share/fonts ${config.xdg.dataHome}/fonts
         run /usr/bin/flatpak override -u --filesystem=xdg-data/fonts:ro
         # Workaround for using the correct icons in all applications
-        run /usr/bin/rm -f ${config.xdg.dataHome}/icons || /usr/bin/true
+        run /usr/bin/rm -rf ${config.xdg.dataHome}/icons
         run /usr/bin/cp -r /usr/share/icons ${config.xdg.dataHome}/icons
         run /usr/bin/flatpak override -u --filesystem=xdg-data/icons:ro
         # Workaround for using the correct theme in all applications
-        run /usr/bin/rm -f ${config.xdg.dataHome}/themes || /usr/bin/true
+        run /usr/bin/rm -rf ${config.xdg.dataHome}/themes
         run /usr/bin/cp -r /usr/share/themes ${config.xdg.dataHome}/themes
         run /usr/bin/flatpak override -u --filesystem=xdg-data/themes:ro
         # Workaround for using the correct QT theme in all applications
