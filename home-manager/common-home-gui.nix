@@ -50,8 +50,6 @@
         lld
         lldb
         maven
-        nerd-fonts.hasklug
-        nerd-fonts.noto
         networkmanagerapplet
         nixd
         nixfmt-rfc-style
@@ -84,13 +82,14 @@
         # Reset flatpak override to make sure that no unnecessary overrides are added
         run /usr/bin/flatpak override -u --reset
         # Workaround for using the correct font in all applications
-        run /usr/bin/ln -sfn ${config.home.profileDirectory}/share/fonts ${config.xdg.dataHome}/fonts
-        run /usr/bin/flatpak override -u --filesystem=xdg-data/fonts:ro --filesystem=${config.home.profileDirectory}/share/fonts:ro --filesystem=${pkgs.nerd-fonts.hasklug}/share/fonts:ro
+        run /usr/bin/flatpak override -u --filesystem=xdg-data/fonts:ro --filesystem=/usr/share/fonts:ro
         # Workaround for using the correct icons in all applications
-        run /usr/bin/flatpak override -u --filesystem=xdg-data/icons:ro --filesystem=/usr/share/icons/:ro
+        run /usr/bin/flatpak override -u --filesystem=xdg-data/icons:ro --filesystem=/usr/share/icons:ro
         run /usr/bin/flatpak override -u --filesystem=xdg-data/themes:ro --filesystem=/usr/share/themes:ro
         # Workaround for using the correct QT theme in all applications
         run /usr/bin/flatpak override -u --env=QT_STYLE_OVERRIDE="breeze"
+        # FIXME: Remove this
+        rm -f ${config.xdg.dataHome}/themes ${config.xdg.dataHome}/fonts
       '';
     };
   };
