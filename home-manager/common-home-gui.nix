@@ -50,7 +50,6 @@
         lld
         lldb
         maven
-        networkmanagerapplet
         nixd
         nixfmt-rfc-style
         nodejs
