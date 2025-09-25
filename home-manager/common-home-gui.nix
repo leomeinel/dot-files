@@ -83,6 +83,7 @@
         # Workaround for using the correct font in all applications
         run /usr/bin/flatpak override -u --filesystem=xdg-data/fonts:ro --filesystem=/usr/share/fonts:ro
         # Workaround for using the correct icons in all applications
+        run /usr/bin/ln -sfn /usr/share/icons ${config.xdg.dataHome}/icons
         run /usr/bin/flatpak override -u --filesystem=xdg-data/icons:ro --filesystem=/usr/share/icons:ro
         run /usr/bin/flatpak override -u --filesystem=xdg-data/themes:ro --filesystem=/usr/share/themes:ro
         # Workaround for using the correct QT theme in all applications
