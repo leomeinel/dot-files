@@ -27,8 +27,8 @@
       name = "Papirus-Dark";
     };
     theme = with pkgs; {
-      package = arc-theme;
-      name = "Arc-Dark";
+      package = gnome-themes-extra;
+      name = "Adwaita-dark";
     };
     gtk2 = {
       configLocation = "${config.xdg.configHome}/gtk-2.0/gtkrc";

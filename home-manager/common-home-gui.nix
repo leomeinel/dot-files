@@ -93,6 +93,7 @@
         run /usr/bin/flatpak override -u --filesystem=xdg-data/icons:ro --filesystem=${config.home.profileDirectory}/share/icons:ro --filesystem=${pkgs.papirus-icon-theme}/share/icons:ro --filesystem=${pkgs.phinger-cursors}/share/icons:ro
         # Workaround for using the correct GTK theme in all applications
         run /usr/bin/ln -sfn ${config.home.profileDirectory}/share/themes ${config.xdg.dataHome}/themes
+        run /usr/bin/flatpak override -u --filesystem=xdg-data/themes:ro --filesystem=${config.home.profileDirectory}/share/themes:ro --filesystem=${pkgs.gnome-themes-extra}/share/themes:ro
         # Workaround for using the correct QT theme in all applications
         run /usr/bin/flatpak override -u --env=QT_STYLE_OVERRIDE="kvantum"
       '';
