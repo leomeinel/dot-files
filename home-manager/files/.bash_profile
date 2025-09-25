@@ -71,12 +71,13 @@ fi
 
 # Start sway with environment variables
 if [[ -z "${WAYLAND_DISPLAY}" ]] && [[ "${XDG_VTNR}" -eq 1 ]]; then
-    export GTK_THEME="Adwaita-dark"
+    export GTK_THEME="Adwaita"
     export MOZ_ENABLE_WAYLAND=1
     export MOZ_WEBRENDER=1
     export QT_AUTO_SCREEN_SCALE_FACTOR=1
     export QT_QPA_PLATFORM="wayland;xcb"
     export QT_WAYLAND_DISABLE_WINDOWDECORATION=1
+	export QT_WAYLAND_DECORATIONS="adwaita"
     export WLR_NO_HARDWARE_CURSORS=1
     export WLR_RENDERER_ALLOW_SOFTWARE=1
     export XDG_CURRENT_DESKTOP=sway

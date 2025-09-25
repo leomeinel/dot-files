@@ -23,12 +23,12 @@
       size = 10;
     };
     iconTheme = with pkgs; {
-      package = papirus-icon-theme;
-      name = "Papirus-Dark";
+      package = adwaita-icon-theme;
+      name = "Adwaita";
     };
     theme = with pkgs; {
       package = gnome-themes-extra;
-      name = "Adwaita-dark";
+      name = "Adwaita";
     };
     gtk2 = {
       configLocation = "${config.xdg.configHome}/gtk-2.0/gtkrc";

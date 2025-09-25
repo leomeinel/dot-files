@@ -16,7 +16,7 @@
   # QT options
   qt = {
     enable = true;
-    platformTheme.name = "qtct";
-    style.name = "Fusion";
+    platformTheme.name = "gtk3";
+    style.name = "breeze";
   };
 }
