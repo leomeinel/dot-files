@@ -95,7 +95,7 @@
         run /usr/bin/ln -sfn ${config.home.profileDirectory}/share/themes ${config.xdg.dataHome}/themes
         run /usr/bin/flatpak override -u --filesystem=xdg-data/themes:ro --filesystem=${config.home.profileDirectory}/share/themes:ro --filesystem=${pkgs.gnome-themes-extra}/share/themes:ro
         # Workaround for using the correct QT theme in all applications
-        run /usr/bin/flatpak override -u --env=QT_STYLE_OVERRIDE="kvantum"
+        run /usr/bin/flatpak override -u --env=QT_STYLE_OVERRIDE="Fusion"
       '';
     };
   };
