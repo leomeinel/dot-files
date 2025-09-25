@@ -71,13 +71,19 @@ fi
 
 # Start sway with environment variables
 if [[ -z "${WAYLAND_DISPLAY}" ]] && [[ "${XDG_VTNR}" -eq 1 ]]; then
-    export GTK_THEME="Adwaita"
+    gsettings set org.gnome.desktop.interface color-scheme prefer-dark
+    gsettings set org.gnome.desktop.interface cursor-size 24
+    gsettings set org.gnome.desktop.interface cursor-theme phinger-cursors-dark
+    gsettings set org.gnome.desktop.interface gtk-theme Adwaita
+    export GTK_THEME="Adwaita:dark"
+    export GTK2_RC_FILES="${XDG_CONFIG_HOME}"/gtk-2.0/gtkrc
     export MOZ_ENABLE_WAYLAND=1
     export MOZ_WEBRENDER=1
     export QT_AUTO_SCREEN_SCALE_FACTOR=1
     export QT_QPA_PLATFORM="wayland;xcb"
+    export QT_QPA_PLATFORMTHEME="gtk3"
+    export QT_STYLE_OVERRIDE="breeze"
     export QT_WAYLAND_DISABLE_WINDOWDECORATION=1
-	export QT_WAYLAND_DECORATIONS="adwaita"
     export WLR_NO_HARDWARE_CURSORS=1
     export WLR_RENDERER_ALLOW_SOFTWARE=1
     export XDG_CURRENT_DESKTOP=sway

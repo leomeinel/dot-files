@@ -49,3 +49,6 @@ hide_edge_borders smart
 
 # Background
 exec /usr/bin/swaybg -i "${XDG_DATA_HOME}"/backgrounds/arch-install/sunrise.jpg
+
+# Cursor theme
+seat seat0 xcursor_theme phinger-cursors-dark 24

@@ -29,6 +29,16 @@
       "gammastep/config.ini" = {
         source = ../../files/.config/gammastep/config.ini;
       };
+      # gtk
+      "gtk-2.0/gtkrc" = {
+        source = ../../files/.config/gtk-2.0/gtkrc;
+      };
+      "gtk-3.0/settings.ini" = {
+        source = ../../files/.config/gtk-3.0/settings.ini;
+      };
+      "gtk-4.0/settings.ini" = {
+        source = ../../files/.config/gtk-4.0/settings.ini;
+      };
       # npmrc
       "npm/npmrc" = {
         source = ../../files/.config/npm/npmrc;
