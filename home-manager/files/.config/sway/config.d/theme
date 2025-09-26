@@ -31,7 +31,8 @@ gaps outer 0
 smart_gaps on
 
 # Borders
-default_border normal 0
+default_border none
+default_floating_border none
 smart_borders on
 client.focused $focused_bgcolor $focused_bgcolor $focused_textcolor $focused_indicator $focused_bgcolor
 client.focused_inactive $inactive_bgcolor $inactive_bgcolor $inactive_textcolor $inactive_indicator $inactive_bgcolor
@@ -43,8 +44,6 @@ font pango: HasklugNerdFont Regular 10
 
 # Title Bars
 for_window [app_id="^.*"] opacity 1
-default_border pixel 1
-default_floating_border pixel 2
 hide_edge_borders smart
 
 # Background
