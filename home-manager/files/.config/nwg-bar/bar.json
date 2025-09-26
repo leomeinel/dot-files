@@ -1,7 +1,7 @@
 [
   {
     "label": "Lock",
-    "exec": "/usr/bin/swaylock -f -c 001d2021",
+    "exec": "/usr/bin/swaylock -f",
     "icon": "/usr/share/nwg-bar/images/system-lock-screen.svg"
   },
   {

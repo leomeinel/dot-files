@@ -1,2 +1,2 @@
 # Idle
-exec /usr/bin/swayidle -w timeout 300 '/usr/bin/swaylock -f -c 001d2021' timeout 600 '/usr/bin/swaymsg "output * dpms off"' resume '/usr/bin/swaymsg "output * dpms on"' before-sleep '/usr/bin/swaylock -f -c 001d2021'
+exec /usr/bin/swayidle -w timeout 300 '/usr/bin/swaylock -f' timeout 600 '/usr/bin/swaymsg "output * dpms off"' resume '/usr/bin/swaymsg "output * dpms on"' before-sleep '/usr/bin/swaylock -f'
