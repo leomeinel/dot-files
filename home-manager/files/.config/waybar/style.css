@@ -30,7 +30,7 @@
 }
 
 window#waybar {
-  background-color: rgb(29, 32, 33) /* var(--dark) */;
+  background-color: rgb(29, 32, 33); /* var(--dark) */
   transition-property: background-color;
   transition-duration: 0.5s;
 }
@@ -75,51 +75,51 @@ window#waybar {
 }
 
 #battery.warning {
-  color: rgb(240, 240, 80) /* var(--hint) */;
+  color: rgb(240, 240, 80); /* var(--hint) */
 }
 #battery.critical {
-  color: rgb(240, 97, 78) /* var(--primary) */;
+  color: rgb(240, 97, 78); /* var(--primary) */
 }
 
 #bluetooth.connected {
-  color: rgb(104, 157, 106) /* var(--secondary) */;
+  color: rgb(104, 157, 106); /* var(--secondary) */
 }
 #bluetooth.off,
 #bluetooth.disabled {
-  color: rgb(240, 97, 78) /* var(--primary) */;
+  color: rgb(240, 97, 78); /* var(--primary) */
 }
 
 #clock {
   font-family: "HasklugNerdFontMono";
-  color: rgb(240, 240, 80) /* var(--hint) */;
+  color: rgb(240, 240, 80); /* var(--hint) */
 }
 
 #custom-gammastep.activated {
-  color: rgb(104, 157, 106) /* var(--secondary) */;
+  color: rgb(104, 157, 106); /* var(--secondary) */
 }
 #custom-gammastep.deactivated {
-  color: rgb(240, 97, 78) /* var(--primary) */;
+  color: rgb(240, 97, 78); /* var(--primary) */
 }
 
 #idle_inhibitor.activated {
-  color: rgb(104, 157, 106) /* var(--secondary) */;
+  color: rgb(104, 157, 106); /* var(--secondary) */
 }
 #idle_inhibitor.deactivated {
-  color: rgb(240, 97, 78) /* var(--primary) */;
+  color: rgb(240, 97, 78); /* var(--primary) */
 }
 
 #pulseaudio.muted {
-  color: rgb(240, 97, 78) /* var(--primary) */;
+  color: rgb(240, 97, 78); /* var(--primary) */
 }
 
 #workspaces button label {
-  color: rgb(104, 157, 106) /* var(--secondary) */;
+  color: rgb(104, 157, 106); /* var(--secondary) */
 }
 #workspaces button.focused {
-  background: rgb(104, 157, 106) /* var(--secondary) */;
+  background: rgb(104, 157, 106); /* var(--secondary) */
 }
 #workspaces button.focused label {
-  color: rgb(29, 32, 33) /* var(--dark) */;
+  color: rgb(29, 32, 33); /* var(--dark) */
 }
 .modules-left > widget:first-child > #workspaces {
   margin-left: 0;

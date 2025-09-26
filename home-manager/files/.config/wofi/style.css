@@ -34,7 +34,7 @@ window {
 #input {
   padding: 10px;
   margin: 0px;
-  background-color: rgb(35, 39, 41) /* var(--dark2) */;
+  background-color: rgb(35, 39, 41); /* var(--dark2) */
   color: white;
 }
 
