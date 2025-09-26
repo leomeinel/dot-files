@@ -104,9 +104,6 @@
       "swaync/config.json" = {
         source = ../../files/.config/swaync/config.json;
       };
-      "swaync/style.css" = {
-        source = ../../files/.config/swaync/style.css;
-      };
       # Thunar
       "Thunar/uca.xml" = {
         force = true;
