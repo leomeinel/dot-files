@@ -176,7 +176,7 @@
             "nix.enableLanguageServer" = true;
             "nix.serverPath" = "nixd";
             "oneDarkPro.editorTheme" = "One Dark Pro Darker";
-            "phpfmt.php_bin" = "${php}/bin/php";
+            "phpfmt.php_bin" = "/usr/bin/php";
             "prettier.trailingComma" = "none";
             "prettier.withNodeModules" = true;
             "redhat.telemetry.enabled" = false;
@@ -184,7 +184,7 @@
             "search.showLineNumbers" = true;
             "search.smartCase" = true;
             "search.useIgnoreFiles" = false;
-            "shellcheck.executablePath" = "${shellcheck}/bin/shellcheck";
+            "shellcheck.executablePath" = "/usr/bin/shellcheck";
             "shfmt.executableArgs" = [ "-i 4" ];
             "telemetry.telemetryLevel" = "off";
             "terminal.external.linuxExec" = "/usr/bin/alacritty";
@@ -585,7 +585,7 @@
             "platformio-ide.useBuiltinPython" = false;
           };
           goSettings = {
-            "go.gopath" = "${go}/bin/go";
+            "go.gopath" = "/usr/bin/go";
           };
           javaSettings = {
             "java.eclipse.downloadSources" = true;
@@ -599,7 +599,7 @@
             "python.languageServer" = "Jedi";
           };
           rustSettings = {
-            "rust-analyzer.check.command" = "${rustup}/bin/cargo-clippy";
+            "rust-analyzer.check.command" = "/usr/bin/cargo-clippy";
             "rust-analyzer.checkOnSave" = true;
             "rust-analyzer.debug.engine" = "vadimcn.vscode-lldb";
             "[rust]" = {

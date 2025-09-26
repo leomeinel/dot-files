@@ -38,31 +38,12 @@
         };
       in
       [
-        autotiling-rs
-        clang
-        clang-tools
-        cmake
-        cmake-format
-        go
-        gradle
         htmlhint
-        libllvm
-        lld
-        lldb
-        maven
         nixd
         nixfmt-rfc-style
-        nodejs
-        nodePackages.prettier
         ocrmypdf
-        php
         R-with-my-packages
         radianWrapper
-        ruff
-        rustup
-        shellcheck
-        shfmt
-        slurp
         toml2json
         usbguard-notifier
         wl-clipboard-rs
