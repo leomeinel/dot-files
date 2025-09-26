@@ -185,7 +185,6 @@
             "search.smartCase" = true;
             "search.useIgnoreFiles" = false;
             "shellcheck.executablePath" = "/usr/bin/shellcheck";
-            "shfmt.executableArgs" = [ "-i 4" ];
             "telemetry.telemetryLevel" = "off";
             "terminal.external.linuxExec" = "/usr/bin/alacritty";
             "terminal.integrated.defaultProfile.linux" = "bash";
@@ -508,9 +507,6 @@
                 ];
               }
             ];
-            "[markdown]" = {
-              "editor.defaultFormatter" = "yzhang.markdown-all-in-one";
-            };
             "[css]" = {
               "editor.defaultFormatter" = "esbenp.prettier-vscode";
               "editor.tabSize" = 2;
@@ -522,6 +518,13 @@
             "[javascript]" = {
               "editor.defaultFormatter" = "esbenp.prettier-vscode";
               "editor.tabSize" = 2;
+            };
+            "[markdown]" = {
+              "editor.defaultFormatter" = "yzhang.markdown-all-in-one";
+            };
+            "[shellscript]" = {
+              "editor.defaultFormatter" = "mkhl.shfmt";
+              "editor.tabSize" = 4;
             };
             "[sql]" = {
               "editor.defaultFormatter" = "mtxr.sqltools";
