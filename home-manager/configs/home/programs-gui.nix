@@ -149,6 +149,7 @@
             "evenBetterToml.formatter.indentString" = " ";
             "explorer.confirmDelete" = false;
             "files.autoSave" = "afterDelay";
+            "files.insertFinalNewline" = true;
             "git.autofetch" = "all";
             "git.autoRepositoryDetection" = "openEditors";
             "git.autoStash" = true;
@@ -181,6 +182,12 @@
             "prettier.withNodeModules" = true;
             "redhat.telemetry.enabled" = false;
             "scm.repositories.sortOrder" = "name";
+            "shfmt.args" = [
+              "-i"
+              "4"
+              "-ci"
+              "-bn"
+            ];
             "search.showLineNumbers" = true;
             "search.smartCase" = true;
             "search.useIgnoreFiles" = false;
@@ -524,7 +531,6 @@
             };
             "[shellscript]" = {
               "editor.defaultFormatter" = "mkhl.shfmt";
-              "editor.tabSize" = 4;
             };
             "[sql]" = {
               "editor.defaultFormatter" = "mtxr.sqltools";
