@@ -527,6 +527,7 @@
             };
             "[shellscript]" = {
               "editor.defaultFormatter" = "mkhl.shfmt";
+              "editor.insertSpaces" = true;
             };
             "[sql]" = {
               "editor.defaultFormatter" = "mtxr.sqltools";
