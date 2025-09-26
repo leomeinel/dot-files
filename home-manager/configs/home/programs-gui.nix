@@ -182,7 +182,7 @@
             "prettier.withNodeModules" = true;
             "redhat.telemetry.enabled" = false;
             "scm.repositories.sortOrder" = "name";
-            "shfmt.args" = [
+            "shfmt.executableArgs" = [
               "-i"
               "4"
               "-ci"
