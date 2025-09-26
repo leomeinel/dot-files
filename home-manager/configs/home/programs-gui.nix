@@ -122,6 +122,7 @@
           ];
 
           # Settings
+          # FIXME: See https://github.com/VSCodium/vscodium/issues/2522
           defaultSettings = {
             "activitusbar.activeColour" = "statusBar.foreground";
             "activitusbar.inactiveColour" = "statusBar.foreground";
@@ -182,12 +183,6 @@
             "prettier.withNodeModules" = true;
             "redhat.telemetry.enabled" = false;
             "scm.repositories.sortOrder" = "name";
-            "shfmt.executableArgs" = [
-              "-i"
-              "4"
-              "-ci"
-              "-bn"
-            ];
             "search.showLineNumbers" = true;
             "search.smartCase" = true;
             "search.useIgnoreFiles" = false;
