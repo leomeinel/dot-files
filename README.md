@@ -72,7 +72,6 @@ This repository is not entirely licensed as MIT.
 
 :information_source: | Store executables in `/usr/local/bin`.
 
-- [calibre](https://flathub.org/apps/com.calibre_ebook.calibre)
 - [librewolf](https://flathub.org/apps/io.gitlab.librewolf-community)
 - [nextcloud](https://flathub.org/apps/com.nextcloud.desktopclient.nextcloud)
 - [pwvucontrol](https://flathub.org/apps/com.saivert.pwvucontrol)
