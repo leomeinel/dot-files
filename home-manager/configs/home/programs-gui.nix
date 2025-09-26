@@ -151,6 +151,7 @@
             "explorer.confirmDelete" = false;
             "files.autoSave" = "afterDelay";
             "files.insertFinalNewline" = true;
+            "files.trimTrailingWhitespace" = true;
             "git.autofetch" = "all";
             "git.autoRepositoryDetection" = "openEditors";
             "git.autoStash" = true;
