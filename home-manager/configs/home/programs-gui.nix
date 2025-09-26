@@ -185,6 +185,7 @@
             "search.smartCase" = true;
             "search.useIgnoreFiles" = false;
             "shellcheck.executablePath" = "${shellcheck}/bin/shellcheck";
+            "shfmt.executableArgs" = [ "-i 4" ];
             "telemetry.telemetryLevel" = "off";
             "terminal.external.linuxExec" = "/usr/bin/alacritty";
             "terminal.integrated.defaultProfile.linux" = "bash";
