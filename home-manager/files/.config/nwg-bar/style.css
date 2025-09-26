@@ -20,17 +20,20 @@
 */
 
 window {
-  background-color: rgb(29, 32, 33) /* var(--dark) */;
+  background-color: rgba(29, 32, 33, 0.8); /* var(--dark) */
+  border-radius: 10px;
 }
 
 /* Outer bar container, takes all the window width/height */
 #outer-box {
   margin: 0px;
+  border-radius: 10px;
+  border-style: none;
 }
 
 /* Inner bar container, surrounds buttons */
 #inner-box {
-  background-color: rgb(29, 32, 33) /* var(--dark) */;
+  background-color: rgba(29, 32, 33, 0.8); /* var(--dark) */
   border-radius: 10px;
   border-style: none;
   border-width: 1px;
@@ -49,9 +52,9 @@ image {
 button {
   padding-left: 10px;
   padding-right: 10px;
-  margin: 5px;
+  margin: 10px;
 }
 
 button:hover {
-  background-color: rgb(104, 157, 106) /* var(--secondary) */;
+  background-color: rgba(104, 157, 106, 0.5); /* var(--secondary) */
 }
