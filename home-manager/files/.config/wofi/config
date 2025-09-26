@@ -1,4 +1,5 @@
 allow_images=true
 allow_markup=true
 insensitive=true
+key_expand=Alt-ISO_Left_Tab
 show=drun
