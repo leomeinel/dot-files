@@ -73,9 +73,7 @@ This repository is not entirely licensed as MIT.
 :information_source: | Store executables in `/usr/local/bin`.
 
 - [librewolf](https://flathub.org/apps/io.gitlab.librewolf-community)
-- [nextcloud](https://flathub.org/apps/com.nextcloud.desktopclient.nextcloud)
 - [pwvucontrol](https://flathub.org/apps/com.saivert.pwvucontrol)
-- [rpi-imager](https://flathub.org/apps/org.raspberrypi.rpi-imager)
 
 ### Nix
 
