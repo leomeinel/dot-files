@@ -41,7 +41,7 @@
       # mimeapps
       "mimeapps.list" = {
         source = ../../files/.config/mimeapps.list;
-      }
+      };
       # npmrc
       "npm/npmrc" = {
         source = ../../files/.config/npm/npmrc;
