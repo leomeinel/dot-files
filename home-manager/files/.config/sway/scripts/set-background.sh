@@ -31,7 +31,7 @@ for ((i = 0; i < BACKGROUNDS_LENGTH; i++)); do
     fi
     BACKGROUNDS=("${BACKGROUNDS[@]}")
 done
-BACKGROUND="$(printf "%s\n" "${BACKGROUNDS[@]}" | shuf -n 1)"
+BACKGROUND="$(/usr/bin/printf "%s\n" "${BACKGROUNDS[@]}" | /usr/bin/shuf -n 1)"
 
 # Set background
 /usr/bin/swaybg -i /usr/share/backgrounds/"${BACKGROUND}"

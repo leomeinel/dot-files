@@ -23,19 +23,19 @@ map_tablet() {
         "type:tablet_tool"
     )
     for identifier in "${IDENTIFIERS[@]}"; do
-        swaymsg "input \"${identifier}\" map_to_output ${1}"
+        /usr/bin/swaymsg "input \"${identifier}\" map_to_output ${1}"
         ## Maintain aspect ratio of 16:10 input region
         ## See: https://man.archlinux.org/man/sway-input.5#MAPPING_CONFIGURATION
-        swaymsg "input \"${identifier}\" map_from_region 0x0 1x0.9"
+        /usr/bin/swaymsg "input \"${identifier}\" map_from_region 0x0 1x0.9"
     done
 }
 
 # Switch display for graphics tablets
-OUTPUT="$(swaymsg -t get_outputs | jq -r '.[] | select(.focused == true) | .name')"
+OUTPUT="$(/usr/bin/swaymsg -t get_outputs | j/usr/bin/jqq -r '.[] | select(.focused == true) | .name')"
 map_tablet "${OUTPUT}"
 
 # Switch display for graphics tablets on workspace switch
-swaymsg -t SUBSCRIBE -m '["workspace"]' | while read -r line; do
-    OUTPUT="$(jq -r 'select(.change == "focus") | .current.output' <<<"${line}")"
+/usr/bin/swaymsg -t SUBSCRIBE -m '["workspace"]' | while read -r line; do
+    OUTPUT="$(/usr/bin/jq -r 'select(.change == "focus") | .current.output' <<<"${line}")"
     map_tablet "${OUTPUT}"
 done
