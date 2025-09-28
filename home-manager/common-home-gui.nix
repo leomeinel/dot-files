@@ -59,7 +59,7 @@
         run /usr/bin/rm -f ${config.xdg.cacheHome}/wofi-run
 
         # Set librewolf as default-web-browser
-        run /usr/bin/xdg-settings set default-web-browser io.gitlab.librewolf-community.desktop
+        #run /usr/bin/xdg-settings set default-web-browser io.gitlab.librewolf-community.desktop
 
         # Configure gsettings
         run /usr/bin/gsettings set org.gnome.desktop.interface icon-theme Papirus-Dark
