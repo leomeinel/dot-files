@@ -38,6 +38,10 @@
       "gtk-4.0/settings.ini" = {
         source = ../../files/.config/gtk-4.0/settings.ini;
       };
+      # mimeapps
+      "mimeapps.list" = {
+        source = ../../files/.config/mimeapps.list;
+      }
       # npmrc
       "npm/npmrc" = {
         source = ../../files/.config/npm/npmrc;
