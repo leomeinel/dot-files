@@ -58,6 +58,13 @@
         # Delete wofi cache to prevent saving deprecated symlinks
         run /usr/bin/rm -f ${config.xdg.cacheHome}/wofi-run
 
+        # Configure gsettings
+        run /usr/bin/gsettings set org.gnome.desktop.interface icon-theme Papirus-Dark
+        run /usr/bin/gsettings set org.gnome.desktop.interface color-scheme prefer-dark
+        run /usr/bin/gsettings set org.gnome.desktop.interface cursor-size 24
+        run /usr/bin/gsettings set org.gnome.desktop.interface cursor-theme phinger-cursors-dark
+        run /usr/bin/gsettings set org.gnome.desktop.interface gtk-theme Fluent-Dark-compact
+
         # FIXME: This shouldn't be necessary
         # Reset flatpak override to make sure that no unnecessary overrides are added
         run /usr/bin/flatpak override -u --reset

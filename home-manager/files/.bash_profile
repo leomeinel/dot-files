@@ -71,11 +71,6 @@ fi
 
 # Start sway with environment variables
 if [[ -z "${WAYLAND_DISPLAY}" ]] && [[ "${XDG_VTNR}" -eq 1 ]]; then
-    gsettings set org.gnome.desktop.interface icon-theme Papirus-Dark
-    gsettings set org.gnome.desktop.interface color-scheme prefer-dark
-    gsettings set org.gnome.desktop.interface cursor-size 24
-    gsettings set org.gnome.desktop.interface cursor-theme phinger-cursors-dark
-    gsettings set org.gnome.desktop.interface gtk-theme Fluent-Dark-compact
     export GTK_THEME="Fluent-Dark-compact"
     export GTK2_RC_FILES="${XDG_CONFIG_HOME}"/gtk-2.0/gtkrc
     export MOZ_ENABLE_WAYLAND=1
