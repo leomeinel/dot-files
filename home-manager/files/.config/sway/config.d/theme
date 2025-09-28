@@ -46,8 +46,8 @@ font pango: HasklugNerdFont Regular 10
 for_window [app_id="^.*"] opacity 1
 hide_edge_borders smart
 
-# Background
-exec /usr/bin/swaybg -i "${XDG_DATA_HOME}"/backgrounds/arch-install/sunrise.jpg
-
 # Cursor theme
 seat seat0 xcursor_theme phinger-cursors-dark 24
+
+# Background
+exec "${XDG_CONFIG_HOME}"/sway/scripts/set-background.sh

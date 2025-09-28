@@ -89,6 +89,10 @@
         executable = true;
         source = ../../files/.config/sway/scripts/input-graphics-tablet.sh;
       };
+      "sway/scripts/set-background.sh" = {
+        executable = true;
+        source = ../../files/.config/sway/scripts/set-background.sh;
+      };
       "sway/scripts/volume.sh" = {
         executable = true;
         source = ../../files/.config/sway/scripts/volume.sh;
@@ -138,11 +142,6 @@
       };
     };
     dataFile = {
-      # backgrounds/arch-install
-      "backgrounds/arch-install" = {
-        recursive = true;
-        source = ../../files/.local/share/backgrounds/arch-install;
-      };
       # gnupg
       "gnupg/gpg-agent.conf" = {
         source = ../../files/.local/share/gnupg/gpg-agent.conf;
