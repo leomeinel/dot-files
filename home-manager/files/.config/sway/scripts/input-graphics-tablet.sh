@@ -31,7 +31,7 @@ map_tablet() {
 }
 
 # Switch display for graphics tablets
-OUTPUT="$(/usr/bin/swaymsg -t get_outputs | j/usr/bin/jqq -r '.[] | select(.focused == true) | .name')"
+OUTPUT="$(/usr/bin/swaymsg -t get_outputs | /usr/bin/jq -r '.[] | select(.focused == true) | .name')"
 map_tablet "${OUTPUT}"
 
 # Switch display for graphics tablets on workspace switch
