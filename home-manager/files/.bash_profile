@@ -18,6 +18,7 @@ fi
 # Set environment variables
 export ANDROID_HOME="${XDG_DATA_HOME}"/android
 export ANDROID_USER_HOME="${XDG_DATA_HOME}"/android
+export BROWSER=/usr/local/bin/librewolf
 export CARGO_HOME="${XDG_DATA_HOME}"/cargo
 export DIFFPROG="${XDG_STATE_HOME}/nix/profile/bin/nvim -d ${1}"
 export GNUPGHOME="${XDG_DATA_HOME}"/gnupg
