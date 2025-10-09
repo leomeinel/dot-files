@@ -65,7 +65,6 @@
             "timonwong.shellcheck"
             "usernamehw.errorlens"
             "waderyan.gitblame"
-            "yzane.markdown-pdf"
             "yzhang.markdown-all-in-one"
             "zhuangtongfa.material-theme"
             "zignd.html-css-class-completion"
@@ -170,11 +169,6 @@
             "github.gitProtocol" = "ssh";
             "html.autoClosingTags" = true;
             "javascript.autoClosingTags" = true;
-            "markdown-pdf.displayHeaderFooter" = false;
-            "markdown-pdf.omitBackground" = true;
-            "markdown-pdf.outputDirectory" = "markdown-pdf";
-            "markdown-pdf.outputDirectoryRelativePathFile" = true;
-            "markdown.extension.toc.orderedList" = true;
             "material-icon-theme.hidesExplorerArrows" = true;
             "nix.enableLanguageServer" = true;
             "nix.serverPath" = "nixd";
