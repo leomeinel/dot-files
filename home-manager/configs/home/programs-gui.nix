@@ -123,6 +123,12 @@
             "code-runner.enableAppInsights" = false;
             "code-runner.runInTerminal" = true;
             "code-runner.saveFileBeforeRun" = true;
+            "code-runner.executorMap" = {
+              "c" = "cd $dir && clang $fileName -o $fileNameWithoutExt.out && $dir$fileNameWithoutExt";
+              "cpp" = "cd $dir && clang++ $fileName -o $fileNameWithoutExt.out && $dir$fileNameWithoutExt";
+              "objective-c" =
+                "cd $dir && clang -framework Cocoa $fileName -o $fileNameWithoutExt.out && $dir$fileNameWithoutExt";
+            };
             "debug.showInStatusBar" = "never";
             "editor.detectIndentation" = false;
             "editor.foldingImportsByDefault" = true;
