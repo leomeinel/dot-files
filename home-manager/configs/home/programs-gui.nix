@@ -124,10 +124,10 @@
             "code-runner.runInTerminal" = true;
             "code-runner.saveFileBeforeRun" = true;
             "code-runner.executorMap" = {
-              "c" = "cd $dir && clang $fileName -o $fileNameWithoutExt.out && $dir$fileNameWithoutExt";
-              "cpp" = "cd $dir && clang++ $fileName -o $fileNameWithoutExt.out && $dir$fileNameWithoutExt";
+              "c" = "cd $dir && clang $fileName -o $fileNameWithoutExt.out && $dir$fileNameWithoutExt.out";
+              "cpp" = "cd $dir && clang++ $fileName -o $fileNameWithoutExt.out && $dir$fileNameWithoutExt.out";
               "objective-c" =
-                "cd $dir && clang -framework Cocoa $fileName -o $fileNameWithoutExt.out && $dir$fileNameWithoutExt";
+                "cd $dir && clang -framework Cocoa $fileName -o $fileNameWithoutExt.out && $dir$fileNameWithoutExt.out";
             };
             "debug.showInStatusBar" = "never";
             "editor.detectIndentation" = false;
