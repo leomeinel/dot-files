@@ -81,12 +81,6 @@
           dataScienceExtensions = nix4vscode.forOpenVsx [
             "reditorsupport.r"
           ];
-          embeddedExtensions = nix4vscode.forOpenVsx [
-            # FIXME: Uncomment after fix
-            #        error: Extension davidgomes.platformio-ide not found in /nix/store/XXX-extensions_openvsx.json
-            #   See: https://github.com/nix-community/nix4vscode/issues/337
-            # "davidgomes.platformio-ide"
-          ];
           goExtensions = nix4vscode.forOpenVsx [
             "golang.go"
           ];
@@ -577,13 +571,6 @@
             "r.plot.useHttpgd" = true;
             "r.rpath.linux" = "${rWrapper}/bin/R";
           };
-          embeddedSettings = {
-            "platformio-ide.disablePIOHomeStartup" = true;
-            "platformio-ide.autoOpenPlatformIOIniFile" = false;
-            "platformio-ide.customPATH" = "/usr/bin/platformio";
-            "platformio-ide.useBuiltinPIOCore" = false;
-            "platformio-ide.useBuiltinPython" = false;
-          };
           goSettings = {
             "go.gopath" = "/usr/bin/go";
           };
@@ -630,10 +617,6 @@
               extensions = defaultExtensions ++ dataScienceExtensions ++ pythonExtensions;
               userSettings = defaultSettings // dataScienceSettings // pythonSettings;
             };
-            embedded = {
-              extensions = defaultExtensions ++ cppExtensions ++ embeddedExtensions;
-              userSettings = defaultSettings // cppSettings // embeddedSettings;
-            };
             go = {
               extensions = defaultExtensions ++ goExtensions;
               userSettings = defaultSettings // goSettings;
@@ -659,7 +642,6 @@
                 defaultExtensions
                 ++ cppExtensions
                 ++ dataScienceExtensions
-                ++ embeddedExtensions
                 ++ goExtensions
                 ++ javaExtensions
                 ++ pythonExtensions
@@ -669,7 +651,6 @@
                 defaultSettings
                 // cppSettings
                 // dataScienceSettings
-                // embeddedSettings
                 // goSettings
                 // javaSettings
                 // pythonSettings
@@ -682,7 +663,6 @@
           default = profiles.default;
           cpp = profiles.cpp;
           dataScience = profiles.dataScience;
-          embedded = profiles.embedded;
           go = profiles.go;
           java = profiles.java;
           python = profiles.python;
