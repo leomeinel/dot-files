@@ -21,7 +21,7 @@ export ANDROID_USER_HOME="${XDG_DATA_HOME}"/android
 export BROWSER=/usr/local/bin/librewolf
 export CARGO_HOME="${XDG_DATA_HOME}"/cargo
 ## FIXME: Find a better way to reference nix packages by absolute path
-export DIFFPROG="${XDG_STATE_HOME}"/nix/profile/bin/nvim -d
+export DIFFPROG="${XDG_STATE_HOME}/nix/profile/bin/nvim -d"
 export GNUPGHOME="${XDG_DATA_HOME}"/gnupg
 export GOPATH="${XDG_DATA_HOME}"/go
 export GRADLE_USER_HOME="${XDG_DATA_HOME}"/gradle
