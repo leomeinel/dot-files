@@ -167,7 +167,7 @@ nix-channel --add https://nixos.org/channels/nixos-"${NIX_VERSION}" nixpkgs || t
 nix-channel --update
 
 # Run home-manager
-nix-shell -p home-manager --command "home-manager switch -b "bak" --flake "${SCRIPT_DIR}/#${USER}""
+nix-shell -p home-manager --command "home-manager switch -b bak --flake ${SCRIPT_DIR}/#${USER}"
 
 # Source ~/.bash_profile
 # shellcheck source=/dev/null
