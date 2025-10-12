@@ -70,15 +70,15 @@
         run /usr/bin/flatpak override -u --reset
         # Workaround for using the correct font in all applications
         run /usr/bin/rm -rf ${config.xdg.dataHome}/fonts
-        run /usr/bin/rsync -lr --delete /usr/share/fonts/ ${config.xdg.dataHome}/fonts
+        run /usr/bin/rsync -urlq --delete /usr/share/fonts/ ${config.xdg.dataHome}/fonts
         run /usr/bin/flatpak override -u --filesystem=xdg-data/fonts:ro
         # Workaround for using the correct icons in all applications
         run /usr/bin/rm -rf ${config.xdg.dataHome}/icons
-        run /usr/bin/rsync -lr --delete /usr/share/icons/ ${config.xdg.dataHome}/icons
+        run /usr/bin/rsync -urlq --delete /usr/share/icons/ ${config.xdg.dataHome}/icons
         run /usr/bin/flatpak override -u --filesystem=xdg-data/icons:ro
         # Workaround for using the correct theme in all applications
         run /usr/bin/rm -rf ${config.xdg.dataHome}/themes
-        run /usr/bin/rsync -lr --delete /usr/share/themes/ ${config.xdg.dataHome}/themes
+        run /usr/bin/rsync -urlq --delete /usr/share/themes/ ${config.xdg.dataHome}/themes
         run /usr/bin/flatpak override -u --filesystem=xdg-data/themes:ro
         # Workaround for using the correct QT theme in all applications
         run /usr/bin/flatpak override -u --env=QT_STYLE_OVERRIDE="breeze"
