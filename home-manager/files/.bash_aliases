@@ -15,8 +15,8 @@ alias sudo='/usr/bin/sudo '
 
 # Rust core-utils
 alias bat='/usr/bin/bat --decorations auto --color auto'
-alias eza='/usr/bin/eza -la --color=automatic'
-alias ll='/usr/bin/eza -la --color=automatic'
+alias eza='/usr/bin/eza -lag --color=automatic'
+alias ll='/usr/bin/eza -lag --color=automatic'
 alias fd='/usr/bin/fd -Hs -c auto'
 alias hyperfine='/usr/bin/hyperfine -w 3 -r 12 --style auto'
 alias rg='/usr/bin/rg -s --color auto'
