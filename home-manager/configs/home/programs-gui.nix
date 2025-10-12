@@ -171,8 +171,8 @@
             "html.autoClosingTags" = true;
             "javascript.autoClosingTags" = true;
             "markdown-pdf.displayHeaderFooter" = false;
-            "markdown-pdf.omitBackground" = true;
-            "markdown-pdf.outputDirectory" = "markdown-pdf";
+            "markdown-pdf.executablePath" = "/usr/local/bin/chromium";
+            "markdown-pdf.outputDirectory" = "output";
             "markdown-pdf.outputDirectoryRelativePathFile" = true;
             "markdown.extension.toc.orderedList" = true;
             "material-icon-theme.hidesExplorerArrows" = true;
