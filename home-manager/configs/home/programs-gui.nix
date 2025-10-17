@@ -116,7 +116,6 @@
           ];
 
           # Settings
-          # FIXME: See https://github.com/VSCodium/vscodium/issues/2522
           defaultSettings = {
             "activitusbar.activeColour" = "statusBar.foreground";
             "activitusbar.inactiveColour" = "statusBar.foreground";
