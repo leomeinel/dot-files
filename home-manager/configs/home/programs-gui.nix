@@ -170,7 +170,7 @@
             "html.autoClosingTags" = true;
             "javascript.autoClosingTags" = true;
             "markdown-pdf.displayHeaderFooter" = false;
-            "markdown-pdf.executablePath" = "/usr/local/bin/chromium";
+            "markdown-pdf.executablePath" = "/usr/local/bin/chromium-access-src";
             "markdown-pdf.outputDirectory" = "output";
             "markdown-pdf.outputDirectoryRelativePathFile" = true;
             "markdown.extension.toc.orderedList" = true;
