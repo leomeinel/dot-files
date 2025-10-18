@@ -44,13 +44,13 @@ export TEXMFVAR="${XDG_CACHE_HOME}"/texlive/texmf-var
 ## FIXME: Find a better way to reference nix packages by absolute path
 export VISUAL="${XDG_STATE_HOME}"/nix/profile/bin/nvim
 
-# Set environment variables that need seperate declaration and assigning
-GPG_TTY="$(tty)"
-export GPG_TTY
-
 # Commands that should be applied only for interactive shells
 [[ "${-}" != *i* ]] &&
     return
+
+# Set environment variables that need seperate declaration and assigning
+GPG_TTY="$(tty)"
+export GPG_TTY
 
 # Start ssh-agent if it is not already started
 [[ -z "${SSH_AUTH_SOCK}" ]] &&
