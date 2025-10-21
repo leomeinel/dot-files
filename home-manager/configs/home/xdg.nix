@@ -34,7 +34,7 @@
               "${installEnv.GIT_NAME}"
               "${installEnv.GIT_SIGNINGKEY}"
               "${installEnv.GIT_GPGSIGN}"
-              "${pkgs.neovim}}/bin/nvim"
+              "${pkgs.neovim}/bin/nvim"
             ]
             builtins.readFile
             ../../files/.config/git/config;
