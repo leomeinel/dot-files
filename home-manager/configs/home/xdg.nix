@@ -36,8 +36,7 @@
               "${installEnv.GIT_GPGSIGN}"
               "${pkgs.neovim}/bin/nvim"
             ]
-            builtins.readFile
-            ../../files/.config/git/config;
+            (builtins.readFile ../../files/.config/git/config);
       };
     };
   };

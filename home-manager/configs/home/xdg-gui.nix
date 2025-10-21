@@ -82,8 +82,8 @@
       };
       "sway/config.d/input" = {
         text =
-          builtins.replaceStrings [ "REPLACE_KEYLAYOUT" ] [ "${installEnv.KEYLAYOUT}" ] builtins.readFile
-            ../../files/.config/sway/config.d/input;
+          builtins.replaceStrings [ "REPLACE_KEYLAYOUT" ] [ "${installEnv.KEYLAYOUT}" ]
+          (builtins.readFile ../../files/.config/sway/config.d/input);
       };
       "sway/config.d/key-bindings" = {
         source = ../../files/.config/sway/config.d/key-bindings;
@@ -119,8 +119,7 @@
       "swaync/config.json" = {
         text =
           builtins.replaceStrings [ "REPLACE_BACKLIGHT_DEVICE" ] [ "${installEnv.BACKLIGHT_DEVICE}" ]
-            builtins.readFile
-            ../../files/.config/swaync/config.json;
+            (builtins.readFile ../../files/.config/swaync/config.json);
       };
       # Thunar
       "Thunar/uca.xml" = {
