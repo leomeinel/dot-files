@@ -9,6 +9,7 @@
 */
 
 {
+  installEnv,
   ...
 }:
 
@@ -69,7 +70,9 @@
       };
       # sway
       "sway/config.d/autostart" = {
-        source = ../../files/.config/sway/config.d/autostart;
+        text = ''
+          ${installEnv.SWAY_AUTOSTART}
+        '';
       };
       "sway/config.d/bar" = {
         source = ../../files/.config/sway/config.d/bar;
@@ -78,13 +81,17 @@
         source = ../../files/.config/sway/config.d/idle;
       };
       "sway/config.d/input" = {
-        source = ../../files/.config/sway/config.d/input;
+        text =
+          builtins.replaceStrings [ "REPLACE_KEYLAYOUT" ] [ "${installEnv.KEYLAYOUT}" ] builtins.readFile
+            ../../files/.config/sway/config.d/input;
       };
       "sway/config.d/key-bindings" = {
         source = ../../files/.config/sway/config.d/key-bindings;
       };
       "sway/config.d/output" = {
-        source = ../../files/.config/sway/config.d/output;
+        text = ''
+          ${installEnv.SWAY_OUTPUT}
+        '';
       };
       "sway/config.d/theme" = {
         source = ../../files/.config/sway/config.d/theme;
@@ -110,7 +117,10 @@
       };
       # swaync
       "swaync/config.json" = {
-        source = ../../files/.config/swaync/config.json;
+        text =
+          builtins.replaceStrings [ "REPLACE_BACKLIGHT_DEVICE" ] [ "${installEnv.BACKLIGHT_DEVICE}" ]
+            builtins.readFile
+            ../../files/.config/swaync/config.json;
       };
       # Thunar
       "Thunar/uca.xml" = {

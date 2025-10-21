@@ -50,8 +50,26 @@
           allowUnfree = true;
         };
       };
-      # FIXME: This should be defined only once
-      nixos-version = "REPLACE_NIX_VERSION";
+      installEnv = {
+        SYSUSER = "REPLACE_SYSUSER";
+        GUESTUSER = "REPLACE_GUESTUSER";
+        HOMEUSER = "REPLACE_HOMEUSER";
+        VIRTUSER = "REPLACE_VIRTUSER";
+        WORKUSER = "REPLACE_WORKUSER";
+        NIX_VERSION = "REPLACE_NIX_VERSION";
+        GIT_EMAIL = "REPLACE_GIT_EMAIL";
+        GIT_NAME = "REPLACE_GIT_NAME";
+        GIT_SIGNINGKEY = "REPLACE_GIT_SIGNINGKEY";
+        GIT_GPGSIGN = "REPLACE_GIT_GPGSIGN";
+        BACKLIGHT_DEVICE = "REPLACE_BACKLIGHT_DEVICE";
+        SWAY_AUTOSTART = ''
+          REPLACE_SWAY_AUTOSTART
+        '';
+        SWAY_OUTPUT = ''
+          REPLACE_SWAY_OUTPUT
+        '';
+        KEYLAYOUT = "REPLACE_KEYLAYOUT";
+      };
     in
     {
       # Configurations
@@ -62,42 +80,42 @@
         "root" = home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
           # Args to parse
-          extraSpecialArgs = { inherit nixos-version; };
+          extraSpecialArgs = { inherit installEnv; };
           # Modules to use
           modules = [ ./home-manager/configs/ROOTUSER.nix ];
         };
-        "REPLACE_SYSUSER" = home-manager.lib.homeManagerConfiguration {
+        "${installEnv.SYSUSER}" = home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
           # Args to parse
-          extraSpecialArgs = { inherit nixos-version nix4vscode; };
+          extraSpecialArgs = { inherit nix4vscode installEnv; };
           # Modules to use
           modules = [ ./home-manager/configs/SYSUSER.nix ];
         };
-        "REPLACE_GUESTUSER" = home-manager.lib.homeManagerConfiguration {
+        "${installEnv.GUESTUSER}" = home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
           # Args to parse
-          extraSpecialArgs = { inherit nixos-version nix4vscode; };
+          extraSpecialArgs = { inherit nix4vscode installEnv; };
           # Modules to use
           modules = [ ./home-manager/configs/GUESTUSER.nix ];
         };
-        "REPLACE_HOMEUSER" = home-manager.lib.homeManagerConfiguration {
+        "${installEnv.HOMEUSER}" = home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
           # Args to parse
-          extraSpecialArgs = { inherit nixos-version nix4vscode; };
+          extraSpecialArgs = { inherit nix4vscode installEnv; };
           # Modules to use
           modules = [ ./home-manager/configs/HOMEUSER.nix ];
         };
-        "REPLACE_VIRTUSER" = home-manager.lib.homeManagerConfiguration {
+        "${installEnv.VIRTUSER}" = home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
           # Args to parse
-          extraSpecialArgs = { inherit nixos-version nix4vscode; };
+          extraSpecialArgs = { inherit nix4vscode installEnv; };
           # Modules to use
           modules = [ ./home-manager/configs/VIRTUSER.nix ];
         };
-        "REPLACE_WORKUSER" = home-manager.lib.homeManagerConfiguration {
+        "${installEnv.WORKUSER}" = home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
           # Args to parse
-          extraSpecialArgs = { inherit nixos-version nix4vscode; };
+          extraSpecialArgs = { inherit nix4vscode installEnv; };
           # Modules to use
           modules = [ ./home-manager/configs/WORKUSER.nix ];
         };

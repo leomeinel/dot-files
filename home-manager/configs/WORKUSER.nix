@@ -9,6 +9,7 @@
 */
 
 {
+  installEnv,
   ...
 }:
 
@@ -21,7 +22,7 @@
 
   # Home options
   home = {
-    username = "REPLACE_WORKUSER";
-    homeDirectory = "/home/REPLACE_WORKUSER";
+    username = "${installEnv.WORKUSER}";
+    homeDirectory = "/home/${installEnv.WORKUSER}";
   };
 }

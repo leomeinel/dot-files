@@ -9,6 +9,7 @@
 */
 
 {
+  installEnv,
   ...
 }:
 
@@ -21,7 +22,7 @@
 
   # Home options
   home = {
-    username = "REPLACE_VIRTUSER";
-    homeDirectory = "/home/REPLACE_VIRTUSER";
+    username = "${installEnv.VIRTUSER}";
+    homeDirectory = "/home/${installEnv.VIRTUSER}";
   };
 }

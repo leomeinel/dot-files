@@ -9,6 +9,7 @@
 */
 
 {
+  installEnv,
   ...
 }:
 
@@ -21,7 +22,7 @@
 
   # Home options
   home = {
-    username = "REPLACE_HOMEUSER";
-    homeDirectory = "/home/REPLACE_HOMEUSER";
+    username = "${installEnv.HOMEUSER}";
+    homeDirectory = "/home/${installEnv.HOMEUSER}";
   };
 }

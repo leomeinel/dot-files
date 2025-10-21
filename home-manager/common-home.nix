@@ -10,8 +10,8 @@
 
 {
   config,
+  installEnv,
   lib,
-  nixos-version,
   pkgs,
   ...
 }:
@@ -28,7 +28,7 @@
   home = {
     # State version
     # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
-    stateVersion = "${nixos-version}";
+    stateVersion = "${installEnv.NIX_VERSION}";
     # Packages
     packages = with pkgs; [
       xdg-ninja

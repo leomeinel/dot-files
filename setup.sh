@@ -30,13 +30,9 @@ SCRIPT_DIR="$(dirname -- "$(readlink -f -- "${0}")")"
 # shellcheck source=/dev/null
 . "${SCRIPT_DIR}"/install.conf
 
-# Set variables
-## flake.nix
+# flake.nix
 ## START sed
 FILE="${SCRIPT_DIR}/flake.nix"
-STRING="REPLACE_NIX_VERSION"
-grep -q "${STRING}" "${FILE}" || sed_exit
-sed -i "s|${STRING}|${NIX_VERSION}|g" "${FILE}"
 if [[ -n "${SYSUSER}" ]]; then
     STRING="REPLACE_SYSUSER"
     grep -q "${STRING}" "${FILE}" || sed_exit
@@ -62,10 +58,9 @@ if [[ -n "${WORKUSER}" ]]; then
     grep -q "${STRING}" "${FILE}" || sed_exit
     sed -i "s|${STRING}|${WORKUSER}|g" "${FILE}"
 fi
-## END sed
-## home-manager/files/.config/git/config
-## START sed
-FILE="${SCRIPT_DIR}/home-manager/files/.config/git/config"
+STRING="REPLACE_NIX_VERSION"
+grep -q "${STRING}" "${FILE}" || sed_exit
+sed -i "s|${STRING}|${NIX_VERSION}|g" "${FILE}"
 STRING="REPLACE_GIT_EMAIL"
 grep -q "${STRING}" "${FILE}" || sed_exit
 sed -i "s|${STRING}|${GIT_EMAIL}|g" "${FILE}"
@@ -78,85 +73,32 @@ sed -i "s|${STRING}|${GIT_SIGNINGKEY}|g" "${FILE}"
 STRING="REPLACE_GIT_GPGSIGN"
 grep -q "${STRING}" "${FILE}" || sed_exit
 sed -i "s|${STRING}|${GIT_GPGSIGN}|g" "${FILE}"
-## END sed
-## home-manager/files/.config/sway/config.d/input
-## START sed
+STRING="REPLACE_BACKLIGHT_DEVICE"
+grep -q "${STRING}" "${FILE}" || sed_exit
+sed -i "s|${STRING}|${BACKLIGHT_DEVICE}|g" "${FILE}"
 KEYLAYOUT="$(localectl status | grep "X11 Layout:" | awk '{print $3}')"
-FILE="${SCRIPT_DIR}/home-manager/files/.config/sway/config.d/input"
 STRING="REPLACE_KEYLAYOUT"
 grep -q "${STRING}" "${FILE}" || sed_exit
 sed -i "s|${STRING}|${KEYLAYOUT}|g" "${FILE}"
 ## END sed
-## home-manager/files/.config/sway/config.d/autostart
 ## START awk
-FILE="${SCRIPT_DIR}/home-manager/files/.config/sway/config.d/autostart"
-STRING="REPLACE_SWAY_AUTOSTART"
+## INFO: ${INDENT_STRING} is necessary because of the formatting of flake.nix
+INDENT_STRING="          "
+STRING="${INDENT_STRING}REPLACE_SWAY_AUTOSTART"
 grep -q "${STRING}" "${FILE}" || awk_exit
 tmpfile="$(mktemp /tmp/dot-files-XXXXXX)"
-cp "${FILE}" "${tmpfile}" &&
-    awk -v a="${STRING}" -v b="${SWAY_AUTOSTART}" '{gsub(a,b)}1' "${tmpfile}" >"${FILE}"
-## END awk
-## home-manager/files/.config/sway/config.d/output
-## START awk
-FILE="${SCRIPT_DIR}/home-manager/files/.config/sway/config.d/output"
-STRING="REPLACE_SWAY_OUTPUT"
+if cp "${FILE}" "${tmpfile}"; then
+    # shellcheck disable=SC2001
+    awk -v a="${STRING}" -v b="$(sed "s/^/${INDENT_STRING}/" <<<"${SWAY_AUTOSTART//\${/\'\'\${}")" '{gsub(a,b)}1' "${tmpfile}" >"${FILE}"
+fi
+STRING="${INDENT_STRING}REPLACE_SWAY_OUTPUT"
 grep -q "${STRING}" "${FILE}" || awk_exit
 tmpfile="$(mktemp /tmp/dot-files-XXXXXX)"
-cp "${FILE}" "${tmpfile}" &&
-    awk -v a="${STRING}" -v b="${SWAY_OUTPUT}" '{gsub(a,b)}1' "${tmpfile}" >"${FILE}"
-## END awk
-## home-manager/files/.config/swaync/config.json
-## START sed
-FILE="${SCRIPT_DIR}/home-manager/files/.config/swaync/config.json"
-STRING="REPLACE_BACKLIGHT_DEVICE"
-grep -q "${STRING}" "${FILE}" || sed_exit
-sed -i "s|${STRING}|${BACKLIGHT_DEVICE}|g" "${FILE}"
-## END sed
-## home-manager/configs/SYSUSER.nix
-if [[ -n "${SYSUSER}" ]]; then
-    ## START sed
-    FILE="${SCRIPT_DIR}/home-manager/configs/SYSUSER.nix"
-    STRING="REPLACE_SYSUSER"
-    grep -q "${STRING}" "${FILE}" || sed_exit
-    sed -i "s|${STRING}|${SYSUSER}|g" "${FILE}"
-## END sed
+if cp "${FILE}" "${tmpfile}"; then
+    # shellcheck disable=SC2001
+    awk -v a="${STRING}" -v b="$(sed "s/^/${INDENT_STRING}/" <<<"${SWAY_OUTPUT//\${/\'\'\${}")" '{gsub(a,b)}1' "${tmpfile}" >"${FILE}"
 fi
-## home-manager/configs/GUESTUSER.nix
-if [[ -n "${GUESTUSER}" ]]; then
-    ## START sed
-    FILE="${SCRIPT_DIR}/home-manager/configs/GUESTUSER.nix"
-    STRING="REPLACE_GUESTUSER"
-    grep -q "${STRING}" "${FILE}" || sed_exit
-    sed -i "s|${STRING}|${GUESTUSER}|g" "${FILE}"
-    ## END sed
-fi
-## home-manager/configs/HOMEUSER.nix
-if [[ -n "${HOMEUSER}" ]]; then
-    ## START sed
-    FILE="${SCRIPT_DIR}/home-manager/configs/HOMEUSER.nix"
-    STRING="REPLACE_HOMEUSER"
-    grep -q "${STRING}" "${FILE}" || sed_exit
-    sed -i "s|${STRING}|${HOMEUSER}|g" "${FILE}"
-    ## END sed
-fi
-## home-manager/configs/VIRTUSER.nix
-if [[ -n "${VIRTUSER}" ]]; then
-    ## START sed
-    FILE="${SCRIPT_DIR}/home-manager/configs/VIRTUSER.nix"
-    STRING="REPLACE_VIRTUSER"
-    grep -q "${STRING}" "${FILE}" || sed_exit
-    sed -i "s|${STRING}|${VIRTUSER}|g" "${FILE}"
-    ## END sed
-fi
-## home-manager/configs/WORKUSER.nix
-if [[ -n "${WORKUSER}" ]]; then
-    ## START sed
-    FILE="${SCRIPT_DIR}/home-manager/configs/WORKUSER.nix"
-    STRING="REPLACE_WORKUSER"
-    grep -q "${STRING}" "${FILE}" || sed_exit
-    sed -i "s|${STRING}|${WORKUSER}|g" "${FILE}"
-    ## END sed
-fi
+## End awk
 
 # Remove codium configs for home-manager to be able to regenerate them
 rm -rf ~/.vscode-oss ~/.vscode-R ~/.config/vscode-sqltools ~/.local/share/vscode-sqltools

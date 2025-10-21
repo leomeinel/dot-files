@@ -9,6 +9,7 @@
 */
 
 {
+  installEnv,
   pkgs,
   ...
 }:
@@ -22,8 +23,8 @@
 
   # Home options
   home = {
-    username = "REPLACE_SYSUSER";
-    homeDirectory = "/home/REPLACE_SYSUSER";
+    username = "${installEnv.SYSUSER}";
+    homeDirectory = "/home/${installEnv.SYSUSER}";
   };
 
   # Systemd options
