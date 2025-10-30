@@ -101,6 +101,8 @@
             "ms-python.isort"
             "ms-python.mypy-type-checker"
             "ms-python.python"
+            "ms-toolsai.jupyter-keymap"
+            "ms-toolsai.jupyter-renderers"
             "njpwerner.autodocstring"
             "njqdev.vscode-python-typehint"
           ];
