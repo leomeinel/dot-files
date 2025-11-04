@@ -20,7 +20,8 @@ export ANDROID_HOME="${XDG_DATA_HOME}"/android
 export ANDROID_USER_HOME="${XDG_DATA_HOME}"/android
 export BROWSER=/usr/local/bin/librewolf
 export CARGO_HOME="${XDG_DATA_HOME}"/cargo
-export DIFFPROG="REPLACE_PATH_NVIM -d"
+# FIXME: Find a way to use an absolute path for nix packages here
+export DIFFPROG="nvim -d"
 export GNUPGHOME="${XDG_DATA_HOME}"/gnupg
 export GOPATH="${XDG_DATA_HOME}"/go
 export GRADLE_USER_HOME="${XDG_DATA_HOME}"/gradle
@@ -40,7 +41,8 @@ export RUSTUP_HOME="${XDG_DATA_HOME}"/rustup
 export SCREENRC="${XDG_CONFIG_HOME}"/screen/screenrc
 export TERMINAL=/usr/bin/alacritty
 export TEXMFVAR="${XDG_CACHE_HOME}"/texlive/texmf-var
-export VISUAL=REPLACE_PATH_NVIM
+# FIXME: Find a way to use an absolute path for nix packages here
+export VISUAL=nvim
 
 # Commands that should be applied only for interactive shells
 [[ "${-}" != *i* ]] &&

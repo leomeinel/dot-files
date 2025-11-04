@@ -4,7 +4,8 @@ name = "REPLACE_GIT_NAME"
 signingkey = "REPLACE_GIT_SIGNINGKEY"
 
 [core]
-editor = "REPLACE_PATH_NVIM"
+# FIXME: Find a way to use an absolute path for nix packages here
+editor = nvim
 pager = /usr/bin/delta
 autocrlf = input
 

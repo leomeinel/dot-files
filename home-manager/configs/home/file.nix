@@ -10,7 +10,6 @@
 
 {
   config,
-  pkgs,
   ...
 }:
 
@@ -24,9 +23,7 @@
       source = ../../files/.bash_logout;
     };
     "${config.home.homeDirectory}/.bash_profile" = {
-      text = builtins.replaceStrings [ "REPLACE_PATH_NVIM" ] [ "${pkgs.neovim}/bin/nvim" ] (
-        builtins.readFile ../../files/.bash_profile
-      );
+      source = ../../files/.bash_profile;
     };
     "${config.home.homeDirectory}/.bashrc" = {
       source = ../../files/.bashrc;
