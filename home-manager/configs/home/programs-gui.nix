@@ -498,13 +498,6 @@
                   "Copyright (c) <<year>> <<author>> & contributors"
                   "SPDX ID: <<spdxid>>"
                   "URL: <<licenseurl>>"
-                  "-----"
-                  "HISTORY:"
-                ];
-                "changeLogCaption" = "HISTORY:";
-                "changeLogNaturalOrder" = true;
-                "changeLogEntryTemplate" = [
-                  "<<dateformat(YYYY-MM-DD)>>    <<author>>"
                 ];
               }
             ];
