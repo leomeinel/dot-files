@@ -1,8 +1,8 @@
 /*
   File: programs-gui.nix
-  Author: Leopold Meinel (leo@meinel.dev)
+  Author: Leopold Johannes Meinel (leo@meinel.dev)
   -----
-  Copyright (c) 2025 Leopold Meinel & contributors
+  Copyright (c) 2025 Leopold Johannes Meinel & contributors
   SPDX ID: MIT
   URL: https://opensource.org/licenses/MIT
   -----
@@ -27,6 +27,7 @@
           defaultExtensions = nix4vscode.forOpenVsx [
             "bbenoist.doxygen"
             "christian-kohler.path-intellisense"
+            "codezombiech.gitignore"
             "cschlosser.doxdocgen"
             "dotjoshjohnson.xml"
             "editorconfig.editorconfig"
@@ -36,7 +37,6 @@
             "franneck94.workspace-formatter"
             "gruntfuggly.activitusbar"
             "hangxingliu.vscode-nginx-conf-hint"
-            "ms-vscode.test-adapter-converter"
             "hbenl.vscode-test-explorer"
             "htmlhint.vscode-htmlhint"
             "jnoortheen.nix-ide"
@@ -45,23 +45,24 @@
             "kokororin.vscode-phpfmt"
             "mikestead.dotenv"
             "mkhl.shfmt"
-            "mtxr.sqltools"
+            "ms-vscode.test-adapter-converter"
             "mtxr.sqltools-driver-mssql"
             "mtxr.sqltools-driver-mysql"
             "mtxr.sqltools-driver-pg"
             "mtxr.sqltools-driver-sqlite"
+            "mtxr.sqltools"
             "pkief.material-icon-theme"
             "pkief.material-product-icons"
             "pranaygp.vscode-css-peek"
             "psioniq.psi-header"
             "redhat.vscode-xml"
             "redhat.vscode-yaml"
-            "streetsidesoftware.code-spell-checker"
             "streetsidesoftware.code-spell-checker-dutch"
             "streetsidesoftware.code-spell-checker-french"
             "streetsidesoftware.code-spell-checker-german"
             "streetsidesoftware.code-spell-checker-medical-terms"
             "streetsidesoftware.code-spell-checker-scientific-terms"
+            "streetsidesoftware.code-spell-checker"
             "tamasfe.even-better-toml"
             "timonwong.shellcheck"
             "usernamehw.errorlens"
