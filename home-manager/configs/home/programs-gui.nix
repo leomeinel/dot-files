@@ -27,7 +27,6 @@
           defaultExtensions = nix4vscode.forOpenVsx [
             "bbenoist.doxygen"
             "christian-kohler.path-intellisense"
-            "codezombiech.gitignore"
             "cschlosser.doxdocgen"
             "dotjoshjohnson.xml"
             "editorconfig.editorconfig"
@@ -51,6 +50,7 @@
             "mtxr.sqltools-driver-pg"
             "mtxr.sqltools-driver-sqlite"
             "mtxr.sqltools"
+            "piotrpalarz.vscode-gitignore-generator"
             "pkief.material-icon-theme"
             "pkief.material-product-icons"
             "pranaygp.vscode-css-peek"
