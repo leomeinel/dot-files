@@ -274,7 +274,6 @@
               "enforceHeader" = false;
               "replace" = [
                 "File:"
-                "Project:"
                 "Author:"
                 "Copyright (c)"
               ];
@@ -493,11 +492,10 @@
               {
                 "language" = "*";
                 "template" = [
-                  "File: <<filerelativepath>>"
-                  "Project: <<projectname>>"
+                  "File: <<filename>>"
                   "Author: <<author>> (<<authoremail>>)"
                   "-----"
-                  "Copyright (c) <<yeartoyear(fc,now)>> <<author>> & contributors"
+                  "Copyright (c) <<year>> <<author>> & contributors"
                   "SPDX ID: <<spdxid>>"
                   "URL: <<licenseurl>>"
                   "-----"
