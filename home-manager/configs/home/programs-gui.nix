@@ -10,6 +10,7 @@
 
 {
   config,
+  installEnv,
   pkgs,
   ...
 }:
@@ -215,20 +216,12 @@
             "zenMode.hideStatusBar" = false;
             "zenMode.showTabs" = "multiple";
             "psi-header.config" = {
+              "author" = installEnv.GIT_NAME;
+              "authorEmail" = installEnv.GIT_EMAIL;
               "forceToTop" = true;
               "blankLinesAfter" = 1;
-              "license" = "MIT";
+              "license" = "Apache-2.0";
             };
-            "psi-header.variables" = [
-              [
-                "author"
-                "Leopold Meinel"
-              ]
-              [
-                "author_email"
-                "leo@meinel.dev"
-              ]
-            ];
             "psi-header.changes-tracking" = {
               "isActive" = true;
               "include" = [
@@ -281,6 +274,7 @@
               "enforceHeader" = false;
               "replace" = [
                 "File:"
+                "Project:"
                 "Author:"
                 "Copyright (c)"
               ];
@@ -499,13 +493,20 @@
               {
                 "language" = "*";
                 "template" = [
-                  "File: <<fileName>>"
-                  "Author: <<author>> (<<author_email>>)"
+                  "File: <<filerelativepath>>"
+                  "Project: <<projectname>>"
+                  "Author: <<author>> (<<authoremail>>)"
                   "-----"
-                  "Copyright (c) <<year>> <<author>> & contributors"
+                  "Copyright (c) <<yeartoyear(fc,now)>> <<author>> & contributors"
                   "SPDX ID: <<spdxid>>"
                   "URL: <<licenseurl>>"
                   "-----"
+                  "HISTORY:"
+                ];
+                "changeLogCaption" = "HISTORY:";
+                "changeLogNaturalOrder" = true;
+                "changeLogEntryTemplate" = [
+                  "<<dateformat(YYYY-MM-DD)>>    <<author>>"
                 ];
               }
             ];
