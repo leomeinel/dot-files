@@ -1,17 +1,16 @@
 /*
  * File: style.css
- * Author: Leopold Meinel (leo@meinel.dev)
+ * Author: Leopold Johannes Meinel (leo@meinel.dev)
  * -----
- * Copyright (c) 2025 Leopold Meinel & contributors
- * SPDX ID: MIT
- * URL: https://opensource.org/licenses/MIT
- * -----
+ * Copyright (c) 2025 Leopold Johannes Meinel & contributors
+ * SPDX ID: Apache-2.0
+ * URL: https://www.apache.org/licenses/LICENSE-2.0
  */
 
 /* FIXME: Reuse whenever support is implemented.
           GTK4 CSS apparently supports this https://docs.gtk.org/gtk4/css-properties.html
           Not supported by GTK3 CSS, not sure why. See: https://docs.gtk.org/gtk3/css-overview.html#color and https://docs.gtk.org/gtk3/css-properties.html
-*/
+ */
 /*
 :root {
   --dark: rgb(29, 32, 33);
@@ -19,7 +18,7 @@
   --primary: rgb(240, 97, 78);
   --secondary: rgb(104, 157, 106);
 }
-*/
+ */
 
 * {
   font-family: HasklugNerdFont, Regular;
