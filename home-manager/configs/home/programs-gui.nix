@@ -546,7 +546,12 @@
           };
           cppSettings = {
             "clangd.arguments" = [
+              "--background-index"
               "--clang-tidy"
+              "--completion-style=detailed"
+              "--function-arg-placeholders=1"
+              "--header-insertion-decorators"
+              "--header-insertion=iwyu"
             ];
             "[c]" = {
               "editor.defaultFormatter" = "llvm-vs-code-extensions.vscode-clangd";
