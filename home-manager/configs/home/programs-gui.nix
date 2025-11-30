@@ -594,7 +594,7 @@
             "python.languageServer" = "Jedi";
           };
           rustSettings = {
-            "rust-analyzer.check.command" = "/usr/bin/cargo-clippy";
+            "rust-analyzer.check.command" = "clippy";
             "rust-analyzer.checkOnSave" = true;
             "rust-analyzer.debug.engine" = "vadimcn.vscode-lldb";
             "[rust]" = {
