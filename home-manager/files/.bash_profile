@@ -62,7 +62,7 @@ if [[ -f ~/.bashrc ]] && [[ -n "${BASH_VERSION}" ]]; then
 fi
 
 # If sway is not installed, don't do anything
-[[ -z "$(/usr/bin/which sway)" ]] >/dev/null 2>&1 &&
+command -v sway >/dev/null 2>&1 &&
     return
 
 # If current user is root, don't do anything

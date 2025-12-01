@@ -72,7 +72,7 @@
     },
     "interval": "once",
     "return-type": "json",
-    "exec-if": "/usr/bin/which gammastep",
+    "exec-if": "command -v gammastep",
     "exec": "${XDG_CONFIG_HOME}/waybar/scripts/gammastep.sh info",
     "on-click": "${XDG_CONFIG_HOME}/waybar/scripts/gammastep.sh",
     "tooltip": true
@@ -99,7 +99,7 @@
       "dnd-inhibited-none": "<span foreground='#f0614e'>󰪑</span>"
     },
     "return-type": "json",
-    "exec-if": "/usr/bin/which swaync-client",
+    "exec-if": "command -v swaync-client",
     "exec": "/usr/bin/swaync-client -swb",
     "on-click": "/usr/bin/swaync-client -t -sw",
     "on-click-right": "/usr/bin/swaync-client -d -sw",
