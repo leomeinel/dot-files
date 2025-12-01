@@ -8,7 +8,7 @@ Meant for general purpose systems with a GUI.
 
 This repository is not entirely licensed as Apache-2.0.
 
-- [This](https://github.com/leomeinel/dot-files/blob/main/home-manager/files/.config/eclipse-style-guides/java.xml) file is taken from [this](https://github.com/google/styleguide/blob/gh-pages/eclipse-java-google-style.xml) repository and is licensed under [CC-BY-3.0](https://github.com/google/styleguide/blob/1387bff19c141c047c483cbe813659625f93defa/LICENSE).
+- The file `/home-manager/files/.config/eclipse-style-guides/java.xml` is taken from [this](https://github.com/google/styleguide/blob/gh-pages/eclipse-java-google-style.xml) repository and is licensed under [CC-BY-3.0](https://github.com/google/styleguide/blob/1387bff19c141c047c483cbe813659625f93defa/LICENSE).
 
 ## Requirements
 
