@@ -121,7 +121,7 @@ git add .
 git commit --no-gpg-sign -m "Install dot-files - ${DATE}"
 
 # Set default rust if rustup is installed and update
-[[ -n "$(which rustup)" ]] >/dev/null 2>&1 &&
+command -v rustup >/dev/null 2>&1 &&
     {
         rustup default stable
         rustup update
