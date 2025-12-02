@@ -131,6 +131,7 @@
                 "cd $dir && clang -framework Cocoa $fileName -o $fileNameWithoutExt.out && $dir$fileNameWithoutExt.out";
             };
             "debug.showInStatusBar" = "never";
+            "dependi.extras.silenceUpdateMessages" = true;
             "editor.detectIndentation" = false;
             "editor.foldingImportsByDefault" = true;
             "editor.foldingMaximumRegions" = 50000;
