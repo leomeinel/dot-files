@@ -40,12 +40,13 @@ DATE="$(date +"%FT%H-%M-%S")"
 git add .
 git commit --no-gpg-sign -m "Update dot-files - ${DATE}" || true
 
-# Set default rust if rustup is installed and update
-command -v rustup >/dev/null 2>&1 &&
-    {
-        rustup default stable
-        rustup update
-    }
+# Set default rust if rustup is installed and update rust and cargo
+if command -v rustup >/dev/null 2>&1; then
+    rustup default stable
+    rustup update
+fi
+command -v cargo >/dev/null 2>&1 &&
+    cargo install --list | awk '/^[[:alnum:]]/ {print $1}' | xargs cargo install
 
 # Notify user if script has finished successfully
 echo "'$(basename "${0}")' has finished successfully."
