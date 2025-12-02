@@ -46,7 +46,7 @@ if command -v rustup >/dev/null 2>&1; then
     rustup update
 fi
 command -v cargo >/dev/null 2>&1 &&
-    cargo install --list | awk '/^[[:alnum:]]/ {print $1}' | xargs cargo install
+    cargo install --list | awk '/^[[:alnum:]]/ {print $1}' | xargs -r cargo install
 
 # Notify user if script has finished successfully
 echo "'$(basename "${0}")' has finished successfully."
