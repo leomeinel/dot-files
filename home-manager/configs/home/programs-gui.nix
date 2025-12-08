@@ -106,6 +106,7 @@
             "njqdev.vscode-python-typehint"
           ];
           rustExtensions = nix4vscode.forOpenVsx [
+            "a5huynh.vscode-ron"
             "rust-lang.rust-analyzer"
             "swellaby.vscode-rust-test-adapter"
           ];
