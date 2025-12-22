@@ -30,7 +30,10 @@
       let
         R-with-my-packages = rWrapper.override {
           packages = with rPackages; [
-            httpgd
+            # FIXME: This is marked as broken since 25.11, find workaround
+            #        error: Package ‘r-httpgd-2.0.4’ in [...] is marked as broken, refusing to evaluate.
+
+            # httpgd
             languageserver
             jsonlite
           ];
