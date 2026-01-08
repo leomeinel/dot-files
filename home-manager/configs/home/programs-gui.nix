@@ -650,7 +650,7 @@
               userSettings = defaultSettings // rustSettings;
             };
             rustGameDev = {
-              extensions = defaultExtensions ++ rustExtensions ++ gameDevExtensions;
+              extensions = defaultExtensions ++ gameDevExtensions ++ rustExtensions;
               userSettings = defaultSettings // rustSettings;
             };
             web = {
@@ -662,6 +662,7 @@
                 defaultExtensions
                 ++ cppExtensions
                 ++ dataScienceExtensions
+                ++ gameDevExtensions
                 ++ goExtensions
                 ++ javaExtensions
                 ++ pythonExtensions
