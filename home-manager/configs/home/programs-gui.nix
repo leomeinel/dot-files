@@ -2,7 +2,7 @@
   File: programs-gui.nix
   Author: Leopold Johannes Meinel (leo@meinel.dev)
   -----
-  Copyright (c) 2025 Leopold Johannes Meinel & contributors
+  Copyright (c) 2026 Leopold Johannes Meinel & contributors
   SPDX ID: Apache-2.0
   URL: https://www.apache.org/licenses/LICENSE-2.0
 */
@@ -82,6 +82,9 @@
           ];
           dataScienceExtensions = nix4vscode.forOpenVsx [
             "reditorsupport.r"
+          ];
+          gameDevExtensions = nix4vscode.forOpenVsx [
+            "wgsl-analyzer.wgsl-analyzer"
           ];
           goExtensions = nix4vscode.forOpenVsx [
             "golang.go"
@@ -646,6 +649,10 @@
               extensions = defaultExtensions ++ rustExtensions;
               userSettings = defaultSettings // rustSettings;
             };
+            rustGameDev = {
+              extensions = defaultExtensions ++ rustExtensions ++ gameDevExtensions;
+              userSettings = defaultSettings // rustSettings;
+            };
             web = {
               extensions = defaultExtensions ++ webExtensions;
               userSettings = defaultSettings // webSettings;
@@ -680,6 +687,7 @@
           java = profiles.java;
           python = profiles.python;
           rust = profiles.rust;
+          rustGameDev = profiles.rustGameDev;
           web = profiles.web;
           full = profiles.full;
         };
