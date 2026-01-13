@@ -90,7 +90,6 @@
             "golang.go"
           ];
           javaExtensions = nix4vscode.forOpenVsx [
-            "fwcd.kotlin"
             "redhat.java"
             "vscjava.vscode-gradle"
             "vscjava.vscode-java-debug"
