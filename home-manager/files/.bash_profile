@@ -3,7 +3,7 @@
 # File: .bash_profile
 # Author: Leopold Johannes Meinel (leo@meinel.dev)
 # -----
-# Copyright (c) 2025 Leopold Johannes Meinel & contributors
+# Copyright (c) 2026 Leopold Johannes Meinel & contributors
 # SPDX ID: Apache-2.0
 # URL: https://www.apache.org/licenses/LICENSE-2.0
 ###
@@ -15,7 +15,6 @@ if [[ -f ~/.local/state/nix/profile/etc/profile.d/hm-session-vars.sh ]]; then
 fi
 
 # Set environment variables
-export ANDROID_HOME="${XDG_DATA_HOME}"/android
 export ANDROID_USER_HOME="${XDG_DATA_HOME}"/android
 export BROWSER=/usr/local/bin/librewolf
 export CARGO_HOME="${XDG_DATA_HOME}"/cargo
