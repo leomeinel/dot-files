@@ -15,7 +15,9 @@ if [[ -f ~/.local/state/nix/profile/etc/profile.d/hm-session-vars.sh ]]; then
 fi
 
 # Set environment variables
-export ANDROID_USER_HOME="${XDG_DATA_HOME}"/android
+export ANDROID_HOME="${XDG_DATA_HOME}"/android
+export ANDROID_NDK_HOME="${ANDROID_HOME}"/ndk
+export ANDROID_USER_HOME="${ANDROID_HOME}"
 export BROWSER=/usr/local/bin/librewolf
 export CARGO_HOME="${XDG_DATA_HOME}"/cargo
 # FIXME: Find a way to use an absolute path for nix packages here

@@ -2,7 +2,7 @@
   File: common-home.nix
   Author: Leopold Johannes Meinel (leo@meinel.dev)
   -----
-  Copyright (c) 2025 Leopold Johannes Meinel & contributors
+  Copyright (c) 2026 Leopold Johannes Meinel & contributors
   SPDX ID: Apache-2.0
   URL: https://www.apache.org/licenses/LICENSE-2.0
 */
@@ -52,6 +52,7 @@
         run /usr/bin/mkdir -p ${config.xdg.configHome}/screen
         run /usr/bin/mkdir -p ${config.xdg.dataHome}
         run /usr/bin/mkdir -p ${config.xdg.dataHome}/android
+        run /usr/bin/mkdir -p ${config.xdg.dataHome}/android/ndk
         run /usr/bin/mkdir -p ${config.xdg.dataHome}/cargo
         run /usr/bin/mkdir -p ${config.xdg.dataHome}/gnupg
         run /usr/bin/mkdir -p ${config.xdg.dataHome}/go
