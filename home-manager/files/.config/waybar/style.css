@@ -21,17 +21,17 @@
  */
 
 * {
-  font-family: HasklugNerdFont, Regular;
-  font-size: 14px;
-  border: none;
-  border-radius: 0px;
-  color: white;
+    font-family: HasklugNerdFont, Regular;
+    font-size: 14px;
+    border: none;
+    border-radius: 0px;
+    color: white;
 }
 
 window#waybar {
-  background-color: rgb(29, 32, 33); /* var(--dark) */
-  transition-property: background-color;
-  transition-duration: 0.5s;
+    background-color: rgb(29, 32, 33); /* var(--dark) */
+    transition-property: background-color;
+    transition-duration: 0.5s;
 }
 
 #battery,
@@ -42,84 +42,84 @@ window#waybar {
 #idle_inhibitor,
 #pulseaudio,
 #tray {
-  padding-top: 0;
-  padding-bottom: 0;
-  padding-right: 5px;
-  padding-left: 5px;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-right: 5px;
+    padding-left: 5px;
 }
 
 #clock {
-  font-size: 15px;
+    font-size: 15px;
 }
 
 #custom-notification {
-  padding-left: 2px;
+    padding-left: 2px;
 }
 
 #tray {
-  padding-top: 1px;
-  padding-right: 2px;
+    padding-top: 1px;
+    padding-right: 2px;
 }
 
 #clock,
 #workspaces {
-  font-weight: 800;
+    font-weight: 800;
 }
 
 #workspaces {
-  margin-top: 0;
-  margin-bottom: 0;
-  margin-right: 10px;
-  margin-left: 10px;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-right: 10px;
+    margin-left: 10px;
 }
 
 #battery.warning {
-  color: rgb(240, 240, 80); /* var(--hint) */
+    color: rgb(240, 240, 80); /* var(--hint) */
 }
 #battery.critical {
-  color: rgb(240, 97, 78); /* var(--primary) */
+    color: rgb(240, 97, 78); /* var(--primary) */
 }
 
 #bluetooth.connected {
-  color: rgb(104, 157, 106); /* var(--secondary) */
+    color: rgb(104, 157, 106); /* var(--secondary) */
 }
 #bluetooth.off,
 #bluetooth.disabled {
-  color: rgb(240, 97, 78); /* var(--primary) */
+    color: rgb(240, 97, 78); /* var(--primary) */
 }
 
 #clock {
-  font-family: "HasklugNerdFontMono";
-  color: rgb(240, 240, 80); /* var(--hint) */
+    font-family: "HasklugNerdFontMono";
+    color: rgb(240, 240, 80); /* var(--hint) */
 }
 
 #custom-gammastep.activated {
-  color: rgb(104, 157, 106); /* var(--secondary) */
+    color: rgb(104, 157, 106); /* var(--secondary) */
 }
 #custom-gammastep.deactivated {
-  color: rgb(240, 97, 78); /* var(--primary) */
+    color: rgb(240, 97, 78); /* var(--primary) */
 }
 
 #idle_inhibitor.activated {
-  color: rgb(104, 157, 106); /* var(--secondary) */
+    color: rgb(104, 157, 106); /* var(--secondary) */
 }
 #idle_inhibitor.deactivated {
-  color: rgb(240, 97, 78); /* var(--primary) */
+    color: rgb(240, 97, 78); /* var(--primary) */
 }
 
 #pulseaudio.muted {
-  color: rgb(240, 97, 78); /* var(--primary) */
+    color: rgb(240, 97, 78); /* var(--primary) */
 }
 
 #workspaces button label {
-  color: rgb(104, 157, 106); /* var(--secondary) */
+    color: rgb(104, 157, 106); /* var(--secondary) */
 }
 #workspaces button.focused {
-  background: rgb(104, 157, 106); /* var(--secondary) */
+    background: rgb(104, 157, 106); /* var(--secondary) */
 }
 #workspaces button.focused label {
-  color: rgb(29, 32, 33); /* var(--dark) */
+    color: rgb(29, 32, 33); /* var(--dark) */
 }
 .modules-left > widget:first-child > #workspaces {
-  margin-left: 0;
+    margin-left: 0;
 }

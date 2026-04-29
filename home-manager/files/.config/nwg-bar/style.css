@@ -19,40 +19,40 @@
  */
 
 window {
-  background-color: rgba(29, 32, 33, 0.8); /* var(--dark) */
-  border-radius: 10px;
+    background-color: rgba(29, 32, 33, 0.8); /* var(--dark) */
+    border-radius: 10px;
 }
 
 /* Outer bar container, takes all the window width/height */
 #outer-box {
-  margin: 0px;
-  border-radius: 10px;
-  border-style: none;
+    margin: 0px;
+    border-radius: 10px;
+    border-style: none;
 }
 
 /* Inner bar container, surrounds buttons */
 #inner-box {
-  padding: 5px;
-  margin: 5px;
+    padding: 5px;
+    margin: 5px;
 }
 
 button,
 image {
-  background: none;
-  border: none;
-  box-shadow: none;
+    background: none;
+    border: none;
+    box-shadow: none;
 }
 
 button {
-  padding-left: 10px;
-  padding-right: 10px;
-  margin: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 10px;
 }
 
 button:hover,
 button:focus {
-  border-radius: 10px;
-  border-style: none;
-  border-width: 1px;
-  background-color: rgba(104, 157, 106, 0.5); /* var(--secondary) */
+    border-radius: 10px;
+    border-style: none;
+    border-width: 1px;
+    background-color: rgba(104, 157, 106, 0.5); /* var(--secondary) */
 }

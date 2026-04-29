@@ -1,13 +1,13 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <actions>
     <action>
         <icon>utilities-terminal</icon>
         <name>Open Terminal Here</name>
-        <submenu></submenu>
+        <submenu />
         <unique-id>1682361916909654-1</unique-id>
         <command>&quot;${TERMINAL}&quot; --working-directory %F</command>
-        <description></description>
-        <range></range>
+        <description />
+        <range />
         <patterns>*</patterns>
         <startup-notify />
         <directories />

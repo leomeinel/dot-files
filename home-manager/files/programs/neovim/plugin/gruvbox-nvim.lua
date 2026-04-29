@@ -1,4 +1,4 @@
-require'gruvbox'.setup({
+require 'gruvbox'.setup({
     terminal_colors = true,
     undercurl = true,
     underline = true,
