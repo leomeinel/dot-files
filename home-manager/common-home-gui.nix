@@ -26,6 +26,7 @@
     # Packages
     packages = with pkgs; [
       htmlhint
+      nginx-language-server
       nixd
       nixfmt-rfc-style
       ocrmypdf
