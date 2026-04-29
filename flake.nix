@@ -27,10 +27,6 @@
       # FIXME: This should be in common-home*.nix
       pkgs = import nixpkgs {
         inherit system;
-        config = {
-          # Allow unfree packages to install VSCode extensions
-          allowUnfree = true;
-        };
       };
       installEnv = {
         SYSUSER = "REPLACE_SYSUSER";
