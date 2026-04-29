@@ -25,7 +25,8 @@
     "sql": true,
     "toml": true,
     "wgsl-wesl": true,
-    "xml": true
+    "xml": true,
+    "one-dark-pro": true
   },
   "languages": {
     "Nix": {
@@ -97,6 +98,6 @@
   "theme": {
     "mode": "system",
     "light": "One Light",
-    "dark": "One Dark"
+    "dark": "One Dark Pro"
   }
 }
