@@ -27,6 +27,11 @@
     "wgsl-wesl": true,
     "xml": true
   },
+  "languages": {
+    "Nix": {
+      "language_servers": ["nixd", "!nil"]
+    }
+  },
   "prettier": {
     "trailingComma": "none"
   },
