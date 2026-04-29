@@ -1,12 +1,4 @@
 #!/usr/bin/env bash
-###
-# File: .bash_profile
-# Author: Leopold Johannes Meinel (leo@meinel.dev)
-# -----
-# Copyright (c) 2026 Leopold Johannes Meinel & contributors
-# SPDX ID: Apache-2.0
-# URL: https://www.apache.org/licenses/LICENSE-2.0
-###
 
 # Source hm-session-vars.sh
 if [[ -f ~/.local/state/nix/profile/etc/profile.d/hm-session-vars.sh ]]; then
