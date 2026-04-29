@@ -20,13 +20,13 @@
     "material-icon-theme": true,
     "nginx": true,
     "nix": true,
+    "one-dark-pro": true,
     "php": true,
     "ron": true,
     "sql": true,
     "toml": true,
     "wgsl-wesl": true,
-    "xml": true,
-    "one-dark-pro": true
+    "xml": true
   },
   "languages": {
     "Nix": {
