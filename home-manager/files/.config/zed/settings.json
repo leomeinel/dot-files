@@ -36,7 +36,6 @@
   "prettier": {
     "trailingComma": "none"
   },
-  "multi_cursor_modifier": "cmd_or_ctrl",
   "inline_code_actions": false,
   "toolbar": {
     "code_actions": true
