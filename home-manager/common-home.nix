@@ -48,7 +48,6 @@
         run /usr/bin/mkdir -p ${config.xdg.configHome}/gtk-2.0
         run /usr/bin/mkdir -p ${config.xdg.configHome}/java
         run /usr/bin/mkdir -p ${config.xdg.configHome}/parallel
-        run /usr/bin/mkdir -p ${config.xdg.configHome}/r
         run /usr/bin/mkdir -p ${config.xdg.configHome}/screen
         run /usr/bin/mkdir -p ${config.xdg.dataHome}
         run /usr/bin/mkdir -p ${config.xdg.dataHome}/android
@@ -58,12 +57,9 @@
         run /usr/bin/mkdir -p ${config.xdg.dataHome}/go
         run /usr/bin/mkdir -p ${config.xdg.dataHome}/gradle
         run /usr/bin/mkdir -p ${config.xdg.dataHome}/platformio
-        run /usr/bin/mkdir -p ${config.xdg.dataHome}/r/library
         run /usr/bin/mkdir -p ${config.xdg.dataHome}/rustup
         run /usr/bin/mkdir -p ${config.xdg.stateHome}
         run /usr/bin/mkdir -p ${config.xdg.stateHome}/bash
-        run /usr/bin/mkdir -p ${config.xdg.stateHome}/r
-        run /usr/bin/mkdir -p ${config.xdg.stateHome}/radian
         run /usr/bin/chmod 700 ${config.xdg.dataHome}/gnupg
       '';
     };

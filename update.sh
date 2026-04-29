@@ -18,8 +18,6 @@ SCRIPT_DIR="$(dirname -- "$(readlink -f -- "${0}")")"
 # shellcheck source=/dev/null
 . "${SCRIPT_DIR}"/install.conf
 
-# Remove codium configs for home-manager to be able to regenerate them
-rm -rf ~/.vscode-oss ~/.vscode-R ~/.config/vscode-sqltools ~/.local/share/vscode-sqltools
 # Update lock file
 cd "${SCRIPT_DIR}"
 nix flake update

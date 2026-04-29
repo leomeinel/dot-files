@@ -20,11 +20,7 @@
       "alacritty/alacritty.toml" = {
         source = ../../files/.config/alacritty/alacritty.toml;
       };
-      # eclipse-style-guides
-      "eclipse-style-guides/java.xml" = {
-        source = ../../files/.config/eclipse-style-guides/java.xml;
-      };
-      # eclipse-style-guides
+      # gammastep
       "gammastep/config.ini" = {
         source = ../../files/.config/gammastep/config.ini;
       };
@@ -52,20 +48,6 @@
       };
       "nwg-bar/style.css" = {
         source = ../../files/.config/nwg-bar/style.css;
-      };
-      # r
-      "r/Renviron" = {
-        source = ../../files/.config/r/Renviron;
-      };
-      "r/Rprofile" = {
-        source = ../../files/.config/r/Rprofile;
-      };
-      "r/lintr" = {
-        source = ../../files/.config/r/lintr;
-      };
-      # radian/profile
-      "radian/profile" = {
-        source = ../../files/.config/radian/profile;
       };
       # sway
       "sway/config.d/autostart" = {
@@ -151,6 +133,10 @@
       "xfce4/xfconf/xfce-perchannel-xml/thunar.xml" = {
         force = true;
         source = ../../files/.config/xfce4/xfconf/xfce-perchannel-xml/thunar.xml;
+      };
+      # zed
+      "zed/settings.json" = {
+        source = ../../files/.config/zed/settings.json;
       };
     };
     dataFile = {

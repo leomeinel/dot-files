@@ -18,39 +18,22 @@
   # Imports
   imports = [
     ./configs/home/fonts-gui.nix
-    ./configs/home/programs-gui.nix
     ./configs/home/xdg-gui.nix
   ];
 
   # Home options
   home = {
     # Packages
-    packages =
-      with pkgs;
-      let
-        R-with-my-packages = rWrapper.override {
-          packages = with rPackages; [
-            # FIXME: This is marked as broken since 25.11, find workaround
-            #        error: Package ‘r-httpgd-2.0.4’ in [...] is marked as broken, refusing to evaluate.
-            #        NOTE: Since other packages depend on it, I had to comment them too. I'm not sure if it is worth my time to fix this.
-            # httpgd
-            # languageserver
-            # jsonlite
-          ];
-        };
-      in
-      [
-        htmlhint
-        nixd
-        nixfmt-rfc-style
-        ocrmypdf
-        R-with-my-packages
-        radianWrapper
-        toml2json
-        usbguard-notifier
-        wl-clipboard-rs
-        yaml2json
-      ];
+    packages = with pkgs; [
+      htmlhint
+      nixd
+      nixfmt-rfc-style
+      ocrmypdf
+      toml2json
+      usbguard-notifier
+      wl-clipboard-rs
+      yaml2json
+    ];
     # Activation script
     activation = {
       common-home-gui = lib.hm.dag.entryAfter [ "writeBoundary" ] ''

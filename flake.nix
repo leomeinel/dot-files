@@ -22,12 +22,6 @@
       url = "github:nix-community/home-manager/release-REPLACE_NIX_VERSION"; # FIXME: This should be defined only once
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    # nix4vscode
-    # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
-    nix4vscode = {
-      url = "github:nix-community/nix4vscode";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
 
   # Output options
@@ -35,7 +29,6 @@
     {
       nixpkgs,
       home-manager,
-      nix4vscode,
       ...
     }:
     let
@@ -43,7 +36,6 @@
       # FIXME: This should be in common-home*.nix
       pkgs = import nixpkgs {
         inherit system;
-        overlays = [ nix4vscode.overlays.default ];
         config = {
           # Allow unfree packages to install VSCode extensions
           allowUnfree = true;
@@ -86,35 +78,35 @@
         "${installEnv.SYSUSER}" = home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
           # Args to parse
-          extraSpecialArgs = { inherit nix4vscode installEnv; };
+          extraSpecialArgs = { inherit installEnv; };
           # Modules to use
           modules = [ ./home-manager/configs/SYSUSER.nix ];
         };
         "${installEnv.GUESTUSER}" = home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
           # Args to parse
-          extraSpecialArgs = { inherit nix4vscode installEnv; };
+          extraSpecialArgs = { inherit installEnv; };
           # Modules to use
           modules = [ ./home-manager/configs/GUESTUSER.nix ];
         };
         "${installEnv.HOMEUSER}" = home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
           # Args to parse
-          extraSpecialArgs = { inherit nix4vscode installEnv; };
+          extraSpecialArgs = { inherit installEnv; };
           # Modules to use
           modules = [ ./home-manager/configs/HOMEUSER.nix ];
         };
         "${installEnv.VIRTUSER}" = home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
           # Args to parse
-          extraSpecialArgs = { inherit nix4vscode installEnv; };
+          extraSpecialArgs = { inherit installEnv; };
           # Modules to use
           modules = [ ./home-manager/configs/VIRTUSER.nix ];
         };
         "${installEnv.WORKUSER}" = home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
           # Args to parse
-          extraSpecialArgs = { inherit nix4vscode installEnv; };
+          extraSpecialArgs = { inherit installEnv; };
           # Modules to use
           modules = [ ./home-manager/configs/WORKUSER.nix ];
         };
