@@ -10,6 +10,7 @@
   "auto_install_extensions": {
     "assembly": true,
     "codebook": true,
+    "color-highlight": true,
     "comment": true,
     "dependi": true,
     "editorconfig": true,
