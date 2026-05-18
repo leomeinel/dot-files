@@ -36,6 +36,9 @@ export TEXMFVAR="${XDG_CACHE_HOME}"/texlive/texmf-var
 # FIXME: Find a way to use an absolute path for nix packages here
 export VISUAL=nvim
 
+# Add to ${PATH}
+export PATH=${PATH}:${CARGO_HOME}/bin
+
 # Commands that should be applied only for interactive shells
 [[ "${-}" != *i* ]] &&
     return
