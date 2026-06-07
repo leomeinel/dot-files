@@ -34,6 +34,10 @@
       "language_servers": ["nixd", "!nil"]
     }
   },
+  "file_types": {
+    "JSON": ["*.ign"],
+    "YAML": ["*.bu"]
+  },
   "prettier": {
     "trailingComma": "none"
   },
