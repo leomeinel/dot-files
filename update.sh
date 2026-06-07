@@ -37,6 +37,7 @@ if command -v rustup >/dev/null 2>&1; then
 fi
 command -v cargo >/dev/null 2>&1 &&
     cargo install --list | awk '/^[[:alnum:]]/ {print $1}' | xargs -r cargo install
+# TODO: Update go packages
 
 # Notify user if script has finished successfully
 echo "'$(basename "${0}")' has finished successfully."

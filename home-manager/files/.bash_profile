@@ -37,7 +37,7 @@ export TEXMFVAR="${XDG_CACHE_HOME}"/texlive/texmf-var
 export VISUAL=nvim
 
 # Add to ${PATH}
-export PATH=${PATH}:${CARGO_HOME}/bin
+export PATH=${PATH}:${CARGO_HOME}/bin:${GOPATH}/bin
 
 # Commands that should be applied only for interactive shells
 [[ "${-}" != *i* ]] &&
