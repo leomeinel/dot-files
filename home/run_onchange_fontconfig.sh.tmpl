@@ -1,9 +1,13 @@
 #!/usr/bin/env bash
 
-# Fail on error
-set -e
-
 {{ if ne .chezmoi.username "root" }}
+# Fail on error
+set -eu
+
+# Source ~/.bash_profile
+# shellcheck source=/dev/null
+. ~/.bash_profile
+
 # Enable user config for fontconfig
 mkdir -p "${XDG_CONFIG_HOME}"/fontconfig/conf.d
 # hash: {{ include "/usr/share/fontconfig/conf.avail/50-user.conf" | sha256sum }}

@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
-# Fail on error
-set -e
-
 {{ if eq .chezmoi.username .sysuser }}
+# Fail on error
+set -eu
+
 systemctl enable --now --user usbguard-notifier.service
 {{ end }}
