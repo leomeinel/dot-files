@@ -3,6 +3,7 @@
 # Fail on error
 set -e
 
+{{ if ne .chezmoi.username "root" }}
 # FIXME: This shouldn't be necessary
 # Use flatpak overrides to allow consistent theming
 flatpak override -u --reset
@@ -16,3 +17,4 @@ rm -rf "${XDG_DATA_HOME}"/themes
 rsync -urlq --delete /usr/share/themes/ "${XDG_DATA_HOME}"/themes
 flatpak override -u --filesystem=xdg-data/themes:ro
 flatpak override -u --env=QT_STYLE_OVERRIDE="breeze"
+{{ end }}

@@ -3,7 +3,9 @@
 # Fail on error
 set -e
 
+{{ if ne .chezmoi.username "root" }}
 # Enable user config for fontconfig
 mkdir -p "${XDG_CONFIG_HOME}"/fontconfig/conf.d
 # hash: {{ include "/usr/share/fontconfig/conf.avail/50-user.conf" | sha256sum }}
 ln -sf /usr/share/fontconfig/conf.avail/50-user.conf ~/.config/fontconfig/conf.d/
+{{ end }}

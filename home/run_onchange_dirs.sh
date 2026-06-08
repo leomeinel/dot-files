@@ -4,17 +4,18 @@
 set -e
 
 # Create dirs
-mkdir -p ~/Documents/Pictures/Screenshots
 mkdir -p ~/.ssh
 mkdir -p ~/src
 chmod 700 ~/.ssh
 chmod 700 ~/src
+{{ if ne .chezmoi.username "root" }}
+mkdir -p ~/Documents/Pictures/Screenshots
+{{ end }}
 
 # Create XDG dirs
 mkdir -p "${XDG_CACHE_HOME}"
 mkdir -p "${XDG_CACHE_HOME}"/texlive
 mkdir -p "${XDG_CONFIG_HOME}"
-mkdir -p "${XDG_CONFIG_HOME}"/gtk-2.0
 mkdir -p "${XDG_CONFIG_HOME}"/java
 mkdir -p "${XDG_CONFIG_HOME}"/parallel
 mkdir -p "${XDG_CONFIG_HOME}"/screen
