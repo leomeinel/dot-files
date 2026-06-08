@@ -73,18 +73,16 @@ Meant for general purpose systems with a GUI.
 
 ## Installation
 
-Edit `install.env` to specify the usernames matching your system. If any of the users are not needed by you, just ignore them.
+Edit [`home/.chezmoi.toml.tmpl`](https://github.com/leomeinel/dot-files/blob/main/home/.chezmoi.toml.tmpl) to configure this.
 
 ```sh
 # Instead of main, you can also use a tag
-git clone -b main https://github.com/leomeinel/dot-files.git ~/.config/dot-files
-chmod +x ~/.config/dot-files/setup.sh
-~/.config/dot-files/setup.sh
+chezmoi init --branch main https://github.com/leomeinel/dot-files.git
+chezmoi update
 ```
 
 ## Updating
 
 ```sh
-chmod +x ~/.config/dot-files/update.sh
-~/.config/dot-files/update.sh
+chezmoi update
 ```
