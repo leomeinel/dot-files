@@ -13,9 +13,8 @@ if command -v rustup >/dev/null 2>&1; then
     rustup update
 fi
 
-CHEZMOI_PATH=~/.local/share/chezmoi/
-
 # Upgrade packages
+CHEZMOI_PATH=~/.local/share/chezmoi/
 command -v cargo >/dev/null 2>&1 &&
     {
         # hash: {{ include "../pkgs-cargo.txt" | sha256sum }}
