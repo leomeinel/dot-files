@@ -13,7 +13,7 @@ alias hyperfine='/usr/bin/hyperfine -w 3 -r 12 --style auto'
 alias rg='/usr/bin/rg -s --color auto'
 
 # xdg-ninja recommendations
-alias adb='HOME="${XDG_DATA_HOME}"/android command /usr/bin/adb'
+alias adb='HOME="${ANDROID_HOME}" /usr/bin/adb'
 alias wget='/usr/bin/wget --hsts-file="${XDG_DATA_HOME}"/wget-hsts'
 
 # Miscellaneous programs
