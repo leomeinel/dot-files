@@ -9,22 +9,24 @@ if command -v rustup >/dev/null 2>&1; then
     rustup update
 fi
 
+CHEZMOI_PATH=~/.local/share/chezmoi/
+
 # Upgrade packages
 command -v cargo >/dev/null 2>&1 &&
     {
-        # hash: {{ include "pkgs-cargo.txt" | sha256sum }}
-        xargs -n 1 cargo install <../pkgs-cargo.txt
+        # hash: {{ include "../pkgs-cargo.txt" | sha256sum }}
+        xargs -n 1 cargo install <${CHEZMOI_PATH}/pkgs-cargo.txt
         cargo install-update -a || true
     }
 command -v go >/dev/null 2>&1 &&
     {
-        # hash: {{ include "pkgs-go.txt" | sha256sum }}
-        xargs -n 1 go install <../pkgs-go.txt
+        # hash: {{ include "../pkgs-go.txt" | sha256sum }}
+        xargs -n 1 go install <${CHEZMOI_PATH}/pkgs-go.txt
         gup update || true
     }
 command -v pipx >/dev/null 2>&1 &&
     {
-        # hash: {{ include "pkgs-pipx.txt" | sha256sum }}
-        xargs -n 1 pipx install <../pkgs-pipx.txt
+        # hash: {{ include "../pkgs-pipx.txt" | sha256sum }}
+        xargs -n 1 pipx install <${CHEZMOI_PATH}/pkgs-pipx.txt
         pipx upgrade-all || true
     }
