@@ -1,3 +1,5 @@
+require("plugins")
+
 -- disable netrw
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
@@ -13,7 +15,7 @@ vim.wo.number = true
 vim.wo.relativenumber = true
 
 -- Enable mouse mode
-vim.o.mouse = 'a'
+vim.o.mouse = "a"
 
 -- Enable break indent
 vim.o.breakindent = true
@@ -27,14 +29,14 @@ vim.o.smartcase = true
 
 -- Decrease update time
 vim.o.updatetime = 250
-vim.wo.signcolumn = 'yes'
+vim.wo.signcolumn = "yes"
 
 -- Set colorscheme
-vim.o.background = 'dark'
+vim.o.background = "dark"
 vim.o.termguicolors = true
 
 -- Set completeopt to have a better completion experience
-vim.o.completeopt = 'menuone,noselect'
+vim.o.completeopt = "menuone,noselect"
 
 -- Wrapping
 vim.wo.wrap = false
@@ -56,10 +58,10 @@ vim.o.autoindent = true
 vim.o.swapfile = false
 
 -- Encoding
-vim.o.encoding = 'UTF-8'
+vim.o.encoding = "UTF-8"
 
 -- Syntax highlighting
-vim.o.syntax = 'ON'
+vim.o.syntax = "ON"
 
 -- Auto completion
 vim.o.wildmenu = true

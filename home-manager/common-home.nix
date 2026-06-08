@@ -10,7 +10,6 @@
   # Imports
   imports = [
     ./configs/home/file.nix
-    ./configs/home/programs.nix
     ./configs/home/xdg.nix
   ];
 
@@ -55,6 +54,8 @@
       '';
     };
   };
+
+  programs.home-manager.enable = true;
 
   # Nix options
   nix = with pkgs; {
