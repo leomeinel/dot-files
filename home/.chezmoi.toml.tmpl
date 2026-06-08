@@ -1,20 +1,17 @@
-# Users
-## Individual users
-### SYSUSER can be renamed, but removing it is not supported
-SYSUSER="systux"
+[data]
+sysuser="systux"
 
-# Config specific to dot-files
-## Git
-GIT_EMAIL="leo@meinel.dev"
-GIT_NAME="Leopold Johannes Meinel"
-GIT_SIGNINGKEY="F0A7BB97CAF49D8CB058BB0A744FDDD73AECC993"
-GIT_GPGSIGN="true"
-## Choose one from: /sys/class/backlight/
-BACKLIGHT_DEVICE="amdgpu_bl1"
-## Modify content on lines inbetween EOF to use different autostart configuration for sway
-### See: https://github.com/swaywm/sway/wiki
-SWAY_AUTOSTART="$(
-    cat <<'EOF'
+keylayout="de"
+
+git_email="leo@meinel.dev"
+git_name="Leopold Johannes Meinel"
+git_signingkey="F0A7BB97CAF49D8CB058BB0A744FDDD73AECC993"
+git_gpgsign="true"
+
+# Choose one from: /sys/class/backlight/
+backlight_device="amdgpu_bl1"
+# See: https://github.com/swaywm/sway/wiki
+sway_autostart="""
 # Startup
 ## Authentication and credentials
 exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
@@ -36,12 +33,9 @@ exec_always /usr/bin/swaync-client -R
 exec_always /usr/bin/swaync-client -rs
 ## Autotiling
 exec_always /usr/bin/autotiling-rs
-EOF
-)"
-## Modify content on lines inbetween EOF to use different output configuration for sway
-### See: https://github.com/swaywm/sway/wiki#display-configuration
-SWAY_OUTPUT="$(
-    cat <<'EOF'
+"""
+# See: https://github.com/swaywm/sway/wiki#display-configuration
+sway_output="""
 # Variables
 set $laptop eDP-1
 set $left DP-3
@@ -66,5 +60,4 @@ workspace 6 output $right $laptop $left
 workspace 7 output $right $laptop $left
 workspace 8 output $right $laptop $left
 workspace 9 output $right $laptop $left
-EOF
-)"
+"""

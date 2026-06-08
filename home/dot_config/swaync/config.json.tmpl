@@ -61,7 +61,7 @@
     },
     "backlight": {
       "label": "󰃞 ",
-      "device": {{ env "BACKLIGHT_DEVICE" | quote }},
+      "device": {{ .backlight_device | quote }},
       "subsystem": "backlight"
     },
     "volume": {

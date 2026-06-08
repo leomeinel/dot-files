@@ -1,7 +1,7 @@
 [user]
-email = {{ env "GIT_EMAIL" | quote }}
-name = {{ env "GIT_NAME" | quote }}
-signingkey = {{ env "GIT_SIGNINGKEY" | quote }}
+email = {{ .git_email | quote }}
+name = {{ .git_name | quote }}
+signingkey = {{ .git_signingkey | quote }}
 
 [core]
 editor = /usr/bin/nvim
@@ -15,7 +15,7 @@ defaultBranch = main
 rebase = true
 
 [commit]
-gpgsign = {{ env "GIT_GPGSIGN" | quote }}
+gpgsign = {{ .git_gpgsign | quote }}
 
 [merge]
 conflictstyle = diff3

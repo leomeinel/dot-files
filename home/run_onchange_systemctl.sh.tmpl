@@ -3,6 +3,6 @@
 # Fail on error
 set -e
 
-{{ if eq .chezmoi.username (env "SYSUSER") }}
+{{ if eq .chezmoi.username .sysuser }}
 systemctl enable --now --user usbguard-notifier.service
 {{ end }}

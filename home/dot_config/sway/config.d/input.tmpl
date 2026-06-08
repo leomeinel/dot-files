@@ -10,5 +10,5 @@ input "type:touchpad" {
 
 # Keyboard
 input "type:keyboard" {
-    xkb_layout {{ env "KEYLAYOUT" }}
+    xkb_layout {{ .keylayout }}
 }

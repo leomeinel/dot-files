@@ -3,6 +3,10 @@
 # Fail on error
 set -e
 
+# Source ~/.bash_profile
+# shellcheck source=/dev/null
+. ~/.bash_profile
+
 # Set default rust if rustup is installed
 if command -v rustup >/dev/null 2>&1; then
     rustup default stable
