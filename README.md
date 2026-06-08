@@ -78,7 +78,7 @@ Edit [`home/.chezmoi.toml.tmpl`](https://github.com/leomeinel/dot-files/blob/mai
 ```sh
 # Instead of main, you can also use a tag
 chezmoi init --branch main https://github.com/leomeinel/dot-files.git
-chezmoi update
+chezmoi apply
 ```
 
 ## Updating
