@@ -71,22 +71,9 @@ Meant for general purpose systems with a GUI.
 - [librewolf](https://flathub.org/apps/io.gitlab.librewolf-community)
 - [pwvucontrol](https://flathub.org/apps/com.saivert.pwvucontrol)
 
-### Nix
-
-```sh
-# Download nix upstream installation script
-tmpfile="$(mktemp /tmp/arch-install-nixos-XXXXXX.sh)"
-curl --proto '=https' --tlsv1.2 -sSfL https://nixos.org/nix/install -o "${tmpfile}"
-# View nix upstream installation script
-bat --decorations auto --color auto "${tmpfile}"
-# Execute nix upstream installation script as root
-chmod +x "${tmpfile}"
-"${tmpfile}" --daemon --yes --nix-extra-conf-file ~/.config/dot-files/nix.conf
-```
-
 ## Installation
 
-Edit `install.conf` to specify the usernames matching your system. If any of the users are not needed by you, just ignore them.
+Edit `install.env` to specify the usernames matching your system. If any of the users are not needed by you, just ignore them.
 
 ```sh
 # Instead of main, you can also use a tag

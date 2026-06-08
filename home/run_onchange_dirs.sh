@@ -1,0 +1,32 @@
+#!/usr/bin/env bash
+
+# Fail on error
+set -e
+
+# Create dirs
+mkdir -p ~/Documents/Pictures/Screenshots
+mkdir -p ~/.ssh
+mkdir -p ~/src
+chmod 700 ~/.ssh
+chmod 700 ~/src
+
+# Create XDG dirs
+mkdir -p "${XDG_CACHE_HOME}"
+mkdir -p "${XDG_CACHE_HOME}"/texlive
+mkdir -p "${XDG_CONFIG_HOME}"
+mkdir -p "${XDG_CONFIG_HOME}"/gtk-2.0
+mkdir -p "${XDG_CONFIG_HOME}"/java
+mkdir -p "${XDG_CONFIG_HOME}"/parallel
+mkdir -p "${XDG_CONFIG_HOME}"/screen
+mkdir -p "${XDG_DATA_HOME}"
+mkdir -p "${XDG_DATA_HOME}"/android
+mkdir -p "${XDG_DATA_HOME}"/android/ndk
+mkdir -p "${XDG_DATA_HOME}"/cargo
+mkdir -p "${XDG_DATA_HOME}"/gnupg
+mkdir -p "${XDG_DATA_HOME}"/go
+mkdir -p "${XDG_DATA_HOME}"/gradle
+mkdir -p "${XDG_DATA_HOME}"/platformio
+mkdir -p "${XDG_DATA_HOME}"/rustup
+chmod 700 "${XDG_DATA_HOME}"/gnupg
+mkdir -p "${XDG_STATE_HOME}"
+mkdir -p "${XDG_STATE_HOME}"/bash
