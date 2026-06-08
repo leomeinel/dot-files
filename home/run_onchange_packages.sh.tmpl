@@ -13,18 +13,18 @@ fi
 command -v cargo >/dev/null 2>&1 &&
     {
         # hash: {{ include "pkgs-cargo.txt" | sha256sum }}
-        xargs -n 1 cargo install <./pkgs-cargo.txt
+        xargs -n 1 cargo install <../pkgs-cargo.txt
         cargo install-update -a || true
     }
 command -v go >/dev/null 2>&1 &&
     {
         # hash: {{ include "pkgs-go.txt" | sha256sum }}
-        xargs -n 1 go install <./pkgs-go.txt
+        xargs -n 1 go install <../pkgs-go.txt
         gup update || true
     }
 command -v pipx >/dev/null 2>&1 &&
     {
         # hash: {{ include "pkgs-pipx.txt" | sha256sum }}
-        xargs -n 1 pipx install <./pkgs-pipx.txt
+        xargs -n 1 pipx install <../pkgs-pipx.txt
         pipx upgrade-all || true
     }
