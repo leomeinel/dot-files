@@ -1,8 +1,12 @@
 #!/usr/bin/env bash
 
-{{ if ne .chezmoi.username "root" }}
+{{ if and (ne .chezmoi.username "root") .chezmoi.gui }}
 # Fail on error
 set -eu
+
+# Return on missing dependencies
+command -v gsettings >/dev/null 2>&1 ||
+    return
 
 gsettings set org.gnome.desktop.interface icon-theme Papirus-Dark
 gsettings set org.gnome.desktop.interface color-scheme prefer-dark

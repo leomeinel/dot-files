@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-{{ if ne .chezmoi.username "root" }}
+{{ if and (ne .chezmoi.username "root") .chezmoi.gui }}
 # Fail on error
 set -eu
 

@@ -47,8 +47,9 @@ GPG_TTY="$(tty)"
 export GPG_TTY
 
 # Start ssh-agent if it is not already started
-[[ -z "${SSH_AUTH_SOCK}" ]] &&
+if [[ -z "${SSH_AUTH_SOCK}" ]] && command -v /usr/bin/ssh-agent >/dev/null 2>&1; then
     eval "$(/usr/bin/ssh-agent -s)" >/dev/null 2>&1
+fi
 
 # Source ~/.bashrc
 if [[ -f ~/.bashrc ]] && [[ -n "${BASH_VERSION}" ]]; then
@@ -56,8 +57,8 @@ if [[ -f ~/.bashrc ]] && [[ -n "${BASH_VERSION}" ]]; then
     . ~/.bashrc
 fi
 
-# If sway is not installed, don't do anything
-command -v sway >/dev/null 2>&1 ||
+# Return if sway is missing
+command -v /usr/bin/sway >/dev/null 2>&1 ||
     return
 
 # If current user is root, don't do anything

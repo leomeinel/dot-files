@@ -1,20 +1,31 @@
 #!/usr/bin/env bash
 
 # Aliases for sudo/doas to also use aliases
-alias doas='/usr/bin/doas '
-alias sudo='/usr/bin/sudo '
+command -v /usr/bin/doas >/dev/null 2>&1 &&
+    alias doas='/usr/bin/doas '
+command -v /usr/bin/sudo >/dev/null 2>&1 &&
+    alias sudo='/usr/bin/sudo '
 
 # Rust core-utils
-alias bat='/usr/bin/bat --decorations auto --color auto'
-alias eza='/usr/bin/eza -lag --color=automatic'
-alias ll='/usr/bin/eza -lag --color=automatic'
-alias fd='/usr/bin/fd -Hs -c auto'
-alias hyperfine='/usr/bin/hyperfine -w 3 -r 12 --style auto'
-alias rg='/usr/bin/rg -s --color auto'
+command -v /usr/bin/bat >/dev/null 2>&1 &&
+    alias bat='/usr/bin/bat --decorations auto --color auto'
+if command -v /usr/bin/eza >/dev/null 2>&1; then
+    alias eza='/usr/bin/eza -lag --color=automatic'
+    alias ll='/usr/bin/eza -lag --color=automatic'
+fi
+command -v /usr/bin/fd >/dev/null 2>&1 &&
+    alias fd='/usr/bin/fd -Hs -c auto'
+command -v /usr/bin/hyperfine >/dev/null 2>&1 &&
+    alias hyperfine='/usr/bin/hyperfine -w 3 -r 12 --style auto'
+command -v /usr/bin/rg >/dev/null 2>&1 &&
+    alias rg='/usr/bin/rg -s --color auto'
 
 # xdg-ninja recommendations
-alias adb='HOME="${ANDROID_HOME}" /usr/bin/adb'
-alias wget='/usr/bin/wget --hsts-file="${XDG_DATA_HOME}"/wget-hsts'
+command -v /usr/bin/adb >/dev/null 2>&1 &&
+    alias adb='HOME="${ANDROID_HOME}" /usr/bin/adb'
+command -v /usr/bin/wget >/dev/null 2>&1 &&
+    alias wget='/usr/bin/wget --hsts-file="${XDG_DATA_HOME}"/wget-hsts'
 
 # Miscellaneous programs
-alias java='/usr/bin/java -Djava.util.prefs.userRoot=${XDG_CONFIG_HOME}/java'
+command -v /usr/bin/java >/dev/null 2>&1 &&
+    alias java='/usr/bin/java -Djava.util.prefs.userRoot=${XDG_CONFIG_HOME}/java'

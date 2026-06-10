@@ -1,8 +1,9 @@
 #!/usr/bin/env bash
 
 # Stop ssh-agent if it is started
-[[ -n "${SSH_AUTH_SOCK}" ]] &&
+if [[ -n "${SSH_AUTH_SOCK}" ]] && command -v /usr/bin/ssh-agent >/dev/null 2>&1; then
     eval "$(/usr/bin/ssh-agent -k)"
+fi
 
 # Clear screen
 [[ "${SHLVL}" -eq 1 ]] &&

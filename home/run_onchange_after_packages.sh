@@ -1,0 +1,32 @@
+#!/usr/bin/env bash
+
+# Fail on error
+set -eu
+
+# Source ~/.bash_profile
+# shellcheck source=/dev/null
+. ~/.bash_profile
+
+# Set default rust if rustup is installed
+if command -v rustup >/dev/null 2>&1; then
+    rustup default stable
+    rustup update
+fi
+
+# Upgrade packages
+CHEZMOI_PATH=~/.local/share/chezmoi
+if command -v cargo >/dev/null 2>&1; then
+    # hash: {{ include "../pkgs-cargo.txt" | sha256sum }}
+    xargs -n 1 cargo install <${CHEZMOI_PATH}/pkgs-cargo.txt
+    cargo install-update -a || true
+fi
+if command -v go >/dev/null 2>&1; then
+    # hash: {{ include "../pkgs-go.txt" | sha256sum }}
+    xargs -n 1 go install <${CHEZMOI_PATH}/pkgs-go.txt
+    gup update || true
+fi
+if command -v pipx >/dev/null 2>&1; then
+    # hash: {{ include "../pkgs-pipx.txt" | sha256sum }}
+    xargs -n 1 pipx install <${CHEZMOI_PATH}/pkgs-pipx.txt
+    pipx upgrade-all || true
+fi

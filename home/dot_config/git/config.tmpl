@@ -1,7 +1,7 @@
 [user]
-email = {{ .git_email | quote }}
-name = {{ .git_name | quote }}
-signingkey = {{ .git_signingkey | quote }}
+email = {{ .git_email }}
+name = {{ .git_name }}
+signingkey = {{ .git_signingkey }}
 
 [core]
 editor = /usr/bin/nvim
@@ -15,7 +15,7 @@ defaultBranch = main
 rebase = true
 
 [commit]
-gpgsign = {{ .git_gpgsign | quote }}
+gpgsign = {{ .git_gpgsign }}
 
 [merge]
 conflictstyle = diff3
@@ -40,7 +40,7 @@ commit-style = raw
 file-style = omit
 hunk-header-decoration-style = blue box
 hunk-header-file-style = red
-hunk-header-line-number-style = "#067a00"
+hunk-header-line-number-style = #067a00
 hunk-header-style = file line-number syntax
 
 [credential]

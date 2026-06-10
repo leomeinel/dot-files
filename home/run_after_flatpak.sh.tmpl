@@ -1,12 +1,18 @@
 #!/usr/bin/env bash
 
-{{ if ne .chezmoi.username "root" }}
+{{ if and (ne .chezmoi.username "root") .chezmoi.gui }}
 # Fail on error
 set -eu
 
 # Source ~/.bash_profile
 # shellcheck source=/dev/null
 . ~/.bash_profile
+
+# Return on missing dependencies
+command -v flatpak >/dev/null 2>&1 ||
+    return
+command -v rsync >/dev/null 2>&1 ||
+    return
 
 # FIXME: This shouldn't be necessary
 # Use flatpak overrides to allow consistent theming
