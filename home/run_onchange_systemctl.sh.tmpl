@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 
-{{ if and (eq .chezmoi.username .sysuser) .chezmoi.gui }}
+{{ if and (eq .chezmoi.username .sysuser) .gui }}
 systemctl enable --now --user usbguard-notifier.service
 {{ end }}
