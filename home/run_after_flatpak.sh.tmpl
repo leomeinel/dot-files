@@ -8,20 +8,16 @@ set -eu
 # shellcheck source=/dev/null
 . ~/.bash_profile
 
-# Return on missing dependencies
-command -v flatpak >/dev/null 2>&1 ||
-    return
-command -v rsync >/dev/null 2>&1 ||
-    return
-
 # FIXME: This shouldn't be necessary
 # Use flatpak overrides to allow consistent theming
-flatpak override -u --reset
-rsync -rlq --delete /usr/share/fonts/ "${XDG_DATA_HOME}"/fonts
-flatpak override -u --filesystem=xdg-data/fonts:ro
-rsync -rlq --delete /usr/share/icons/ "${XDG_DATA_HOME}"/icons
-flatpak override -u --filesystem=xdg-data/icons:ro
-rsync -rlq --delete /usr/share/themes/ "${XDG_DATA_HOME}"/themes
-flatpak override -u --filesystem=xdg-data/themes:ro
-flatpak override -u --env=QT_STYLE_OVERRIDE="breeze"
+if command -v flatpak >/dev/null 2>&1 && command -v rsync >/dev/null 2>&1; then
+    flatpak override -u --reset
+    rsync -rlq --delete /usr/share/fonts/ "${XDG_DATA_HOME}"/fonts
+    flatpak override -u --filesystem=xdg-data/fonts:ro
+    rsync -rlq --delete /usr/share/icons/ "${XDG_DATA_HOME}"/icons
+    flatpak override -u --filesystem=xdg-data/icons:ro
+    rsync -rlq --delete /usr/share/themes/ "${XDG_DATA_HOME}"/themes
+    flatpak override -u --filesystem=xdg-data/themes:ro
+    flatpak override -u --env=QT_STYLE_OVERRIDE="breeze"
+fi
 {{ end }}
