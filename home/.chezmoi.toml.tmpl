@@ -2,21 +2,21 @@
 autoCommit = true
 
 [data]
-gui=true
+gui = true
 
-sysuser="systux"
+sysuser = "systux"
 
-keylayout="de"
+keylayout = "de"
 
-git_email="leo@meinel.dev"
-git_name="Leopold Johannes Meinel"
-git_signingkey="F0A7BB97CAF49D8CB058BB0A744FDDD73AECC993"
-git_gpgsign="true"
+git_email = "leo@meinel.dev"
+git_name = "Leopold Johannes Meinel"
+git_signingkey = "F0A7BB97CAF49D8CB058BB0A744FDDD73AECC993"
+git_gpgsign = "true"
 
 # Choose one from: /sys/class/backlight/
-backlight_device="amdgpu_bl1"
+backlight_device = "amdgpu_bl1"
 # See: https://github.com/swaywm/sway/wiki
-sway_autostart="""
+sway_autostart = """
 # Startup
 ## Authentication and credentials
 exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
@@ -40,7 +40,7 @@ exec_always /usr/bin/swaync-client -rs
 exec_always /usr/bin/autotiling-rs
 """
 # See: https://github.com/swaywm/sway/wiki#display-configuration
-sway_output="""
+sway_output = """
 # Variables
 set $laptop eDP-1
 set $left DP-3
