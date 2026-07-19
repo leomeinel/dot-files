@@ -10,8 +10,8 @@ command -v /usr/bin/sudo >/dev/null 2>&1 &&
 command -v /usr/bin/bat >/dev/null 2>&1 &&
     alias bat='/usr/bin/bat --decorations auto --color auto'
 if command -v /usr/bin/eza >/dev/null 2>&1; then
-    alias eza='/usr/bin/eza -lag --color=automatic'
-    alias ll='/usr/bin/eza -lag --color=automatic'
+    alias eza='/usr/bin/eza -lag --color=auto'
+    alias ll='/usr/bin/eza -lag --color=auto'
 fi
 command -v /usr/bin/fd >/dev/null 2>&1 &&
     alias fd='/usr/bin/fd -Hs -c auto'
