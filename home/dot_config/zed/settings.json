@@ -12,7 +12,7 @@
     "codebook": true,
     "color-highlight": true,
     "comment": true,
-    "dependi": true,
+    "depsy": true,
     "editorconfig": true,
     "env": true,
     "git-firefly": true,
