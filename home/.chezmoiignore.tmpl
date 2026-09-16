@@ -1,4 +1,4 @@
-{{ if and (ne .chezmoi.username "root") .gui }}
+{{ if or (eq .chezmoi.username "root") (not .gui) }}
 .config/*
 !.config/git
 !.config/nvim
